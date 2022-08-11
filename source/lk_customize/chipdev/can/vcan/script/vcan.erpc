@@ -1,0 +1,93 @@
+/*
+ * vcan.erpc
+ *
+ * Copyright (c) 2019 Semidrive Semiconductor.
+ * All rights reserved.
+ *
+ * Description:
+ *
+ * Revision History:
+ * -----------------
+ */
+
+program vcan
+
+import "flexcan_autogen.erpc"
+
+/******************* CAN configuration data structure *********************/
+
+struct rx_mb_frame_t {
+    uint32 frameId;
+    uint32 rxIDFilterMask;
+    flexcan_frame_type_t frameType;
+    flexcan_frame_format_t frameFormat;
+}
+
+struct tx_mb_ctrl_t {
+    uint8 paddingVal;
+    uint8 isMBIdle;
+    uint32 txLock;
+}
+
+struct Can_ControllerConfig {
+    flexcan_controller_id_t controllerId;
+    uint32 baseAddr;
+    flexcan_config_t flexcanCfg;
+}
+
+struct Can_MBConfig {
+    uint32 hwObjId;
+    flexcan_controller_id_t controllerId;
+    uint8 mbId;
+    rx_mb_frame_t rx;
+    tx_mb_ctrl_t tx;
+}
+
+struct Can_RxFIFOConfig {
+    uint32 hwObjId;
+    flexcan_controller_id_t controllerId;
+    uint8 rxFifoFilterMaskNum;
+    flexcan_rx_fifo_config_t flexcanRxFIFOCfg;
+    list<uint32> rxFifoIdFilterMask @length(rxFifoFilterMaskNum);
+}
+
+struct Can_BaudRateConfig {
+    flexcan_timing_config_t nomianlBitTimingCfg;
+    flexcan_timing_config_t dataBitTimingCfg;
+}
+
+struct Can_ConfigType {
+    uint8 controllerCount;
+    uint8 rxFifoCount;
+    uint8 baudRateCfgCount;
+    uint16 rxCount;
+    uint16 txCount;
+    list<Can_ControllerConfig> ctrllerCfg @length(controllerCount);
+    list<Can_MBConfig> rxMBCfg @length(rxCount);
+    list<Can_MBConfig> txMBCfg @length(txCount);
+    list<Can_RxFIFOConfig> rxFIFOCfg @length(rxFifoCount);
+    list<Can_BaudRateConfig> baudRateCfg @length(baudRateCfgCount);
+}
+
+struct Can_PduType {
+    uint16 swPduHandle;
+    uint8 length;
+    uint32 id;
+    binary sdu @length(length);
+}
+
+@id(2)
+interface vcan
+{
+    /******************* VCAN function interface *********************/
+    virCan_Init(in Can_ConfigType Config) -> void
+    virCan_DeInit() -> void
+    virCan_SetBaudrate(uint8 Controller, uint16 BaudRateConfigID) -> uint8
+    virCan_SetControllerMode(uint8 Controller, uint8 Transition) -> uint8
+    virCan_DisableControllerInterrupts(uint8 Controller) -> void
+    virCan_EnableControllerInterrupts(uint8 Controller) -> void
+    virCan_CheckWakeup(uint8 Controller) -> void
+    virCan_GetControllerErrorState(uint8 Controller, out uint8 ErrorStatePtr) -> uint8
+    virCan_GetControllerMode(uint8 Controller, out uint8 ControllerModePtr) -> uint8
+    virCan_Write(uint8 ControllerId, in Can_PduType virPduInfo) -> uint8
+}

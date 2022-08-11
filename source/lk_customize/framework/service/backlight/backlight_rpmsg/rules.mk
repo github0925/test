@@ -1,0 +1,18 @@
+LOCAL_DIR := $(GET_LOCAL_DIR)
+
+MODULE := $(LOCAL_DIR)
+
+GLOBAL_INCLUDES += \
+	$(LOCAL_DIR)/include
+
+MODULE_SRCS += \
+	$(LOCAL_DIR)/backlight.c
+
+MODULE_DEPS += framework/communication
+
+GLOBAL_DEFINES += \
+	SUPPORT_BACKLIGHT_SVC=1 \
+
+MODULE_COMPILEFLAGS += -Wno-format -fno-builtin -Wno-unused-variable -Wno-sign-compare -Wno-format -Wno-int-to-void-pointer-cast
+
+include make/module.mk

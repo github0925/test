@@ -1,0 +1,48 @@
+{
+		"tag":"0x53465301",
+    "init_act_t": [
+    	{
+          "header": "(((1) << 6) | ((0) << 3) | ((0) << 0))",
+          "command": 6,
+          "addr": "0x0",
+          "data0": 0,
+          "data1": 0
+	    },
+	    {
+          "header": "(((1) << 6) | ((3) << 3) | ((1) << 0))",
+          "command": "0x81",
+          "addr": "0x0",
+          "data0": "0xE7",
+          "data1": 0
+	    }
+    ],
+    
+    "xfer_attr_t":{
+    "cmd": "0x0B",
+		"cinst_type": 3,
+		"caddr_type": 3,
+		"cdata_type": 3,
+		"caddr_size": 4,
+		"cmode": 0,
+		"cdummy_size": 16,
+		"cflag": "(0x01 << 2)|(0x01 << 1)",
+		"rsvd":[0,0,0,0,0,0,0,0]
+    },
+    
+    "ip_settings_t": {
+    	"flags":"0x01 << 3",
+	    "rx_delay":0,
+	    "tx_delay":0,
+	    "csda":0,
+	    "csdada":0,
+	    "cseot":0,
+	    "cssot":0,
+	    "min_rx_win":0,
+	    "rx_training_step":0,
+	    "ctrl_misc":0,
+	    "rsvd":[0,0,0,0,0]
+    },
+    "freq":2,
+    "training_pattern":["0x5a","0xa5","0xf0","0x0f","0x0f","0xf0","0xa5","0x5a"]
+    
+}

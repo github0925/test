@@ -1,0 +1,30 @@
+Directory view
+
+libjpu
+├── helper
+│   ├── include
+│   └── src
+├── jdi
+│   ├── driver
+│   ├── include
+│   └── src
+├── jpuapi
+│   ├── include
+│   ├── Makefile
+│   └── src
+├── readme
+└── test
+    └── sample
+
+2: jpuapi
+   jpu API interface
+
+3：jdi
+   jpu os abstraction layer
+
+4：test
+   sample decode/encode
+
+
+description
+	libjpu compiles dynamic libraries libvpu.so (32-bit and 64-bit) and static libraries libjpu.a;

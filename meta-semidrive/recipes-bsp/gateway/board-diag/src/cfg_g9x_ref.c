@@ -1,0 +1,139 @@
+/*
+ * cfg_g9x_ref.c
+ *
+ * Copyright (c) 2020 SemiDrive Semiconductor.
+ * All rights reserved.
+ *
+ * Description:
+ *
+ * Revision History:
+ * -----------------
+ */
+#include "cfg.h"
+#include "board_diag.h"
+/*
+*GPIO_pin parament config
+*/
+const gpio_value_table_t gpio_write_value_table[] = {
+
+    {0x01, PIN_NUM_INVALID},// "BOOT_MODE_AND_LIN_CS",
+    {0x02, PIN_NUM_INVALID},//"SAFETY_RESET_AP_IO",
+    {0x03, PIN_NUM_INVALID},//"NULL",
+    {0x04, PIN_NUM_INVALID},//"PMIC_POFF_IN_SAFETY",
+    {0x05, PIN_NUM_INVALID},//"PMIC_WDI_SAFETY",
+    {0x06, PIN_NUM_INVALID},//"CANFD18_EN_AP",
+    {0x07, PIN_NUM_INVALID},//"CANFD18_STDBY_AP",
+    {0x08, PIN_NUM_INVALID},//"CANFD19_EN_AP",
+    {0x09, PIN_NUM_INVALID},//"CANFD19_STDBY_AP",
+    {0x0a, PIN_NUM_INVALID},//"CANFD20_EN_AP",
+    {0x0b, PIN_NUM_INVALID},//"CANFD20_STDBY_AP",
+    {0x0c, PIN_NUM_INVALID},//"CANFD9_EN_AP",
+    {0x0d, PIN_NUM_INVALID},//"CANFD9_STDBY_AP",
+    {0x0e, PIN_NUM_INVALID},//"CANFD10_EN_AP",
+    {0x0f, PIN_NUM_INVALID},//"CANFD10_STDBY_AP",
+    {0x10, PIN_NUM_INVALID},//"CANFD11_EN_AP",
+    {0x11, PIN_NUM_INVALID},//"CANFD11_STDBY_AP",
+    {0x12, PIN_NUM_INVALID},//"CANFD12_EN_AP",
+    {0x13, PIN_NUM_INVALID},//"CANFD12_STDBY_AP",
+    {0x14, PIN_NUM_INVALID},//"CANFD13_EN_AP",
+    {0x15, PIN_NUM_INVALID},//"CANFD13_STDBY_AP",
+    {0x16, PIN_NUM_INVALID},//"CANFD14_EN_AP",
+    {0x17, PIN_NUM_INVALID},//"CANFD14_STDBY_AP",
+    {0x18, PIN_NUM_INVALID},//"CANFD15_EN_AP",
+    {0x19, PIN_NUM_INVALID},//"CANFD15_STDBY_AP",
+    {0x1a, PIN_NUM_INVALID},//"CANFD16_EN_AP",
+    {0x1b, PIN_NUM_INVALID},//"CANFD16_STDBY_AP",
+    {0x1c, GPIO_D14},//"5072_RESRT",
+    {0x1d, GPIO_D13},//"5050_RESET",
+    {0x1e, GPIO_C7},//"5072_Cy_2122_RESET",
+    {0x1f, GPIO_C5},//"5050_Cy_2112_RESET",
+    {0x20, GPIO_D8},//"5072_WAKE",
+    {0x21, GPIO_D7},//"5050_WAKE",
+    {0x22, GPIO_D6},//AP IO-extender reset,
+    {0x23, PIN_NUM_INVALID},//"5050_INTN",
+    {PIN_NUM_INVALID, PIN_NUM_INVALID} //keep this in the end
+};
+
+/*
+*GPIO_pin_read_parament config
+*/
+const gpio_value_table_t gpio_read_value_table[] = {
+
+    {0x01, GPIO_C2},//"STAND_BY",
+    {0x02, GPIO_D11},//"STAND_BY",
+    {0x03, PIN_NUM_INVALID},//AP_TCA9539QPWRQ1_RESET
+    {0x04, PIN_NUM_INVALID},//SAF_TCA9539QPWRQ1_RESET
+    {0x05, PIN_NUM_INVALID},//AP_to_SAF
+    {0x06, PIN_NUM_INVALID},//KL15_WAKE_UP
+    {0x07, PIN_NUM_INVALID},//DCDC MAX20098 +5V PGOOD
+    {0x08, PIN_NUM_INVALID},//DCDC LTC7150 0.8V
+    {0x09, PIN_NUM_INVALID},//DCDC BD9S400 3.3V
+    {0x0a, PIN_NUM_INVALID},//PMIC PF8200_PGOOD
+    {0x0b, PIN_NUM_INVALID},//PS7A1601AQ +1V8_PGOOD
+    {0x0c, PIN_NUM_INVALID},//CANFD17_INH_AP
+    {0x0d, PIN_NUM_INVALID},//CANFD17_ERR_AP
+    {0x0e, PIN_NUM_INVALID},//CANFD18_INH_AP
+    {0x0f, PIN_NUM_INVALID},//CANFD18_ERR_AP
+    {0x10, PIN_NUM_INVALID},//CANFD19_INH_AP
+    {0x11, PIN_NUM_INVALID},//CANFD19_ERR_AP
+    {0x12, PIN_NUM_INVALID},//CANFD20_INH_AP
+    {0x13, PIN_NUM_INVALID},//CANFD20_ERR_AP
+    {0x14, PIN_NUM_INVALID},//CANFD13_INH_AP
+    {0x15, PIN_NUM_INVALID},//CANFD13_ERR_AP
+    {0x16, PIN_NUM_INVALID},//CANFD14_INH_AP
+    {0x17, PIN_NUM_INVALID},//CANFD14_ERR_AP
+    {0x18, PIN_NUM_INVALID},//CANFD15_INH_AP
+    {0x19, PIN_NUM_INVALID},//CANFD15_ERR_AP
+    {0x1a, PIN_NUM_INVALID},//CANFD16_INH_AP
+    {0x1b, PIN_NUM_INVALID},//CANFD16_ERR_AP
+    {0x1c, GPIO_C11},//2122_INT_1
+    {0x1d, GPIO_C9},//2122_INT_2
+    {0x1e, GPIO_C14},//2122_INT_3
+    {0x1f, GPIO_C15},//2122_INT_4
+    {0x20, PIN_NUM_INVALID},//ETH_WAKE_UP
+    {0x21, GPIO_C4},//5072_INTn
+    {0x22, GPIO_D15},//5050_INTN
+    {0x23, PIN_NUM_INVALID},//88Q5072_INH
+    {0x24, PIN_NUM_INVALID},//88Q5050_INTN
+    {PIN_NUM_INVALID, PIN_NUM_INVALID} //keep this in the end
+};
+
+const gpio_value_table_t eth_int_table[] = {
+    {0x0, GPIO_C11},
+    {0x1, GPIO_C9},
+    {0x2, GPIO_C14},
+    {0x3, GPIO_C15},
+    {0x4, GPIO_D15},
+    {0x5, GPIO_C4},
+    {PIN_NUM_INVALID, PIN_NUM_INVALID} //keep this in the end
+};
+
+const eth_chn_table_t eth_100_base_t1[] = {
+    {0x01, 0x11, ETH_BASE100_TST_MODE},//5072_port_1
+    {0x02, 0x12, ETH_BASE100_TST_MODE},//5072_port_2
+    {0x03, 0x13, ETH_BASE100_TST_MODE},//5072_port_3
+    {0x04, 0x14, ETH_BASE100_TST_MODE},//5072_port_4
+    {0x05, 0x15, ETH_BASE100_TST_MODE},//5072_port_5
+    {0x06, 0x16, ETH_BASE100_TST_MODE},//5072_port_6
+    {0x07, 0x01, ETH_BASE100_TST_MODE},//5050_port_1
+    {0x08, 0x02, ETH_BASE100_TST_MODE},//5050_port_2
+    {0x09, 0x03, ETH_BASE100_TST_MODE},//5050_port_3
+    {0x0a, 0x04, ETH_BASE100_TST_MODE},//5050_port_4
+    {0x0b, 0x05, ETH_BASE100_TST_MODE},//5050_port_5
+    {ETH_INVALID_CHN_NUM, ETH_INVALID_PORT_NUM, ETH_BASE100_TST_MODE}//keep this in the end
+};
+
+const eth_chn_table_t eth_100_base_tx[] = {
+    {0x01, 0x17, ETH_BASE100_TST_MODE},//5072_Port7差分对信号P_0,5072_Port7差分对信号N_0
+    {0x02, 0x17, ETH_BASE100_TST_MODE},//5072_Port7差分对信号P_1,5072_Port7差分对信号N_1
+    {ETH_INVALID_CHN_NUM, ETH_INVALID_PORT_NUM, ETH_BASE100_TST_MODE}//keep this in the end
+};
+
+const eth_chn_table_t eth_1000_base_t1[] = {
+    {0x01, 0x06, ETH_BASE1000_TST_MODE},//88Q2122_88Q5050_P567_RGMII
+    {0x02, 0x1a, ETH_BASE1000_TST_MODE},//88Q2122_88Q5072_P10_SGMII
+    {0x03, 0x19, ETH_BASE1000_TST_MODE},//88Q2122_88Q5072_P9_SGMII
+    {0x04, 0x07, ETH_BASE1000_TST_MODE},//88Q2122_88Q5050_P7_SGMII
+    {ETH_INVALID_CHN_NUM, ETH_INVALID_PORT_NUM, ETH_BASE1000_TST_MODE}//keep this in the end
+};
+

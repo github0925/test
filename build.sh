@@ -1,0 +1,1 @@
+meta-semidrive/scripts/project_build_link.sh

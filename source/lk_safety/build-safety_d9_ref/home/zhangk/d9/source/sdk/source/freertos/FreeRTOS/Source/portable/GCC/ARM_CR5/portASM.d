@@ -1,0 +1,7 @@
+build-safety_d9_ref//home/zhangk/d9/source/sdk/source/lk_safety/../../source/freertos/FreeRTOS/Source/portable/GCC/ARM_CR5/portASM.o: \
+ /home/zhangk/d9/source/sdk/source/lk_safety/../../source/freertos/FreeRTOS/Source/portable/GCC/ARM_CR5/portASM.S \
+ build-safety_d9_ref/config.h build-safety_d9_ref/kernel/module_config.h
+
+build-safety_d9_ref/config.h:
+
+build-safety_d9_ref/kernel/module_config.h:

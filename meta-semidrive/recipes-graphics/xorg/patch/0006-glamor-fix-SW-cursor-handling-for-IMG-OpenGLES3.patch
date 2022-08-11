@@ -1,0 +1,133 @@
+From fb75f3c2acd0626d5156639b9c092674c8e538c5 Mon Sep 17 00:00:00 2001
+From: Brendan King <Brendan.King@imgtec.com>
+Date: Fri, 20 Jul 2018 13:36:02 +0100
+Subject: [PATCH 06/11] glamor: fix SW cursor handling for IMG OpenGLES3
+
+Use miPushPixels unconditionally in glamor_push_pixels, as using
+glamor_push_pixels_gl results in no cursor on the screen (cause
+currently unknown).
+Pass the hint GLAMOR_CREATE_PIXMAP_CURSOR when creating the
+pixmap used to save the screen area under the cursor, and call
+glFinish whenever the pixmap is the destination for
+glamor_copy_fbo_fbo_draw. This avoids the initial cursor image
+being left on the screen when the cursor is moved.
+---
+ glamor/glamor.c          | 2 ++
+ glamor/glamor.h          | 2 ++
+ glamor/glamor_copy.c     | 3 +++
+ glamor/glamor_glyphblt.c | 5 ++++-
+ glamor/glamor_priv.h     | 1 +
+ mi/midispcur.c           | 9 ++++++++-
+ 6 files changed, 20 insertions(+), 2 deletions(-)
+
+diff --git a/glamor/glamor.c b/glamor/glamor.c
+index 218d75c6d..18bf1e43c 100644
+--- a/glamor/glamor.c
++++ b/glamor/glamor.c
+@@ -214,6 +214,8 @@ glamor_create_pixmap(ScreenPtr screen, int w, int h, int depth,
+ 
+     pixmap_priv->type = GLAMOR_TEXTURE_ONLY;
+ 
++    pixmap_priv->needs_glfinish = (usage == GLAMOR_CREATE_PIXMAP_CURSOR);
++
+     if (usage == GLAMOR_CREATE_PIXMAP_NO_TEXTURE) {
+         glamor_init_pixmap_private_small(pixmap, pixmap_priv);
+         return pixmap;
+diff --git a/glamor/glamor.h b/glamor/glamor.h
+index 3f9d265db..0cb8093e5 100644
+--- a/glamor/glamor.h
++++ b/glamor/glamor.h
+@@ -127,6 +127,8 @@ extern _X_EXPORT Bool glamor_destroy_pixmap(PixmapPtr pixmap);
+ #define GLAMOR_CREATE_NO_LARGE          0x105
+ #define GLAMOR_CREATE_PIXMAP_NO_TEXTURE 0x106
+ 
++#define GLAMOR_CREATE_PIXMAP_CURSOR     0x200
++
+ /* @glamor_egl_exchange_buffers: Exchange the underlying buffers(KHR image,fbo).
+  *
+  * @front: front pixmap.
+diff --git a/glamor/glamor_copy.c b/glamor/glamor_copy.c
+index e050c0220..41764184c 100644
+--- a/glamor/glamor_copy.c
++++ b/glamor/glamor_copy.c
+@@ -485,6 +485,9 @@ bail_ctx:
+     glDisable(GL_SCISSOR_TEST);
+     glDisableVertexAttribArray(GLAMOR_VERTEX_POS);
+ 
++    if (ret && dst_priv->needs_glfinish)
++        glFinish();
++
+     return ret;
+ }
+ 
+diff --git a/glamor/glamor_glyphblt.c b/glamor/glamor_glyphblt.c
+index 3c2b567c8..e7b14a612 100644
+--- a/glamor/glamor_glyphblt.c
++++ b/glamor/glamor_glyphblt.c
+@@ -161,6 +161,7 @@ glamor_poly_glyph_blt(DrawablePtr drawable, GCPtr gc,
+                    ppci, pglyph_base);
+ }
+ 
++#if 0
+ static Bool
+ glamor_push_pixels_gl(GCPtr gc, PixmapPtr bitmap,
+                       DrawablePtr drawable, int w, int h, int x, int y)
+@@ -241,13 +242,15 @@ bail:
+ 
+     return ret;
+ }
++#endif
+ 
+ void
+ glamor_push_pixels(GCPtr pGC, PixmapPtr pBitmap,
+                    DrawablePtr pDrawable, int w, int h, int x, int y)
+ {
++#if 0
+     if (glamor_push_pixels_gl(pGC, pBitmap, pDrawable, w, h, x, y))
+         return;
+-
++#endif
+     miPushPixels(pGC, pBitmap, pDrawable, w, h, x, y);
+ }
+diff --git a/glamor/glamor_priv.h b/glamor/glamor_priv.h
+index 003693524..2daab5f8c 100644
+--- a/glamor/glamor_priv.h
++++ b/glamor/glamor_priv.h
+@@ -381,6 +381,7 @@ typedef struct glamor_pixmap_private {
+      * names.
+      */
+     glamor_pixmap_fbo **fbo_array;
++    Bool needs_glfinish;
+ } glamor_pixmap_private;
+ 
+ extern DevPrivateKeyRec glamor_pixmap_private_key;
+diff --git a/mi/midispcur.c b/mi/midispcur.c
+index d1da0fd58..79460d626 100644
+--- a/mi/midispcur.c
++++ b/mi/midispcur.c
+@@ -50,6 +50,13 @@ in this Software without prior written authorization from The Open Group.
+ 
+ #include "inputstr.h"
+ 
++#ifdef GLAMOR
++#include "../glamor/glamor.h"
++#define MI_CREATE_PIXMAP_USAGE_CURSOR GLAMOR_CREATE_PIXMAP_CURSOR
++#else
++#define MI_CREATE_PIXMAP_USAGE_CURSOR 0
++#endif
++
+ /* per-screen private data */
+ static DevPrivateKeyRec miDCScreenKeyRec;
+ 
+@@ -398,7 +405,7 @@ miDCSaveUnderCursor(DeviceIntPtr pDev, ScreenPtr pScreen,
+         if (pSave)
+             (*pScreen->DestroyPixmap) (pSave);
+         pBuffer->pSave = pSave =
+-            (*pScreen->CreatePixmap) (pScreen, w, h, pScreen->rootDepth, 0);
++            (*pScreen->CreatePixmap) (pScreen, w, h, pScreen->rootDepth, MI_CREATE_PIXMAP_USAGE_CURSOR);
+         if (!pSave)
+             return FALSE;
+     }
+-- 
+2.17.1
+

@@ -1,0 +1,13 @@
+#ifndef __lk_customize_build_bootloader_d9_ref_lk_external_lib_fdt_module_config_h_H
+#define __lk_customize_build_bootloader_d9_ref_lk_external_lib_fdt_module_config_h_H
+#define MODULE_COMPILEFLAGS "__WNO_SIGN_COMPARE"
+#define MODULE_CFLAGS ""
+#define MODULE_CPPFLAGS ""
+#define MODULE_ASMFLAGS ""
+#define MODULE_LDFLAGS ""
+#define MODULE_OPTFLAGS ""
+#define MODULE_INCLUDES ""
+#define MODULE_SRCDEPS ""
+#define MODULE_DEPS ""
+#define MODULE_SRCS "_LK_EXTERNAL_LIB_FDT_FDT_C_LK_EXTERNAL_LIB_FDT_FDT_ADDRESSES_C_LK_EXTERNAL_LIB_FDT_FDT_EMPTY_TREE_C_LK_EXTERNAL_LIB_FDT_FDT_RO_C_LK_EXTERNAL_LIB_FDT_FDT_RW_C_LK_EXTERNAL_LIB_FDT_FDT_STRERROR_C_LK_EXTERNAL_LIB_FDT_FDT_SW_C_LK_EXTERNAL_LIB_FDT_FDT_WIP_C"
+#endif

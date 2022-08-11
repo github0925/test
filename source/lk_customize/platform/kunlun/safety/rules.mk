@@ -1,0 +1,107 @@
+LOCAL_DIR := $(GET_LOCAL_DIR)
+
+MODULE := $(LOCAL_DIR)
+
+ARCH    := arm
+ARM_CPU := cortex-r5
+CPU     := generic
+
+GLOBAL_INCLUDES += \
+	$(LOCAL_DIR)/
+
+#GLOBAL_MODULE_LDFLAGS += hal/disp_hal/sd_disp_hal/lib/libdisp_link.a
+MODULE_INCLUDES += hal/disp_hal/sd_disp_hal/lib/inc
+
+MODULE_DEPS += platform/$(PLATFORM)/common
+
+MODULE_DEPS += \
+	lib/debug \
+	lib/libc \
+	lib/system_config
+
+ifeq ($(SUPPORT_MODULE_HELPER_SDDRV),true)
+MODULE_DEPS += hal/module_helper_hal
+endif
+ifeq ($(SUPPORT_STR_MODE), true)
+GLOBAL_DEFINES +=SUPPORT_STR_MODE=1
+endif
+MODULE_SRCS += \
+	$(LOCAL_DIR)/platform.c	\
+	$(LOCAL_DIR)/debug.c \
+	$(LOCAL_DIR)/uart.c \
+	$(LOCAL_DIR)/timer.c \
+	$(LOCAL_DIR)/interrupt.c \
+	$(LOCAL_DIR)/tcm_init.S \
+	$(LOCAL_DIR)/str.c
+
+ifneq ($(DDR_ENTER_SELF), true)
+ifneq ($(SUPPORT_DIL2_INIT),true)
+MODULE_SRCS += $(LOCAL_DIR)/reboot.c
+endif
+endif
+
+ifeq ($(STATIC_HANDOVER),true)
+MODULE_SRCS += $(LOCAL_DIR)/reboot.c
+endif
+
+ifeq ($(SUPPORT_VIRT_UART), true)
+MODULE_SRCS += \
+	$(LOCAL_DIR)/vuart.c
+endif
+
+ifeq ($(SUPPORT_VIRT_CONSOLE), true)
+MODULE_DEPS += framework/service/sdshell
+endif
+
+ifeq ($(SUPPORT_DCF),true)
+MODULE_SRCS += \
+	$(LOCAL_DIR)/domain_config.c
+
+ifeq ($(CHIPVERSION),x9_high)
+GLOBAL_DEFINES += CONFIG_DCF_HAS_AP1=1 CONFIG_DCF_HAS_AP2=0 CONFIG_DCF_HAS_MP=0
+else ifeq ($(CHIPVERSION),x9_mid)
+GLOBAL_DEFINES += CONFIG_DCF_HAS_AP1=1 CONFIG_DCF_HAS_AP2=0 CONFIG_DCF_HAS_MP=0
+else ifeq ($(CHIPVERSION),x9_eco)
+GLOBAL_DEFINES += CONFIG_DCF_HAS_AP1=1 CONFIG_DCF_HAS_AP2=0 CONFIG_DCF_HAS_MP=0
+else ifeq ($(CHIPVERSION),x9_high-plus)
+GLOBAL_DEFINES += CONFIG_DCF_HAS_AP1=1 CONFIG_DCF_HAS_AP2=1 CONFIG_DCF_HAS_MP=1
+else ifeq ($(CHIPVERSION),x9_ultra)
+GLOBAL_DEFINES += CONFIG_DCF_HAS_AP1=1 CONFIG_DCF_HAS_AP2=1 CONFIG_DCF_HAS_MP=1
+else ifeq ($(CHIPVERSION),g9x)
+GLOBAL_DEFINES += CONFIG_DCF_HAS_AP1=0 CONFIG_DCF_HAS_AP2=1 CONFIG_DCF_HAS_MP=1
+else ifeq ($(CHIPVERSION),g9q)
+GLOBAL_DEFINES += CONFIG_DCF_HAS_AP1=1 CONFIG_DCF_HAS_AP2=0 CONFIG_DCF_HAS_MP=1
+else ifeq ($(CHIPVERSION),d9)
+GLOBAL_DEFINES += CONFIG_DCF_HAS_AP1=1 CONFIG_DCF_HAS_AP2=0 CONFIG_DCF_HAS_MP=0
+else ifeq ($(CHIPVERSION),d9lite)
+GLOBAL_DEFINES += CONFIG_DCF_HAS_AP1=0 CONFIG_DCF_HAS_AP2=1 CONFIG_DCF_HAS_MP=0
+else ifeq ($(CHIPVERSION),d9plus)
+GLOBAL_DEFINES += CONFIG_DCF_HAS_AP1=1 CONFIG_DCF_HAS_AP2=1 CONFIG_DCF_HAS_MP=0
+else ifeq ($(CHIPVERSION),v9f)
+GLOBAL_DEFINES += CONFIG_DCF_HAS_AP1=0 CONFIG_DCF_HAS_AP2=1 CONFIG_DCF_HAS_MP=0
+else ifeq ($(CHIPVERSION),v9t)
+GLOBAL_DEFINES += CONFIG_DCF_HAS_AP1=1 CONFIG_DCF_HAS_AP2=0 CONFIG_DCF_HAS_MP=0
+endif
+
+endif
+
+GLOBAL_DEFINES += \
+        LOCKSTEP_SCR_ADDR=0xfc297000 \
+        LOCKSTEP_SCR_BIT=0
+
+EXTRA_LINKER_SCRIPTS += $(LOCAL_DIR)/earlycopy.ld
+
+ifeq ($(SUPPORT_SDPE_RPC), true)
+SDPE_RPC_BUFFER_LD := $(call TOBUILDDIR, $(LOCAL_DIR)/sdpe_rpc_buffer.ld)
+EXTRA_LINKER_SCRIPTS += $(SDPE_RPC_BUFFER_LD)
+
+GENERATED += $(SDPE_RPC_BUFFER_LD)
+
+$(SDPE_RPC_BUFFER_LD) : $(LOCAL_DIR)/sdpe_rpc_buffer.ld
+	@echo generating $@
+	@$(MKDIR)
+	$(NOECHO)sed "s/%SAF_SDPE_RPC_MEMBASE%/$(SAF_SDPE_RPC_MEMBASE)/;s/%SAF_SDPE_RPC_MEMSIZE%/$(SAF_SDPE_RPC_MEMSIZE)/" < $< > $@.tmp
+	@$(call TESTANDREPLACEFILE,$@.tmp,$@)
+endif
+
+include make/module.mk

@@ -1,0 +1,13 @@
+#ifndef __lk_customize_build_bootloader_d9_ref_lk_customize_platform_kunlun_ap1_module_config_h_H
+#define __lk_customize_build_bootloader_d9_ref_lk_customize_platform_kunlun_ap1_module_config_h_H
+#define MODULE_COMPILEFLAGS ""
+#define MODULE_CFLAGS ""
+#define MODULE_CPPFLAGS ""
+#define MODULE_ASMFLAGS ""
+#define MODULE_LDFLAGS ""
+#define MODULE_OPTFLAGS ""
+#define MODULE_INCLUDES ""
+#define MODULE_SRCDEPS ""
+#define MODULE_DEPS "_PLATFORM_KUNLUN_COMMON"
+#define MODULE_SRCS "_LK_CUSTOMIZE_PLATFORM_KUNLUN_AP1_PLATFORM_C_LK_CUSTOMIZE_PLATFORM_KUNLUN_AP1_DEMO_C_LK_CUSTOMIZE_PLATFORM_KUNLUN_AP1_DEBUG_C_LK_CUSTOMIZE_PLATFORM_KUNLUN_AP1_UART_C_LK_CUSTOMIZE_PLATFORM_KUNLUN_AP1_INTERRUPT_C_LK_CUSTOMIZE_PLATFORM_KUNLUN_AP1_TIMER_C"
+#endif

@@ -1,0 +1,23 @@
+#version 320 es
+#extension GL_OES_EGL_image_external : require
+
+out highp vec4 Color;
+in highp vec2 Texcoord;
+uniform highp samplerExternalOES yuvTexSampler[8];
+uniform int cam_num;
+
+void main(void) {
+  int i = 0;
+  if (i + 1 > cam_num) discard;
+  highp vec2 center = vec2(0.0f, 0.0f);
+  highp vec4 col = vec4(0.0, 0.0, 0.0, 1.0);
+  highp float alpha = -0.2;
+  highp vec2 p1 = vec2(2.0 * Texcoord - 1.0) - center;
+  highp vec2 p2 = p1 / (1.0 - alpha * length(p1));
+  p2 = (p2 + center + 1.0) * 0.5;
+  if (all(greaterThanEqual(p2, vec2(0.0))) && all(lessThanEqual(p2, vec2(1.0))))
+  {
+       col = texture2D(yuvTexSampler[i], p2);
+  }
+  Color = col;
+}

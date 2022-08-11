@@ -1,0 +1,32 @@
+From 7f51765969bab9675b56c99e809f12469b6cfa5b Mon Sep 17 00:00:00 2001
+From: Brendan King <Brendan.King@imgtec.com>
+Date: Thu, 26 Jul 2018 09:16:23 +0100
+Subject: [PATCH 07/11] glamor: fix a failure path in
+ glamor_upload_picture_to_texture
+
+Return FALSE if glamor_pixmap_ensure_fbo fails. The incorrect
+return code led to a segfault in glamor_bind_texture, due to a
+pixmap having no FBO.
+---
+ glamor/glamor_picture.c | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/glamor/glamor_picture.c b/glamor/glamor_picture.c
+index b7c5d038f..1461a67d5 100644
+--- a/glamor/glamor_picture.c
++++ b/glamor/glamor_picture.c
+@@ -340,8 +340,10 @@ glamor_upload_picture_to_texture(PicturePtr picture)
+     else
+         iformat = format;
+ 
+-    if (!glamor_pixmap_ensure_fbo(pixmap, GLAMOR_CREATE_FBO_NO_FBO))
++    if (!glamor_pixmap_ensure_fbo(pixmap, GLAMOR_CREATE_FBO_NO_FBO)) {
++        ret = FALSE;
+         goto fail;
++    }
+ 
+     glPixelStorei(GL_UNPACK_ALIGNMENT, 4);
+ 
+-- 
+2.17.1
+

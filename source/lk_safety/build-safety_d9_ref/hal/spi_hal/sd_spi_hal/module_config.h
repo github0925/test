@@ -1,0 +1,13 @@
+#ifndef __build_safety_d9_ref_hal_spi_hal_sd_spi_hal_module_config_h_H
+#define __build_safety_d9_ref_hal_spi_hal_sd_spi_hal_module_config_h_H
+#define MODULE_COMPILEFLAGS ""
+#define MODULE_CFLAGS ""
+#define MODULE_CPPFLAGS ""
+#define MODULE_ASMFLAGS ""
+#define MODULE_LDFLAGS ""
+#define MODULE_OPTFLAGS ""
+#define MODULE_INCLUDES ""
+#define MODULE_SRCDEPS ""
+#define MODULE_DEPS ""
+#define MODULE_SRCS "_HAL_SPI_HAL_SD_SPI_HAL_SRC_SPI_HAL_MASTER_WEAK_C__HAL_SPI_HAL_SD_SPI_HAL_SRC_SPI_HAL_SLAVE_WEAK_C_"
+#endif

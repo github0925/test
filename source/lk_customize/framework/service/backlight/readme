@@ -1,0 +1,3 @@
+backlight_rpmsg for receive AP pwm backlight control by rpmsg
+
+backlight_rtos for feertos native controls its own screen api

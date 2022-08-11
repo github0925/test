@@ -1,0 +1,14 @@
+#!/bin/bash
+if [ -L $0 ]
+then
+    BASE_DIR=`dirname $(readlink $0)`
+else
+    BASE_DIR=`dirname $0`
+fi #
+
+KEY=$BASE_DIR/test/keys/TestRSA2048_ossl.pem
+if [  -n "$2" ] ;then
+    KEY=$2
+fi
+
+$BASE_DIR/atb_signer sign --sec_ver 1234 --pkg_ver 1 --rcp key=$BASE_DIR/test/keys/TestRSA1024_ossl.pem rot=1 --iib img=$1 to=0x140000 entry=0x140000 ctl=12345678900d900d uuid=12345678ab --dgst sha256 aes_key_id=1 --of $1.sec.signed

@@ -1,0 +1,4 @@
+CUR_DIR := $(GET_LOCAL_DIR)
+
+GLOBAL_MODULE_LDFLAGS += -L$(CUR_DIR) -lsd_disp
+

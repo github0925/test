@@ -1,0 +1,86 @@
+From 02b3d9018095b33d36849ac82e7d741be8ae9d67 Mon Sep 17 00:00:00 2001
+From: Brendan King <Brendan.King@imgtec.com>
+Date: Fri, 27 Jul 2018 15:16:58 +0100
+Subject: [PATCH 08/11] modesetting: add option to not render a SW cursor
+
+If option NoCursor is set to true in the Device section of xorg.conf,
+don't render a software cursor.
+
+This is intended for benchmarking on a system with no hardware cursor
+support. Rendering a software cursor can have a significant impact
+on performance.
+
+The name of the option was chosen to match that of a similar option
+in the IMG PVR video driver.
+---
+ hw/xfree86/drivers/modesetting/driver.c          | 6 ++++++
+ hw/xfree86/drivers/modesetting/driver.h          | 1 +
+ hw/xfree86/drivers/modesetting/drmmode_display.c | 3 +++
+ hw/xfree86/drivers/modesetting/drmmode_display.h | 1 +
+ 4 files changed, 11 insertions(+)
+
+diff --git a/hw/xfree86/drivers/modesetting/driver.c b/hw/xfree86/drivers/modesetting/driver.c
+index 9beb51f36..9b2df55b3 100644
+--- a/hw/xfree86/drivers/modesetting/driver.c
++++ b/hw/xfree86/drivers/modesetting/driver.c
+@@ -131,6 +131,7 @@ static const OptionInfoRec Options[] = {
+     {OPTION_PAGEFLIP, "PageFlip", OPTV_BOOLEAN, {0}, FALSE},
+     {OPTION_ZAPHOD_HEADS, "ZaphodHeads", OPTV_STRING, {0}, FALSE},
+     {OPTION_DOUBLE_SHADOW, "DoubleShadow", OPTV_BOOLEAN, {0}, FALSE},
++    {OPTION_NOSW_CURSOR, "NoCursor", OPTV_BOOLEAN, {0}, FALSE},
+     {-1, NULL, OPTV_NONE, {0}, FALSE}
+ };
+ 
+@@ -982,6 +983,11 @@ PreInit(ScrnInfoPtr pScrn, int flags)
+         ms->drmmode.sw_cursor = TRUE;
+     }
+ 
++    if (xf86ReturnOptValBool(ms->drmmode.Options, OPTION_NOSW_CURSOR, FALSE)) {
++        ms->drmmode.sw_cursor = FALSE;
++        ms->drmmode.nosw_cursor = TRUE;
++    }
++
+     ms->cursor_width = 64;
+     ms->cursor_height = 64;
+     ret = drmGetCap(ms->fd, DRM_CAP_CURSOR_WIDTH, &value);
+diff --git a/hw/xfree86/drivers/modesetting/driver.h b/hw/xfree86/drivers/modesetting/driver.h
+index 493280c1d..aea9b2acb 100644
+--- a/hw/xfree86/drivers/modesetting/driver.h
++++ b/hw/xfree86/drivers/modesetting/driver.h
+@@ -51,6 +51,7 @@ typedef enum {
+     OPTION_PAGEFLIP,
+     OPTION_ZAPHOD_HEADS,
+     OPTION_DOUBLE_SHADOW,
++    OPTION_NOSW_CURSOR,
+ } modesettingOpts;
+ 
+ typedef struct
+diff --git a/hw/xfree86/drivers/modesetting/drmmode_display.c b/hw/xfree86/drivers/modesetting/drmmode_display.c
+index e18cc379f..f895686d1 100644
+--- a/hw/xfree86/drivers/modesetting/drmmode_display.c
++++ b/hw/xfree86/drivers/modesetting/drmmode_display.c
+@@ -1596,6 +1596,9 @@ drmmode_set_cursor(xf86CrtcPtr crtc)
+         xf86CrtcConfigPtr xf86_config = XF86_CRTC_CONFIG_PTR(crtc->scrn);
+         xf86CursorInfoPtr cursor_info = xf86_config->cursor_info;
+ 
++        if (drmmode_crtc->drmmode->nosw_cursor)
++                return TRUE;
++
+         cursor_info->MaxWidth = cursor_info->MaxHeight = 0;
+         drmmode_crtc->drmmode->sw_cursor = TRUE;
+     }
+diff --git a/hw/xfree86/drivers/modesetting/drmmode_display.h b/hw/xfree86/drivers/modesetting/drmmode_display.h
+index cde661450..48a3b3fdf 100644
+--- a/hw/xfree86/drivers/modesetting/drmmode_display.h
++++ b/hw/xfree86/drivers/modesetting/drmmode_display.h
+@@ -97,6 +97,7 @@ typedef struct {
+     drmEventContext event_context;
+     drmmode_bo front_bo;
+     Bool sw_cursor;
++    Bool nosw_cursor;
+ 
+     /* Broken-out options. */
+     OptionInfoPtr Options;
+-- 
+2.17.1
+

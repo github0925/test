@@ -1,0 +1,50 @@
+/*
+ * lin.erpc
+ *
+ * Copyright (c) 2019 Semidrive Semiconductor.
+ * All rights reserved.
+ *
+ * Description:
+ *
+ * Revision History:
+ * -----------------
+ */
+
+struct Lin_PduType {
+    uint8   Pid;   /* LIN identifier */
+    uint8   Cs;    /* checksum type */
+    uint8   Drc;   /* type of response */
+    uint8   Dl;    /* data length of a LIN frame */
+    list<uint8> SduPtr @length(Dl);    /* sPointer to SDU data bytes */
+}
+
+struct Lin_ControllerConfigType {
+    uint32  hrdChannel;     /* UART resource Id */
+    uint32  sclk;           /* UART SCLK */
+    uint32  baud;           /* UART baud rate */
+    uint8   data_bits;
+    uint8   stop_bits;
+    uint8   parity;
+    uint8   loopback_enable;
+    uint8   fifo_enable;
+    uint8   rx_trigger;     /* UART RX trigger mode */
+    uint8   tx_trigger;     /* UART TX trigger mode */
+}
+
+struct Lin_ConfigType {
+    uint32 Count;
+    list<Lin_ControllerConfigType> Config @length(Count);
+}
+
+@id(1)
+interface lin_drv
+{
+    virLin_Init(in Lin_ConfigType Config) -> void
+    virLin_SendFrame(uint8 Channel, in Lin_PduType PduInfoPtr) -> uint8
+    virLin_CheckWakeup(uint8 Channel) -> uint8
+    virLin_GoToSleep(uint8 Channel) -> uint8
+    virLin_GoToSleepInternal(uint8 Channel) -> uint8
+    virLin_Wakeup(uint8 Channel) -> uint8
+    virLin_WakeupInternal(uint8 Channel) -> uint8
+    virLin_GetStatus(uint8 Channel, out list<uint8> Lin_Sdu @length(8)) -> uint8
+}

@@ -1,0 +1,10 @@
+#version 320 es
+out highp vec2 Texcoord;
+
+in highp vec4 position;
+in highp vec2 texcoord;
+
+void main(void) {
+  Texcoord = texcoord;
+  gl_Position = position;
+}

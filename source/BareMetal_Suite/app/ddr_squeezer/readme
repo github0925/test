@@ -1,0 +1,32 @@
+DDR Squeezer (trail version)
+
+DDR Squeezer is a tool to do stress test to DDR memory. It sits in internal RAM and runs on AP cores (the core number depends on the chip. For example, on G9, only one AP core) thus can test the whole DDR memory range.
+
+The features of DDR Squeezer are as follow:
+    
+    #1. Run in internal memory thus can test the whole DDR.
+
+    #2. Multi-core supported for more stressful test.
+
+    #3. Cache/MMU enabled for better performance.
+
+    #4. Can run on Windows.
+
+Usage:
+        1) Test setup
+            ./TestSetup.sh ddr_init_script.c sec_uart_num ap_uart_num
+            For example, 
+                ./TestSetup.sh ddr_script/x9_evb_lpddr4x_4266.c 10 9
+            The loadable binary (ddr_squeezer_loader_usb.elf.bin.signed.rsa1024) will be generated.
+            
+                On Windows, run ./TestSetup.bat ddr_script/x9_evb_lpddr4x_4266.c 10 9
+
+        2) Load binary into board by USB
+            a. Put board into USB boot mode, and connect the board with your PC using USB cable.
+            b. Run command in Windows PowerShell, for example
+                    ./TestChannel.exe ddr_squeezer_loader_usb.elf.bin.signed.rsa1024
+            c. Run command in AP terminal. 
+                    memtester start size loop=m core=n
+               For example, 
+                    memtester 0x40000000 0x10000000 loop=4 core=4
+        3) Or burn binray into eMMC/SD (take it as a 'SPL' when using Semidrive SDFactoryTool)then boot the board, then run command in AP terminal.

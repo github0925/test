@@ -1,0 +1,73 @@
+#!/bin/bash
+
+usage()
+{
+    echo -e "\nUsage:run_sign_sec
+    Optional parameters: [-l loaded address] [-e entry point] [-k keyfile]"
+echo "
+    * [-i image]:             The image to be signed.
+    * [-l loaded address]:    The address that the image will be loaded.
+    * [-e entry point]:       The entry point of the images.
+    * [-k key file]:          The private key file used to sign the image.
+    * [-h]:                   This help message.
+"
+}
+
+if [ -L $0 ]
+then
+    BASE_DIR=`dirname $(readlink $0)`
+else
+    BASE_DIR=`dirname $0`
+fi
+
+IMAGE=
+LOADADDR=0x100000
+ENTRYPOINT=0x100000
+KEY=$BASE_DIR/test/keys/TestRSA1024_ossl.pem
+
+OLD_OPTIND=$OPTIND
+while getopts "e:i:l:k:h" args
+do
+    case $args in
+        i) IMAGE="$OPTARG";
+           ;;
+        l) LOADADDR="$OPTARG";
+           ;;
+        e) ENTRYPOINT="$OPTARG";
+           ;;
+        k) KEY="$OPTARG";
+           ;;
+        h) sign_help='true';
+           ;;
+        \?) sign_error='true';
+           ;;
+    esac
+done
+
+shift $((OPTIND-1))
+if [ $# -ne 0 ]; then
+    echo -e "Invalid command line ending: '$@'"
+fi
+OPTIND=$OLD_OPTIND
+if test $sign_help; then
+    usage && exit 1
+elif test $sign_error; then
+    echo "unsupport args!"
+    exit 1
+fi
+
+if [[ x${IMAGE} == x ]];then
+    echo "pls input the image to be signed!"
+    usage
+    exit 1
+fi
+
+SIGNED_IMAGE=${IMAGE}.safe.signed
+echo "image":${IMAGE}
+echo "loaded address":${LOADADDR}
+echo "entry point":${ENTRYPOINT}
+echo "key file":${KEY}
+echo "signed image":${SIGNED_IMAGE}
+
+$BASE_DIR/atb_signer sign --sec_ver 1234 --pkg_ver 1 --rcp key=${KEY} rot=2 --iib img=${IMAGE} to=${LOADADDR} entry=${ENTRYPOINT} ctl=12345678900d900d uuid=12345678ab --dgst sha256 aes_key_id=1 --of ${SIGNED_IMAGE}
+

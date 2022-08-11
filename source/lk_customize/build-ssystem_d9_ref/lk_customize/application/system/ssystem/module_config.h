@@ -1,0 +1,13 @@
+#ifndef __lk_customize_build_ssystem_d9_ref_lk_customize_application_system_ssystem_module_config_h_H
+#define __lk_customize_build_ssystem_d9_ref_lk_customize_application_system_ssystem_module_config_h_H
+#define MODULE_COMPILEFLAGS ""
+#define MODULE_CFLAGS ""
+#define MODULE_CPPFLAGS ""
+#define MODULE_ASMFLAGS ""
+#define MODULE_LDFLAGS ""
+#define MODULE_OPTFLAGS ""
+#define MODULE_INCLUDES ""
+#define MODULE_SRCDEPS ""
+#define MODULE_DEPS "_FRAMEWORK_SERVICE_PROPERTY_DEV_LIB_PARTITION_LIB_STORAGE_DEVICE_LIB_BOOT_LIB_LIBAVB_LIB_SYSTEM_CONFIG_FRAMEWORK_LIB_MEM_IMAGE_FRAMEWORK_SERVICE_RPMSG"
+#define MODULE_SRCS "_LK_CUSTOMIZE_APPLICATION_SYSTEM_SSYSTEM_SSYSTEM_C_LK_CUSTOMIZE_APPLICATION_SYSTEM_SSYSTEM_AUXILIARY_FUNCS_C_LK_CUSTOMIZE_APPLICATION_SYSTEM_SSYSTEM_SERVICE_C_"
+#endif

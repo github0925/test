@@ -1,0 +1,13 @@
+#ifndef __lk_customize_build_dloader_d9_ref_lk_customize_hal_usb_hal_sd_usb_hal_module_config_h_H
+#define __lk_customize_build_dloader_d9_ref_lk_customize_hal_usb_hal_sd_usb_hal_module_config_h_H
+#define MODULE_COMPILEFLAGS "__WNO_FORMAT__FNO_BUILTIN__WNO_UNUSED_VARIABLE__WNO_SIGN_COMPARE__WNO_FORMAT"
+#define MODULE_CFLAGS ""
+#define MODULE_CPPFLAGS ""
+#define MODULE_ASMFLAGS ""
+#define MODULE_LDFLAGS ""
+#define MODULE_OPTFLAGS ""
+#define MODULE_INCLUDES ""
+#define MODULE_SRCDEPS ""
+#define MODULE_DEPS ""
+#define MODULE_SRCS "_LK_CUSTOMIZE_HAL_USB_HAL_SD_USB_HAL_SRC_USB_HAL_C_LK_CUSTOMIZE_HAL_USB_HAL_SD_USB_HAL_SRC_CLASS_CLASS_FASTBOOT_C_LK_CUSTOMIZE_HAL_USB_HAL_SD_USB_HAL_SRC_CLASS_WINUSB_C_"
+#endif

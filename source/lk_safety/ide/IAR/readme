@@ -1,0 +1,6 @@
+20201214
+scripts: generate iar project 
+linkcfg: iram.icf-- iram linkfile
+		 iram.mac-- disable mpu
+v2: distinguish iram/ospi/ddr,based on GLOBAL_DEF
+    add Freertos include path

@@ -1,0 +1,11 @@
+force {emu_top.dut.safe_ss.efusec_gp_key0[127:0]} 127'h64726f777373617064726f7773736170
+force {emu_top.dut.safe_ss.efusec_gp_key1[127:0]} 127'h64726f777373617064726f7773736170
+force {emu_top.dut.safe_ss.efusec_gp_key2[127:0]} 127'h64726f777373617064726f7773736170
+force {emu_top.dut.safe_ss.efusec_gp_key3[127:0]} 127'h64726f777373617064726f7773736170
+#force {emu_top.dut.sec_ss.ce2.VCE_KEYENABLE[127:0]} 128'hffffffffffffffffffffffffffffffff
+force {emu_top.dut.safe_ss.efusec.sek0[255:0]} 256'h64726f777373617064726f7773736170
+force {emu_top.dut.safe_ss.efusec.sek1[255:0]} 256'h64726f777373617064726f7773736170
+force {emu_top.dut.safe_ss.efusec.sek2[255:0]} 256'h64726f777373617064726f7773736170
+force {emu_top.dut.safe_ss.efusec.rotpk0[255:0]} 256'h6b6a69686a696867696867666867666567666564666564636564636264636261
+force {emu_top.dut.safe_ss.efusec.rotpk1[255:0]} 192'h71706f6e706f6e6d6f6e6d6c6e6d6c6b6d6c6b6a6c6b6a69
+force {emu_top.dut.safe_ss.efusec.huk[255:0]} 256'h70617373776f726470617373776f726470617373776f726470617373776f726

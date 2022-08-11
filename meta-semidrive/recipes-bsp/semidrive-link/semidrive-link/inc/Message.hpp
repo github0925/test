@@ -1,0 +1,98 @@
+#ifndef __SEMIDRIVE_MESSAGE_HPP__
+#define __SEMIDRIVE_MESSAGE_HPP__
+
+//#define USE_SOCKET
+
+#define BIT7 0xC0
+#define BIT6 0x40
+#define BIT5 0x20
+#define BIT4 0x10
+#define BIT3 0x8
+#define BIT2 0x4
+#define BIT1 0x2
+#define BIT0 0x1
+
+#define POWER_OFF 0
+#define POWER_ON 1
+
+#define FLASH_ON 1
+#define FLASH_OFF 0
+
+#define UP 0
+#define DOWN 1
+
+#define LEFT 0x2
+#define RIGHT 0x1
+
+enum EVENT_TYPE{
+    EVENT_ENTER_BTN = 0,
+    EVENT_PRV_BTN,
+    EVENT_NEXT_BTN,
+    EVENT_MENU_BTN,
+    EVENT_VOLUMN_SUB_BTN,
+    EVENT_VOLUMN_PLUS_BTN,
+    EVENT_VOLUMN_SPEECH_CTRL,
+    EVENT_SPEED_DOWN,
+    EVENT_SPEED_UP_AND_RECOVER,
+    EVENT_FOLLOWING_DISTENCE_SUB,
+    EVENT_FOLLOWING_DISTENCE_PLUS,
+    EVENT_CRUISE_OPEN,
+    EVENT_SWITCH_FUN_PREV,
+    EVENT_SWITCH_FUN_NEXT,
+    EVENT_HAZARD_LIGHTS,
+    EVENT_TURN_LEFT_RIGHT,
+    EVENT_DIPPED_HEADING_BTN,
+    EVENT_HIGHT_BEAN_LIGHT_BTN,
+    EVENT_FOG_LIGHT_BTN,
+    EVENT_STEERING_WHEEL_ANGLE,
+    EVENT_FRONT_AIR_CONDITION,
+    EVENT_SYNC,
+    EVENT_RECIRCUDATING_AI,
+    EVENT_FRONT_WINSHIELD_GLASS_WARM,
+    EVENT_REAR_WINSHIELD_GLASS_WARM,
+    EVENT_REAR_AIR_CONDITIONING,
+    EVENT_GEARS,
+    EVENT_ROTARY_KNOB_LEFT,
+    EVENT_ENTER_BTN_2,
+    EVENT_ROTARY_KNOB_RIGHT,
+    EVENT_TEMPERATURE_1,
+    EVENT_WIND_SPEED_1,
+    EVENT_AIR_MODE_1,
+    EVENT_AIR_RGB_R_1,
+    EVENT_AIR_RGB_G_1,
+    EVENT_AIR_RGB_B_1,
+    EVENT_TEMPERATURE_2,
+    EVENT_WIND_SPEED_2,
+    EVENT_AIR_MODE_2,
+    EVENT_AIR_RGB_R_2,
+    EVENT_AIR_RGB_G_2,
+    EVENT_AIR_RGB_B_2,
+    EVENT_DRIVER_SEAT,
+    EVENT_HAZARD_LIGHTS_2,
+    EVENT_RIGHT_REAR_SEAT_PANEL_POWER,
+    EVENT_LEFT_REAR_SEAT_PANEL_POWER,
+    EVENT_AIR_POWER,
+    EVENT_FRONT_PASSENGER_SEAT_PANEL_POWER,
+    EVENT_CENTER_PANEL_POWER,
+    EVENT_INSTRUMENT_PANEL_POWER,
+    EVENT_PASSENGER_SEAT,
+    EVENT_FLIDAR_UP_AND_DOWN,
+    EVENT_RLIDAR_UP_AND_DOWN,
+    EVENT_GEAR_UP_AND_DOWN,
+};
+
+class MessageUpdateListener {
+public:
+    virtual void onChanged(int event,int value) = 0;
+    virtual ~MessageUpdateListener(){}
+};
+
+class Message {
+public:
+    virtual void parse(unsigned char* buff,int len) = 0; 
+    virtual int compose(unsigned char *buff) = 0;
+    virtual bool onUpdate(int32_t event,int32_t value) = 0;
+    virtual bool onUpdate(Message *data,MessageUpdateListener *l) = 0;
+    virtual ~Message(){};
+};
+#endif

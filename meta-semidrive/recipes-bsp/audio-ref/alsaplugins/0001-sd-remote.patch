@@ -1,0 +1,754 @@
+Index: alsa-plugins-1.1.5/arcam-av/Makefile.am
+===================================================================
+--- alsa-plugins-1.1.5.orig/arcam-av/Makefile.am
++++ alsa-plugins-1.1.5/arcam-av/Makefile.am
+@@ -2,8 +2,15 @@ asound_module_ctl_arcam_av_LTLIBRARIES =
+ 
+ asound_module_ctl_arcam_avdir = @ALSA_PLUGIN_DIR@
+ 
++asound_module_ctl_remote_LTLIBRARIES = libasound_module_ctl_remote.la
++
++asound_module_ctl_remotedir = @ALSA_PLUGIN_DIR@
++
+ AM_CFLAGS = -Wall -g @ALSA_CFLAGS@
+ AM_LDFLAGS = -module -avoid-version -export-dynamic -no-undefined
+ 
+ libasound_module_ctl_arcam_av_la_SOURCES = ctl_arcam_av.c arcam_av.c arcam_av.h
+ libasound_module_ctl_arcam_av_la_LIBADD = @ALSA_LIBS@
++
++libasound_module_ctl_remote_la_SOURCES = remote.c
++libasound_module_ctl_remote_la_LIBADD = @ALSA_LIBS@
+Index: alsa-plugins-1.1.5/arcam-av/Makefile.in
+===================================================================
+--- alsa-plugins-1.1.5.orig/arcam-av/Makefile.in
++++ alsa-plugins-1.1.5/arcam-av/Makefile.in
+@@ -89,13 +89,19 @@ am__uninstall_files_from_dir = { \
+     || { echo " ( cd '$$dir' && rm -f" $$files ")"; \
+          $(am__cd) "$$dir" && rm -f $$files; }; \
+   }
+-am__installdirs = "$(DESTDIR)$(asound_module_ctl_arcam_avdir)"
+-LTLIBRARIES = $(asound_module_ctl_arcam_av_LTLIBRARIES)
++am__installdirs = "$(DESTDIR)$(asound_module_ctl_arcam_avdir)" \
++				"$(DESTDIR)$(asound_module_ctl_remotedir)"
++LTLIBRARIES = $(asound_module_ctl_arcam_av_LTLIBRARIES) \
++				$(asound_module_ctl_remote_LTLIBRARIES)
+ libasound_module_ctl_arcam_av_la_DEPENDENCIES =
+ am_libasound_module_ctl_arcam_av_la_OBJECTS = ctl_arcam_av.lo \
+ 	arcam_av.lo
+ libasound_module_ctl_arcam_av_la_OBJECTS =  \
+ 	$(am_libasound_module_ctl_arcam_av_la_OBJECTS)
++libasound_module_ctl_remote_la_DEPENDENCIES =
++am_libasound_module_ctl_remote_la_OBJECTS = remote.lo
++libasound_module_ctl_remote_la_OBJECTS =  \
++	$(am_libasound_module_ctl_remote_la_OBJECTS)
+ DEFAULT_INCLUDES = -I.@am__isrc@ -I$(top_builddir)
+ depcomp = $(SHELL) $(top_srcdir)/depcomp
+ am__depfiles_maybe = depfiles
+@@ -109,8 +115,10 @@ CCLD = $(CC)
+ LINK = $(LIBTOOL) --tag=CC $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) \
+ 	--mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) $(AM_LDFLAGS) \
+ 	$(LDFLAGS) -o $@
+-SOURCES = $(libasound_module_ctl_arcam_av_la_SOURCES)
+-DIST_SOURCES = $(libasound_module_ctl_arcam_av_la_SOURCES)
++SOURCES = $(libasound_module_ctl_arcam_av_la_SOURCES) \
++			$(libasound_module_ctl_remote_la_SOURCES)
++DIST_SOURCES = $(libasound_module_ctl_arcam_av_la_SOURCES) \
++				$(libasound_module_ctl_remote_la_SOURCES)
+ am__can_run_installinfo = \
+   case $$AM_UPDATE_INFO_DIR in \
+     n|no|NO) false;; \
+@@ -255,10 +263,14 @@ top_builddir = @top_builddir@
+ top_srcdir = @top_srcdir@
+ asound_module_ctl_arcam_av_LTLIBRARIES = libasound_module_ctl_arcam_av.la
+ asound_module_ctl_arcam_avdir = @ALSA_PLUGIN_DIR@
++asound_module_ctl_remote_LTLIBRARIES = libasound_module_ctl_remote.la
++asound_module_ctl_remotedir = @ALSA_PLUGIN_DIR@
+ AM_CFLAGS = -Wall -g @ALSA_CFLAGS@
+ AM_LDFLAGS = -module -avoid-version -export-dynamic -no-undefined
+ libasound_module_ctl_arcam_av_la_SOURCES = ctl_arcam_av.c arcam_av.c arcam_av.h
+ libasound_module_ctl_arcam_av_la_LIBADD = @ALSA_LIBS@
++libasound_module_ctl_remote_la_SOURCES = remote.c
++libasound_module_ctl_remote_la_LIBADD = @ALSA_LIBS@
+ all: all-am
+ 
+ .SUFFIXES:
+@@ -329,7 +341,42 @@ clean-asound_module_ctl_arcam_avLTLIBRAR
+ 	}
+ libasound_module_ctl_arcam_av.la: $(libasound_module_ctl_arcam_av_la_OBJECTS) $(libasound_module_ctl_arcam_av_la_DEPENDENCIES) $(EXTRA_libasound_module_ctl_arcam_av_la_DEPENDENCIES) 
+ 	$(LINK) -rpath $(asound_module_ctl_arcam_avdir) $(libasound_module_ctl_arcam_av_la_OBJECTS) $(libasound_module_ctl_arcam_av_la_LIBADD) $(LIBS)
++install-asound_module_ctl_remoteLTLIBRARIES: $(asound_module_ctl_remote_LTLIBRARIES)
++	@$(NORMAL_INSTALL)
++	@list='$(asound_module_ctl_remote_LTLIBRARIES)'; test -n "$(asound_module_ctl_remotedir)" || list=; \
++	list2=; for p in $$list; do \
++	  if test -f $$p; then \
++	    list2="$$list2 $$p"; \
++	  else :; fi; \
++	done; \
++	test -z "$$list2" || { \
++	  echo " $(MKDIR_P) '$(DESTDIR)$(asound_module_ctl_remotedir)'"; \
++	  $(MKDIR_P) "$(DESTDIR)$(asound_module_ctl_remotedir)" || exit 1; \
++	  echo " $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=install $(INSTALL) $(INSTALL_STRIP_FLAG) $$list2 '$(DESTDIR)$(asound_module_ctl_remotedir)'"; \
++	  $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=install $(INSTALL) $(INSTALL_STRIP_FLAG) $$list2 "$(DESTDIR)$(asound_module_ctl_remotedir)"; \
++	}
++
++uninstall-asound_module_ctl_remoteLTLIBRARIES:
++	@$(NORMAL_UNINSTALL)
++	@list='$(asound_module_ctl_remote_LTLIBRARIES)'; test -n "$(asound_module_ctl_remotedir)" || list=; \
++	for p in $$list; do \
++	  $(am__strip_dir) \
++	  echo " $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=uninstall rm -f '$(DESTDIR)$(asound_module_ctl_remotedir)/$$f'"; \
++	  $(LIBTOOL) $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=uninstall rm -f "$(DESTDIR)$(asound_module_ctl_remotedir)/$$f"; \
++	done
+ 
++clean-asound_module_ctl_remoteLTLIBRARIES:
++	-test -z "$(asound_module_ctl_remote_LTLIBRARIES)" || rm -f $(asound_module_ctl_remote_LTLIBRARIES)
++	@list='$(asound_module_ctl_remote_LTLIBRARIES)'; \
++	locs=`for p in $$list; do echo $$p; done | \
++	      sed 's|^[^/]*$$|.|; s|/[^/]*$$||; s|$$|/so_locations|' | \
++	      sort -u`; \
++	test -z "$$locs" || { \
++	  echo rm -f $${locs}; \
++	  rm -f $${locs}; \
++	}
++libasound_module_ctl_remote.la: $(libasound_module_ctl_remote_la_OBJECTS) $(libasound_module_ctl_remote_la_DEPENDENCIES) $(EXTRA_libasound_module_ctl_remote_la_DEPENDENCIES) 
++	$(LINK) -rpath $(asound_module_ctl_remotedir) $(libasound_module_ctl_remote_la_OBJECTS) $(libasound_module_ctl_remote_la_LIBADD) $(LIBS)
+ mostlyclean-compile:
+ 	-rm -f *.$(OBJEXT)
+ 
+@@ -337,6 +384,7 @@ distclean-compile:
+ 	-rm -f *.tab.c
+ 
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/arcam_av.Plo@am__quote@
++@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/remote.Plo@am__quote@
+ @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/ctl_arcam_av.Plo@am__quote@
+ 
+ .c.o:
+@@ -466,7 +514,7 @@ check-am: all-am
+ check: check-am
+ all-am: Makefile $(LTLIBRARIES)
+ installdirs:
+-	for dir in "$(DESTDIR)$(asound_module_ctl_arcam_avdir)"; do \
++	for dir in "$(DESTDIR)$(asound_module_ctl_arcam_avdir)" "$(DESTDIR)$(asound_module_ctl_remotedir)"; do \
+ 	  test -z "$$dir" || $(MKDIR_P) "$$dir"; \
+ 	done
+ install: install-am
+@@ -502,6 +550,7 @@ maintainer-clean-generic:
+ clean: clean-am
+ 
+ clean-am: clean-asound_module_ctl_arcam_avLTLIBRARIES clean-generic \
++	clean-asound_module_ctl_remoteLTLIBRARIES \
+ 	clean-libtool mostlyclean-am
+ 
+ distclean: distclean-am
+@@ -522,7 +571,8 @@ info: info-am
+ 
+ info-am:
+ 
+-install-data-am: install-asound_module_ctl_arcam_avLTLIBRARIES
++install-data-am: install-asound_module_ctl_arcam_avLTLIBRARIES \
++				install-asound_module_ctl_remoteLTLIBRARIES
+ 
+ install-dvi: install-dvi-am
+ 
+@@ -568,16 +618,19 @@ ps: ps-am
+ 
+ ps-am:
+ 
+-uninstall-am: uninstall-asound_module_ctl_arcam_avLTLIBRARIES
++uninstall-am: uninstall-asound_module_ctl_arcam_avLTLIBRARIES \
++				uninstall-asound_module_ctl_remoteLTLIBRARIES
+ 
+ .MAKE: install-am install-strip
+ 
+ .PHONY: CTAGS GTAGS all all-am check check-am clean \
+ 	clean-asound_module_ctl_arcam_avLTLIBRARIES clean-generic \
++	clean-asound_module_ctl_remoteLTLIBRARIES \
+ 	clean-libtool cscopelist ctags distclean distclean-compile \
+ 	distclean-generic distclean-libtool distclean-tags distdir dvi \
+ 	dvi-am html html-am info info-am install install-am \
+ 	install-asound_module_ctl_arcam_avLTLIBRARIES install-data \
++	install-asound_module_ctl_remoteLTLIBRARIES \
+ 	install-data-am install-dvi install-dvi-am install-exec \
+ 	install-exec-am install-html install-html-am install-info \
+ 	install-info-am install-man install-pdf install-pdf-am \
+@@ -586,6 +639,7 @@ uninstall-am: uninstall-asound_module_ct
+ 	maintainer-clean-generic mostlyclean mostlyclean-compile \
+ 	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
+ 	tags uninstall uninstall-am \
++	uninstall-asound_module_ctl_remoteLTLIBRARIES \
+ 	uninstall-asound_module_ctl_arcam_avLTLIBRARIES
+ 
+ 
+Index: alsa-plugins-1.1.5/arcam-av/remote.c
+===================================================================
+--- /dev/null
++++ alsa-plugins-1.1.5/arcam-av/remote.c
+@@ -0,0 +1,567 @@
++#include <alsa/asoundlib.h>
++#include <alsa/control_external.h>
++#include <errno.h>
++#include <fcntl.h>
++#include <semaphore.h>
++#include <signal.h>
++#include <stddef.h>
++#include <stdio.h>
++#include <stdlib.h>
++#include <string.h>
++#include <sys/ioctl.h>
++#include <sys/ipc.h>
++#include <sys/select.h>
++#include <sys/shm.h>
++#include <sys/socket.h>
++#include <sys/stat.h>
++#include <sys/types.h>
++#include <sys/un.h>
++#include <termios.h>
++#include <unistd.h>
++#define SUCCESS 0
++// #define VDEBUG
++#define ARRAY_SIZE(a) (sizeof(a) / sizeof((a)[0]))
++#define LOGI(f, ...)                                                           \
++    printf("%5d %s " f "\n", __LINE__, __FUNCTION__, ##__VA_ARGS__);
++
++#ifdef VDEBUG
++#define LOGV(f, ...)                                                           \
++    printf("%5d %s " f "\n", __LINE__, __FUNCTION__, ##__VA_ARGS__);
++#else
++#define LOGV(f, ...)
++#endif
++#define FUNC_DBG LOGV("in");
++
++#define LOGE(f, ...)                                                           \
++    printf("%s:%i %i " f "\n", __FUNCTION__, __LINE__, getpid(), ##__VA_ARGS__);
++typedef enum {
++    REMOTE_START = 1000,
++    REMOTE_STOP,
++    REMOTE_HIFI_VOL,
++    REMOTE_CLUSTER_VOL,
++    REMOTE_BT_WB_VOL,
++    REMOTE_BT_NB_VOL,
++    REMOTE_HIFI_MUTE,
++    REMOTE_CLUSTER_MUTE,
++    REMOTE_BT_WB_MUTE,
++    REMOTE_BT_NB_MUTE,
++    REMOTE_AGENT_PLAY,
++    REMOTE_AGENT_STOP,
++    REMOTE_SWITCH,
++    REMOTE_BYTES,
++} remote_cmd_code_t;
++
++static const char *remote_name = "Semidrive remote";
++typedef enum audio_path {
++    IDLE_PATH = 0,
++    HIFI_PLAYBACK_TO_MAIN_SPK_48K,
++    HIFI_CAPTURE_FROM_MAIN_MIC_48K,
++    CLUSTER_PLAYBACK_TO_MAIN_SPK_48K,
++    BT_PLAYBACK_TO_MAIN_SPK_16K,
++    BT_CAPTURE_FROM_MAIN_MIC_16K,
++    BT_PLAYBACK_TO_MAIN_SPK_8K,
++    BT_CAPTURE_FROM_MAIN_MIC_8K,
++    PATH_TOTAL_NUMB,
++    INVALID_PATH_ID = PATH_TOTAL_NUMB,
++    INVALID_ORDER_INDEX = PATH_TOTAL_NUMB,
++} aud_mgr_source_t;
++
++static const struct {
++    aud_mgr_source_t code;
++    const char *name;
++} remote_sources[] = {
++    {HIFI_PLAYBACK_TO_MAIN_SPK_48K, "hifip"},
++    {HIFI_CAPTURE_FROM_MAIN_MIC_48K, "hific"},
++    {CLUSTER_PLAYBACK_TO_MAIN_SPK_48K, "clusterp"},
++    {BT_PLAYBACK_TO_MAIN_SPK_8K, "btp_nb"},
++    {BT_CAPTURE_FROM_MAIN_MIC_8K, "btc_nb"},
++    {BT_PLAYBACK_TO_MAIN_SPK_16K, "btp_wb"},
++    {BT_CAPTURE_FROM_MAIN_MIC_16K, "btc_wb"},
++};
++enum audio_resource_id { TURN_SIGNAL_TONE, WARNING_TONE };
++static const struct {
++    enum audio_resource_id code;
++    const char *name;
++} agent_resource[] = {
++    {TURN_SIGNAL_TONE, "turn_signal_tone"},
++    {WARNING_TONE, "warning_tone"},
++};
++static const struct {
++    remote_cmd_code_t code;
++    const char *name;
++} remote_all[] = {
++    {REMOTE_START, "Start Path"},       {REMOTE_STOP, "Stop Path"},
++    {REMOTE_HIFI_VOL, "Hifi volume"},   {REMOTE_CLUSTER_VOL, "Cluster volume"},
++    {REMOTE_BT_WB_VOL, "BT Wb volume"}, {REMOTE_BT_NB_VOL, "BT Nb volume"},
++    {REMOTE_HIFI_MUTE, "Hifi Mute"},    {REMOTE_CLUSTER_MUTE, "Cluster Mute"},
++    {REMOTE_BT_WB_MUTE, "BT Wb Mute"},  {REMOTE_BT_NB_MUTE, "BT Nb Mute"},
++    {REMOTE_AGENT_PLAY, "Agent Play"},  {REMOTE_AGENT_STOP, "Agent Stop"},
++    {REMOTE_SWITCH, "Switch Path"},     {REMOTE_BYTES, "Bytes"},
++};
++
++typedef struct snd_ctl_remote {
++    snd_ctl_ext_t ext;
++    int port_fd;
++    const char *port;
++} snd_ctl_remote_t;
++
++struct ioctl_data {
++    uint32_t data;
++    uint32_t data1;
++    uint32_t data2;
++};
++#define TYPE 'S'
++#define IOCTL_OP_HANDSHAKE _IOWR(TYPE, 0, int)
++#define IOCTL_OP_START _IOWR(TYPE, 1, int)
++#define IOCTL_OP_STOP _IOWR(TYPE, 2, int)
++#define IOCTL_OP_MUTE _IOWR(TYPE, 3, int)
++#define IOCTL_OP_SETVOL _IOWR(TYPE, 4, int)
++#define IOCTL_OP_SWITCH _IOWR(TYPE, 5, int)
++#define IOCTL_OP_RESET _IOWR(TYPE, 6, int)
++#define IOCTL_OP_RESTORE _IOWR(TYPE, 7, int)
++#define IOCTL_OP_PLAY_AGENT _IOWR(TYPE, 8, int)
++#define IOCTL_OP_PCM_PLAYBACK_CTL _IOWR(TYPE, 9, int)
++#define IOCTL_OP_PCM_CAPTURE_CTL _IOWR(TYPE, 10, int)
++#define IOCTL_OP_PCM_PLAYBACK_STREAM _IOWR(TYPE, 11, int)
++#define IOCTL_OP_PCM_CAPTURE_STREAM _IOWR(TYPE, 12, int)
++#define IOCTL_OP_PCM_LOOPBACK_CTL _IOWR(TYPE, 13, int)
++enum audiomanager_cmd {
++    OP_HANDSHAKE = IOCTL_OP_HANDSHAKE,
++    OP_START = IOCTL_OP_START,
++    OP_STOP = IOCTL_OP_STOP,
++    OP_MUTE = IOCTL_OP_MUTE,
++    OP_SETVOL = IOCTL_OP_SETVOL,
++    OP_SWITCH = IOCTL_OP_SWITCH,
++    OP_RESET = IOCTL_OP_RESET,
++    OP_RESTORE = IOCTL_OP_RESTORE,
++    OP_PLAY_AGENT = IOCTL_OP_PLAY_AGENT,
++    OP_PCM_PLAYBACK_CTL = IOCTL_OP_PCM_PLAYBACK_CTL,
++    OP_PCM_CAPTURE_CTL = IOCTL_OP_PCM_CAPTURE_CTL,
++    OP_PCM_PLAYBACK_STREAM = IOCTL_OP_PCM_PLAYBACK_STREAM,
++    OP_PCM_CAPTURE_STREAM = IOCTL_OP_PCM_CAPTURE_STREAM,
++    OP_PCM_LOOPBACK_CTL = IOCTL_OP_PCM_LOOPBACK_CTL,
++    OP_NUMB
++};
++static int32_t remote_ioctl(int fd, int cmd, void *data)
++{
++    int32_t ret = SUCCESS;
++    if (fd <= 0) {
++        LOGE("Remote is not init");
++        return -1;
++    }
++    LOGI("fd %d, cmd: %d", fd, cmd);
++    ret = ioctl(fd, cmd, data);
++    LOGI("err: %s", strerror(errno));
++    return ret;
++}
++
++static int mute_path(int remote_fd, int path, int mute)
++{
++    struct ioctl_data send;
++    int ret;
++    send.data1 = path;
++    send.data2 = mute;
++    ret = remote_ioctl(remote_fd, IOCTL_OP_MUTE, &send);
++    LOGI("start path : %d, mute: %d, ret: %d\n", path, mute, ret);
++    return SUCCESS;
++}
++static int start_path(int remote_fd, int path, int vol)
++{
++    struct ioctl_data send;
++    int ret;
++    send.data1 = path;
++    send.data2 = vol;
++    ret = remote_ioctl(remote_fd, OP_START, &send);
++    LOGI("start path : %d, vol: %d, ret: %d\n", path, vol, ret);
++    return SUCCESS;
++}
++
++static int stop_path(int remote_fd, int path)
++{
++    struct ioctl_data send;
++    int ret;
++    send.data1 = path;
++    ret = remote_ioctl(remote_fd, OP_STOP, &send);
++    // ret = ioctl(remote, 400, &send);
++    LOGI("stop path : %d, ret: %d\n", path, ret);
++    return SUCCESS;
++}
++static int remote_play(int remote_fd, enum audio_resource_id id, char prop)
++{
++    struct ioctl_data send;
++    int ret;
++    send.data1 = id;
++    send.data2 = prop;
++    ret = remote_ioctl(remote_fd, OP_PLAY_AGENT, &send);
++    LOGI("play id: %d, prop: %d, ret: %d\n", id, prop, ret);
++    return SUCCESS;
++}
++int32_t remote_set_volume(int remote_fd, aud_mgr_source_t path, uint32_t vol)
++{
++    struct ioctl_data send;
++    int ret;
++    send.data1 = path;
++    send.data2 = vol;
++    ret = remote_ioctl(remote_fd, OP_SETVOL, &send);
++    LOGI("setvol path : %d, vol: %d, ret: %d\n", path, vol, ret);
++    return SUCCESS;
++}
++
++static void remote_close(snd_ctl_ext_t *ext)
++{
++    FUNC_DBG
++    snd_ctl_remote_t *remote = ext->private_data;
++    if (remote->port_fd)
++        close(remote->port_fd);
++    return;
++}
++static int remote_elem_count(snd_ctl_ext_t *ext)
++{
++    int count = 0;
++    count = ARRAY_SIZE(remote_all);
++    LOGV("count: %d", count);
++    return count;
++}
++
++static int remote_elem_list(snd_ctl_ext_t *ext, unsigned int offset,
++                            snd_ctl_elem_id_t *id)
++{
++    LOGV("offset: %d", offset);
++    snd_ctl_elem_id_set_interface(id, SND_CTL_ELEM_IFACE_MIXER);
++    if (offset < ARRAY_SIZE(remote_all))
++        snd_ctl_elem_id_set_name(id, remote_all[offset].name);
++    return SUCCESS;
++}
++
++static snd_ctl_ext_key_t remote_find_elem(snd_ctl_ext_t *ext,
++                                          const snd_ctl_elem_id_t *id)
++{
++    unsigned int numid, search;
++    const char *name;
++
++    numid = snd_ctl_elem_id_get_numid(id);
++    LOGV("numid: %d -> code: %d", numid, remote_all[numid - 1].code);
++
++    return remote_all[numid - 1].code;
++    // return SND_CTL_EXT_KEY_NOT_FOUND;
++}
++
++static int remote_get_attribute(snd_ctl_ext_t *ext ATTRIBUTE_UNUSED,
++                                snd_ctl_ext_key_t key, int *type,
++                                unsigned int *acc, unsigned int *count)
++{
++    LOGV("key: %d", key);
++    switch (key) {
++    case REMOTE_START:
++    case REMOTE_STOP:
++    case REMOTE_AGENT_PLAY:
++    case REMOTE_AGENT_STOP:
++        *type = SND_CTL_ELEM_TYPE_ENUMERATED;
++        *acc = SND_CTL_EXT_ACCESS_READWRITE;
++        *count = 1;
++        break;
++    case REMOTE_HIFI_VOL:
++    case REMOTE_CLUSTER_VOL:
++    case REMOTE_BT_WB_VOL:
++    case REMOTE_BT_NB_VOL:
++        *type = SND_CTL_ELEM_TYPE_INTEGER;
++        *acc = SND_CTL_EXT_ACCESS_READWRITE;
++        *count = 1;
++        break;
++    case REMOTE_HIFI_MUTE:
++    case REMOTE_CLUSTER_MUTE:
++    case REMOTE_BT_WB_MUTE:
++    case REMOTE_BT_NB_MUTE:
++        *type = SND_CTL_ELEM_TYPE_BOOLEAN;
++        *acc = SND_CTL_EXT_ACCESS_READWRITE;
++        *count = 1;
++        break;
++    case REMOTE_BYTES:
++        *type = SND_CTL_ELEM_TYPE_BYTES;
++        *acc = SND_CTL_EXT_ACCESS_READWRITE;
++        *count = 1;
++    }
++    return SUCCESS;
++}
++
++static int remote_get_integer_info(snd_ctl_ext_t *ext, snd_ctl_ext_key_t key,
++                                   long *imin, long *imax, long *istep)
++{
++    FUNC_DBG
++    switch (key) {
++    case REMOTE_HIFI_VOL:
++    case REMOTE_CLUSTER_VOL:
++    case REMOTE_BT_WB_VOL:
++    case REMOTE_BT_NB_VOL:
++        *istep = 1;
++        *imin = 0;
++        *imax = 100;
++        break;
++    }
++    return SUCCESS;
++}
++
++static int remote_get_enumerated_info(snd_ctl_ext_t *ext ATTRIBUTE_UNUSED,
++                                      snd_ctl_ext_key_t key,
++                                      unsigned int *items)
++{
++    FUNC_DBG
++    switch (key) {
++    case REMOTE_START:
++    case REMOTE_STOP:
++        *items = ARRAY_SIZE(remote_sources);
++        break;
++    case REMOTE_AGENT_PLAY:
++    case REMOTE_AGENT_STOP:
++        *items = ARRAY_SIZE(agent_resource);
++        break;
++    }
++    return SUCCESS;
++}
++
++static int remote_get_enumerated_name(snd_ctl_ext_t *ext ATTRIBUTE_UNUSED,
++                                      snd_ctl_ext_key_t key, unsigned int item,
++                                      char *name, size_t name_max_len)
++{
++    FUNC_DBG
++    const char *label = "Hello";
++    switch (key) {
++    case REMOTE_START:
++    case REMOTE_STOP:
++        if (item >= ARRAY_SIZE(remote_sources))
++            return -EINVAL;
++
++        label = remote_sources[item].name;
++        break;
++    case REMOTE_AGENT_PLAY:
++    case REMOTE_AGENT_STOP:
++        if (item >= ARRAY_SIZE(agent_resource)) {
++            LOGE("item unsupport");
++
++            return -EINVAL;
++        }
++        label = agent_resource[item].name;
++    }
++    strncpy(name, label, name_max_len - 1);
++    name[name_max_len - 1] = '\0';
++    return SUCCESS;
++}
++static int remote_read_integer(snd_ctl_ext_t *ext, snd_ctl_ext_key_t key,
++                               long *value)
++{
++    LOGV("key: %d", key);
++    switch (key) {
++    case REMOTE_HIFI_VOL:
++    case REMOTE_CLUSTER_VOL:
++    case REMOTE_BT_WB_VOL:
++    case REMOTE_BT_NB_VOL:
++        // TODO: get vol form audiomanager
++        *value = 88;
++        break;
++    case REMOTE_HIFI_MUTE:
++    case REMOTE_CLUSTER_MUTE:
++    case REMOTE_BT_WB_MUTE:
++    case REMOTE_BT_NB_MUTE:
++        // TODO: get mute state form audiomanager
++        *value = 1;
++        break;
++    }
++    return SUCCESS;
++}
++
++static int remote_read_enumerated(snd_ctl_ext_t *ext, snd_ctl_ext_key_t key,
++                                  unsigned int *item)
++{
++    FUNC_DBG
++    LOGV("Key: %d", key);
++    *item = 1;
++    return SUCCESS;
++}
++
++static int remote_write_integer(snd_ctl_ext_t *ext, snd_ctl_ext_key_t key,
++                                long *value)
++{
++    FUNC_DBG
++    snd_ctl_remote_t *remote = ext->private_data;
++    LOGI("key: %d, value: %d", key, *value);
++    switch (key) {
++    case REMOTE_HIFI_VOL:
++        LOGV("set vol: %ld", *value);
++        remote_set_volume(remote->port_fd, HIFI_PLAYBACK_TO_MAIN_SPK_48K,
++                          *value);
++        break;
++    case REMOTE_CLUSTER_VOL:
++        LOGV("set vol: %ld", *value);
++        remote_set_volume(remote->port_fd, CLUSTER_PLAYBACK_TO_MAIN_SPK_48K,
++                          *value);
++        break;
++    case REMOTE_BT_WB_VOL:
++        LOGV("set vol: %ld", *value);
++        remote_set_volume(remote->port_fd, BT_PLAYBACK_TO_MAIN_SPK_16K, *value);
++        break;
++    case REMOTE_BT_NB_VOL:
++        LOGV("set vol: %ld", *value);
++        remote_set_volume(remote->port_fd, BT_PLAYBACK_TO_MAIN_SPK_8K, *value);
++        break;
++    case REMOTE_HIFI_MUTE:
++        LOGI("mute %d", *value);
++        mute_path(remote->port_fd, HIFI_PLAYBACK_TO_MAIN_SPK_48K, *value);
++        break;
++    case REMOTE_CLUSTER_MUTE:
++        LOGI("mute %d", *value);
++        mute_path(remote->port_fd, CLUSTER_PLAYBACK_TO_MAIN_SPK_48K, *value);
++        break;
++    case REMOTE_BT_WB_MUTE:
++        LOGI("mute %d", *value);
++        mute_path(remote->port_fd, BT_PLAYBACK_TO_MAIN_SPK_16K, *value);
++        break;
++    case REMOTE_BT_NB_MUTE:
++        LOGI("mute %d", *value);
++        mute_path(remote->port_fd, BT_PLAYBACK_TO_MAIN_SPK_8K, *value);
++        break;
++    }
++    return SUCCESS;
++}
++
++static int remote_write_enumerated(snd_ctl_ext_t *ext, snd_ctl_ext_key_t key,
++                                   unsigned int *item)
++{
++    snd_ctl_remote_t *remote = ext->private_data;
++    char *name;
++    int code;
++    if (*item >= ARRAY_SIZE(remote_sources)) {
++        LOGE("item invalid");
++        return -EINVAL;
++    }
++    LOGV("*item： %d", *item);
++    switch (key) {
++    case REMOTE_START:
++        name = remote_sources[*item].name;
++        code = remote_sources[*item].code;
++        LOGI("start name: %s, code: %d", name, code);
++        start_path(remote->port_fd, code, 80);
++        break;
++    case REMOTE_STOP:
++        name = remote_sources[*item].name;
++        code = remote_sources[*item].code;
++        LOGI("stop name: %s, code: %d", name, code);
++        stop_path(remote->port_fd, code);
++        break;
++    case REMOTE_AGENT_PLAY:
++        name = agent_resource[*item].name;
++        code = agent_resource[*item].code;
++        LOGI("name: %s, code: %d", name, code);
++        remote_play(remote->port_fd, code, 0);
++        LOGI("AGENT_PLAY %d", code);
++        break;
++    case REMOTE_AGENT_STOP:
++        LOGI("AGENT_STOP %d", code);
++        remote_play(remote->port_fd, code, 1);
++        break;
++    }
++    return SUCCESS;
++}
++
++static int remote_read_event(snd_ctl_ext_t *ext, snd_ctl_elem_id_t *id,
++                             unsigned int *event_mask)
++{
++    int result = 0;
++    FUNC_DBG
++    return result;
++}
++#define u16 unsigned short
++#define u8 unsigned char
++#define u32 unsigned int
++
++struct audio_rpc_cmd {
++    u16 op;
++    union {
++        u8 data[16];
++        struct {
++            u32 data;
++        } send_msg;
++        struct {
++            u32 data;
++            u32 val0;
++            u32 val1;
++        } recv_msg;
++    } msg;
++};
++struct audio_rpc_cmd cmd;
++int remote_read_bytes(snd_ctl_ext_t *ext, snd_ctl_ext_key_t key,
++                      unsigned char *data, size_t max_bytes)
++{
++    data = &cmd;
++    LOGI("key : %d, max_bytes: %d", key, max_bytes);
++    return SUCCESS;
++}
++int remote_write_bytes(snd_ctl_ext_t *ext, snd_ctl_ext_key_t key,
++                       unsigned char *data, size_t max_bytes)
++{
++    LOGI("key : %d, max_bytes: %d", key, max_bytes);
++}
++static snd_ctl_ext_callback_t remote_ext_callback = {
++    .close = remote_close,
++    .elem_count = remote_elem_count,
++    .elem_list = remote_elem_list,
++    .find_elem = remote_find_elem,
++    .get_attribute = remote_get_attribute,
++    .get_integer_info = remote_get_integer_info,
++    .get_enumerated_info = remote_get_enumerated_info,
++    .get_enumerated_name = remote_get_enumerated_name,
++    .read_integer = remote_read_integer,
++    .read_enumerated = remote_read_enumerated,
++    // .read_bytes = remote_read_bytes,
++    .write_integer = remote_write_integer,
++    .write_enumerated = remote_write_enumerated,
++    // .write_bytes = remote_write_bytes,
++    .read_event = remote_read_event,
++};
++
++SND_CTL_PLUGIN_DEFINE_FUNC(remote)
++{
++    snd_config_iterator_t it, next;
++    const char *port = "/dev/audio_rpc";
++    int err;
++    snd_ctl_remote_t *remote = NULL;
++
++    snd_config_for_each(it, next, conf)
++    {
++        FUNC_DBG
++        snd_config_t *n = snd_config_iterator_entry(it);
++        const char *id;
++        if (snd_config_get_id(n, &id) < 0)
++            continue;
++    }
++
++    if (access(port, R_OK | W_OK) < 0) {
++        err = -errno;
++        LOGE("audiomanager client unsupport");
++        goto error;
++    }
++
++    remote = calloc(1, sizeof(*remote) + strlen(port) + 1);
++    if (!remote)
++        return -ENOMEM;
++    remote->port_fd = open("/dev/audio_rpc", O_RDWR);
++    if (remote->port_fd <= 0) {
++        LOGE("open rpc dev failed :%d", remote->port_fd);
++        goto error;
++    }
++    remote->ext.version = SND_CTL_EXT_VERSION;
++    remote->ext.callback = &remote_ext_callback;
++    remote->ext.private_data = remote;
++
++    err = snd_ctl_ext_create(&remote->ext, name, mode);
++    if (err < 0)
++        goto error;
++    *handlep = remote->ext.handle;
++    LOGV("remote() open done\n");
++    return SUCCESS;
++
++error:
++    LOGE("remote plugin failed");
++    return err;
++}
++
++SND_CTL_PLUGIN_SYMBOL(remote);
+\ No newline at end of file

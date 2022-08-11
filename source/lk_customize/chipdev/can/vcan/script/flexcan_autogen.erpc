@@ -1,0 +1,119 @@
+/*
+ * flexcan_autogen.erpc
+ *
+ * Copyright (c) 2019 Semidrive Semiconductor.
+ * All rights reserved.
+ *
+ * Description:
+ *
+ * Revision History:
+ * -----------------
+ */
+
+/******************* FlexCAN data structure *********************/
+
+/*! @brief CAN FD MB payload size. */
+enum flexcan_fd_data_size_t {
+    CAN_FD_8BYTES_PER_MB = 0U,  /*!< 8 bytes per message buffer. */
+    CAN_FD_16BYTES_PER_MB,      /*!< 16 bytes per message buffer. */
+    CAN_FD_32BYTES_PER_MB,      /*!< 32 bytes per message buffer. */
+    CAN_FD_64BYTES_PER_MB       /*!< 64 bytes per message buffer. */
+}
+
+struct flexcan_fd_config_t {
+    uint8 enableISOCANFD;
+    uint8 enableBRS;
+    uint8 enableTDC;
+    uint8 TDCOffset;
+    flexcan_fd_data_size_t r0_mb_data_size;
+    flexcan_fd_data_size_t r1_mb_data_size;
+}
+
+/*! NOTICE: The length of the time quantum should be the same in nominal
+ *          and data bit timing (i.e. preDivider should be the same in
+ *          nominal and data bit timing configuration) in order to minimize
+ *          the chance of error frames on the CAN bus, and to optimize the
+ *          clock tolerance in networks that use CAN FD frams.
+ */
+struct flexcan_timing_config_t {
+    uint16 preDivider;
+    uint8 rJumpwidth;
+    uint8 propSeg;
+    uint8 phaseSeg1;
+    uint8 phaseSeg2;
+}
+
+/*! @brief FlexCAN clock source. */
+enum flexcan_clock_source_t {
+    FLEXCAN_ClkSrcOsc  = 0x0U, /*!< FlexCAN Protocol Engine clock from Oscillator. */
+    FLEXCAN_ClkSrcPeri = 0x1U, /*!< FlexCAN Protocol Engine clock from Peripheral Clock. */
+}
+
+struct flexcan_config_t {
+    flexcan_clock_source_t clkSrc;
+    uint8 maxMbNum;
+    bool enableLoopBack;
+    bool enableListenOnly;
+    bool enableSelfWakeup;
+    uint8 enableIndividMask;
+    bool enableDoze;
+    bool enableCANFD;
+    flexcan_timing_config_t nominalBitTiming;
+    flexcan_timing_config_t dataBitTiming;
+    flexcan_fd_config_t can_fd_cfg;
+}
+
+enum flexcan_rx_fifo_filter_type_t {
+    FLEXCAN_RxFifoFilterTypeA = 0x0U, /*!< One full ID (standard and extended) per ID Filter element. */
+    FLEXCAN_RxFifoFilterTypeB = 0x1U, /*!< Two full standard IDs or two partial 14-bit ID slices per ID Filter Table element. */
+    FLEXCAN_RxFifoFilterTypeC = 0x2U, /*!< Four partial 8-bit Standard or extended ID slices per ID Filter Table element. */
+    FLEXCAN_RxFifoFilterTypeD = 0x3U, /*!< All frames rejected. */
+}
+
+enum flexcan_rx_fifo_priority_t {
+    FLEXCAN_RxFifoPrioLow  = 0x0U, /*!< Matching process start from Rx Message Buffer first*/
+    FLEXCAN_RxFifoPrioHigh = 0x1U, /*!< Matching process start from Rx FIFO first*/
+}
+
+struct flexcan_rx_fifo_config_t {
+    list<uint32> idFilterTable @length(idFilterNum);
+    uint8 idFilterNum;
+    flexcan_rx_fifo_filter_type_t idFilterType;
+    flexcan_rx_fifo_priority_t priority;
+}
+
+/*! @brief FlexCAN frame type. */
+enum flexcan_frame_type_t {
+    FLEXCAN_FrameTypeData   = 0x0U, /*!< Data frame type attribute. */
+    FLEXCAN_FrameTypeRemote = 0x1U, /*!< Remote frame type attribute. */
+}
+
+/*! @brief FlexCAN frame format. */
+enum flexcan_frame_format_t {
+    FLEXCAN_STANDARD_FRAME = 0x0U, /*!< Standard frame format attribute. */
+    FLEXCAN_EXTEND_FRAME           /*!< Extend frame format attribute. */
+}
+
+/* CAN channels */
+enum flexcan_controller_id_t {
+    CAN1 = 0U,
+    CAN2,
+    CAN3,
+    CAN4,
+    CAN5,
+    CAN6,
+    CAN7,
+    CAN8,
+    CAN9,
+    CAN10,
+    CAN11,
+    CAN12,
+    CAN13,
+    CAN14,
+    CAN15,
+    CAN16,
+    CAN17,
+    CAN18,
+    CAN19,
+    CAN20
+}

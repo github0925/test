@@ -1,0 +1,24 @@
+From 5bb32ff244630647208ee0d4626d4720f1957236 Mon Sep 17 00:00:00 2001
+From: Alex Chen <qing.chen@semidrive.com>
+Date: Wed, 7 Jul 2021 13:11:11 +0800
+Subject: [PATCH] change poll timeout from 1s to 20ms
+
+ID:
+Signed-off-by: Alex Chen <qing.chen@semidrive.com>
+
+diff --git a/src/udev/udevadm-settle.c b/src/udev/udevadm-settle.c
+index 33597bc..51b4b42 100644
+--- a/src/udev/udevadm-settle.c
++++ b/src/udev/udevadm-settle.c
+@@ -153,7 +153,7 @@ static int adm_settle(struct udev *udev, int argc, char *argv[]) {
+                         break;
+ 
+                 /* wake up when queue is empty */
+-                if (poll(pfd, 1, MSEC_PER_SEC) > 0 && pfd[0].revents & POLLIN)
++                if (poll(pfd, 1, 20) > 0 && pfd[0].revents & POLLIN)
+                         udev_queue_flush(queue);
+         }
+ 
+-- 
+2.7.4
+

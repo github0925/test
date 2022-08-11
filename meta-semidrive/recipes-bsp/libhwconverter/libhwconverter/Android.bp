@@ -1,0 +1,70 @@
+cc_defaults {
+	name: "hw_defaults",
+
+    shared_libs: [
+        "libcutils",
+        "libui",
+        "libutils",
+        "libdrm",
+        "libhwbinder",
+    ],
+
+    cflags: [
+        "-Wno-unused-parameter",
+        "-Wno-implicit-fallthrough",
+        "-Wno-reorder",
+    ],
+
+    include_dirs: [
+        "bionic/libc/kernel/uapi",
+        "vendor/semidrive/gpu/android/include/public",
+        "vendor/semidrive/gpu/android/include/public/powervr",
+        "system/core/libutils/include/utils",
+        "kernel/include/uapi/drm",
+    ],
+    local_include_dirs: ["include"],
+}
+
+cc_library_shared {
+	name: "libdrmdisplay",
+	srcs: [
+		"display/DrmDisplay.cpp",
+	],
+    vendor: true,
+	defaults: ["hw_defaults"],
+
+    local_include_dirs: ["display"],
+}
+
+cc_library_shared {
+	name: "libhwconverter",
+	srcs: [
+		"HwConverter.cpp",
+		"G2dConverter.cpp",
+		"buildConverter.cpp",
+	],
+
+    vendor: true,
+	shared_libs: [
+		"libdrmdisplay",
+	],
+	defaults: ["hw_defaults"],
+
+	export_include_dirs: ["include"],
+    local_include_dirs: ["include"],
+}
+
+cc_binary {
+	name: "test_hwconverter",
+	srcs: [
+		"tests/test_hwconvert.cpp",
+	],
+    vendor: true,
+	shared_libs: [
+		"libhwconverter",
+	],
+
+    local_include_dirs: ["tests"],
+}
+
+

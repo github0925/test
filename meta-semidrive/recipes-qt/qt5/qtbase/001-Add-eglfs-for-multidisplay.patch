@@ -1,0 +1,37 @@
+Index: git/src/plugins/platforms/eglfs/api/qeglfsdeviceintegration.cpp
+===================================================================
+--- git.orig/src/plugins/platforms/eglfs/api/qeglfsdeviceintegration.cpp	2016-12-14 17:03:17.000000000 -0600
++++ git/src/plugins/platforms/eglfs/api/qeglfsdeviceintegration.cpp	2016-12-14 17:06:23.000000000 -0600
+@@ -126,6 +126,7 @@ static int framebuffer = -1;
+
+ QByteArray QEglFSDeviceIntegration::fbDeviceName() const
+ {
++    qCWarning(qLcEglDevDebug) << "fbDeviceName";
+ #ifdef Q_OS_LINUX
+     QByteArray fbDev = qgetenv("QT_QPA_EGLFS_FB");
+     if (fbDev.isEmpty())
+@@ -151,6 +152,7 @@ int QEglFSDeviceIntegration::framebufferIndex() const
+
+ void QEglFSDeviceIntegration::platformInit()
+ {
++    qCWarning(qLcEglDevDebug) << "platformInit";
+ #ifdef Q_OS_LINUX
+     QByteArray fbDev = fbDeviceName();
+
+@@ -177,11 +179,16 @@ void QEglFSDeviceIntegration::platformDestroy()
+
+ EGLNativeDisplayType QEglFSDeviceIntegration::platformDisplay() const
+ {
+-    return EGL_DEFAULT_DISPLAY;
++    bool displayOk;
++    const int defaultDisplay = qEnvironmentVariableIntValue("QT_QPA_EGLFS_DEFAULT_DISPLAY", &displayOk);
++    qCWarning(qLcEglDevDebug) << "platformDisplay " << defaultDisplay;
++    qWarning("EGLFS: kyle use env display: %d", defaultDisplay);
++    return displayOk ? EGLNativeDisplayType(quintptr(defaultDisplay)) : EGL_DEFAULT_DISPLAY;
+ }
+
+ EGLDisplay QEglFSDeviceIntegration::createDisplay(EGLNativeDisplayType nativeDisplay)
+ {
++    qCWarning(qLcEglDevDebug) << "createDisplay";
+     return eglGetDisplay(nativeDisplay);
+ }

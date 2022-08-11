@@ -1,0 +1,23 @@
+srv_pin.o: srv_pin.c srv_pin.h \
+ /home/zhangk/d9/source/sdk/source/BareMetal_Suite/soc/kunlun/soc.h \
+ /home/zhangk/d9/source/sdk/source/BareMetal_Suite/soc/soc_def.h \
+ /home/zhangk/d9/source/sdk/source/BareMetal_Suite/soc/soc_hal.h \
+ /home/zhangk/d9/source/sdk/source/BareMetal_Suite/include/common/types_def.h \
+ /home/zhangk/d9/source/sdk/source/BareMetal_Suite/soc/lnk_sym.h \
+ /home/zhangk/d9/source/sdk/source/BareMetal_Suite/soc/kunlun/soc_share.h \
+ /home/zhangk/d9/source/sdk/source/BareMetal_Suite/soc/kunlun/iomux_ctrl_safety_reg.h \
+ /home/zhangk/d9/source/sdk/source/BareMetal_Suite/soc/kunlun/iomux_ctrl_ap_reg.h \
+ /home/zhangk/d9/source/sdk/source/BareMetal_Suite/service/srv_pin/srv_pin.h \
+ /home/zhangk/d9/source/sdk/source/BareMetal_Suite/soc/kunlun/rst_idx.h \
+ /home/zhangk/d9/source/sdk/source/BareMetal_Suite/soc/kunlun/ckgate.h \
+ /home/zhangk/d9/source/sdk/source/BareMetal_Suite/soc/kunlun/scr_bits.h \
+ /home/zhangk/d9/source/sdk/source/BareMetal_Suite/soc/kunlun/fusemap.h \
+ /home/zhangk/d9/source/sdk/source/BareMetal_Suite/soc/kunlun/fuse_hdr_gen.h \
+ /home/zhangk/d9/source/sdk/source/BareMetal_Suite/soc/kunlun/safe/soc_safe.h \
+ /home/zhangk/d9/source/sdk/source/BareMetal_Suite/soc/kunlun/safe/__regs_base.h \
+ /home/zhangk/d9/source/sdk/source/BareMetal_Suite/driver/scr/scr.h \
+ /home/zhangk/d9/source/sdk/source/BareMetal_Suite/soc/kunlun/safe/memory_map.h \
+ /home/zhangk/d9/source/sdk/source/BareMetal_Suite/soc/kunlun/safe/irq.h \
+ /home/zhangk/d9/source/sdk/source/BareMetal_Suite/soc/kunlun/irq_v.h \
+ /home/zhangk/d9/source/sdk/source/BareMetal_Suite/driver/iomux/iomux_def.h \
+ /home/zhangk/d9/source/sdk/source/BareMetal_Suite/include/common/helper.h

@@ -1,0 +1,551 @@
+--- Starting bitbake server pid 222852 at 2021-04-22 18:36:00.199259 ---
+Started bitbake server pid 222852
+DEBUG: BBCooker starting 1619087760.2020535
+DEBUG: BBCooker pyinotify1 1619087760.210797
+DEBUG: BBCooker pyinotify2 1619087760.211227
+DEBUG: BBCooker pyinotify3 1619087760.2183294
+DEBUG: BBCooker pyinotify complete 1619087760.2186644
+DEBUG: Found bblayers.conf (/workspace/dailili/yocto/build_jack/conf/bblayers.conf)
+DEBUG: Adding layer /workspace/dailili/yocto/poky/meta
+DEBUG: Adding layer /workspace/dailili/yocto/poky/meta-poky
+DEBUG: Adding layer /workspace/dailili/yocto/meta-openembedded/meta-oe
+DEBUG: Adding layer /workspace/dailili/yocto/meta-openembedded/meta-multimedia
+DEBUG: Adding layer /workspace/dailili/yocto/meta-semidrive
+DEBUG: Adding layer /workspace/dailili/yocto/meta-openembedded/meta-networking
+DEBUG: Adding layer /workspace/dailili/yocto/meta-openembedded/meta-python
+DEBUG: Adding layer /workspace/dailili/yocto/meta-openembedded/meta-filesystems
+DEBUG: Adding layer /workspace/dailili/yocto/meta-qt5
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:746: including conf/abi_version.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:747: including conf/site.conf
+DEBUG: CONF file 'conf/site.conf' not found
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:748: including conf/auto.conf
+DEBUG: CONF file 'conf/auto.conf' not found
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:749: including conf/local.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:750: including conf/multiconfig/default.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:751: including conf/machine/x9m_ref_serdes.conf
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/machine/x9m_ref_serdes.conf:12: including conf/machine/include/tune-cortexa57-cortexa53.inc
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/machine/include/tune-cortexa57-cortexa53.inc:2: including conf/machine/include/arm/arch-armv8.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv8.inc:1: including conf/machine/include/arm/arch-arm64.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-arm64.inc:3: including conf/machine/include/arm/arch-armv7ve.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv7ve.inc:8: including conf/machine/include/arm/arch-armv7a.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv7a.inc:8: including conf/machine/include/arm/arch-armv6.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv6.inc:8: including conf/machine/include/arm/arch-armv5-dsp.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv5-dsp.inc:4: including conf/machine/include/arm/arch-armv5.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv5.inc:8: including conf/machine/include/arm/arch-armv4.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv4.inc:15: including conf/machine/include/arm/arch-arm.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv4.inc:16: including conf/machine/include/arm/feature-arm-thumb.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv5.inc:9: including conf/machine/include/arm/feature-arm-vfp.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv7a.inc:9: including conf/machine/include/arm/feature-arm-neon.inc
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/machine/x9m_ref_serdes.conf:13: including conf/machine/include/x9high.inc
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/machine/include/x9high.inc:2: including conf/machine/include/soc-family.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:752: including conf/machine-sdk/x86_64.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:753: including conf/distro/jack.conf
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/distro/jack.conf:3: including conf/distro/include/sdrv-base.inc
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/distro/include/sdrv-base.inc:1: including conf/distro/poky.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta-poky/conf/distro/poky.conf:96: including conf/distro/include/poky-world-exclude.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta-poky/conf/distro/poky.conf:97: including conf/distro/include/no-static-libs.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta-poky/conf/distro/poky.conf:98: including conf/distro/include/yocto-uninative.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:754: including conf/distro/defaultsetup.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:1: including conf/distro/include/default-providers.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:2: including conf/distro/include/default-versions.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:3: including conf/distro/include/default-distrovars.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:4: including conf/distro/include/world-broken.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:7: including conf/distro/include/tcmode-default.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/include/tcmode-default.inc:73: including conf/distro/include/as-needed.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:10: including conf/distro/include/tclibc-glibc.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:12: including conf/distro/include/uninative-flags.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:755: including conf/documentation.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:756: including conf/licenses.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:757: including conf/sanity.conf
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/patch.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:4)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/terminal.bbclass (from /workspace/dailili/yocto/poky/meta/classes/patch.bbclass:11)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/staging.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:5)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/mirrors.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:7)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/utils.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:8)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/utility-tasks.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:9)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/metadata_scm.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:10)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/logging.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:11)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta-poky/classes/poky-sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/uninative.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/buildhistory.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/package_rpm.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/package.bbclass (from /workspace/dailili/yocto/poky/meta/classes/package_rpm.bbclass:1)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/packagedata.bbclass (from /workspace/dailili/yocto/poky/meta/classes/package.bbclass:41)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/chrpath.bbclass (from /workspace/dailili/yocto/poky/meta/classes/package.bbclass:42)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/insane.bbclass (from /workspace/dailili/yocto/poky/meta/classes/package.bbclass:45)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/buildstats.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/image-mklibs.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/linuxloader.bbclass (from /workspace/dailili/yocto/poky/meta/classes/image-mklibs.bbclass:5)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/image-prelink.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/debian.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/devshell.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/sstate.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/license.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/remove-libtool.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/blacklist.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/workspace/dailili/yocto/build_jack/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/workspace/dailili/yocto/build_jack/cache/bb_codeparser.dat'
+DEBUG: Enabling uninative
+DEBUG: BBCooker parsed base configuration 1619087760.4782043
+DEBUG: BBCooker startup complete 1619087760.4784052
+Entering server connection loop
+Accepting [<socket.socket fd=7, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>] ([])
+Processing Client
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'invalidate_stamp': None, 'dry_run': False, 'force': False, 'dump_signatures': [], 'postfile': [], 'debug_domains': [], 'server_timeout': None, 'extra_assume_provided': [], 'abort': True, 'verbose': False, 'profile': False, 'prefile': [], 'debug': 0}, {'USER': 'dailili', 'BYOBU_PREFIX': '/usr', 'BYOBU_SED': 'sed', 'LOGNAME': 'dailili', 'BYOBU_BACKEND': 'tmux', 'LC_TIME': 'en_US.UTF-8', 'LC_TELEPHONE': 'en_US.UTF-8', 'BYOBU_DATE': '%Y-%m-%d ', 'MAIL': '/var/mail/dailili', 'YOCTO_DISTRO': 'jack', 'SHLVL': '3', 'XDG_SESSION_ID': '117', 'YOCTO_MACHINE': 'x9m_ref_serdes', 'HISTTIMEFORMAT': '%F %T ', 'XDG_RUNTIME_DIR': '/run/user/569', 'LC_ALL': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.0.77 64603 192.168.1.14 22', 'BBPATH': '/workspace/dailili/yocto/build_jack', 'BYOBU_LIGHT': '#EEEEEE', 'BYOBU_CONFIG_DIR': '/home/dailili/.byobu', 'LC_ADDRESS': 'en_US.UTF-8', 'BB_ENV_EXTRAWHITE': 'ALL_PROXY BBPATH_EXTRA BB_NO_NETWORK BB_NUMBER_THREADS BB_SETSCENE_ENFORCE BB_SRCREV_POLICY DISTRO FTPS_PROXY FTP_PROXY GIT_PROXY_COMMAND HTTPS_PROXY HTTP_PROXY MACHINE NO_PROXY PARALLEL_MAKE SCREENDIR SDKMACHINE SOCKS5_PASSWD SOCKS5_USER SSH_AGENT_PID SSH_AUTH_SOCK STAMPS_DIR TCLIBC TCMODE all_proxy ftp_proxy ftps_proxy http_proxy https_proxy no_proxy ', 'BYOBU_DARK': '#333333', 'PWD': '/workspace/dailili/yocto/prebuilt/gpu/powervr_mesa/gm9446/firmware', 'BUILDDIR': '/workspace/dailili/yocto/build_jack', 'BYOBU_PAGER': 'sensible-pager', 'LC_PAPER': 'en_US.UTF-8', 'LC_NUMERIC': 'en_US.UTF-8', 'BYOBU_TIME': '%H:%M:%S', 'BYOBU_DISTRO': 'Ubuntu', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', '_byobu_sourced': '1', 'SSH_CLIENT': '192.168.0.28 54453 22', 'TERM': 'screen', 'LC_MONETARY': 'en_US.UTF-8', 'LANGUAGE': 'en_US:en', 'SHELL': '/bin/bash', 'OLDPWD': '/workspace/dailili/yocto/prebuilt/gpu/powervr_mesa/gm9446', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'BYOBU_TTY': '/dev/pts/13', '_': '/workspace/dailili/yocto/poky/bitbake/bin/bitbake', 'BYOBU_CHARMAP': 'UTF-8', 'LANG': 'en_US.UTF-8', 'BYOBU_READLINK': 'readlink', 'PATH': '/workspace/dailili/yocto/poky/scripts:/workspace/dailili/yocto/poky/bitbake/bin:/home/dailili/.local/bin:/tool/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin:/tool/gcc_linaro/gcc-linaro-7.3.1-2018.05-x86_64_aarch64-elf/bin:/tool/check_tools:/opt/share/qemu-sd/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/tool/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin:/tool/gcc_linaro/gcc-linaro-7.3.1-2018.05-x86_64_aarch64-elf/bin:/tool/check_tools', 'BYOBU_ULIMIT': 'ulimit', 'SSH_TTY': '/dev/pts/13', 'LC_MEASUREMENT': 'en_US.UTF-8', 'TMUX': '/tmp/tmux-569/default,114167,1', 'BYOBU_RUN_DIR': '/dev/shm/byobu-dailili-Y3LQjg4m', 'BYOBU_ACCENT': '#75507B', 'TMUX_PANE': '%53', 'BYOBU_PYTHON': 'python3', 'HOME': '/home/dailili', 'BYOBU_HIGHLIGHT': '#DD4814', 'QT_QPA_PLATFORMTHEME': 'appmenu-qt5', 'BYOBU_WINDOW_NAME': '-', 'PARALLEL_MAKE': '-j 24', 'LC_NAME': 'en_US.UTF-8'}, ['/workspace/dailili/yocto/poky/bitbake/bin/bitbake', 'pvr-lib-mesa']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 20, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['buildTargets', ['pvr-lib-mesa'], 'build']
+Processing Client
+Disconnecting Client
+No timeout, exiting.
+Exiting
+--- Starting bitbake server pid 230155 at 2021-04-22 18:37:25.440165 ---
+Started bitbake server pid 230155
+DEBUG: BBCooker starting 1619087845.4424336
+DEBUG: BBCooker pyinotify1 1619087845.451003
+DEBUG: BBCooker pyinotify2 1619087845.451317
+DEBUG: BBCooker pyinotify3 1619087845.4588516
+DEBUG: BBCooker pyinotify complete 1619087845.4592047
+DEBUG: Found bblayers.conf (/workspace/dailili/yocto/build_jack/conf/bblayers.conf)
+DEBUG: Adding layer /workspace/dailili/yocto/poky/meta
+DEBUG: Adding layer /workspace/dailili/yocto/poky/meta-poky
+DEBUG: Adding layer /workspace/dailili/yocto/meta-openembedded/meta-oe
+DEBUG: Adding layer /workspace/dailili/yocto/meta-openembedded/meta-multimedia
+DEBUG: Adding layer /workspace/dailili/yocto/meta-semidrive
+DEBUG: Adding layer /workspace/dailili/yocto/meta-openembedded/meta-networking
+DEBUG: Adding layer /workspace/dailili/yocto/meta-openembedded/meta-python
+DEBUG: Adding layer /workspace/dailili/yocto/meta-openembedded/meta-filesystems
+DEBUG: Adding layer /workspace/dailili/yocto/meta-qt5
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:746: including conf/abi_version.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:747: including conf/site.conf
+DEBUG: CONF file 'conf/site.conf' not found
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:748: including conf/auto.conf
+DEBUG: CONF file 'conf/auto.conf' not found
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:749: including conf/local.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:750: including conf/multiconfig/default.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:751: including conf/machine/x9m_ref_serdes.conf
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/machine/x9m_ref_serdes.conf:12: including conf/machine/include/tune-cortexa57-cortexa53.inc
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/machine/include/tune-cortexa57-cortexa53.inc:2: including conf/machine/include/arm/arch-armv8.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv8.inc:1: including conf/machine/include/arm/arch-arm64.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-arm64.inc:3: including conf/machine/include/arm/arch-armv7ve.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv7ve.inc:8: including conf/machine/include/arm/arch-armv7a.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv7a.inc:8: including conf/machine/include/arm/arch-armv6.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv6.inc:8: including conf/machine/include/arm/arch-armv5-dsp.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv5-dsp.inc:4: including conf/machine/include/arm/arch-armv5.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv5.inc:8: including conf/machine/include/arm/arch-armv4.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv4.inc:15: including conf/machine/include/arm/arch-arm.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv4.inc:16: including conf/machine/include/arm/feature-arm-thumb.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv5.inc:9: including conf/machine/include/arm/feature-arm-vfp.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv7a.inc:9: including conf/machine/include/arm/feature-arm-neon.inc
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/machine/x9m_ref_serdes.conf:13: including conf/machine/include/x9high.inc
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/machine/include/x9high.inc:2: including conf/machine/include/soc-family.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:752: including conf/machine-sdk/x86_64.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:753: including conf/distro/jack.conf
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/distro/jack.conf:3: including conf/distro/include/sdrv-base.inc
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/distro/include/sdrv-base.inc:1: including conf/distro/poky.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta-poky/conf/distro/poky.conf:96: including conf/distro/include/poky-world-exclude.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta-poky/conf/distro/poky.conf:97: including conf/distro/include/no-static-libs.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta-poky/conf/distro/poky.conf:98: including conf/distro/include/yocto-uninative.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:754: including conf/distro/defaultsetup.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:1: including conf/distro/include/default-providers.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:2: including conf/distro/include/default-versions.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:3: including conf/distro/include/default-distrovars.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:4: including conf/distro/include/world-broken.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:7: including conf/distro/include/tcmode-default.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/include/tcmode-default.inc:73: including conf/distro/include/as-needed.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:10: including conf/distro/include/tclibc-glibc.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:12: including conf/distro/include/uninative-flags.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:755: including conf/documentation.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:756: including conf/licenses.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:757: including conf/sanity.conf
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/patch.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:4)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/terminal.bbclass (from /workspace/dailili/yocto/poky/meta/classes/patch.bbclass:11)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/staging.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:5)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/mirrors.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:7)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/utils.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:8)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/utility-tasks.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:9)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/metadata_scm.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:10)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/logging.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:11)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta-poky/classes/poky-sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/uninative.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/buildhistory.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/package_rpm.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/package.bbclass (from /workspace/dailili/yocto/poky/meta/classes/package_rpm.bbclass:1)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/packagedata.bbclass (from /workspace/dailili/yocto/poky/meta/classes/package.bbclass:41)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/chrpath.bbclass (from /workspace/dailili/yocto/poky/meta/classes/package.bbclass:42)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/insane.bbclass (from /workspace/dailili/yocto/poky/meta/classes/package.bbclass:45)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/buildstats.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/image-mklibs.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/linuxloader.bbclass (from /workspace/dailili/yocto/poky/meta/classes/image-mklibs.bbclass:5)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/image-prelink.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/debian.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/devshell.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/sstate.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/license.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/remove-libtool.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/blacklist.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/workspace/dailili/yocto/build_jack/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/workspace/dailili/yocto/build_jack/cache/bb_codeparser.dat'
+DEBUG: Enabling uninative
+DEBUG: BBCooker parsed base configuration 1619087845.7149432
+DEBUG: BBCooker startup complete 1619087845.7151558
+Entering server connection loop
+Accepting [<socket.socket fd=7, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>] ([])
+Processing Client
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'abort': True, 'prefile': [], 'debug': 0, 'server_timeout': None, 'dump_signatures': [], 'postfile': [], 'verbose': False, 'dry_run': False, 'force': False, 'extra_assume_provided': [], 'profile': False, 'invalidate_stamp': 'cleanall', 'debug_domains': []}, {'BYOBU_LIGHT': '#EEEEEE', 'BYOBU_TIME': '%H:%M:%S', 'LC_MONETARY': 'en_US.UTF-8', 'BBPATH': '/workspace/dailili/yocto/build_jack', 'SSH_TTY': '/dev/pts/13', 'LC_ALL': 'en_US.UTF-8', 'SHLVL': '3', 'BYOBU_HIGHLIGHT': '#DD4814', '_byobu_sourced': '1', 'YOCTO_DISTRO': 'jack', 'LC_TIME': 'en_US.UTF-8', 'XDG_SESSION_ID': '117', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'HISTTIMEFORMAT': '%F %T ', 'BYOBU_RUN_DIR': '/dev/shm/byobu-dailili-Y3LQjg4m', 'BB_ENV_EXTRAWHITE': 'ALL_PROXY BBPATH_EXTRA BB_NO_NETWORK BB_NUMBER_THREADS BB_SETSCENE_ENFORCE BB_SRCREV_POLICY DISTRO FTPS_PROXY FTP_PROXY GIT_PROXY_COMMAND HTTPS_PROXY HTTP_PROXY MACHINE NO_PROXY PARALLEL_MAKE SCREENDIR SDKMACHINE SOCKS5_PASSWD SOCKS5_USER SSH_AGENT_PID SSH_AUTH_SOCK STAMPS_DIR TCLIBC TCMODE all_proxy ftp_proxy ftps_proxy http_proxy https_proxy no_proxy ', 'TMUX': '/tmp/tmux-569/default,114167,1', 'LC_TELEPHONE': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.0.77 64603 192.168.1.14 22', 'XDG_RUNTIME_DIR': '/run/user/569', 'BYOBU_ULIMIT': 'ulimit', 'USER': 'dailili', 'BYOBU_CONFIG_DIR': '/home/dailili/.byobu', 'LC_NUMERIC': 'en_US.UTF-8', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'TERM': 'screen', 'PARALLEL_MAKE': '-j 24', 'BYOBU_WINDOW_NAME': '-', 'LC_PAPER': 'en_US.UTF-8', 'BUILDDIR': '/workspace/dailili/yocto/build_jack', 'SSH_CLIENT': '192.168.0.28 54453 22', 'HOME': '/home/dailili', 'BYOBU_CHARMAP': 'UTF-8', 'BYOBU_BACKEND': 'tmux', 'YOCTO_MACHINE': 'x9m_ref_serdes', 'BYOBU_PREFIX': '/usr', 'LC_ADDRESS': 'en_US.UTF-8', 'BYOBU_TTY': '/dev/pts/13', 'LC_NAME': 'en_US.UTF-8', 'PATH': '/workspace/dailili/yocto/poky/scripts:/workspace/dailili/yocto/poky/bitbake/bin:/home/dailili/.local/bin:/tool/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin:/tool/gcc_linaro/gcc-linaro-7.3.1-2018.05-x86_64_aarch64-elf/bin:/tool/check_tools:/opt/share/qemu-sd/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/tool/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin:/tool/gcc_linaro/gcc-linaro-7.3.1-2018.05-x86_64_aarch64-elf/bin:/tool/check_tools', 'BYOBU_DARK': '#333333', 'BYOBU_DATE': '%Y-%m-%d ', 'LOGNAME': 'dailili', 'QT_QPA_PLATFORMTHEME': 'appmenu-qt5', 'BYOBU_SED': 'sed', 'LANG': 'en_US.UTF-8', 'BYOBU_ACCENT': '#75507B', 'BYOBU_PAGER': 'sensible-pager', 'BYOBU_READLINK': 'readlink', 'SHELL': '/bin/bash', '_': '/workspace/dailili/yocto/poky/bitbake/bin/bitbake', 'TMUX_PANE': '%53', 'OLDPWD': '/workspace/dailili/yocto/prebuilt/gpu/powervr_mesa/gm9446', 'BYOBU_PYTHON': 'python3', 'BYOBU_DISTRO': 'Ubuntu', 'MAIL': '/var/mail/dailili', 'PWD': '/workspace/dailili/yocto/prebuilt/gpu/powervr_mesa/gm9446/firmware', 'LANGUAGE': 'en_US:en', 'LC_MEASUREMENT': 'en_US.UTF-8'}, ['/workspace/dailili/yocto/poky/bitbake/bin/bitbake', 'pvr-lib-mesa', '-C', 'cleanall']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 20, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['buildTargets', ['pvr-lib-mesa'], 'build']
+Exiting
+--- Starting bitbake server pid 230582 at 2021-04-22 18:37:35.223095 ---
+Started bitbake server pid 230582
+DEBUG: BBCooker starting 1619087855.225737
+DEBUG: BBCooker pyinotify1 1619087855.2349415
+DEBUG: BBCooker pyinotify2 1619087855.2353623
+DEBUG: BBCooker pyinotify3 1619087855.242991
+DEBUG: BBCooker pyinotify complete 1619087855.243249
+DEBUG: Found bblayers.conf (/workspace/dailili/yocto/build_jack/conf/bblayers.conf)
+DEBUG: Adding layer /workspace/dailili/yocto/poky/meta
+DEBUG: Adding layer /workspace/dailili/yocto/poky/meta-poky
+DEBUG: Adding layer /workspace/dailili/yocto/meta-openembedded/meta-oe
+DEBUG: Adding layer /workspace/dailili/yocto/meta-openembedded/meta-multimedia
+DEBUG: Adding layer /workspace/dailili/yocto/meta-semidrive
+DEBUG: Adding layer /workspace/dailili/yocto/meta-openembedded/meta-networking
+DEBUG: Adding layer /workspace/dailili/yocto/meta-openembedded/meta-python
+DEBUG: Adding layer /workspace/dailili/yocto/meta-openembedded/meta-filesystems
+DEBUG: Adding layer /workspace/dailili/yocto/meta-qt5
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:746: including conf/abi_version.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:747: including conf/site.conf
+DEBUG: CONF file 'conf/site.conf' not found
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:748: including conf/auto.conf
+DEBUG: CONF file 'conf/auto.conf' not found
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:749: including conf/local.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:750: including conf/multiconfig/default.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:751: including conf/machine/x9m_ref_serdes.conf
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/machine/x9m_ref_serdes.conf:12: including conf/machine/include/tune-cortexa57-cortexa53.inc
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/machine/include/tune-cortexa57-cortexa53.inc:2: including conf/machine/include/arm/arch-armv8.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv8.inc:1: including conf/machine/include/arm/arch-arm64.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-arm64.inc:3: including conf/machine/include/arm/arch-armv7ve.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv7ve.inc:8: including conf/machine/include/arm/arch-armv7a.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv7a.inc:8: including conf/machine/include/arm/arch-armv6.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv6.inc:8: including conf/machine/include/arm/arch-armv5-dsp.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv5-dsp.inc:4: including conf/machine/include/arm/arch-armv5.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv5.inc:8: including conf/machine/include/arm/arch-armv4.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv4.inc:15: including conf/machine/include/arm/arch-arm.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv4.inc:16: including conf/machine/include/arm/feature-arm-thumb.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv5.inc:9: including conf/machine/include/arm/feature-arm-vfp.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv7a.inc:9: including conf/machine/include/arm/feature-arm-neon.inc
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/machine/x9m_ref_serdes.conf:13: including conf/machine/include/x9high.inc
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/machine/include/x9high.inc:2: including conf/machine/include/soc-family.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:752: including conf/machine-sdk/x86_64.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:753: including conf/distro/jack.conf
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/distro/jack.conf:3: including conf/distro/include/sdrv-base.inc
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/distro/include/sdrv-base.inc:1: including conf/distro/poky.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta-poky/conf/distro/poky.conf:96: including conf/distro/include/poky-world-exclude.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta-poky/conf/distro/poky.conf:97: including conf/distro/include/no-static-libs.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta-poky/conf/distro/poky.conf:98: including conf/distro/include/yocto-uninative.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:754: including conf/distro/defaultsetup.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:1: including conf/distro/include/default-providers.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:2: including conf/distro/include/default-versions.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:3: including conf/distro/include/default-distrovars.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:4: including conf/distro/include/world-broken.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:7: including conf/distro/include/tcmode-default.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/include/tcmode-default.inc:73: including conf/distro/include/as-needed.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:10: including conf/distro/include/tclibc-glibc.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:12: including conf/distro/include/uninative-flags.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:755: including conf/documentation.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:756: including conf/licenses.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:757: including conf/sanity.conf
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/patch.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:4)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/terminal.bbclass (from /workspace/dailili/yocto/poky/meta/classes/patch.bbclass:11)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/staging.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:5)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/mirrors.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:7)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/utils.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:8)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/utility-tasks.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:9)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/metadata_scm.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:10)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/logging.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:11)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta-poky/classes/poky-sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/uninative.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/buildhistory.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/package_rpm.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/package.bbclass (from /workspace/dailili/yocto/poky/meta/classes/package_rpm.bbclass:1)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/packagedata.bbclass (from /workspace/dailili/yocto/poky/meta/classes/package.bbclass:41)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/chrpath.bbclass (from /workspace/dailili/yocto/poky/meta/classes/package.bbclass:42)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/insane.bbclass (from /workspace/dailili/yocto/poky/meta/classes/package.bbclass:45)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/buildstats.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/image-mklibs.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/linuxloader.bbclass (from /workspace/dailili/yocto/poky/meta/classes/image-mklibs.bbclass:5)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/image-prelink.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/debian.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/devshell.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/sstate.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/license.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/remove-libtool.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/blacklist.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/workspace/dailili/yocto/build_jack/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/workspace/dailili/yocto/build_jack/cache/bb_codeparser.dat'
+DEBUG: Enabling uninative
+DEBUG: BBCooker parsed base configuration 1619087855.4875221
+DEBUG: BBCooker startup complete 1619087855.487725
+Entering server connection loop
+Accepting [<socket.socket fd=7, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>] ([])
+Processing Client
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'prefile': [], 'abort': True, 'dry_run': False, 'postfile': [], 'debug': 0, 'invalidate_stamp': 'cleanstatus', 'extra_assume_provided': [], 'dump_signatures': [], 'profile': False, 'server_timeout': None, 'force': False, 'debug_domains': [], 'verbose': False}, {'BYOBU_DISTRO': 'Ubuntu', 'TERM': 'screen', 'BYOBU_WINDOW_NAME': '-', 'PARALLEL_MAKE': '-j 24', 'QT_QPA_PLATFORMTHEME': 'appmenu-qt5', 'YOCTO_DISTRO': 'jack', 'SHELL': '/bin/bash', '_': '/workspace/dailili/yocto/poky/bitbake/bin/bitbake', 'PATH': '/workspace/dailili/yocto/poky/scripts:/workspace/dailili/yocto/poky/bitbake/bin:/home/dailili/.local/bin:/tool/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin:/tool/gcc_linaro/gcc-linaro-7.3.1-2018.05-x86_64_aarch64-elf/bin:/tool/check_tools:/opt/share/qemu-sd/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/tool/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin:/tool/gcc_linaro/gcc-linaro-7.3.1-2018.05-x86_64_aarch64-elf/bin:/tool/check_tools', 'LC_MEASUREMENT': 'en_US.UTF-8', 'LC_TELEPHONE': 'en_US.UTF-8', 'BYOBU_HIGHLIGHT': '#DD4814', 'BYOBU_TTY': '/dev/pts/13', 'BYOBU_SED': 'sed', 'BUILDDIR': '/workspace/dailili/yocto/build_jack', 'PWD': '/workspace/dailili/yocto/prebuilt/gpu/powervr_mesa/gm9446/firmware', 'OLDPWD': '/workspace/dailili/yocto/prebuilt/gpu/powervr_mesa/gm9446', 'LC_NUMERIC': 'en_US.UTF-8', 'LC_PAPER': 'en_US.UTF-8', 'BYOBU_LIGHT': '#EEEEEE', 'TMUX_PANE': '%53', 'SSH_TTY': '/dev/pts/13', 'TMUX': '/tmp/tmux-569/default,114167,1', 'BYOBU_TIME': '%H:%M:%S', 'USER': 'dailili', 'HOME': '/home/dailili', 'LC_ADDRESS': 'en_US.UTF-8', 'SHLVL': '3', 'BYOBU_PAGER': 'sensible-pager', '_byobu_sourced': '1', 'BYOBU_CHARMAP': 'UTF-8', 'BBPATH': '/workspace/dailili/yocto/build_jack', 'BYOBU_CONFIG_DIR': '/home/dailili/.byobu', 'SSH_CLIENT': '192.168.0.28 54453 22', 'BYOBU_BACKEND': 'tmux', 'LOGNAME': 'dailili', 'SSH_CONNECTION': '192.168.0.77 64603 192.168.1.14 22', 'BYOBU_DATE': '%Y-%m-%d ', 'HISTTIMEFORMAT': '%F %T ', 'LC_TIME': 'en_US.UTF-8', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'BYOBU_READLINK': 'readlink', 'BYOBU_ACCENT': '#75507B', 'BB_ENV_EXTRAWHITE': 'ALL_PROXY BBPATH_EXTRA BB_NO_NETWORK BB_NUMBER_THREADS BB_SETSCENE_ENFORCE BB_SRCREV_POLICY DISTRO FTPS_PROXY FTP_PROXY GIT_PROXY_COMMAND HTTPS_PROXY HTTP_PROXY MACHINE NO_PROXY PARALLEL_MAKE SCREENDIR SDKMACHINE SOCKS5_PASSWD SOCKS5_USER SSH_AGENT_PID SSH_AUTH_SOCK STAMPS_DIR TCLIBC TCMODE all_proxy ftp_proxy ftps_proxy http_proxy https_proxy no_proxy ', 'BYOBU_RUN_DIR': '/dev/shm/byobu-dailili-Y3LQjg4m', 'LC_MONETARY': 'en_US.UTF-8', 'LANGUAGE': 'en_US:en', 'BYOBU_PYTHON': 'python3', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'BYOBU_PREFIX': '/usr', 'YOCTO_MACHINE': 'x9m_ref_serdes', 'XDG_RUNTIME_DIR': '/run/user/569', 'XDG_SESSION_ID': '117', 'LC_ALL': 'en_US.UTF-8', 'BYOBU_DARK': '#333333', 'BYOBU_ULIMIT': 'ulimit', 'MAIL': '/var/mail/dailili', 'LC_NAME': 'en_US.UTF-8', 'LANG': 'en_US.UTF-8'}, ['/workspace/dailili/yocto/poky/bitbake/bin/bitbake', 'pvr-lib-mesa', '-C', 'cleanstatus']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 20, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['buildTargets', ['pvr-lib-mesa'], 'build']
+Processing Client
+Disconnecting Client
+No timeout, exiting.
+Exiting
+--- Starting bitbake server pid 249632 at 2021-04-22 18:40:49.696291 ---
+Started bitbake server pid 249632
+DEBUG: BBCooker starting 1619088049.6985178
+DEBUG: BBCooker pyinotify1 1619088049.7066584
+DEBUG: BBCooker pyinotify2 1619088049.7068624
+DEBUG: BBCooker pyinotify3 1619088049.7135785
+DEBUG: BBCooker pyinotify complete 1619088049.7138824
+DEBUG: Found bblayers.conf (/workspace/dailili/yocto/build_jack/conf/bblayers.conf)
+DEBUG: Adding layer /workspace/dailili/yocto/poky/meta
+DEBUG: Adding layer /workspace/dailili/yocto/poky/meta-poky
+DEBUG: Adding layer /workspace/dailili/yocto/meta-openembedded/meta-oe
+DEBUG: Adding layer /workspace/dailili/yocto/meta-openembedded/meta-multimedia
+DEBUG: Adding layer /workspace/dailili/yocto/meta-semidrive
+DEBUG: Adding layer /workspace/dailili/yocto/meta-openembedded/meta-networking
+DEBUG: Adding layer /workspace/dailili/yocto/meta-openembedded/meta-python
+DEBUG: Adding layer /workspace/dailili/yocto/meta-openembedded/meta-filesystems
+DEBUG: Adding layer /workspace/dailili/yocto/meta-qt5
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:746: including conf/abi_version.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:747: including conf/site.conf
+DEBUG: CONF file 'conf/site.conf' not found
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:748: including conf/auto.conf
+DEBUG: CONF file 'conf/auto.conf' not found
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:749: including conf/local.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:750: including conf/multiconfig/default.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:751: including conf/machine/x9m_ref_serdes.conf
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/machine/x9m_ref_serdes.conf:12: including conf/machine/include/tune-cortexa57-cortexa53.inc
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/machine/include/tune-cortexa57-cortexa53.inc:2: including conf/machine/include/arm/arch-armv8.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv8.inc:1: including conf/machine/include/arm/arch-arm64.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-arm64.inc:3: including conf/machine/include/arm/arch-armv7ve.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv7ve.inc:8: including conf/machine/include/arm/arch-armv7a.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv7a.inc:8: including conf/machine/include/arm/arch-armv6.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv6.inc:8: including conf/machine/include/arm/arch-armv5-dsp.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv5-dsp.inc:4: including conf/machine/include/arm/arch-armv5.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv5.inc:8: including conf/machine/include/arm/arch-armv4.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv4.inc:15: including conf/machine/include/arm/arch-arm.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv4.inc:16: including conf/machine/include/arm/feature-arm-thumb.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv5.inc:9: including conf/machine/include/arm/feature-arm-vfp.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv7a.inc:9: including conf/machine/include/arm/feature-arm-neon.inc
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/machine/x9m_ref_serdes.conf:13: including conf/machine/include/x9high.inc
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/machine/include/x9high.inc:2: including conf/machine/include/soc-family.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:752: including conf/machine-sdk/x86_64.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:753: including conf/distro/jack.conf
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/distro/jack.conf:3: including conf/distro/include/sdrv-base.inc
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/distro/include/sdrv-base.inc:1: including conf/distro/poky.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta-poky/conf/distro/poky.conf:96: including conf/distro/include/poky-world-exclude.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta-poky/conf/distro/poky.conf:97: including conf/distro/include/no-static-libs.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta-poky/conf/distro/poky.conf:98: including conf/distro/include/yocto-uninative.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:754: including conf/distro/defaultsetup.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:1: including conf/distro/include/default-providers.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:2: including conf/distro/include/default-versions.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:3: including conf/distro/include/default-distrovars.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:4: including conf/distro/include/world-broken.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:7: including conf/distro/include/tcmode-default.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/include/tcmode-default.inc:73: including conf/distro/include/as-needed.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:10: including conf/distro/include/tclibc-glibc.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:12: including conf/distro/include/uninative-flags.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:755: including conf/documentation.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:756: including conf/licenses.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:757: including conf/sanity.conf
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/patch.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:4)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/terminal.bbclass (from /workspace/dailili/yocto/poky/meta/classes/patch.bbclass:11)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/staging.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:5)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/mirrors.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:7)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/utils.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:8)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/utility-tasks.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:9)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/metadata_scm.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:10)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/logging.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:11)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta-poky/classes/poky-sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/uninative.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/buildhistory.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/package_rpm.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/package.bbclass (from /workspace/dailili/yocto/poky/meta/classes/package_rpm.bbclass:1)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/packagedata.bbclass (from /workspace/dailili/yocto/poky/meta/classes/package.bbclass:41)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/chrpath.bbclass (from /workspace/dailili/yocto/poky/meta/classes/package.bbclass:42)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/insane.bbclass (from /workspace/dailili/yocto/poky/meta/classes/package.bbclass:45)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/buildstats.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/image-mklibs.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/linuxloader.bbclass (from /workspace/dailili/yocto/poky/meta/classes/image-mklibs.bbclass:5)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/image-prelink.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/debian.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/devshell.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/sstate.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/license.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/remove-libtool.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/blacklist.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/workspace/dailili/yocto/build_jack/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/workspace/dailili/yocto/build_jack/cache/bb_codeparser.dat'
+DEBUG: Enabling uninative
+DEBUG: BBCooker parsed base configuration 1619088049.977725
+DEBUG: BBCooker startup complete 1619088049.9780374
+Entering server connection loop
+Accepting [<socket.socket fd=7, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>] ([])
+Processing Client
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'server_timeout': None, 'force': False, 'invalidate_stamp': None, 'dump_signatures': [], 'debug_domains': [], 'dry_run': False, 'extra_assume_provided': [], 'abort': True, 'profile': False, 'postfile': [], 'prefile': [], 'verbose': False, 'debug': 0}, {'BYOBU_DATE': '%Y-%m-%d ', 'LC_ALL': 'en_US.UTF-8', 'BYOBU_WINDOW_NAME': '-', 'BYOBU_ACCENT': '#75507B', 'LC_PAPER': 'en_US.UTF-8', 'LC_MEASUREMENT': 'en_US.UTF-8', 'YOCTO_MACHINE': 'x9m_ref_serdes', 'BUILDDIR': '/workspace/dailili/yocto/build_jack', 'PARALLEL_MAKE': '-j 24', '_byobu_sourced': '1', 'BB_ENV_EXTRAWHITE': 'ALL_PROXY BBPATH_EXTRA BB_NO_NETWORK BB_NUMBER_THREADS BB_SETSCENE_ENFORCE BB_SRCREV_POLICY DISTRO FTPS_PROXY FTP_PROXY GIT_PROXY_COMMAND HTTPS_PROXY HTTP_PROXY MACHINE NO_PROXY PARALLEL_MAKE SCREENDIR SDKMACHINE SOCKS5_PASSWD SOCKS5_USER SSH_AGENT_PID SSH_AUTH_SOCK STAMPS_DIR TCLIBC TCMODE all_proxy ftp_proxy ftps_proxy http_proxy https_proxy no_proxy ', 'SSH_CLIENT': '192.168.0.28 54453 22', 'LOGNAME': 'dailili', 'OLDPWD': '/workspace/dailili/yocto/prebuilt/gpu/powervr_mesa/gm9446', 'BYOBU_TTY': '/dev/pts/13', 'BYOBU_CHARMAP': 'UTF-8', 'XDG_RUNTIME_DIR': '/run/user/569', 'TMUX_PANE': '%53', 'LANGUAGE': 'en_US:en', 'BYOBU_RUN_DIR': '/dev/shm/byobu-dailili-Y3LQjg4m', 'BYOBU_SED': 'sed', 'BYOBU_READLINK': 'readlink', 'BYOBU_PYTHON': 'python3', 'PWD': '/workspace/dailili/yocto/prebuilt/gpu/powervr_mesa/gm9446/firmware', 'BBPATH': '/workspace/dailili/yocto/build_jack', 'QT_QPA_PLATFORMTHEME': 'appmenu-qt5', 'LC_TIME': 'en_US.UTF-8', 'BYOBU_CONFIG_DIR': '/home/dailili/.byobu', 'BYOBU_DARK': '#333333', 'SHELL': '/bin/bash', 'BYOBU_DISTRO': 'Ubuntu', 'LANG': 'en_US.UTF-8', 'PATH': '/workspace/dailili/yocto/poky/scripts:/workspace/dailili/yocto/poky/bitbake/bin:/home/dailili/.local/bin:/tool/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin:/tool/gcc_linaro/gcc-linaro-7.3.1-2018.05-x86_64_aarch64-elf/bin:/tool/check_tools:/opt/share/qemu-sd/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/tool/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin:/tool/gcc_linaro/gcc-linaro-7.3.1-2018.05-x86_64_aarch64-elf/bin:/tool/check_tools', 'XDG_SESSION_ID': '117', 'SSH_CONNECTION': '192.168.0.77 64603 192.168.1.14 22', 'LC_MONETARY': 'en_US.UTF-8', 'YOCTO_DISTRO': 'jack', 'HOME': '/home/dailili', 'LC_NUMERIC': 'en_US.UTF-8', '_': '/workspace/dailili/yocto/poky/bitbake/bin/bitbake', 'MAIL': '/var/mail/dailili', 'TERM': 'screen', 'BYOBU_TIME': '%H:%M:%S', 'BYOBU_PREFIX': '/usr', 'BYOBU_BACKEND': 'tmux', 'TMUX': '/tmp/tmux-569/default,114167,1', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'BYOBU_PAGER': 'sensible-pager', 'BYOBU_LIGHT': '#EEEEEE', 'HISTTIMEFORMAT': '%F %T ', 'USER': 'dailili', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'LC_NAME': 'en_US.UTF-8', 'BYOBU_ULIMIT': 'ulimit', 'BYOBU_HIGHLIGHT': '#DD4814', 'SHLVL': '3', 'LC_ADDRESS': 'en_US.UTF-8', 'SSH_TTY': '/dev/pts/13', 'LC_TELEPHONE': 'en_US.UTF-8'}, ['/workspace/dailili/yocto/poky/bitbake/bin/bitbake', 'pvr-lib-mesa', '-c', 'cleanall']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 20, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['setConfig', 'cmd', 'cleanall']
+Running command ['buildTargets', ['pvr-lib-mesa'], 'cleanall']
+Processing Client
+Disconnecting Client
+No timeout, exiting.
+Exiting
+--- Starting bitbake server pid 25016 at 2021-04-22 18:42:07.588827 ---
+Started bitbake server pid 25016
+DEBUG: BBCooker starting 1619088127.5911045
+DEBUG: BBCooker pyinotify1 1619088127.5996237
+DEBUG: BBCooker pyinotify2 1619088127.599954
+DEBUG: BBCooker pyinotify3 1619088127.6078134
+DEBUG: BBCooker pyinotify complete 1619088127.608171
+DEBUG: Found bblayers.conf (/workspace/dailili/yocto/build_jack/conf/bblayers.conf)
+DEBUG: Adding layer /workspace/dailili/yocto/poky/meta
+DEBUG: Adding layer /workspace/dailili/yocto/poky/meta-poky
+DEBUG: Adding layer /workspace/dailili/yocto/meta-openembedded/meta-oe
+DEBUG: Adding layer /workspace/dailili/yocto/meta-openembedded/meta-multimedia
+DEBUG: Adding layer /workspace/dailili/yocto/meta-semidrive
+DEBUG: Adding layer /workspace/dailili/yocto/meta-openembedded/meta-networking
+DEBUG: Adding layer /workspace/dailili/yocto/meta-openembedded/meta-python
+DEBUG: Adding layer /workspace/dailili/yocto/meta-openembedded/meta-filesystems
+DEBUG: Adding layer /workspace/dailili/yocto/meta-qt5
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:746: including conf/abi_version.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:747: including conf/site.conf
+DEBUG: CONF file 'conf/site.conf' not found
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:748: including conf/auto.conf
+DEBUG: CONF file 'conf/auto.conf' not found
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:749: including conf/local.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:750: including conf/multiconfig/default.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:751: including conf/machine/x9m_ref_serdes.conf
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/machine/x9m_ref_serdes.conf:12: including conf/machine/include/tune-cortexa57-cortexa53.inc
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/machine/include/tune-cortexa57-cortexa53.inc:2: including conf/machine/include/arm/arch-armv8.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv8.inc:1: including conf/machine/include/arm/arch-arm64.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-arm64.inc:3: including conf/machine/include/arm/arch-armv7ve.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv7ve.inc:8: including conf/machine/include/arm/arch-armv7a.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv7a.inc:8: including conf/machine/include/arm/arch-armv6.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv6.inc:8: including conf/machine/include/arm/arch-armv5-dsp.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv5-dsp.inc:4: including conf/machine/include/arm/arch-armv5.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv5.inc:8: including conf/machine/include/arm/arch-armv4.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv4.inc:15: including conf/machine/include/arm/arch-arm.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv4.inc:16: including conf/machine/include/arm/feature-arm-thumb.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv5.inc:9: including conf/machine/include/arm/feature-arm-vfp.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/machine/include/arm/arch-armv7a.inc:9: including conf/machine/include/arm/feature-arm-neon.inc
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/machine/x9m_ref_serdes.conf:13: including conf/machine/include/x9high.inc
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/machine/include/x9high.inc:2: including conf/machine/include/soc-family.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:752: including conf/machine-sdk/x86_64.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:753: including conf/distro/jack.conf
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/distro/jack.conf:3: including conf/distro/include/sdrv-base.inc
+DEBUG: CONF /workspace/dailili/yocto/meta-semidrive/conf/distro/include/sdrv-base.inc:1: including conf/distro/poky.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta-poky/conf/distro/poky.conf:96: including conf/distro/include/poky-world-exclude.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta-poky/conf/distro/poky.conf:97: including conf/distro/include/no-static-libs.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta-poky/conf/distro/poky.conf:98: including conf/distro/include/yocto-uninative.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:754: including conf/distro/defaultsetup.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:1: including conf/distro/include/default-providers.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:2: including conf/distro/include/default-versions.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:3: including conf/distro/include/default-distrovars.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:4: including conf/distro/include/world-broken.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:7: including conf/distro/include/tcmode-default.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/include/tcmode-default.inc:73: including conf/distro/include/as-needed.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:10: including conf/distro/include/tclibc-glibc.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/distro/defaultsetup.conf:12: including conf/distro/include/uninative-flags.inc
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:755: including conf/documentation.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:756: including conf/licenses.conf
+DEBUG: CONF /workspace/dailili/yocto/poky/meta/conf/bitbake.conf:757: including conf/sanity.conf
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/patch.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:4)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/terminal.bbclass (from /workspace/dailili/yocto/poky/meta/classes/patch.bbclass:11)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/staging.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:5)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/mirrors.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:7)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/utils.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:8)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/utility-tasks.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:9)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/metadata_scm.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:10)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/logging.bbclass (from /workspace/dailili/yocto/poky/meta/classes/base.bbclass:11)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta-poky/classes/poky-sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/uninative.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/buildhistory.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/package_rpm.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/package.bbclass (from /workspace/dailili/yocto/poky/meta/classes/package_rpm.bbclass:1)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/packagedata.bbclass (from /workspace/dailili/yocto/poky/meta/classes/package.bbclass:41)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/chrpath.bbclass (from /workspace/dailili/yocto/poky/meta/classes/package.bbclass:42)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/insane.bbclass (from /workspace/dailili/yocto/poky/meta/classes/package.bbclass:45)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/buildstats.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/image-mklibs.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/linuxloader.bbclass (from /workspace/dailili/yocto/poky/meta/classes/image-mklibs.bbclass:5)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/image-prelink.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/debian.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/devshell.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/sstate.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/license.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/remove-libtool.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/blacklist.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/dailili/yocto/poky/meta/classes/sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/workspace/dailili/yocto/build_jack/cache/local_file_checksum_cache.dat'
+Entering server connection loop
+DEBUG: Using cache in '/workspace/dailili/yocto/build_jack/cache/bb_codeparser.dat'
+DEBUG: Enabling uninative
+DEBUG: BBCooker parsed base configuration 1619088127.8638785
+DEBUG: BBCooker startup complete 1619088127.864165
+Accepting [<socket.socket fd=7, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>] ([])
+Processing Client
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'prefile': [], 'abort': True, 'verbose': False, 'debug_domains': [], 'invalidate_stamp': None, 'dry_run': False, 'postfile': [], 'dump_signatures': [], 'force': False, 'debug': 0, 'extra_assume_provided': [], 'server_timeout': None, 'profile': False}, {'LC_TELEPHONE': 'en_US.UTF-8', 'YOCTO_MACHINE': 'x9m_ref_serdes', 'BYOBU_ULIMIT': 'ulimit', 'SSH_CLIENT': '192.168.0.28 54453 22', 'HISTTIMEFORMAT': '%F %T ', 'BYOBU_DATE': '%Y-%m-%d ', 'BYOBU_WINDOW_NAME': '-', 'BYOBU_SED': 'sed', 'XDG_SESSION_ID': '117', 'LC_NUMERIC': 'en_US.UTF-8', '_byobu_sourced': '1', 'BUILDDIR': '/workspace/dailili/yocto/build_jack', 'USER': 'dailili', 'LOGNAME': 'dailili', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'SSH_TTY': '/dev/pts/13', 'YOCTO_DISTRO': 'jack', 'LC_ADDRESS': 'en_US.UTF-8', 'PATH': '/workspace/dailili/yocto/poky/scripts:/workspace/dailili/yocto/poky/bitbake/bin:/home/dailili/.local/bin:/tool/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin:/tool/gcc_linaro/gcc-linaro-7.3.1-2018.05-x86_64_aarch64-elf/bin:/tool/check_tools:/opt/share/qemu-sd/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/tool/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin:/tool/gcc_linaro/gcc-linaro-7.3.1-2018.05-x86_64_aarch64-elf/bin:/tool/check_tools', 'SHLVL': '3', '_': '/workspace/dailili/yocto/poky/bitbake/bin/bitbake', 'LC_TIME': 'en_US.UTF-8', 'QT_QPA_PLATFORMTHEME': 'appmenu-qt5', 'BYOBU_CHARMAP': 'UTF-8', 'PARALLEL_MAKE': '-j 24', 'HOME': '/home/dailili', 'LC_NAME': 'en_US.UTF-8', 'BYOBU_TIME': '%H:%M:%S', 'BYOBU_PYTHON': 'python3', 'PWD': '/workspace/dailili/yocto/prebuilt/gpu/powervr_mesa/gm9446/firmware', 'TMUX_PANE': '%53', 'LC_PAPER': 'en_US.UTF-8', 'LC_MEASUREMENT': 'en_US.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/569', 'SHELL': '/bin/bash', 'BYOBU_CONFIG_DIR': '/home/dailili/.byobu', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'BYOBU_RUN_DIR': '/dev/shm/byobu-dailili-Y3LQjg4m', 'BYOBU_DARK': '#333333', 'BYOBU_HIGHLIGHT': '#DD4814', 'LANG': 'en_US.UTF-8', 'BYOBU_ACCENT': '#75507B', 'LANGUAGE': 'en_US:en', 'BBPATH': '/workspace/dailili/yocto/build_jack', 'BYOBU_PAGER': 'sensible-pager', 'MAIL': '/var/mail/dailili', 'BYOBU_READLINK': 'readlink', 'BB_ENV_EXTRAWHITE': 'ALL_PROXY BBPATH_EXTRA BB_NO_NETWORK BB_NUMBER_THREADS BB_SETSCENE_ENFORCE BB_SRCREV_POLICY DISTRO FTPS_PROXY FTP_PROXY GIT_PROXY_COMMAND HTTPS_PROXY HTTP_PROXY MACHINE NO_PROXY PARALLEL_MAKE SCREENDIR SDKMACHINE SOCKS5_PASSWD SOCKS5_USER SSH_AGENT_PID SSH_AUTH_SOCK STAMPS_DIR TCLIBC TCMODE all_proxy ftp_proxy ftps_proxy http_proxy https_proxy no_proxy ', 'LC_ALL': 'en_US.UTF-8', 'BYOBU_LIGHT': '#EEEEEE', 'BYOBU_TTY': '/dev/pts/13', 'TERM': 'screen', 'TMUX': '/tmp/tmux-569/default,114167,1', 'OLDPWD': '/workspace/dailili/yocto/prebuilt/gpu/powervr_mesa/gm9446', 'BYOBU_DISTRO': 'Ubuntu', 'LC_MONETARY': 'en_US.UTF-8', 'SSH_CONNECTION': '192.168.0.77 64603 192.168.1.14 22', 'BYOBU_PREFIX': '/usr', 'BYOBU_BACKEND': 'tmux'}, ['/workspace/dailili/yocto/poky/bitbake/bin/bitbake', 'pvr-lib-mesa']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 20, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['buildTargets', ['pvr-lib-mesa'], 'build']
+Processing Client
+Disconnecting Client
+No timeout, exiting.
+Exiting

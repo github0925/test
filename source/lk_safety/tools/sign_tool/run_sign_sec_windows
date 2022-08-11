@@ -1,0 +1,14 @@
+#!/bin/bash
+if [ -L $0 ]
+then
+    BASE_DIR=`dirname $(readlink $0)`
+else
+    BASE_DIR=`dirname $0`
+fi #
+
+# $1
+#./atb_signer sign --sec_ver 1234 --pkg_ver 1 --rcp key=test/keys/TestRSA512_ossl.pem rot=1 --iib img=$1 to=0x140000 entry=0x140000 ctl=12345678900d900d uuid=12345678ab --dgst sha256 aes_key_id=1 --of $1.signed
+atb_signer sign --sec_ver 1234 --pkg_ver 1 --rcp key=$BASE_DIR/test/keys/TestRSA1024_ossl.pem rot=1 --iib img=$1 to=0x140000 entry=0x140000 ctl=12345678900d900d uuid=12345678ab --dgst sha256 aes_key_id=1 --of $1.signed.rsa1024
+#./atb_signer sign --sec_ver 1234 --pkg_ver 1 --rcp key=test/keys/TestRSA2048_ossl.pem rot=1 --iib img=$1 to=0x140000 entry=0x140000 ctl=12345678900d900d uuid=12345678ab --dgst sha256 aes_key_id=1 --of $1.signed.rsa2048
+#./atb_signer sign --sec_ver 1234 --pkg_ver 1 --rcp key=test/keys/TestRSA3072_ossl.pem rot=1 --iib img=$1 to=0x140000 entry=0x140000 ctl=12345678900d900d uuid=12345678ab --dgst sha256 aes_key_id=1 --of $1.signed.rsa3072
+#./atb_signer sign --sec_ver 1234 --pkg_ver 1 --rcp key=test/keys/TestRSA4096_ossl.pem rot=1 --iib img=$1 to=0x140000 entry=0x140000 ctl=12345678900d900d uuid=12345678ab --dgst sha256 aes_key_id=1 --of $1.signed.rsa4096

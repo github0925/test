@@ -1,0 +1,5 @@
+option('with_omx_header_path', type : 'string', value : '', description : 'An extra include directory to find the OpenMax headers')
+option('with_omx_target', type : 'combo', choices : ['none', 'generic', 'rpi', 'bellagio', 'tizonia', 'zynqultrascaleplus'], value : 'none', description : 'The OMX platform to target')
+option('with_omx_struct_packing', type : 'combo', choices : ['0', '1', '2', '4', '8'], value : '0', description : 'Force OpenMAX struct packing')
+# semidrive vendor option
+option('sdrv', type : 'feature', value : 'auto', description : 'Enable sdrv omx feature')

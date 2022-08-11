@@ -1,0 +1,31 @@
+diff --git a/libweston/libinput-seat.c b/libweston/libinput-seat.c
+index 953f620..17f252f 100644
+--- a/libweston/libinput-seat.c
++++ b/libweston/libinput-seat.c
+@@ -69,6 +69,9 @@ device_added(struct udev_input *input, struct libinput_device *libinput_device)
+ 	struct udev_seat *udev_seat;
+ 	struct weston_pointer *pointer;
+ 
++	static int touch_count = 0;
++	char output_for_touch[10] = { 0 };
++
+ 	c = input->compositor;
+ 
+ 	udev_seat = get_udev_seat(input, libinput_device);
+@@ -93,6 +96,16 @@ device_added(struct udev_input *input, struct libinput_device *libinput_device)
+ 				     &pointer->y);
+ 
+ 	output_name = libinput_device_get_output_name(libinput_device);
++	/* Semidrive modified */
++	/* Add by Besto, assign different touchscreen to different output */
++	if (libinput_device_has_capability(libinput_device, LIBINPUT_DEVICE_CAP_TOUCH))
++	{
++		touch_count++;
++		sprintf(output_for_touch, "UNNAMED-%d", touch_count);
++		output_name = output_for_touch;
++		weston_log("touch screen for %s\n", output_name);
++	}
++	/* Semidrive modified end */
+ 	if (output_name) {
+ 		device->output_name = strdup(output_name);
+ 		wl_list_for_each(output, &c->output_list, link)

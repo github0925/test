@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1174145381.1723404663/PATH/delimiter=;
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1174145381.1723404663/PATH/operation=replace
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1174145381.1723404663/PATH/value=${ARM_GCC_HOME};${MSYS_HOME}
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1174145381.1723404663/append=true
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1174145381.1723404663/appendContributed=true
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1174145381/PATH/delimiter=;
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1174145381/PATH/operation=replace
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1174145381/PATH/value=${ARM_GCC_HOME};${MSYS_HOME}
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1174145381/append=true
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.1174145381/appendContributed=true

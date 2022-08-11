@@ -1,0 +1,29 @@
+/*
+ * sdpe_ctrl.erpc
+ *
+ * Copyright (c) 2019 Semidrive Semiconductor.
+ * All rights reserved.
+ *
+ * Description:
+ *
+ * Revision History:
+ * -----------------
+ */
+
+program sdpe
+
+@group("ctrl")
+@id(4)
+interface sdpe_ctrl
+{
+    sdpe_start_routing(in uint32 route_table) -> void
+    sdpe_stop_routing() -> void
+    sdpe_monitor_event(uint32 event_id, uint8 enable, uint32 arg_len, list <uint8> arg @length(arg_len)) -> void
+}
+
+@group("cb")
+@id(5)
+interface sdpe_cb
+{
+    oneway sdpe_event_cb(uint32 event_id, in uint32 arg)
+}

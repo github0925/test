@@ -1,0 +1,13 @@
+#ifndef __build_ospi_handover_d9_ref_arch_arm_module_config_h_H
+#define __build_ospi_handover_d9_ref_arch_arm_module_config_h_H
+#define MODULE_COMPILEFLAGS ""
+#define MODULE_CFLAGS ""
+#define MODULE_CPPFLAGS ""
+#define MODULE_ASMFLAGS ""
+#define MODULE_LDFLAGS ""
+#define MODULE_OPTFLAGS ""
+#define MODULE_INCLUDES ""
+#define MODULE_SRCDEPS ""
+#define MODULE_DEPS ""
+#define MODULE_SRCS "_ARCH_ARM_ARM_START_S_ARCH_ARM_ARM_ASM_S_ARCH_ARM_ARM_CACHE_OPS_S_ARCH_ARM_ARM_CACHE_C_ARCH_ARM_ARM_ARM_DEBUG_C_ARCH_ARM_ARM_OPS_S_ARCH_ARM_ARM_EXCEPTIONS_S_ARCH_ARM_ARM_USERCOPY_S_ARCH_ARM_ARM_FAULTS_C_ARCH_ARM_ARM_FPU_C_ARCH_ARM_ARM_MPU_C"
+#endif

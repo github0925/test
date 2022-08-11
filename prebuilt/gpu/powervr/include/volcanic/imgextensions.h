@@ -1,0 +1,175 @@
+/*************************************************************************/ /*!
+@File
+@Title          IMG GLES and EGL extensions
+@Copyright      Copyright (c) Imagination Technologies Ltd. All Rights Reserved
+@Description
+@License        Strictly Confidential.
+*/ /**************************************************************************/
+
+#ifndef _IMGEXTENSIONS_H_
+#define _IMGEXTENSIONS_H_
+
+/* Needed for FIX_HW_BRN #defines */
+#include <rgxdefs.h>
+
+#if defined(RGX_FEATURE_ALBIORIX_TOP_INFRASTRUCTURE)
+	#define GLES_HW_SERIES_NAME	"A-Series"
+#else
+	#define GLES_HW_SERIES_NAME	"Furian"
+#endif
+
+/* Example: "PowerVR A-Series AXM-8-256" */
+#define GLES_HW_RENDERER_NAME	"PowerVR " GLES_HW_SERIES_NAME " " RGX_FEATURE_PUBLIC_VARIANT_NAME
+
+/* Extensions supported in the ES1 driver */
+#define GLES1_EXTENSION_MULTI_DRAW_ARRAYS
+#define GLES1_EXTENSION_REQUIRED_INTERNAL_FORMAT
+#define GLES1_EXTENSION_VERTEX_ARRAY_OBJECT
+#define GLES1_EXTENSION_EGL_IMAGE_EXTERNAL
+#define GLES1_EXTENSION_TEXTURE_FILTER_ANISOTROPIC
+#define GLES1_EXTENSION_TEXTURE_2D_LIMITED_NPOT
+#define GLES1_EXTENSION_TEXTURE_NPOT
+
+/* Extensions supported in the ES3 driver */
+#define GLES3_EXTENSION_MULTI_DRAW_ARRAYS
+#define GLES3_EXTENSION_EGL_IMAGE_EXTERNAL
+#define GLES3_EXTENSION_MULTISAMPLED_RENDER_TO_TEXTURE
+#define GLES3_EXTENSION_MULTISAMPLED_RENDER_TO_TEXTURE2
+#define GLES3_EXTENSION_TEXTURE_FILTER_ANISOTROPIC
+#define GLES3_EXTENSION_TEXTURE_PVRTC_SRGB
+#define GLES3_EXTENSION_POLYGON_OFFSET_CLAMP
+#define GLES3_EXTENSION_EGL_IMAGE_ARRAY
+#define GLES3_EXTENSION_SHADER_FRAMEBUFFER_FETCH
+#define GLES3_EXTENSION_TEXTURE_SRGB_DECODE_AND_OVERRIDE
+#define GLES3_EXTENSION_SHADER_PIXEL_LOCAL_STORAGE
+#define GLES3_EXTENSION_SHADER_PIXEL_LOCAL_STORAGE2
+#define GLES3_EXTENSION_FRAMEBUFFER_DOWNSAMPLE
+#define GLES3_EXTENSION_SHADER_GROUP_VOTE
+#define GLES3_EXTENSION_EGL_IMAGE_EXTERNAL_ESSL3
+#if defined(RGX_FEATURE_TF_BICUBIC_FILTER)
+	#define GLES3_EXTENSION_TEXTURE_FILTER_CUBIC
+#endif
+#define GLES3_EXTENSION_FLOAT_BLEND
+#define GLES3_EXTENSION_YUV_TARGET
+#define GLES3_EXTENSION_CONSERVATIVE_DEPTH
+#define GLES3_EXTENSION_SHADER_NON_CONSTANT_GLOBAL_INITIALIZERS
+#if defined(EGL_EXTENSION_CONTENT_PROTECTED)
+	#define GLES3_EXTENSION_PROTECTED_TEXTURES
+#endif
+#define GLES3_EXTENSION_SRGB_WRITE_CONTROL
+#define GLES3_EXTENSION_CLIP_CONTROL
+#define GLES3_EXTENSION_TEXTURE_SHADOW_LOD
+#define GLES3_EXTENSION_COLOR_BUFFER_HALF_FLOAT
+#if defined(RGX_FEATURE_USC_READ_DEPTH_STENCIL)
+	#define GLES3_EXTENSION_FETCH_DEPTH_STENCIL
+#endif
+#define GLES3_EXTENSION_APPLE_TEXTURE_FORMAT_BGRA8888
+
+/* Custom extensions */
+
+/* GLES31 extensions */
+#define GLES3_EXTENSION_TEXTURE_SRGB_R8
+#define GLES3_EXTENSION_TEXTURE_SRGB_RG8
+#define GLES3_EXTENSION_SPARSE_TEXTURE
+#define GLES3_EXTENSION_BUFFER_STORAGE
+#if !defined(IMG_PUBLIC_EXTENSIONS_ONLY)
+	#define GLES31_EXTENSION_CLEAR_TEXTURE
+#endif
+
+#if defined(ANDROID)
+#if defined(GLES3_EXTENSION_BUFFER_STORAGE)
+	#define GLES31_EXTENSION_BUFFER_EXTERNAL
+#endif
+#endif
+
+/*
+ * Currently disabled due to geometry shader and gl_ViewportIndex built-in variable overhead.
+ */
+#define GLES31_EXTENSION_VIEWPORT_ARRAY
+#define GLES31_EXTENSION_SHADER_IMPLICIT_CONVERSIONS
+/* These extensions are included in core ES 3.2. They should always be defined. */
+#define GLES3_EXTENSION_BLEND_EQUATION_ADVANCED
+
+#if !defined(SUPPORT_NEUTRINO_PLATFORM) && !defined(INTEGRITY_OS)
+#define GLES31_EXTENSION_MEMORY_OBJECT
+#endif
+
+#define GLES3_EXTENSION_ASTC_LDR							/* Required for ES 3.2 */
+
+#define GLES3_EXTENSION_GEOMETRY_SHADER						/* Required for ES 3.2 */
+#define GLES3_EXTENSION_TESSELLATION_SHADER					/* Required for ES 3.2 */
+#define GLES3_EXTENSION_MULTIVIEW
+#define GLES3_EXTENSION_MULTIVIEW_MULTISAMPLED_RENDER_TO_TEXTURE
+#define GLES3_EXTENSION_MULTI_DRAW_INDIRECT
+
+/* GL_OES_EGL_image_external_essl3 requires OES_EGL_image_external */
+#if defined(GLES3_EXTENSION_EGL_IMAGE_EXTERNAL_ESSL3) && !defined(GLES3_EXTENSION_EGL_IMAGE_EXTERNAL)
+#	error Extension GLES3_EXTENSION_EGL_IMAGE_EXTERNAL_ESSL3 enabled without GLES3_EXTENSION_EGL_IMAGE_EXTERNAL
+#endif
+
+/* Most of the Android Extension Pack (AEP) is core driver functionality. When
+   the extensions below are enabled we can advertise full support. */
+#if defined(GLES3_EXTENSION_ASTC_LDR) && \
+    defined(GLES3_EXTENSION_GEOMETRY_SHADER) && \
+    defined(GLES3_EXTENSION_TESSELLATION_SHADER) && \
+    defined(GLES3_EXTENSION_TEXTURE_SRGB_DECODE_AND_OVERRIDE)
+#define GLES3_EXTENSION_ANDROID_EXTENSION_PACK_ES31A
+#endif
+
+/* EGL extensions */
+#define EGL_EXTENSION_RENDER_TO_TEXTURE
+#define EGL_EXTENSION_KHR_GL_TEXTURE_2D_IMAGE
+#define EGL_EXTENSION_KHR_GL_TEXTURE_3D_IMAGE
+#define EGL_EXTENSION_KHR_GL_TEXTURE_CUBEMAP_IMAGE
+#define EGL_EXTENSION_KHR_GL_RENDERBUFFER_IMAGE
+#define EGL_EXTENSION_IMG_EGL_IMAGE_PLANE_ATTRIBS
+#if defined(LINUX)
+#define EGL_EXTENSION_IMAGE_DMA_BUF_IMPORT
+
+#if defined(EGL_EXTENSION_IMAGE_DMA_BUF_IMPORT)
+#define EGL_EXTENSION_IMAGE_DMA_BUF_IMPORT_MODIFIERS
+#endif
+
+#endif
+
+#if defined(ANDROID)
+#define EGL_EXTENSION_IMG_IMAGE_DEBUG_DUMP
+#endif
+
+#if defined(RGX_FEATURE_PIXEL_COVERAGE_ANTIALIASING)
+#define GLES3_EXTENSION_OGL_FEATURES
+#endif
+
+/* Used to decorate entrypoints that should only be exported for ES 3.2 */
+#if defined(SUPPORT_ES32)
+#	define ES32_EXPORT GL_APICALL
+#else
+#	define ES32_EXPORT GL_API_EXT
+#endif
+
+#if defined(EGL_EXTENSION_KHR_GL_COLORSPACE)
+#	define EGL_EXTENSION_KHR_GL_COLORSPACE_SCRGB
+
+#	if defined(EGL_EXTENSION_PIXEL_FORMAT_FLOAT)
+#		define EGL_EXTENSION_KHR_GL_COLORSPACE_DISPLAY_P3
+#	endif
+
+#	define EGL_EXTENSION_KHR_GL_COLORSPACE_BT2020
+
+#endif /* defined(EGL_EXTENSION_KHR_GL_COLORSPACE) */
+
+#if defined(GLES3_EXTENSION_OGL_FEATURES)
+/* Missing enums form gle2ext.h */
+#define GL_CLAMP						0x2900
+#define GL_EDGE_FLAG					0x0B43 	/* Usage: glEnable/glDisable(GL_EDGE_FLAG) */
+#define GL_POLYGON_SMOOTH				0x0B41
+#define GL_LINE_SMOOTH					0x0B20
+#define GL_POINT_SMOOTH					0x0B10
+#define GL_TEXTURE_CUBE_MAP_SEAMLESS    0x884F
+#endif
+
+#endif /* _IMGEXTENSIONS_H_ */
+
+/******************************************************************************
+ End of file (imgextensions.h)
+******************************************************************************/

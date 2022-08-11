@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<exampleInfo>
+    <copyDir>application</copyDir>
+    <copyDir>arch</copyDir>
+    <copyDir>chipcfg</copyDir>
+    <copyDir>chipdev</copyDir>
+    <copyDir>hal</copyDir>
+    <copyDir>framework</copyDir>
+    <copyDir>freertos</copyDir>
+    <copyDir>exdev</copyDir>
+    <copyDir>kernel</copyDir>
+    <copyDir>lib</copyDir>
+    <copyDir>platform</copyDir>
+    <copyDir>target</copyDir>
+    <copyDir>top</copyDir>
+</exampleInfo>

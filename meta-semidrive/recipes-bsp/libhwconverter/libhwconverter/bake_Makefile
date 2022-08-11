@@ -1,0 +1,48 @@
+CFLAGS=-g -O0 -Wall
+CPPFLAGS = -g -O0 -Wall -Wno-reorder  -std=c++11 -fpermissive -fPIC
+LDFLAGS= -lstdc++ -lpthread -fPIC \
+		 -L . \
+		 -L libs/yocto/gbm \
+		 -L $(SDKTARGETSYSROOT)/usr/lib
+INCLUDE := \
+	-I . \
+	-I ./include \
+	-I display \
+    -I libs/yocto/gbm \
+	-I $(SDKTARGETSYSROOT)/usr/include \
+	-I $(SDKTARGETSYSROOT)/usr/include/drm \
+	-I /workspace3/chenfeng/work/projects/11_buildsystem/yocto/source/linux/include/uapi/drm
+TARGETS := libdrmdisplay.so libhwconverter.so test_hwconverter
+
+all:clean $(TARGETS)
+	$(info build all)
+
+version:
+	date > version.h
+
+libdrmdisplay.so: DrmDisplay.o
+	$(CXX) -shared -ldrm $(LDFLAGS) -o $@ $^
+
+libhwconverter.so: HwConverter.o G2dConverter.o GbmAllocator.o buildConverter.o
+	$(CXX) -shared -ldrm -lminigbm -ldrmdisplay $(LDFLAGS) -o $@ $^
+
+test_hwconverter:  test_hwconvert.o
+	$(CXX) $(LDFLAGS) -ldrmdisplay -lhwconverter -ldrm -lminigbm -o $@ $^
+
+%.o:%.c
+	$(CXX) $(CFLAGS) $(INCLUDE) -c $^
+%.o:%.cpp
+	$(CXX) $(CPPFLAGS) $(INCLUDE) -c $^
+
+%.o:display/%.cpp
+	$(CXX) $(CPPFLAGS) $(INCLUDE) -c $^
+
+%.o:allocator/%.cpp
+	$(CXX) $(CPPFLAGS) $(INCLUDE) -c $^
+
+%.o:tests/%.cpp
+	$(CXX) $(CPPFLAGS) $(INCLUDE) -c $^
+
+.PHONY: clean
+clean:
+	-rm -f *.o $(TARGETS)

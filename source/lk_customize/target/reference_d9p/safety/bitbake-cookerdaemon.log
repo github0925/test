@@ -1,0 +1,112 @@
+--- Starting bitbake server pid 46780 at 2021-08-13 17:34:24.249126 ---
+Started bitbake server pid 46780
+DEBUG: BBCooker starting 1628847264.251414
+DEBUG: BBCooker pyinotify1 1628847264.2626262
+DEBUG: BBCooker pyinotify2 1628847264.2627451
+DEBUG: BBCooker pyinotify3 1628847264.2688887
+DEBUG: BBCooker pyinotify complete 1628847264.269091
+DEBUG: Found bblayers.conf (/workspace/kun.feng/d9_sdk_in_unifiedboot/build-d9plus_ap1/conf/bblayers.conf)
+DEBUG: Adding layer /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta
+DEBUG: Adding layer /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta-poky
+DEBUG: Adding layer /workspace/kun.feng/d9_sdk_in_unifiedboot/meta-openembedded/meta-oe
+DEBUG: Adding layer /workspace/kun.feng/d9_sdk_in_unifiedboot/meta-openembedded/meta-multimedia
+DEBUG: Adding layer /workspace/kun.feng/d9_sdk_in_unifiedboot/meta-semidrive
+DEBUG: Adding layer /workspace/kun.feng/d9_sdk_in_unifiedboot/meta-openembedded/meta-networking
+DEBUG: Adding layer /workspace/kun.feng/d9_sdk_in_unifiedboot/meta-openembedded/meta-python
+DEBUG: Adding layer /workspace/kun.feng/d9_sdk_in_unifiedboot/meta-openembedded/meta-filesystems
+DEBUG: Adding layer /workspace/kun.feng/d9_sdk_in_unifiedboot/meta-qt5
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/bitbake.conf:746: including conf/abi_version.conf
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/bitbake.conf:747: including conf/site.conf
+DEBUG: CONF file 'conf/site.conf' not found
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/bitbake.conf:748: including conf/auto.conf
+DEBUG: CONF file 'conf/auto.conf' not found
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/bitbake.conf:749: including conf/local.conf
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/bitbake.conf:750: including conf/multiconfig/default.conf
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/bitbake.conf:751: including conf/machine/d9p_ref_ap1.conf
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/meta-semidrive/conf/machine/d9p_ref_ap1.conf:12: including conf/machine/include/tune-cortexa57-cortexa53.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/meta-semidrive/conf/machine/include/tune-cortexa57-cortexa53.inc:2: including conf/machine/include/arm/arch-armv8.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/machine/include/arm/arch-armv8.inc:1: including conf/machine/include/arm/arch-arm64.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/machine/include/arm/arch-arm64.inc:3: including conf/machine/include/arm/arch-armv7ve.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/machine/include/arm/arch-armv7ve.inc:8: including conf/machine/include/arm/arch-armv7a.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/machine/include/arm/arch-armv7a.inc:8: including conf/machine/include/arm/arch-armv6.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/machine/include/arm/arch-armv6.inc:8: including conf/machine/include/arm/arch-armv5-dsp.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/machine/include/arm/arch-armv5-dsp.inc:4: including conf/machine/include/arm/arch-armv5.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/machine/include/arm/arch-armv5.inc:8: including conf/machine/include/arm/arch-armv4.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/machine/include/arm/arch-armv4.inc:15: including conf/machine/include/arm/arch-arm.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/machine/include/arm/arch-armv4.inc:16: including conf/machine/include/arm/feature-arm-thumb.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/machine/include/arm/arch-armv5.inc:9: including conf/machine/include/arm/feature-arm-vfp.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/machine/include/arm/arch-armv7a.inc:9: including conf/machine/include/arm/feature-arm-neon.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/meta-semidrive/conf/machine/d9p_ref_ap1.conf:13: including conf/machine/include/d9.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/meta-semidrive/conf/machine/include/d9.inc:2: including conf/machine/include/soc-family.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/meta-semidrive/conf/machine/d9p_ref_ap1.conf:24: including conf/machine/include/verified-boot.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/bitbake.conf:752: including conf/machine-sdk/x86_64.conf
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/bitbake.conf:753: including conf/distro/minimal-console.conf
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/meta-semidrive/conf/distro/minimal-console.conf:3: including conf/distro/include/sdrv-base.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/meta-semidrive/conf/distro/include/sdrv-base.inc:1: including conf/distro/poky.conf
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta-poky/conf/distro/poky.conf:96: including conf/distro/include/poky-world-exclude.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta-poky/conf/distro/poky.conf:97: including conf/distro/include/no-static-libs.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta-poky/conf/distro/poky.conf:98: including conf/distro/include/yocto-uninative.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/bitbake.conf:754: including conf/distro/defaultsetup.conf
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/distro/defaultsetup.conf:1: including conf/distro/include/default-providers.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/distro/defaultsetup.conf:2: including conf/distro/include/default-versions.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/distro/defaultsetup.conf:3: including conf/distro/include/default-distrovars.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/distro/defaultsetup.conf:4: including conf/distro/include/world-broken.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/distro/defaultsetup.conf:7: including conf/distro/include/tcmode-default.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/distro/include/tcmode-default.inc:73: including conf/distro/include/as-needed.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/distro/defaultsetup.conf:10: including conf/distro/include/tclibc-glibc.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/distro/defaultsetup.conf:12: including conf/distro/include/uninative-flags.inc
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/bitbake.conf:755: including conf/documentation.conf
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/bitbake.conf:756: including conf/licenses.conf
+DEBUG: CONF /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/conf/bitbake.conf:757: including conf/sanity.conf
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/base.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/patch.bbclass (from /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/base.bbclass:4)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/terminal.bbclass (from /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/patch.bbclass:11)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/staging.bbclass (from /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/base.bbclass:5)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/mirrors.bbclass (from /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/base.bbclass:7)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/utils.bbclass (from /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/base.bbclass:8)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/utility-tasks.bbclass (from /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/base.bbclass:9)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/metadata_scm.bbclass (from /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/base.bbclass:10)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/logging.bbclass (from /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/base.bbclass:11)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta-poky/classes/poky-sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/uninative.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/buildhistory.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/package_rpm.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/package.bbclass (from /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/package_rpm.bbclass:1)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/packagedata.bbclass (from /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/package.bbclass:41)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/chrpath.bbclass (from /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/package.bbclass:42)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/insane.bbclass (from /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/package.bbclass:45)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/buildstats.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/image-mklibs.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/linuxloader.bbclass (from /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/image-mklibs.bbclass:5)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/image-prelink.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/debian.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/devshell.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/sstate.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/license.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/remove-libtool.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/blacklist.bbclass (from configuration INHERITs:0)
+DEBUG: Inheriting /workspace/kun.feng/d9_sdk_in_unifiedboot/poky/meta/classes/sanity.bbclass (from configuration INHERITs:0)
+DEBUG: Clearing SRCREV cache due to cache policy of: clear
+DEBUG: Using cache in '/workspace/kun.feng/d9_sdk_in_unifiedboot/build-d9plus_ap1/cache/local_file_checksum_cache.dat'
+DEBUG: Using cache in '/workspace/kun.feng/d9_sdk_in_unifiedboot/build-d9plus_ap1/cache/bb_codeparser.dat'
+DEBUG: Enabling uninative
+DEBUG: BBCooker parsed base configuration 1628847264.4987926
+DEBUG: BBCooker startup complete 1628847264.4989662
+Entering server connection loop
+Accepting [<socket.socket fd=7, family=AddressFamily.AF_UNIX, type=SocketKind.SOCK_STREAM, proto=0, laddr=bitbake.sock>] ([])
+Processing Client
+Connecting Client
+Running command ['setFeatures', [2]]
+Running command ['updateConfig', {'abort': True, 'verbose': False, 'force': False, 'debug_domains': [], 'invalidate_stamp': None, 'dry_run': False, 'profile': False, 'extra_assume_provided': [], 'server_timeout': None, 'postfile': [], 'dump_signatures': [], 'debug': 0, 'prefile': []}, {'LC_TELEPHONE': 'en_US.UTF-8', 'LC_ADDRESS': 'en_US.UTF-8', 'TERM': 'xterm', 'MAIL': '/var/mail/kun.feng', 'PWD': '/workspace/kun.feng/d9_sdk_in_unifiedboot/source/lk_customize/target/reference_d9p/safety', 'SHLVL': '1', 'LC_ALL': 'en_US.UTF-8', 'LC_TIME': 'en_US.UTF-8', 'LC_MONETARY': 'en_US.UTF-8', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'BBPATH': '/workspace/kun.feng/d9_sdk_in_unifiedboot/build-d9plus_ap1', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'HOME': '/home/kun.feng', 'LOGNAME': 'kun.feng', 'LC_IDENTIFICATION': 'en_US.UTF-8', 'USER': 'kun.feng', 'BB_ENV_EXTRAWHITE': 'ALL_PROXY BBPATH_EXTRA BB_NO_NETWORK BB_NUMBER_THREADS BB_SETSCENE_ENFORCE BB_SRCREV_POLICY DISTRO FTPS_PROXY FTP_PROXY GIT_PROXY_COMMAND HTTPS_PROXY HTTP_PROXY MACHINE NO_PROXY PARALLEL_MAKE SCREENDIR SDKMACHINE SOCKS5_PASSWD SOCKS5_USER SSH_AGENT_PID SSH_AUTH_SOCK STAMPS_DIR TCLIBC TCMODE all_proxy ftp_proxy ftps_proxy http_proxy https_proxy no_proxy ', 'SHELL': '/bin/bash', 'SSH_TTY': '/dev/pts/11', 'SSH_CONNECTION': '172.16.0.31 52933 172.16.1.12 22', 'LANGUAGE': 'en_US:en', 'PATH': '/workspace/kun.feng/d9_sdk_in_unifiedboot/poky/scripts:/workspace/kun.feng/d9_sdk_in_unifiedboot/poky/bitbake/bin:/home/kun.feng/bin:/home/kun.feng/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/tool/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin:/tool/gcc_linaro/gcc-linaro-7.3.1-2018.05-x86_64_aarch64-elf/bin:/tool/check_tools', 'QT_QPA_PLATFORMTHEME': 'appmenu-qt5', 'YOCTO_DISTRO': 'minimal-console', 'LANG': 'en_US.UTF-8', '_': '/workspace/kun.feng/d9_sdk_in_unifiedboot/poky/bitbake/bin/bitbake', 'SSH_CLIENT': '172.16.0.31 52933 22', 'XDG_SESSION_ID': '24488', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'LC_NUMERIC': 'en_US.UTF-8', 'YOCTO_MACHINE': 'd9p_ref_ap1', 'LC_NAME': 'en_US.UTF-8', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'en_US.UTF-8', 'LC_PAPER': 'en_US.UTF-8', 'BUILDDIR': '/workspace/kun.feng/d9_sdk_in_unifiedboot/build-d9plus_ap1', 'XDG_RUNTIME_DIR': '/run/user/715', 'OLDPWD': '/workspace/kun.feng/d9_sdk_in_unifiedboot/source/lk_customize/target/reference_d9p'}, ['/workspace/kun.feng/d9_sdk_in_unifiedboot/poky/bitbake/bin/bitbake', 'safety']]
+Running command ['getVariable', 'BBINCLUDELOGS']
+Running command ['getVariable', 'BBINCLUDELOGS_LINES']
+Running command ['getSetVariable', 'BB_CONSOLELOG']
+Running command ['getUIHandlerNum']
+Running command ['setEventMask', 1, 20, {}, ['bb.runqueue.runQueueExitWait', 'bb.event.LogExecTTY', 'logging.LogRecord', 'bb.build.TaskFailed', 'bb.build.TaskBase', 'bb.event.ParseStarted', 'bb.event.ParseProgress', 'bb.event.ParseCompleted', 'bb.event.CacheLoadStarted', 'bb.event.CacheLoadProgress', 'bb.event.CacheLoadCompleted', 'bb.command.CommandFailed', 'bb.command.CommandExit', 'bb.command.CommandCompleted', 'bb.cooker.CookerExit', 'bb.event.MultipleProviders', 'bb.event.NoProvider', 'bb.runqueue.sceneQueueTaskStarted', 'bb.runqueue.runQueueTaskStarted', 'bb.runqueue.runQueueTaskFailed', 'bb.runqueue.sceneQueueTaskFailed', 'bb.event.BuildBase', 'bb.build.TaskStarted', 'bb.build.TaskSucceeded', 'bb.build.TaskFailedSilent', 'bb.build.TaskProgress', 'bb.event.ProcessStarted', 'bb.event.ProcessProgress', 'bb.event.ProcessFinished']]
+Running command ['getVariable', 'BB_DEFAULT_TASK']
+Running command ['setConfig', 'cmd', 'build']
+Running command ['buildTargets', ['safety'], 'build']
+Processing Client
+Disconnecting Client
+No timeout, exiting.
+Exiting

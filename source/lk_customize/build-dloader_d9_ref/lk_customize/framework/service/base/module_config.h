@@ -1,0 +1,13 @@
+#ifndef __lk_customize_build_dloader_d9_ref_lk_customize_framework_service_base_module_config_h_H
+#define __lk_customize_build_dloader_d9_ref_lk_customize_framework_service_base_module_config_h_H
+#define MODULE_COMPILEFLAGS "__WALL"
+#define MODULE_CFLAGS ""
+#define MODULE_CPPFLAGS ""
+#define MODULE_ASMFLAGS ""
+#define MODULE_LDFLAGS ""
+#define MODULE_OPTFLAGS ""
+#define MODULE_INCLUDES ""
+#define MODULE_SRCDEPS ""
+#define MODULE_DEPS ""
+#define MODULE_SRCS "_LK_CUSTOMIZE_FRAMEWORK_SERVICE_BASE_DCF_COMMON_C_LK_CUSTOMIZE_FRAMEWORK_SERVICE_BASE_DCF_FILE_C_LK_CUSTOMIZE_FRAMEWORK_SERVICE_BASE_DCF_SELECT_C_LK_CUSTOMIZE_FRAMEWORK_SERVICE_BASE_DCF_NOTIFY_C_LK_CUSTOMIZE_FRAMEWORK_SERVICE_BASE_DCF_SERVICE_C"
+#endif

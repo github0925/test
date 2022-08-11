@@ -1,0 +1,663 @@
+From 84cd3cb7d767c10906a966119741df79f20cc656 Mon Sep 17 00:00:00 2001
+From: Brendan King <Brendan.King@imgtec.com>
+Date: Tue, 29 Nov 2016 09:39:16 +0000
+Subject: [PATCH 03/11] glamor: improve OpenGLES support
+
+OpenGLES3 has map buffer range, so use it when preparing a pixmap for
+CPU access.
+
+OpenGLES may have GL_EXT_buffer_storage.
+
+Where possible, use GL_RED rather than GL_ALPHA for a8 textures with
+OpenGLES. The description of glReadPixels for OpenGLES3 implies it
+can read back GL_ALPHA format textures, but IMG OpenGLES3 doesn't
+support it.
+
+Both the BGRA5551 and BGRA1010102 formats have been disabled for OpenGLES,
+as it only supports RGBA5551 and RGBA1010102.
+
+Rework glamor_format_for_pixmap, separating the OpenGL and OpenGLES
+code paths.
+---
+ glamor/glamor.c           | 47 +++++++++++--------
+ glamor/glamor_egl.c       | 13 ++++++
+ glamor/glamor_fbo.c       | 30 +++++++------
+ glamor/glamor_picture.c   |  4 +-
+ glamor/glamor_prepare.c   | 23 +++++++---
+ glamor/glamor_priv.h      | 10 +++--
+ glamor/glamor_render.c    | 12 ++---
+ glamor/glamor_transfer.c  | 66 +++++++++++++++++++++++++--
+ glamor/glamor_transform.c |  2 +-
+ glamor/glamor_utils.h     | 95 +++++++++++++++++++++++++++++++++------
+ 10 files changed, 238 insertions(+), 64 deletions(-)
+
+diff --git a/glamor/glamor.c b/glamor/glamor.c
+index a6cc798f8..528a93f2c 100644
+--- a/glamor/glamor.c
++++ b/glamor/glamor.c
+@@ -102,7 +102,7 @@ glamor_set_pixmap_texture(PixmapPtr pixmap, unsigned int tex)
+         glamor_destroy_fbo(glamor_priv, fbo);
+     }
+ 
+-    format = gl_iformat_for_pixmap(pixmap);
++    gl_iformat_for_pixmap(pixmap, NULL, &format, NULL);
+     fbo = glamor_create_fbo_from_tex(glamor_priv, pixmap->drawable.width,
+                                      pixmap->drawable.height, format, tex, 0);
+ 
+@@ -187,7 +187,7 @@ glamor_create_pixmap(ScreenPtr screen, int w, int h, int depth,
+     glamor_screen_private *glamor_priv = glamor_get_screen_private(screen);
+     glamor_pixmap_fbo *fbo = NULL;
+     int pitch;
+-    GLenum format;
++    GLenum iformat, format, type;
+ 
+     if (w > 32767 || h > 32767)
+         return NullPixmap;
+@@ -197,16 +197,16 @@ glamor_create_pixmap(ScreenPtr screen, int w, int h, int depth,
+              w <= glamor_priv->glyph_max_dim &&
+              h <= glamor_priv->glyph_max_dim)
+          || (w == 0 && h == 0)
+-         || !glamor_check_pixmap_fbo_depth(depth))
++         || !glamor_check_pixmap_fbo_depth(glamor_priv, depth))
+         || (!GLAMOR_TEXTURED_LARGE_PIXMAP &&
+             !glamor_check_fbo_size(glamor_priv, w, h)))
+         return fbCreatePixmap(screen, w, h, depth, usage);
+     else
+         pixmap = fbCreatePixmap(screen, 0, 0, depth, usage);
+ 
+     pixmap_priv = glamor_get_pixmap_private(pixmap);
+ 
+-    format = gl_iformat_for_pixmap(pixmap);
++    gl_iformat_for_pixmap(pixmap, &iformat, &format, &type);
+ 
+     pitch = (((w * pixmap->drawable.bitsPerPixel + 7) / 8) + 3) & ~3;
+     screen->ModifyPixmapHeader(pixmap, w, h, 0, 0, pitch, NULL);
+@@ -221,13 +221,15 @@ glamor_create_pixmap(ScreenPtr screen, int w, int h, int depth,
+         glamor_check_fbo_size(glamor_priv, w, h))
+     {
+         glamor_init_pixmap_private_small(pixmap, pixmap_priv);
+-        fbo = glamor_create_fbo(glamor_priv, w, h, format, usage);
++        fbo = glamor_create_fbo(glamor_priv, w, h, iformat, format, type,
++                                usage);
+     } else {
+         int tile_size = glamor_priv->max_fbo_size;
+         DEBUGF("Create LARGE pixmap %p width %d height %d, tile size %d\n",
+                pixmap, w, h, tile_size);
+-        fbo = glamor_create_fbo_array(glamor_priv, w, h, format, usage,
+-                                      tile_size, tile_size, pixmap_priv);
++        fbo = glamor_create_fbo_array(glamor_priv, w, h, iformat, format,
++                                      type, usage, tile_size, tile_size,
++                                      pixmap_priv);
+     }
+ 
+     if (fbo == NULL) {
+@@ -600,21 +600,19 @@ glamor_init(ScreenPtr screen, unsigned int flags)
+             goto fail;
+         }
+     }
+ 
+-    glamor_priv->has_rw_pbo = FALSE;
+-    if (glamor_priv->gl_flavor == GLAMOR_GL_DESKTOP)
+-        glamor_priv->has_rw_pbo = TRUE;
+-
+     glamor_priv->has_khr_debug = epoxy_has_gl_extension("GL_KHR_debug");
+     glamor_priv->has_pack_invert =
+         epoxy_has_gl_extension("GL_MESA_pack_invert");
+     glamor_priv->has_fbo_blit =
+         epoxy_has_gl_extension("GL_EXT_framebuffer_blit");
+     glamor_priv->has_map_buffer_range =
+         epoxy_has_gl_extension("GL_ARB_map_buffer_range") ||
+-        epoxy_has_gl_extension("GL_EXT_map_buffer_range");
++        epoxy_has_gl_extension("GL_EXT_map_buffer_range") ||
++        (glamor_priv->gl_flavor == GLAMOR_GL_ES2 && gl_version >= 30);
+     glamor_priv->has_buffer_storage =
+-        epoxy_has_gl_extension("GL_ARB_buffer_storage");
++        epoxy_has_gl_extension("GL_ARB_buffer_storage") ||
++        epoxy_has_gl_extension("GL_EXT_buffer_storage");
+     glamor_priv->has_nv_texture_barrier =
+         epoxy_has_gl_extension("GL_NV_texture_barrier");
+     glamor_priv->has_unpack_subimage =
+@@ -627,9 +627,21 @@ glamor_init(ScreenPtr screen, unsigned int flags)
+     glamor_priv->has_dual_blend =
+         glamor_priv->glsl_version >= 130 &&
+         epoxy_has_gl_extension("GL_ARB_blend_func_extended");
++    glamor_priv->has_format_bgra8888 =
++        glamor_priv->gl_flavor == GLAMOR_GL_DESKTOP ||
++        (epoxy_has_gl_extension("GL_IMG_read_format") &&
++         epoxy_has_gl_extension("GL_EXT_texture_format_BGRA8888"));
++    glamor_priv->has_iformat_rgb10a2 =
++        glamor_priv->gl_flavor == GLAMOR_GL_DESKTOP ||
++        gl_version >= 30;
+ 
+     glamor_priv->can_copyplane = (gl_version >= 30);
+ 
++    glamor_priv->has_rw_pbo = FALSE;
++    if (glamor_priv->gl_flavor == GLAMOR_GL_DESKTOP ||
++        glamor_priv->has_map_buffer_range)
++        glamor_priv->has_rw_pbo = TRUE;
++
+     glamor_setup_debug_output(screen);
+ 
+     glamor_priv->use_quads = (glamor_priv->gl_flavor == GLAMOR_GL_DESKTOP) &&
+@@ -669,7 +681,8 @@ glamor_init(ScreenPtr screen, unsigned int flags)
+          (glamor_priv->gl_flavor != GLAMOR_GL_DESKTOP && gl_version >= 30));
+ 
+     glamor_priv->one_channel_format = GL_ALPHA;
+-    if (epoxy_has_gl_extension("GL_ARB_texture_rg") &&
++    if ((epoxy_has_gl_extension("GL_ARB_texture_rg") ||
++         (glamor_priv->gl_flavor != GLAMOR_GL_DESKTOP && gl_version >= 30)) &&
+         glamor_priv->has_texture_swizzle) {
+         glamor_priv->one_channel_format = GL_RED;
+     }
+@@ -846,7 +846,7 @@ glamor_fd_from_pixmap(ScreenPtr screen,
+     switch (pixmap_priv->type) {
+     case GLAMOR_TEXTURE_DRM:
+     case GLAMOR_TEXTURE_ONLY:
+-        if (!glamor_pixmap_ensure_fbo(pixmap, GL_RGBA, 0))
++        if (!glamor_pixmap_ensure_fbo(pixmap, 0))
+             return -1;
+         return glamor_egl_dri3_fd_name_from_tex(screen,
+                                                 pixmap,
+@@ -846,6 +846,6 @@ glamor_name_from_pixmap(PixmapPtr pixmap, CARD16 *stride, CARD32 *size)
+     switch (pixmap_priv->type) {
+     case GLAMOR_TEXTURE_DRM:
+     case GLAMOR_TEXTURE_ONLY:
+-        if (!glamor_pixmap_ensure_fbo(pixmap, GL_RGBA, 0))
++        if (!glamor_pixmap_ensure_fbo(pixmap, 0))
+             return -1;
+         return glamor_egl_dri3_fd_name_from_tex(pixmap->drawable.pScreen,
+diff --git a/glamor/glamor_egl.c b/glamor/glamor_egl.c
+index ce8cbfaf4..c2035decb 100644
+--- a/glamor/glamor_egl.c
++++ b/glamor/glamor_egl.c
+@@ -830,2 +830,16 @@ glamor_egl_init(ScrnInfoPtr scrn, int fd)
+                                                    config_attribs);
++ 
++        if (glamor_egl->context == EGL_NO_CONTEXT) {
++            static const EGLint config_attribs[] = {
++                EGL_CONTEXT_CLIENT_VERSION, 3,
++                EGL_CONTEXT_MINOR_VERSION_KHR, 0,
++                EGL_NONE
++            };
++            if (eglBindAPI(EGL_OPENGL_ES_API)) {
++                glamor_egl->context = eglCreateContext(glamor_egl->display,
++                                                       NULL, EGL_NO_CONTEXT,
++                                                       config_attribs);
++            }
++        }
++
+         if (glamor_egl->context == EGL_NO_CONTEXT) {
+diff --git a/glamor/glamor_fbo.c b/glamor/glamor_fbo.c
+index e8c4330b3..b10f75767 100644
+--- a/glamor/glamor_fbo.c
++++ b/glamor/glamor_fbo.c
+@@ -120,7 +120,7 @@ glamor_create_fbo_from_tex(glamor_screen_private *glamor_priv,
+ 
+ static int
+ _glamor_create_tex(glamor_screen_private *glamor_priv,
+-                   int w, int h, GLenum format)
++                   int w, int h, GLenum iformat, GLenum format, GLenum type)
+ {
+     unsigned int tex;
+
+@@ -133,7 +133,7 @@ _glamor_create_tex(glamor_screen_private *glamor_priv,
+         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_SWIZZLE_A, GL_RED);
+     glamor_priv->suppress_gl_out_of_memory_logging = true;
+     glTexImage2D(GL_TEXTURE_2D, 0, format, w, h, 0,
+-                 format, GL_UNSIGNED_BYTE, NULL);
++                 format, type, NULL);
+     glamor_priv->suppress_gl_out_of_memory_logging = false;
+ 
+     if (glGetError() == GL_OUT_OF_MEMORY) {
+@@ -156,9 +153,10 @@ _glamor_create_tex(glamor_screen_private *glamor_priv,
+ 
+ glamor_pixmap_fbo *
+ glamor_create_fbo(glamor_screen_private *glamor_priv,
+-                  int w, int h, GLenum format, int flag)
++                  int w, int h, GLenum iformat, GLenum format, GLenum type,
++                  int flag)
+ {
+-    GLint tex = _glamor_create_tex(glamor_priv, w, h, format);
++    GLint tex = _glamor_create_tex(glamor_priv, w, h, iformat, format, type);
+ 
+     if (!tex) /* Texture creation failed due to GL_OUT_OF_MEMORY */
+         return NULL;
+@@ -172,7 +170,8 @@ glamor_create_fbo(glamor_screen_private *glamor_priv,
+  */
+ glamor_pixmap_fbo *
+ glamor_create_fbo_array(glamor_screen_private *glamor_priv,
+-                         int w, int h, GLenum format, int flag,
++                         int w, int h, GLenum iformat, GLenum format,
++                         GLenum type, int flag,
+                          int block_w, int block_h,
+                          glamor_pixmap_private *priv)
+ {
+@@ -216,8 +215,8 @@ glamor_create_fbo_array(glamor_screen_private *glamor_priv,
+                                                              j].x1;
+             fbo_array[i * block_wcnt + j] = glamor_create_fbo(glamor_priv,
+                                                               fbo_w, fbo_h,
+-                                                              format,
+-                                                              GLAMOR_CREATE_PIXMAP_FIXUP);
++                                                              iformat, format,
++                                                              type, GLAMOR_CREATE_PIXMAP_FIXUP);
+             if (fbo_array[i * block_wcnt + j] == NULL)
+                 goto cleanup;
+         }
+@@ -302,18 +301,22 @@ glamor_pixmap_destroy_fbo(PixmapPtr pixmap)
+ }
+ 
+ Bool
+-glamor_pixmap_ensure_fbo(PixmapPtr pixmap, GLenum format, int flag)
++glamor_pixmap_ensure_fbo(PixmapPtr pixmap, int flag)
+ {
+     glamor_screen_private *glamor_priv;
+     glamor_pixmap_private *pixmap_priv;
+     glamor_pixmap_fbo *fbo;
++    GLenum iformat, format, type;
++
++    gl_iformat_for_pixmap(pixmap, &iformat, &format, &type);
+ 
+     glamor_priv = glamor_get_screen_private(pixmap->drawable.pScreen);
+     pixmap_priv = glamor_get_pixmap_private(pixmap);
+     if (pixmap_priv->fbo == NULL) {
+ 
+         fbo = glamor_create_fbo(glamor_priv, pixmap->drawable.width,
+-                                pixmap->drawable.height, format, flag);
++                                pixmap->drawable.height, iformat, format, type,
++                                flag);
+         if (fbo == NULL)
+             return FALSE;
+ 
+@@ -324,7 +327,8 @@ glamor_pixmap_ensure_fbo(PixmapPtr pixmap, GLenum format, int flag)
+         if (!pixmap_priv->fbo->tex)
+             pixmap_priv->fbo->tex =
+                 _glamor_create_tex(glamor_priv, pixmap->drawable.width,
+-                                   pixmap->drawable.height, format);
++                                   pixmap->drawable.height, iformat, format,
++                                   type);
+ 
+         if (flag != GLAMOR_CREATE_FBO_NO_FBO && pixmap_priv->fbo->fb == 0)
+             if (glamor_pixmap_ensure_fb(glamor_priv, pixmap_priv->fbo) != 0)
+diff --git a/glamor/glamor_picture.c b/glamor/glamor_picture.c
+index 84a33ad6a..b7c5d038f 100644
+--- a/glamor/glamor_picture.c
++++ b/glamor/glamor_picture.c
+@@ -336,11 +336,11 @@ glamor_upload_picture_to_texture(PicturePtr picture)
+     }
+ 
+     if (glamor_priv->gl_flavor == GLAMOR_GL_DESKTOP)
+-        iformat = gl_iformat_for_pixmap(pixmap);
++        gl_iformat_for_pixmap(pixmap, &iformat, NULL, NULL);
+     else
+         iformat = format;
+ 
+-    if (!glamor_pixmap_ensure_fbo(pixmap, iformat, GLAMOR_CREATE_FBO_NO_FBO))
++    if (!glamor_pixmap_ensure_fbo(pixmap, GLAMOR_CREATE_FBO_NO_FBO))
+         goto fail;
+ 
+     glPixelStorei(GL_UNPACK_ALIGNMENT, 4);
+diff --git a/glamor/glamor_prepare.c b/glamor/glamor_prepare.c
+index 5a73e6c7d..f284d7ca9 100644
+--- a/glamor/glamor_prepare.c
++++ b/glamor/glamor_prepare.c
+@@ -107,12 +107,25 @@ glamor_prep_pixmap_box(PixmapPtr pixmap, glamor_access_t access, BoxPtr box)
+     RegionUninit(&region);
+ 
+     if (glamor_priv->has_rw_pbo) {
+-        if (priv->map_access == GLAMOR_ACCESS_RW)
+-            gl_access = GL_READ_WRITE;
+-        else
+-            gl_access = GL_READ_ONLY;
++        if (glamor_priv->has_map_buffer_range) {
++            if (priv->map_access == GLAMOR_ACCESS_RW)
++                gl_access = GL_MAP_WRITE_BIT;
++            else
++                gl_access = GL_MAP_READ_BIT;
++
++            pixmap->devPrivate.ptr = glMapBufferRange(GL_PIXEL_PACK_BUFFER, 0,
++                                                      pixmap->devKind *
++                                                      pixmap->drawable.height,
++                                                      gl_access);
++        } else {
++            if (priv->map_access == GLAMOR_ACCESS_RW)
++                gl_access = GL_READ_WRITE;
++            else
++                gl_access = GL_READ_ONLY;
+ 
+-        pixmap->devPrivate.ptr = glMapBuffer(GL_PIXEL_PACK_BUFFER, gl_access);
++            pixmap->devPrivate.ptr = glMapBuffer(GL_PIXEL_PACK_BUFFER,
++                                                 gl_access);
++        }
+         glBindBuffer(GL_PIXEL_PACK_BUFFER, 0);
+     }
+ 
+diff --git a/glamor/glamor_priv.h b/glamor/glamor_priv.h
+index 661c11d90..003693524 100644
+--- a/glamor/glamor_priv.h
++++ b/glamor/glamor_priv.h
+@@ -200,6 +200,8 @@ typedef struct glamor_screen_private {
+     Bool use_quads;
+     Bool has_dual_blend;
+     Bool has_texture_swizzle;
++    Bool has_format_bgra8888;
++    Bool has_iformat_rgb10a2;
+     Bool is_core_profile;
+     Bool can_copyplane;
+     int max_fbo_size;
+@@ -533,7 +535,8 @@ glamor_pixmap_fbo *glamor_create_fbo_from_tex(glamor_screen_private *
+                                               GLenum format, GLint tex,
+                                               int flag);
+ glamor_pixmap_fbo *glamor_create_fbo(glamor_screen_private *glamor_priv, int w,
+-                                     int h, GLenum format, int flag);
++                                     int h, GLenum iformat, GLenum format,
++                                     GLenum type, int flag);
+ void glamor_destroy_fbo(glamor_screen_private *glamor_priv,
+                         glamor_pixmap_fbo *fbo);
+ void glamor_pixmap_destroy_fbo(PixmapPtr pixmap);
+@@ -568,7 +571,8 @@ void glamor_bind_texture(glamor_screen_private *glamor_priv,
+                          Bool destination_red);
+ 
+ glamor_pixmap_fbo *glamor_create_fbo_array(glamor_screen_private *glamor_priv,
+-                                           int w, int h, GLenum format,
++                                           int w, int h, GLenum iformat,
++                                           GLenum format, GLenum type,
+                                            int flag, int block_w, int block_h,
+                                            glamor_pixmap_private *);
+ 
+@@ -678,7 +682,7 @@ glamor_put_vbo_space(ScreenPtr screen);
+  * the fbo has valid texture and attach to a valid fb.
+  * If the fbo already has a valid glfbo then do nothing.
+  */
+-Bool glamor_pixmap_ensure_fbo(PixmapPtr pixmap, GLenum format, int flag);
++Bool glamor_pixmap_ensure_fbo(PixmapPtr pixmap, int flag);
+ 
+ glamor_pixmap_clipped_regions *
+ glamor_compute_clipped_regions(PixmapPtr pixmap,
+diff --git a/glamor/glamor_render.c b/glamor/glamor_render.c
+index d5737018f..8497ec966 100644
+--- a/glamor/glamor_render.c
++++ b/glamor/glamor_render.c
+@@ -769,15 +769,27 @@ glamor_set_normalize_tcoords_generic(PixmapPtr pixmap,
+  * tweaking whether we sample the alpha bits of an a8r8g8b8, or just
+  * force them to 1.
+  */
+ static Bool
+-glamor_render_format_is_supported(PictFormatShort format)
++glamor_render_format_is_supported(glamor_screen_private *glamor_priv,
++                                  PicturePtr picture)
+ {
++    PictFormatShort storage_format;
++
++    /* Source-only pictures should always work */
++    if (!picture->pDrawable)
++        return TRUE;
++
++    storage_format = format_for_depth(picture->pDrawable->depth);
++
+-    switch (format) {
++    switch (picture->format) {
++    case PICT_x2r10g10b10:
++        return storage_format == PICT_x2r10g10b10 && glamor_priv->gl_flavor == GLAMOR_GL_DESKTOP;
+     case PICT_a8r8g8b8:
+     case PICT_x8r8g8b8:
++        return storage_format == PICT_a8r8g8b8 || storage_format == PICT_x8r8g8b8;
+     case PICT_a8:
+-        return TRUE;
++        return storage_format == PICT_a8;
+     default:
+         return FALSE;
+     }
+ }
+@@ -824,7 +825,7 @@ glamor_composite_choose_shader(CARD8 op,
+         goto fail;
+     }
+ 
+-    if (!glamor_render_format_is_supported(dest->format)) {
++    if (!glamor_render_format_is_supported(glamor_priv, dest)) {
+         glamor_fallback("Unsupported dest picture format.\n");
+         goto fail;
+     }
+@@ -987,7 +988,8 @@ glamor_composite_choose_shader(CARD8 op,
+                 goto fail;
+             }
+         } else {
+-            if (source && !glamor_render_format_is_supported(source->format)) {
++            if (source && !glamor_render_format_is_supported(glamor_priv,
++                                                             source)) {
+                 glamor_fallback("Unsupported source picture format.\n");
+                 goto fail;
+             }
+@@ -999,7 +1001,7 @@ glamor_composite_choose_shader(CARD8 op,
+                 goto fail;
+             }
+         } else if (mask) {
+-            if (!glamor_render_format_is_supported(mask->format)) {
++            if (!glamor_render_format_is_supported(glamor_priv, mask)) {
+                 glamor_fallback("Unsupported mask picture format.\n");
+                 goto fail;
+             }
+diff --git a/glamor/glamor_transfer.c b/glamor/glamor_transfer.c
+index ebb5101d1..4fd01d6c8 100644
+--- a/glamor/glamor_transfer.c
++++ b/glamor/glamor_transfer.c
+@@ -24,8 +24,8 @@
+ #include "glamor_transfer.h"
+ 
+ /* XXX a kludge for now */
+-void
+-glamor_format_for_pixmap(PixmapPtr pixmap, GLenum *format, GLenum *type)
++static void
++glamor_format_for_pixmap_gl(glamor_screen_private *glamor_priv, PixmapPtr pixmap, GLenum *format, GLenum *type)
+ {
+     switch (pixmap->drawable.depth) {
+     case 24:
+@@ -46,7 +46,7 @@ glamor_format_for_pixmap(PixmapPtr pixmap, GLenum *format, GLenum *type)
+         *type = GL_UNSIGNED_SHORT_1_5_5_5_REV;
+         break;
+     case 8:
+-        *format = glamor_get_screen_private(pixmap->drawable.pScreen)->one_channel_format;
++        *format = glamor_priv->one_channel_format;
+         *type = GL_UNSIGNED_BYTE;
+         break;
+     default:
+@@ -55,6 +55,66 @@ glamor_format_for_pixmap(PixmapPtr pixmap, GLenum *format, GLenum *type)
+     }
+ }
+ 
++static void
++glamor_format_for_pixmap_es(glamor_screen_private *glamor_priv, PixmapPtr pixmap, GLenum *format, GLenum *type)
++{
++    switch (pixmap->drawable.depth) {
++    case 24:
++    case 32:
++        if (glamor_priv->has_format_bgra8888) {
++            *format = GL_BGRA;
++            *type = GL_UNSIGNED_BYTE;
++        } else {
++            FatalError("Invalid pixmap depth %d\n", pixmap->drawable.depth);
++        }
++        break;
++    case 30:
++	if (glamor_priv->has_iformat_rgb10a2)
++        {
++            *format = GL_RGBA;
++            *type = GL_UNSIGNED_INT_2_10_10_10_REV;
++        } else {
++            FatalError("Invalid pixmap depth %d\n", pixmap->drawable.depth);
++        }
++        break;
++        /*
++         * FIXME:
++         * OpenGLES 2.0 implementations need not support either of the
++         * GL_RGB/GL_UNSIGNED_SHORT_5_6_5 GL_RGBA/GL_UNSIGNED_SHORT_5_5_5_1
++         * combinations for glReadPixels. To find out if either is supported
++         * requires querying GL_IMPLEMENTATION_COLOR_READ_FORMAT and
++         * GL_IMPLEMENTATION_COLOR_READ_TYPE.
++         */
++    case 16:
++        *format = GL_RGB;
++        *type = GL_UNSIGNED_SHORT_5_6_5;
++        break;
++    case 15:
++        *format = GL_RGBA;
++        *type = GL_UNSIGNED_SHORT_5_5_5_1;
++        break;
++    case 8:
++        *format = glamor_priv->one_channel_format;
++        *type = GL_UNSIGNED_BYTE;
++        break;
++    default:
++        FatalError("Invalid pixmap depth %d\n", pixmap->drawable.depth);
++        break;
++    }
++}
++
++void
++glamor_format_for_pixmap(PixmapPtr pixmap, GLenum *format, GLenum *type)
++{
++	glamor_screen_private *glamor_priv = glamor_get_screen_private(pixmap->drawable.pScreen);
++
++        if (glamor_priv->gl_flavor == GLAMOR_GL_DESKTOP) {
++            return glamor_format_for_pixmap_gl(glamor_priv, pixmap, format, type);
++        } else {
++            return glamor_format_for_pixmap_es(glamor_priv, pixmap, format, type);
++        }
++}
++
+ /*
+  * Write a region of bits into a pixmap
+  */
+diff --git a/glamor/glamor_transform.c b/glamor/glamor_transform.c
+index 2d5a634a8..358c508a8 100644
+--- a/glamor/glamor_transform.c
++++ b/glamor/glamor_transform.c
+@@ -159,7 +159,7 @@ glamor_set_solid(PixmapPtr      pixmap,
+             return FALSE;
+         }
+     }
+-    glamor_set_color(pixmap, gc->fgPixel, uniform);
++    glamor_set_color(pixmap, pixel, uniform);
+ 
+     return TRUE;
+ }
+diff --git a/glamor/glamor_utils.h b/glamor/glamor_utils.h
+index 0d5674d63..c545470f5 100644
+--- a/glamor/glamor_utils.h
++++ b/glamor/glamor_utils.h
+@@ -571,13 +571,13 @@
+                                                     && (_h_) <= _glamor_->max_fbo_size)
+ 
+ /* For 1bpp pixmap, we don't store it as texture. */
+-#define glamor_check_pixmap_fbo_depth(_depth_) (			\
++#define glamor_check_pixmap_fbo_depth(glamor_priv, _depth_) (			\
+ 						_depth_ == 8		\
+-						|| _depth_ == 15	\
++						|| (_depth_ == 15 && (glamor_priv)->gl_flavor == GLAMOR_GL_DESKTOP)	\
+ 						|| _depth_ == 16	\
+-						|| _depth_ == 24	\
+-						|| _depth_ == 30	\
+-						|| _depth_ == 32)
++						|| (_depth_ == 24 && (glamor_priv)->has_format_bgra8888)	\
++						|| (_depth_ == 30 && (glamor_priv)->has_iformat_rgb10a2 && (glamor_priv)->gl_flavor == GLAMOR_GL_DESKTOP)	\
++						|| (_depth_ == 32 && (glamor_priv)->has_format_bgra8888))
+ 
+ #define GLAMOR_PIXMAP_PRIV_HAS_FBO(pixmap_priv)    (pixmap_priv->gl_fbo == GLAMOR_FBO_NORMAL)
+ 
+@@ -608,18 +608,88 @@ format_for_depth(int depth)
+     }
+ }
+ 
+-static inline GLenum
+-gl_iformat_for_pixmap(PixmapPtr pixmap)
++static inline void
++gl_iformat_for_pixmap_gl(glamor_screen_private *glamor_priv, int depth,
++                         GLenum *iformat, GLenum *format, GLenum *type)
++{
++    if (depth == 1 || depth == 8) {
++        *iformat = glamor_priv->one_channel_format;
++    } else if (depth == 30) {
++        *iformat = GL_RGB10_A2;
++    } else {
++        *iformat = GL_RGBA;
++    }
++
++    *format = GL_RGBA;
++    *type = GL_UNSIGNED_BYTE;
++}
++
++static inline void
++gl_iformat_for_pixmap_es(glamor_screen_private *glamor_priv, int depth,
++                         GLenum *iformat, GLenum *format, GLenum *type)
++{
++    switch(depth) {
++    case 1:
++    case 8:
++         *iformat = GL_R8;
++         *format = glamor_priv->one_channel_format;
++         *type = GL_UNSIGNED_BYTE;
++         break;
++    case 15:
++        *iformat = GL_RGBA;
++        *format = GL_RGBA;
++        *type = GL_UNSIGNED_SHORT_5_5_5_1;
++        break;
++    case 16:
++         *iformat = GL_RGB;
++         *format = GL_RGB;
++         *type = GL_UNSIGNED_SHORT_5_6_5;
++         break;
++    case 30:
++         if (glamor_priv->has_iformat_rgb10a2) {
++             *iformat = GL_RGB10_A2;
++             *format = GL_RGBA;
++             *type = GL_UNSIGNED_INT_2_10_10_10_REV;
++        } else {
++            FatalError("Invalid pixmap depth %d\n", depth);
++        }
++        break;
++    case 24:
++    case 32:
++        if (glamor_priv->has_format_bgra8888) {
++            *iformat = GL_BGRA;
++            *format = GL_BGRA;
++            *type = GL_UNSIGNED_BYTE;
++        } else {
++            FatalError("Invalid pixmap depth %d\n", depth);
++        }
++        break;
++    default:
++        *iformat = GL_RGBA;
++        *format = GL_RGBA;
++        *type = GL_UNSIGNED_BYTE;
++        break;
++    }
++}
++
++static inline void
++gl_iformat_for_pixmap(PixmapPtr pixmap, GLenum *iformat, GLenum *format,
++                      GLenum *type)
+ {
+     glamor_screen_private *glamor_priv =
+         glamor_get_screen_private((pixmap)->drawable.pScreen);
++    int depth = pixmap->drawable.depth;
++    GLenum i, f, t;
+ 
+-    if (glamor_priv->gl_flavor == GLAMOR_GL_DESKTOP &&
+-        ((pixmap)->drawable.depth == 1 || (pixmap)->drawable.depth == 8)) {
+-        return glamor_priv->one_channel_format;
++    if (glamor_priv->gl_flavor == GLAMOR_GL_DESKTOP) {
++        gl_iformat_for_pixmap_gl(glamor_priv, depth, &i, &f, &t);
+     } else {
+-        return GL_RGBA;
++        gl_iformat_for_pixmap_es(glamor_priv, depth, &i, &f, &t);
+     }
++
++    if (iformat) *iformat = i;
++    if (format) *format = f;
++    if (type) *type = t;
+ }
+ 
+ static inline CARD32
+-- 
+2.17.1
+

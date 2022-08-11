@@ -1,0 +1,10 @@
+diff --git a/mini-x-session b/mini-x-session
+index dca655a..622be11 100644
+--- a/mini-x-session
++++ b/mini-x-session
+@@ -36,4 +36,3 @@ xrandr -s 1024x768
+ # dont exist. 
+ 
+-matchbox-terminal&
+-exec matchbox-window-manager
++matchbox-terminal

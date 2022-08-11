@@ -1,0 +1,3 @@
+test steps
+1.push this dir's resource to /data/gstreamer_test/resource/
+2.run executable program "gstreamer_test_main"

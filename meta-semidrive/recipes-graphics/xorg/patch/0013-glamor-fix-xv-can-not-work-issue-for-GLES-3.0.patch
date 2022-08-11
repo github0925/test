@@ -1,0 +1,59 @@
+From 9c774ce0e41253c918acbb7bf79e1ff0f3b82343 Mon Sep 17 00:00:00 2001
+From: Ming Fang <ming.fang@semidrive.com>
+Date: Mon, 7 Jun 2021 10:43:14 +0800
+Subject: [PATCH] test
+
+---
+ glamor/glamor_xv.c | 27 ++++++++++++++-------------
+ 1 file changed, 14 insertions(+), 13 deletions(-)
+
+diff --git a/glamor/glamor_xv.c b/glamor/glamor_xv.c
+index 62fc4ff..2671139 100644
+--- a/glamor/glamor_xv.c
++++ b/glamor/glamor_xv.c
+@@ -62,9 +62,11 @@ typedef struct tagREF_TRANSFORM {
+ static const glamor_facet glamor_facet_xv_planar = {
+     .name = "xv_planar",
+
++    .version = 300,
++
+     .source_name = "v_texcoord0",
+-    .vs_vars = ("attribute vec2 position;\n"
+-                "attribute vec2 v_texcoord0;\n"
+-                "varying vec2 tcs;\n"),
++    .vs_vars = ("in vec2 position;\n"
++                "in vec2 v_texcoord0;\n"
++                "out vec2 tcs;\n"),
+     .vs_exec = (GLAMOR_POS(gl_Position, position)
+                 "        tcs = v_texcoord0;\n"),
+@@ -77,18 +77,19 @@ static const glamor_facet glamor_facet_xv_planar = {
+                 "uniform vec4 offsetyco;\n"
+                 "uniform vec4 ucogamma;\n"
+                 "uniform vec4 vco;\n"
+-                "varying vec2 tcs;\n"),
++                "in vec2 tcs;\n"
++                "out vec4 out_color;\n"),
+     .fs_exec = (
+-                "        float sample;\n"
++                "        float sample1;\n"
+                 "        vec4 temp1;\n"
+-                "        sample = texture2D(y_sampler, tcs).w;\n"
+-                "        temp1.xyz = offsetyco.www * vec3(sample) + offsetyco.xyz;\n"
+-                "        sample = texture2D(u_sampler, tcs).w;\n"
+-                "        temp1.xyz = ucogamma.xyz * vec3(sample) + temp1.xyz;\n"
+-                "        sample = texture2D(v_sampler, tcs).w;\n"
+-                "        temp1.xyz = clamp(vco.xyz * vec3(sample) + temp1.xyz, 0.0, 1.0);\n"
++                "        sample1 = texture(y_sampler, tcs).w;\n"
++                "        temp1.xyz = offsetyco.www * vec3(sample1) + offsetyco.xyz;\n"
++                "        sample1 = texture(u_sampler, tcs).w;\n"
++                "        temp1.xyz = ucogamma.xyz * vec3(sample1) + temp1.xyz;\n"
++                "        sample1 = texture(v_sampler, tcs).w;\n"
++                "        temp1.xyz = clamp(vco.xyz * vec3(sample1) + temp1.xyz, 0.0, 1.0);\n"
+                 "        temp1.w = 1.0;\n"
+-                "        gl_FragColor = temp1;\n"
++                "        out_color = temp1;\n"
+                 ),
+ };
+
+--
+2.7.4

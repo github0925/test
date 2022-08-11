@@ -1,0 +1,197 @@
+/*************************************************************************/ /*!
+@File
+@Title          IMG GLES and EGL extensions
+@Copyright      Copyright (c) Imagination Technologies Ltd. All Rights Reserved
+@Description
+@License        Strictly Confidential.
+*/ /**************************************************************************/
+
+#ifndef _IMGEXTENSIONS_H_
+#define _IMGEXTENSIONS_H_
+
+/* Needed for FIX_HW_BRN #defines */
+#include <rgxdefs.h>
+
+#define GLES_HW_SERIES_NAME	"Rogue"
+
+/* Example: "PowerVR Rogue GM9740" */
+#if defined(RGX_FEATURE_PUBLIC_VARIANT_NAME)
+#define GLES_HW_RENDERER_NAME	"PowerVR " GLES_HW_SERIES_NAME " " RGX_FEATURE_PUBLIC_VARIANT_NAME
+#else
+#define GLES_HW_RENDERER_NAME	"PowerVR " GLES_HW_SERIES_NAME " " RGX_FEATURE_HW_VARIANT_NAME
+#endif
+
+/* Extensions supported in the ES1 driver */
+#define GLES1_EXTENSION_MULTI_DRAW_ARRAYS
+#define GLES1_EXTENSION_REQUIRED_INTERNAL_FORMAT
+#define GLES1_EXTENSION_VERTEX_ARRAY_OBJECT
+#define GLES1_EXTENSION_EGL_IMAGE_EXTERNAL
+#define GLES1_EXTENSION_TEXTURE_FILTER_ANISOTROPIC
+#define GLES1_EXTENSION_TEXTURE_2D_LIMITED_NPOT
+#define GLES1_EXTENSION_TEXTURE_NPOT
+
+/* GLES2 extensions */
+#define GLES3_EXTENSION_MULTI_DRAW_ARRAYS
+#define GLES3_EXTENSION_EGL_IMAGE_EXTERNAL
+#define GLES3_EXTENSION_MULTISAMPLED_RENDER_TO_TEXTURE
+#define GLES3_EXTENSION_MULTISAMPLED_RENDER_TO_TEXTURE2
+#define GLES3_EXTENSION_TEXTURE_FILTER_ANISOTROPIC
+#define GLES3_EXTENSION_TEXTURE_PVRTC_SRGB
+#define GLES3_EXTENSION_POLYGON_OFFSET_CLAMP
+#define GLES3_EXTENSION_EGL_IMAGE_ARRAY
+
+/* GLES3 extensions */
+#define GLES3_EXTENSION_SHADER_FRAMEBUFFER_FETCH
+#define GLES3_EXTENSION_TEXTURE_SRGB_DECODE_AND_OVERRIDE
+#define GLES3_EXTENSION_SHADER_PIXEL_LOCAL_STORAGE
+#define GLES3_EXTENSION_SHADER_PIXEL_LOCAL_STORAGE2
+#define GLES3_EXTENSION_FRAMEBUFFER_DOWNSAMPLE
+#define GLES3_EXTENSION_SHADER_GROUP_VOTE
+#define GLES3_EXTENSION_EGL_IMAGE_EXTERNAL_ESSL3
+#if defined(RGX_FEATURE_TPU_BICUBIC_FILTER)
+	#define GLES3_EXTENSION_TEXTURE_FILTER_CUBIC
+#endif
+#define GLES3_EXTENSION_FLOAT_BLEND
+#define GLES3_EXTENSION_YUV_TARGET
+#define GLES3_EXTENSION_CONSERVATIVE_DEPTH
+#define GLES3_EXTENSION_SHADER_NON_CONSTANT_GLOBAL_INITIALIZERS
+#if defined(EGL_EXTENSION_CONTENT_PROTECTED)
+	#define GLES3_EXTENSION_PROTECTED_TEXTURES
+#endif
+#define GLES3_EXTENSION_SRGB_WRITE_CONTROL
+#define GLES3_EXTENSION_CLIP_CONTROL
+#define GLES3_EXTENSION_TEXTURE_SHADOW_LOD
+#define GLES3_EXTENSION_COLOR_BUFFER_HALF_FLOAT
+#define GLES3_EXTENSION_APPLE_TEXTURE_FORMAT_BGRA8888
+
+/* Custom extensions */
+
+/* GLES31 extensions */
+#define GLES3_EXTENSION_TEXTURE_SRGB_R8
+#define GLES3_EXTENSION_TEXTURE_SRGB_RG8
+#define GLES3_EXTENSION_SPARSE_TEXTURE
+#define GLES3_EXTENSION_BUFFER_STORAGE
+#if !defined(IMG_PUBLIC_EXTENSIONS_ONLY)
+	#define GLES31_EXTENSION_CLEAR_TEXTURE
+#endif
+#if defined(ANDROID)
+#if defined(GLES3_EXTENSION_BUFFER_STORAGE)
+	#define GLES31_EXTENSION_BUFFER_EXTERNAL
+#endif
+#endif
+
+/*
+ * Currently disabled due to geometry shader and gl_ViewportIndex built-in variable overhead.
+ *
+#define GLES31_EXTENSION_VIEWPORT_ARRAY
+*/
+#define GLES31_EXTENSION_SHADER_IMPLICIT_CONVERSIONS
+
+/* These extensions are included in core ES 3.2. They should always be defined. */
+#define GLES3_EXTENSION_TEXTURE_BORDER_CLAMP
+#define GLES3_EXTENSION_BLEND_EQUATION_ADVANCED
+#define GLES3_EXTENSION_COPY_IMAGE
+#define GLES3_EXTENSION_DRAW_BUFFERS_INDEXED
+#define GLES3_EXTENSION_GPU_SHADER5
+#define GLES3_EXTENSION_SHADER_IMAGE_ATOMIC
+#define GLES3_EXTENSION_SHADER_MULTISAMPLE_INTERPOLATION
+#define GLES31_EXTENSION_DRAW_ELEMENTS_BASE_VERTEX
+#define GLES31_EXTENSION_SHADER_IO_BLOCKS
+
+#if !defined(SUPPORT_NEUTRINO_PLATFORM) && !defined(INTEGRITY_OS)
+#define GLES31_EXTENSION_MEMORY_OBJECT
+#endif
+
+/* These extensions are included in core ES3.2 but they aren't supported by all BVNCs. If
+   the HW supports full ES3.2 then the build system defines SUPPORT_ES32. This is used to
+   add (minor) ES 3.2 specific functionality, configure the GL_VERSION string, and add
+   ES3.2 entrypoints to the libGLESv2 exports. */
+#if defined(RGX_FEATURE_ASTC)
+#define GLES3_EXTENSION_ASTC_LDR
+#endif
+
+/*
+ * Support geometry and tessellation only if GS RTA is supported,
+ * and UVS has enough space to fit GL_MAX_GEOMETRY_TOTAL_OUTPUT_COMPONENTS_EXT=1024
+*/
+#if defined(RGX_FEATURE_GS_RTA_SUPPORT) && (RGX_FEATURE_UVS_VTX_ENTRIES * RGX_FEATURE_UVS_BANKS * (RGX_UVS_DATAWIDTH_BITS / 32) >= 1024)
+	#define GLES3_EXTENSION_GEOMETRY_SHADER
+	#define GLES3_EXTENSION_TESSELLATION_SHADER
+	#define GLES31_EXTENSION_PRIMITIVE_BOUNDING_BOX
+	#define SUPPORT_EMUTESS /* Enable regardless of RGX_FEATURE_TESSELLATION */
+#if !defined(FIX_HW_BRN_61484) && !defined(FIX_HW_BRN_66333)
+	/* Depends on RTA */
+	#define GLES3_EXTENSION_MULTIVIEW
+	#define GLES3_EXTENSION_MULTIVIEW_MULTISAMPLED_RENDER_TO_TEXTURE
+#endif
+#endif
+
+/* GL_OES_EGL_image_external_essl3 requires OES_EGL_image_external */
+#if defined(GLES3_EXTENSION_EGL_IMAGE_EXTERNAL_ESSL3) && !defined(GLES3_EXTENSION_EGL_IMAGE_EXTERNAL)
+#	error Extension GLES3_EXTENSION_EGL_IMAGE_EXTERNAL_ESSL3 enabled without GLES3_EXTENSION_EGL_IMAGE_EXTERNAL
+#endif
+
+/* The Android Extension Pack (AEP) rolls-up 20 prerequisite extensions. The define
+   isn't pretty but it handles dependencies (e.g. no RGX_FEATURE_TESSELLATION == no
+   GLES3_EXTENSION_TESSELLATION_SHADER == no AEP) and we retain the ability to flip
+   individual extensions on/off. */
+#if defined(GLES3_EXTENSION_ASTC_LDR) && \
+    defined(GLES3_EXTENSION_BLEND_EQUATION_ADVANCED) && \
+    defined(GLES3_EXTENSION_SHADER_IMAGE_ATOMIC) && \
+    defined(GLES3_EXTENSION_SHADER_MULTISAMPLE_INTERPOLATION) && \
+    defined(GLES3_EXTENSION_COPY_IMAGE) && \
+    defined(GLES3_EXTENSION_DRAW_BUFFERS_INDEXED) && \
+    defined(GLES3_EXTENSION_GEOMETRY_SHADER) && \
+    defined(GLES3_EXTENSION_GPU_SHADER5) && \
+    defined(GLES31_EXTENSION_PRIMITIVE_BOUNDING_BOX) && \
+    defined(GLES31_EXTENSION_SHADER_IO_BLOCKS) && \
+    defined(GLES3_EXTENSION_TESSELLATION_SHADER) && \
+    defined(GLES3_EXTENSION_TEXTURE_BORDER_CLAMP) && \
+    defined(GLES3_EXTENSION_TEXTURE_SRGB_DECODE_AND_OVERRIDE)
+#define GLES3_EXTENSION_ANDROID_EXTENSION_PACK_ES31A
+#endif	/* OpenGL ES Extension #187 (AEP) rolls-up the above 20 extensions */
+
+/* EGL extensions */
+#define EGL_EXTENSION_RENDER_TO_TEXTURE
+#define EGL_EXTENSION_KHR_GL_TEXTURE_2D_IMAGE
+#define EGL_EXTENSION_KHR_GL_TEXTURE_3D_IMAGE
+#define EGL_EXTENSION_KHR_GL_TEXTURE_CUBEMAP_IMAGE
+#define EGL_EXTENSION_KHR_GL_RENDERBUFFER_IMAGE
+#define EGL_EXTENSION_IMG_EGL_IMAGE_PLANE_ATTRIBS
+#if defined(LINUX)
+#define EGL_EXTENSION_IMAGE_DMA_BUF_IMPORT
+
+#if defined(EGL_EXTENSION_IMAGE_DMA_BUF_IMPORT)
+#define EGL_EXTENSION_IMAGE_DMA_BUF_IMPORT_MODIFIERS
+#endif
+
+#endif
+
+#if defined(ANDROID)
+#define EGL_EXTENSION_IMG_IMAGE_DEBUG_DUMP
+#endif
+
+/* Used to decorate entrypoints that should only be exported for ES 3.2 */
+#if defined(SUPPORT_ES32)
+#	define ES32_EXPORT GL_APICALL
+#else
+#	define ES32_EXPORT GL_API_EXT
+#endif
+
+#if defined(EGL_EXTENSION_KHR_GL_COLORSPACE)
+#	define EGL_EXTENSION_KHR_GL_COLORSPACE_SCRGB
+
+#	if defined(EGL_EXTENSION_PIXEL_FORMAT_FLOAT)
+#		define EGL_EXTENSION_KHR_GL_COLORSPACE_DISPLAY_P3
+#	endif
+
+#	define EGL_EXTENSION_KHR_GL_COLORSPACE_BT2020
+
+#endif /* defined(EGL_EXTENSION_KHR_GL_COLORSPACE) */
+
+
+#endif /* _IMGEXTENSIONS_H_ */
+
+/******************************************************************************
+ End of file (imgextensions.h)
+******************************************************************************/

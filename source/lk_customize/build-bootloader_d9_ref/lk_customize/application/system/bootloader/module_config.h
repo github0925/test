@@ -1,0 +1,13 @@
+#ifndef __lk_customize_build_bootloader_d9_ref_lk_customize_application_system_bootloader_module_config_h_H
+#define __lk_customize_build_bootloader_d9_ref_lk_customize_application_system_bootloader_module_config_h_H
+#define MODULE_COMPILEFLAGS ""
+#define MODULE_CFLAGS ""
+#define MODULE_CPPFLAGS ""
+#define MODULE_ASMFLAGS ""
+#define MODULE_LDFLAGS ""
+#define MODULE_OPTFLAGS ""
+#define MODULE_INCLUDES ""
+#define MODULE_SRCDEPS ""
+#define MODULE_DEPS "_LIB_PARTITION_LIB_STORAGE_DEVICE_LIB_FDT_LIB_LIBAVB_LIB_VERIFIED_BOOT_LIB_BOOT_LIB_LIBUFDT"
+#define MODULE_SRCS "_LK_CUSTOMIZE_APPLICATION_SYSTEM_BOOTLOADER_BOOTLOADER_C_LK_CUSTOMIZE_APPLICATION_SYSTEM_BOOTLOADER_BOOTLOADER_QNX_C_LK_CUSTOMIZE_APPLICATION_SYSTEM_BOOTLOADER_IMAGE_SCAN_C_LK_CUSTOMIZE_APPLICATION_SYSTEM_BOOTLOADER_IMAGE_SETUP_C"
+#endif

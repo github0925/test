@@ -1,0 +1,23 @@
+#!/bin/bash
+if [ -L $0 ]
+then
+    BASE_DIR=`dirname $(readlink $0)`
+else
+    BASE_DIR=`dirname $0`
+fi #
+
+if [ ! -n "$2" ] ;then
+	echo "Need specify Image Base."
+	exit 1
+fi
+
+KEY=$BASE_DIR/test/keys/TestRSA2048_ossl.pem
+if [  -n "$3" ] ;then
+    KEY=$3
+elif [ x"$ATB_SIGNER_KEY_FILE" != x"" ];then
+    KEY=$ATB_SIGNER_KEY_FILE
+fi
+
+echo "$0:"$KEY
+
+$BASE_DIR/atb_signer sign --sec_ver 1234 --pkg_ver 1 --rcp key=$KEY rot=2 --iib img=$1 to=$2 entry=$2 ctl=12345678900d900d uuid=12345678ab --dgst sha256 aes_key_id=1 --of $1.safe.signed

@@ -1,0 +1,68 @@
+
+Tiny Loader (tloader) XIP runs from OSPI flash on Safety Core to meet two
+strict requirements to Semidrive 9 serial SOC. 
+
+#1. Fast Boot. <100ms.
+#2. Safety image runs in RAM instead of flash so it is possible to OTA image
+    which sits in flash. 
+
+tloader itself is XIP from OSPI. It initializes DDR then load safety image
+(running in DDR) to DDR (so far, the target address hardcoded as 0x4000000,
+from Safety view. So safety image shall be linked there. And image size 
+hardcoded as 1MB).
+
+tloader binary will be pad to the beginning of the original raw safety image,
+then sign the combined binary, and 'to'/'entry' (input parameters of atb_signer
+which deleivered by Semidrive) shall set to OSPI range (hardcoded as 0x4007800 
+so far). ROM code will verify the combined binary then jump into tloader if
+verification pass.
+
+tloader search GPT table (hardcoded at 0x4007000 so far), it loads 'DDR_FW' 
+into DDR phy then executes 'DDR_INIT_SEQ' to initialize/trains DDR. 
+
+User shall burn proper ddr fw (in build/ddr_fw) into flash (to DDR_FW partition).
+"ddr4_training_fw.pac" for DDR4, "lpddr4_training_fw.pac" for LPDDR4,
+and "lpddr4x_training_fw.pac" for LPDDR4x.
+
+User can run tools/ddr_seq_parser to convert DDR init sequence script into 
+binary format. For example,
+
+    ./tools/ddr_seq_parser if=ddr_script/g9_ref_ddr_init_lpddr4_2133.c of=g9_ref_lpddr4_2133.bin
+
+It is supposed that "g9_ref_lpddr4_2133.bin" (for example) shall be burned into
+flash (to DDR_INIT_SEQ partition)
+
+Note: DDR data rate shall be specifed in beginning of DDR init sequence script.
+For example,
+    
+    DDR_INFO("lpddr4 init start...");
+    CFG_DDR_CLK(FREQ_DDR_2133);
+    DDR_W32(APB_DDRCTRL_BASE+UMCTL2_REGS_DBG1_OFF, 0x1);
+    ...
+
+"FREQ_DDR_1600", "FREQ_DDR_3200", and "FREQ_DDR_4266" also supported. 
+
+A script tools/script/t_loader.sh provisioned to combine/sign tloader and raw
+safety image. Its usage is as followed:
+
+    Usage: ./tools/script/t_loader.sh safety_image_binary [debug]
+
+If 'debug' specfied, debug version tloader will be used to print DDR training
+information to uart.
+
+So far, the size of debug version tloader is 64KB, and non-debug version is 16KB.
+
+The tloader binary had been tested on g9_ref board. Technically, it works on all 
+other 9 serial board but may has no uart output.
+
+Note: 
+    AP FW shall not initialize DDR anymore if tloader used.
+
+TODOs:
+    #1. Check integrity of safety image after copying it into DDR.
+    #2. Check integrity of DDR init sequnce.
+    #3. Support to specify uart (for print) by user.
+    #4. Port tools/scirpts to Windows.
+
+Known Issue:
+

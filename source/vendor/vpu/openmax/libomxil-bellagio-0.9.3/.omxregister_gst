@@ -1,0 +1,5 @@
+/usr/lib/libomxvpu.so
+ ==> OMX.vpu.video_decoder ==> OMX.vpu.video_decoder.avc:OMX.vpu.video_decoder.mpeg4:OMX.vpu.video_decoder.mpeg2:OMX.vpu.video_decoder.h263:OMX.vpu.video_decoder.hevc:
+ ==> OMX.vpu.video_encoder ==> OMX.vpu.video_encoder.avc:
+/usr/lib/libomxjpu.so
+ ==> OMX.jpu.video_decoder ==> OMX.jpu.video_decoder.mjpeg:

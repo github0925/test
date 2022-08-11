@@ -1,0 +1,39 @@
+#include make/module.mk
+
+TOP := $(cur_path)/../../../
+CFLAGS_DEFS := $(IAR_GLB_DEF)
+CFLAGS_INC := $(GLOBAL_INCLUDES) $(IAR_MODULE_INCLUDE)
+IAR_SRCS := $(ALLSRCS) $(IAR_MODULE_SRCS)
+ITARGET := $(IAR_PRJ)
+ICFTARGET := $(TARGET)
+#IVARIANT := iram
+#SELECTED_ITARGET := $(IVARIANT)
+#ALL_VARIANTS ?= iram
+IEXE_PLACE := $(IAR_EXECUTION_PLACE)
+IAR_OUT := $(shell pwd)/ide/IAR/$(IAR_PRJ)
+
+iar-workspace-template-y ?= ide/IAR/scripts/iar_workspace.template
+iar-project-template-y ?= ide/IAR/scripts/iar_project.template
+iar-debug-template-y ?= ide/IAR/scripts/iar_debug.template
+iar_ifc_screen_template-y ?= ide/IAR/scripts/iar_ifc_screen.template
+iar_ifc_example_template-y ?= ide/IAR/scripts/iar_ifc_example.template
+iar_ifc_ewinfo_template-y ?= ide/IAR/scripts/iar_ifc_ewinfo.template
+
+iar-program-entry-y ?= __iar_program_start
+
+iar:
+	if [ ! -d $(IAR_OUT) ]; then mkdir -p $(IAR_OUT); fi
+
+	$(call MAKECONFIGHEADER, $(IAR_OUT)/iar_config.h,GLOBAL_DEFINES); \
+
+	+$(Q)bash ide/IAR/scripts/iar_predef.sh "$(IAR_SRCS)" "$(TOP)" "$(CFLAGS_DEFS)" "$(CFLAGS_INC)" \
+		"$(GLOBAL_MODULE_LDFLAGS)" "$(iar-program-entry-y)" "$(IAR_OUT)" "$(ICFTARGET)" "$(IEXE_PLACE)"
+
+	+$(Q)bash ide/IAR/scripts/iar_project.sh "$(shell pwd)" "$(TOP)" "$(ITARGET)" \
+		"$(iar-workspace-template-y)" "$(iar-project-template-y)" "$(iar-debug-template-y)" \
+		"$(iar_ifc_screen_template-y)" "$(iar_ifc_example_template-y)" "$(iar_ifc_ewinfo_template-y)" \
+		"$(IAR_OUT)"
+
+clean-env:
+	rm -f $(IAR_OUT)/.env-$(IVARIANT).sh
+

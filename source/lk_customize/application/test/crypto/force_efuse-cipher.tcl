@@ -1,0 +1,11 @@
+force {emu_top.dut.safe_ss.efusec_gp_key0[127:0]} 127'h64726f777373617064726f7773736170
+force {emu_top.dut.safe_ss.efusec_gp_key1[127:0]} 127'h64726f777373617064726f7773736170
+force {emu_top.dut.safe_ss.efusec_gp_key2[127:0]} 127'h64726f777373617064726f7773736170
+force {emu_top.dut.safe_ss.efusec_gp_key3[127:0]} 127'h64726f777373617064726f7773736170
+#force {emu_top.dut.sec_ss.ce2.VCE_KEYENABLE[127:0]} 128'hffffffffffffffffffffffffffffffff
+force {emu_top.dut.safe_ss.efusec.sek2[255:0]} 256'h7c0e1a31bd105250c7d0683e8e9f7f9e1447094b2fe401480e3a948dc561a61e
+force {emu_top.dut.safe_ss.efusec.sek1[255:0]} 192'h1877916e022309096217087638342c3b35ac063fba0cb9a1
+force {emu_top.dut.safe_ss.efusec.sek0[255:0]} 127'h6217087638342c3b35ac063fba0cb9a1
+force {emu_top.dut.safe_ss.efusec.rotpk1[255:0]} 256'hf4df1409a310982dd708613b072c351f81777d85f0ae732bbe71ca1510eb3d60
+force {emu_top.dut.safe_ss.efusec.rotpk0[255:0]} 192'h7b6b2c52d2eaf862e57990802bf310c852640edaf7b0738e
+force {emu_top.dut.safe_ss.efusec.huk[255:0]} 127'h3c4fcf098815f7aba6d2ae2816157e2b

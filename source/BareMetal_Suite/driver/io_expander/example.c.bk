@@ -1,0 +1,41 @@
+#include "TCA9539.h"
+#include <stdio.h>
+#include "srv_timer/srv_timer.h"
+#include "Mcu_Modules.h"
+
+#define spin(x) udelay(x)
+
+void spin_s(uint32_t s)
+{
+   spin(s*1000*1000);
+}
+
+#define RES_I2C_I2C9   I2C2
+#define TCA9539_SLAVE_ADDRESS   0x74
+
+void tca9539_expamle(void)
+{
+    //init device with default cfg table then get device handle.
+    void* expander_handle = TCA9539_init(RES_I2C_I2C9,TCA9539_SLAVE_ADDRESS,&TCA9539_AP3V3_CFG_TABLE);
+    //set p07 to output, p01 to input
+    TCA9539_set_pin_dir(expander_handle,TCA9539_GROUP_0,TCA9539_PIN(7),TCA9539_CONFIG_OUTPUT);
+    TCA9539_set_pin_dir(expander_handle,TCA9539_GROUP_0,TCA9539_PIN(1),TCA9539_CONFIG_INPUT);
+    uint8_t pin_state = 0;
+    while(1)
+    {
+        //write p07 to high
+        TCA9539_write_pin_logic(expander_handle,TCA9539_GROUP_0,TCA9539_PIN(7),TCA9539_LOGIC_HIGH);
+        //read p01 state
+        TCA9539_read_pin_logic(expander_handle,TCA9539_GROUP_0,TCA9539_PIN(1),&pin_state);
+        printf("tca9539 group%d pin%x write %d\n",TCA9539_GROUP_0,TCA9539_PIN(7),TCA9539_LOGIC_HIGH);
+        printf("tca9539 group%d pin%x read %d\n",TCA9539_GROUP_0,TCA9539_PIN(1),pin_state);
+        spin_s(2);
+        TCA9539_write_pin_logic(expander_handle,TCA9539_GROUP_0,TCA9539_PIN(7),TCA9539_LOGIC_LOW);
+        TCA9539_read_pin_logic(expander_handle,TCA9539_GROUP_0,TCA9539_PIN(1),&pin_state);
+        printf("tca9539 group%d pin%x write %d\n",TCA9539_GROUP_0,TCA9539_PIN(7),TCA9539_LOGIC_LOW);
+        printf("tca9539 group%d pin%x read %d\n",TCA9539_GROUP_0,TCA9539_PIN(1),pin_state);
+        spin_s(2);
+
+    }
+
+}

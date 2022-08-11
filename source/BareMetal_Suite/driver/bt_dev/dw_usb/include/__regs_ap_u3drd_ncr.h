@@ -1,0 +1,779 @@
+/*
+* __regs_ap_u3drd_ncr.h
+*
+* Copyright (c) 2018 Semidrive Semiconductor.
+* All rights reserved.
+*
+* Description: synopsys usb registers header file
+*
+* Revision History:
+* -----------------
+* 011, 3/8/2019 chenqing create this file
+*/
+#ifndef _AP_APB_U3DRD_NCR_REG_H
+#define _AP_APB_U3DRD_NCR_REG_H
+//--------------------------------------------------------------------------
+// IP Ref Info     : REG_AP_APB_U3DRD_NCR
+// RTL version     :
+//--------------------------------------------------------------------------
+//--------------------------------------------------------------------------
+// Address Block Name : U3DRD_NCR_APB_AB0
+// Description        :
+//--------------------------------------------------------------------------
+#define U3DRD_NCR_APB_AB0_BASE_ADDR 0xD000
+//--------------------------------------------------------------------------
+// Register Name   : REG_AP_APB_U3DRD_NCR_INTEN
+// Register Offset : 0x0
+// Description     :
+//--------------------------------------------------------------------------
+#define REG_AP_APB_U3DRD_NCR_INTEN (U3DRD_NCR_APB_AB0_BASE_ADDR + 0x0)
+#define BIT_AP_APB_U3DRD_NCR_INTEN_INTEN_RSVD8    (BIT_(15))
+#define BIT_AP_APB_U3DRD_NCR_INTEN_INTEN_RSVD7    (BIT_(14))
+#define BIT_AP_APB_U3DRD_NCR_INTEN_INTEN_RSVD6    (BIT_(13))
+#define BIT_AP_APB_U3DRD_NCR_INTEN_INTEN_RSVD5    (BIT_(12))
+#define BIT_AP_APB_U3DRD_NCR_INTEN_INTEN_RSVD4    (BIT_(11))
+#define BIT_AP_APB_U3DRD_NCR_INTEN_INTEN_RSVD3    (BIT_(10))
+#define BIT_AP_APB_U3DRD_NCR_INTEN_INTEN_RSVD2    (BIT_(9))
+#define BIT_AP_APB_U3DRD_NCR_INTEN_INTEN_RSVD1    (BIT_(8))
+#define BIT_AP_APB_U3DRD_NCR_INTEN_INTEN_RSVD0    (BIT_(7))
+#define BIT_AP_APB_U3DRD_NCR_INTEN_INTEN_WAKEUP    (BIT_(6))
+#define BIT_AP_APB_U3DRD_NCR_INTEN_INTEN_HOST_LEGACY_SMI_INTERRUPT    (BIT_(5))
+#define BIT_AP_APB_U3DRD_NCR_INTEN_INTEN_PME_GENERATION    (BIT_(4))
+#define BIT_AP_APB_U3DRD_NCR_INTEN_INTEN_BC_INTERRUPT    (BIT_(3))
+#define BIT_AP_APB_U3DRD_NCR_INTEN_INTEN_CHGDET    (BIT_(2))
+#define BIT_AP_APB_U3DRD_NCR_INTEN_INTEN_HOST_SYSTEM_ERR    (BIT_(1))
+#define BIT_AP_APB_U3DRD_NCR_INTEN_INTEN_CORE_INTERRUPT    (BIT_(0))
+
+//--------------------------------------------------------------------------
+// Register Name   : REG_AP_APB_U3DRD_NCR_CTRL_0
+// Register Offset : 0x10
+// Description     :
+//--------------------------------------------------------------------------
+#define REG_AP_APB_U3DRD_NCR_CTRL_0 (U3DRD_NCR_APB_AB0_BASE_ADDR + 0x10)
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_DEBOUNCECTL_2    (BIT_(31))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_DEBOUNCECTL_1    (BIT_(30))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_DEBOUNCECTL_0    (BIT_(29))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_WAKEBYIDCHG    (BIT_(28))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_WAKEBYVBUSCHG    (BIT_(27))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_WAKEBYDPDMCHG    (BIT_(26))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_WAKEBYREMOTEWAKE    (BIT_(25))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_WAKEBYHSDSCNNT    (BIT_(24))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_WAKEBYHSCNNT    (BIT_(23))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_WAKEBYOC    (BIT_(22))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_XHC_BME    (BIT_(21))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_BUS_FILTER_BYPASS_3    (BIT_(20))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_BUS_FILTER_BYPASS_2    (BIT_(19))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_BUS_FILTER_BYPASS_1    (BIT_(18))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_BUS_FILTER_BYPASS_0    (BIT_(17))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_FLADJ_30MHZ_REG_5    (BIT_(16))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_FLADJ_30MHZ_REG_4    (BIT_(15))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_FLADJ_30MHZ_REG_3    (BIT_(14))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_FLADJ_30MHZ_REG_2    (BIT_(13))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_FLADJ_30MHZ_REG_1    (BIT_(12))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_FLADJ_30MHZ_REG_0    (BIT_(11))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_HOST_LEGACY_SMI_BAR_WR    (BIT_(10))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_HOST_LEGACY_SMI_PCI_CMD_REG_WR    (BIT_(9))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_HOST_MSI_ENABLE    (BIT_(8))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_HOST_PORT_POWER_CONTROL_PRESENT    (BIT_(7))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_DISRXDETU3RXDET    (BIT_(6))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_STARTRXDETU3RXDET    (BIT_(5))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_HOST_U3_PORT_DISABLE    (BIT_(4))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_HOST_U2_PORT_DISABLE    (BIT_(3))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_HUB_PORT_PERM_ATTACH_1    (BIT_(2))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_HUB_PORT_PERM_ATTACH_0    (BIT_(1))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_0_PME_EN    (BIT_(0))
+
+//--------------------------------------------------------------------------
+// Register Name   : REG_AP_APB_U3DRD_NCR_CTRL_1
+// Register Offset : 0x14
+// Description     :
+//--------------------------------------------------------------------------
+#define REG_AP_APB_U3DRD_NCR_CTRL_1 (U3DRD_NCR_APB_AB0_BASE_ADDR + 0x14)
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_RSVD0_7    (BIT_(31))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_RSVD0_6    (BIT_(30))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_RSVD0_5    (BIT_(29))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_RSVD0_4    (BIT_(28))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_RSVD0_3    (BIT_(27))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_RSVD0_2    (BIT_(26))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_RSVD0_1    (BIT_(25))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_RSVD0_0    (BIT_(24))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_RAM_DEBUG_SEL_3    (BIT_(23))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_RAM_DEBUG_SEL_2    (BIT_(22))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_RAM_DEBUG_SEL_1    (BIT_(21))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_RAM_DEBUG_SEL_0    (BIT_(20))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_CTRL_REF_SEL_1    (BIT_(19))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_CTRL_REF_SEL_0    (BIT_(18))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_XM_ACLK_SEL_1    (BIT_(17))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_XM_ACLK_SEL_0    (BIT_(16))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_DRVRSM32KCTRL1_9    (BIT_(15))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_DRVRSM32KCTRL1_8    (BIT_(14))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_DRVRSM32KCTRL1_7    (BIT_(13))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_DRVRSM32KCTRL1_6    (BIT_(12))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_DRVRSM32KCTRL1_5    (BIT_(11))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_DRVRSM32KCTRL1_4    (BIT_(10))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_DRVRSM32KCTRL1_3    (BIT_(9))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_DRVRSM32KCTRL1_2    (BIT_(8))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_DRVRSM32KCTRL1_1    (BIT_(7))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_DRVRSM32KCTRL1_0    (BIT_(6))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_DRVRSM32KCTRL0_4    (BIT_(5))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_DRVRSM32KCTRL0_3    (BIT_(4))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_DRVRSM32KCTRL0_2    (BIT_(3))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_DRVRSM32KCTRL0_1    (BIT_(2))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_DRVRSM32KCTRL0_0    (BIT_(1))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_1_DRVRSM32KEN    (BIT_(0))
+
+//--------------------------------------------------------------------------
+// Register Name   : REG_AP_APB_U3DRD_NCR_CTRL_2
+// Register Offset : 0x18
+// Description     :
+//--------------------------------------------------------------------------
+#define REG_AP_APB_U3DRD_NCR_CTRL_2 (U3DRD_NCR_APB_AB0_BASE_ADDR + 0x18)
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_31    (BIT_(31))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_30    (BIT_(30))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_29    (BIT_(29))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_28    (BIT_(28))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_27    (BIT_(27))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_26    (BIT_(26))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_25    (BIT_(25))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_24    (BIT_(24))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_23    (BIT_(23))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_22    (BIT_(22))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_21    (BIT_(21))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_20    (BIT_(20))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_19    (BIT_(19))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_18    (BIT_(18))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_17    (BIT_(17))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_16    (BIT_(16))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_15    (BIT_(15))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_14    (BIT_(14))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_13    (BIT_(13))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_12    (BIT_(12))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_11    (BIT_(11))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_10    (BIT_(10))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_9    (BIT_(9))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_8    (BIT_(8))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_7    (BIT_(7))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_6    (BIT_(6))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_5    (BIT_(5))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_4    (BIT_(4))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_3    (BIT_(3))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_2    (BIT_(2))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_1    (BIT_(1))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_2_RSVD0_0    (BIT_(0))
+
+//--------------------------------------------------------------------------
+// Register Name   : REG_AP_APB_U3DRD_NCR_CTRL_3
+// Register Offset : 0x1c
+// Description     :
+//--------------------------------------------------------------------------
+#define REG_AP_APB_U3DRD_NCR_CTRL_3 (U3DRD_NCR_APB_AB0_BASE_ADDR + 0x1c)
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_31    (BIT_(31))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_30    (BIT_(30))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_29    (BIT_(29))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_28    (BIT_(28))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_27    (BIT_(27))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_26    (BIT_(26))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_25    (BIT_(25))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_24    (BIT_(24))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_23    (BIT_(23))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_22    (BIT_(22))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_21    (BIT_(21))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_20    (BIT_(20))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_19    (BIT_(19))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_18    (BIT_(18))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_17    (BIT_(17))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_16    (BIT_(16))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_15    (BIT_(15))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_14    (BIT_(14))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_13    (BIT_(13))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_12    (BIT_(12))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_11    (BIT_(11))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_10    (BIT_(10))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_9    (BIT_(9))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_8    (BIT_(8))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_7    (BIT_(7))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_6    (BIT_(6))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_5    (BIT_(5))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_4    (BIT_(4))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_3    (BIT_(3))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_2    (BIT_(2))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_1    (BIT_(1))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_3_RSVD0_0    (BIT_(0))
+
+//--------------------------------------------------------------------------
+// Register Name   : REG_AP_APB_U3DRD_NCR_CTRL_4
+// Register Offset : 0x20
+// Description     :
+//--------------------------------------------------------------------------
+#define REG_AP_APB_U3DRD_NCR_CTRL_4 (U3DRD_NCR_APB_AB0_BASE_ADDR + 0x20)
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_31    (BIT_(31))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_30    (BIT_(30))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_29    (BIT_(29))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_28    (BIT_(28))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_27    (BIT_(27))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_26    (BIT_(26))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_25    (BIT_(25))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_24    (BIT_(24))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_23    (BIT_(23))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_22    (BIT_(22))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_21    (BIT_(21))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_20    (BIT_(20))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_19    (BIT_(19))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_18    (BIT_(18))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_17    (BIT_(17))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_16    (BIT_(16))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_15    (BIT_(15))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_14    (BIT_(14))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_13    (BIT_(13))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_12    (BIT_(12))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_11    (BIT_(11))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_10    (BIT_(10))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_9    (BIT_(9))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_8    (BIT_(8))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_7    (BIT_(7))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_6    (BIT_(6))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_5    (BIT_(5))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_4    (BIT_(4))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_3    (BIT_(3))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_2    (BIT_(2))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_1    (BIT_(1))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_4_RSVD0_0    (BIT_(0))
+
+//--------------------------------------------------------------------------
+// Register Name   : REG_AP_APB_U3DRD_NCR_CTRL_5
+// Register Offset : 0x24
+// Description     :
+//--------------------------------------------------------------------------
+#define REG_AP_APB_U3DRD_NCR_CTRL_5 (U3DRD_NCR_APB_AB0_BASE_ADDR + 0x24)
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_31    (BIT_(31))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_30    (BIT_(30))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_29    (BIT_(29))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_28    (BIT_(28))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_27    (BIT_(27))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_26    (BIT_(26))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_25    (BIT_(25))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_24    (BIT_(24))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_23    (BIT_(23))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_22    (BIT_(22))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_21    (BIT_(21))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_20    (BIT_(20))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_19    (BIT_(19))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_18    (BIT_(18))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_17    (BIT_(17))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_16    (BIT_(16))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_15    (BIT_(15))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_14    (BIT_(14))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_13    (BIT_(13))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_12    (BIT_(12))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_11    (BIT_(11))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_10    (BIT_(10))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_9    (BIT_(9))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_8    (BIT_(8))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_7    (BIT_(7))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_6    (BIT_(6))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_5    (BIT_(5))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_4    (BIT_(4))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_3    (BIT_(3))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_2    (BIT_(2))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_1    (BIT_(1))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_5_RSVD0_0    (BIT_(0))
+
+//--------------------------------------------------------------------------
+// Register Name   : REG_AP_APB_U3DRD_NCR_CTRL_6
+// Register Offset : 0x28
+// Description     :
+//--------------------------------------------------------------------------
+#define REG_AP_APB_U3DRD_NCR_CTRL_6 (U3DRD_NCR_APB_AB0_BASE_ADDR + 0x28)
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_31    (BIT_(31))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_30    (BIT_(30))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_29    (BIT_(29))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_28    (BIT_(28))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_27    (BIT_(27))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_26    (BIT_(26))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_25    (BIT_(25))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_24    (BIT_(24))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_23    (BIT_(23))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_22    (BIT_(22))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_21    (BIT_(21))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_20    (BIT_(20))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_19    (BIT_(19))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_18    (BIT_(18))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_17    (BIT_(17))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_16    (BIT_(16))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_15    (BIT_(15))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_14    (BIT_(14))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_13    (BIT_(13))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_12    (BIT_(12))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_11    (BIT_(11))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_10    (BIT_(10))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_9    (BIT_(9))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_8    (BIT_(8))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_7    (BIT_(7))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_6    (BIT_(6))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_5    (BIT_(5))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_4    (BIT_(4))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_3    (BIT_(3))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_2    (BIT_(2))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_1    (BIT_(1))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_6_RSVD0_0    (BIT_(0))
+
+//--------------------------------------------------------------------------
+// Register Name   : REG_AP_APB_U3DRD_NCR_CTRL_7
+// Register Offset : 0x2c
+// Description     :
+//--------------------------------------------------------------------------
+#define REG_AP_APB_U3DRD_NCR_CTRL_7 (U3DRD_NCR_APB_AB0_BASE_ADDR + 0x2c)
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_31    (BIT_(31))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_30    (BIT_(30))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_29    (BIT_(29))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_28    (BIT_(28))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_27    (BIT_(27))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_26    (BIT_(26))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_25    (BIT_(25))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_24    (BIT_(24))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_23    (BIT_(23))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_22    (BIT_(22))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_21    (BIT_(21))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_20    (BIT_(20))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_19    (BIT_(19))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_18    (BIT_(18))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_17    (BIT_(17))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_16    (BIT_(16))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_15    (BIT_(15))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_14    (BIT_(14))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_13    (BIT_(13))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_12    (BIT_(12))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_11    (BIT_(11))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_10    (BIT_(10))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_9    (BIT_(9))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_8    (BIT_(8))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_7    (BIT_(7))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_6    (BIT_(6))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_5    (BIT_(5))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_4    (BIT_(4))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_3    (BIT_(3))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_2    (BIT_(2))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_1    (BIT_(1))
+#define BIT_AP_APB_U3DRD_NCR_CTRL_7_RSVD0_0    (BIT_(0))
+
+//--------------------------------------------------------------------------
+// Register Name   : REG_AP_APB_U3DRD_NCR_INTR
+// Register Offset : 0x80
+// Description     :
+//--------------------------------------------------------------------------
+#define REG_AP_APB_U3DRD_NCR_INTR (U3DRD_NCR_APB_AB0_BASE_ADDR + 0x80)
+#define BIT_AP_APB_U3DRD_NCR_INTR_INTR_RSVD8    (BIT_(15))
+#define BIT_AP_APB_U3DRD_NCR_INTR_INTR_RSVD7    (BIT_(14))
+#define BIT_AP_APB_U3DRD_NCR_INTR_INTR_RSVD6    (BIT_(13))
+#define BIT_AP_APB_U3DRD_NCR_INTR_INTR_RSVD5    (BIT_(12))
+#define BIT_AP_APB_U3DRD_NCR_INTR_INTR_RSVD4    (BIT_(11))
+#define BIT_AP_APB_U3DRD_NCR_INTR_INTR_RSVD3    (BIT_(10))
+#define BIT_AP_APB_U3DRD_NCR_INTR_INTR_RSVD2    (BIT_(9))
+#define BIT_AP_APB_U3DRD_NCR_INTR_INTR_RSVD1    (BIT_(8))
+#define BIT_AP_APB_U3DRD_NCR_INTR_INTR_RSVD0    (BIT_(7))
+#define BIT_AP_APB_U3DRD_NCR_INTR_INTR_WAKEUP    (BIT_(6))
+#define BIT_AP_APB_U3DRD_NCR_INTR_INTR_HOST_LEGACY_SMI_INTERRUPT    (BIT_(5))
+#define BIT_AP_APB_U3DRD_NCR_INTR_INTR_PME_GENERATION    (BIT_(4))
+#define BIT_AP_APB_U3DRD_NCR_INTR_INTR_BC_INTERRUPT    (BIT_(3))
+#define BIT_AP_APB_U3DRD_NCR_INTR_INTR_CHGDET    (BIT_(2))
+#define BIT_AP_APB_U3DRD_NCR_INTR_INTR_HOST_SYSTEM_ERR    (BIT_(1))
+#define BIT_AP_APB_U3DRD_NCR_INTR_INTR_CORE_INTERRUPT    (BIT_(0))
+
+//--------------------------------------------------------------------------
+// Register Name   : REG_AP_APB_U3DRD_NCR_STS_0
+// Register Offset : 0x90
+// Description     :
+//--------------------------------------------------------------------------
+#define REG_AP_APB_U3DRD_NCR_STS_0 (U3DRD_NCR_APB_AB0_BASE_ADDR + 0x90)
+#define BIT_AP_APB_U3DRD_NCR_STS_0_SUSPEND_CLK_ACTIVE    (BIT_(1))
+#define BIT_AP_APB_U3DRD_NCR_STS_0_ACLK_ACTIVE    (BIT_(0))
+
+//--------------------------------------------------------------------------
+// Register Name   : REG_AP_APB_U3DRD_NCR_STS_1
+// Register Offset : 0x94
+// Description     :
+//--------------------------------------------------------------------------
+#define REG_AP_APB_U3DRD_NCR_STS_1 (U3DRD_NCR_APB_AB0_BASE_ADDR + 0x94)
+#define BIT_AP_APB_U3DRD_NCR_STS_1_DISRXDETU3RXDET_ACK    (BIT_(17))
+#define BIT_AP_APB_U3DRD_NCR_STS_1_CLK_GATE_CTRL_2    (BIT_(16))
+#define BIT_AP_APB_U3DRD_NCR_STS_1_CLK_GATE_CTRL_1    (BIT_(15))
+#define BIT_AP_APB_U3DRD_NCR_STS_1_CLK_GATE_CTRL_0    (BIT_(14))
+#define BIT_AP_APB_U3DRD_NCR_STS_1_OPERATIONAL_MODE_1    (BIT_(13))
+#define BIT_AP_APB_U3DRD_NCR_STS_1_OPERATIONAL_MODE_0    (BIT_(12))
+#define BIT_AP_APB_U3DRD_NCR_STS_1_HOST_CURRENT_BELT_11    (BIT_(11))
+#define BIT_AP_APB_U3DRD_NCR_STS_1_HOST_CURRENT_BELT_10    (BIT_(10))
+#define BIT_AP_APB_U3DRD_NCR_STS_1_HOST_CURRENT_BELT_9    (BIT_(9))
+#define BIT_AP_APB_U3DRD_NCR_STS_1_HOST_CURRENT_BELT_8    (BIT_(8))
+#define BIT_AP_APB_U3DRD_NCR_STS_1_HOST_CURRENT_BELT_7    (BIT_(7))
+#define BIT_AP_APB_U3DRD_NCR_STS_1_HOST_CURRENT_BELT_6    (BIT_(6))
+#define BIT_AP_APB_U3DRD_NCR_STS_1_HOST_CURRENT_BELT_5    (BIT_(5))
+#define BIT_AP_APB_U3DRD_NCR_STS_1_HOST_CURRENT_BELT_4    (BIT_(4))
+#define BIT_AP_APB_U3DRD_NCR_STS_1_HOST_CURRENT_BELT_3    (BIT_(3))
+#define BIT_AP_APB_U3DRD_NCR_STS_1_HOST_CURRENT_BELT_2    (BIT_(2))
+#define BIT_AP_APB_U3DRD_NCR_STS_1_HOST_CURRENT_BELT_1    (BIT_(1))
+#define BIT_AP_APB_U3DRD_NCR_STS_1_HOST_CURRENT_BELT_0    (BIT_(0))
+
+//--------------------------------------------------------------------------
+// Register Name   : REG_AP_APB_U3DRD_NCR_STS_2
+// Register Offset : 0x98
+// Description     :
+//--------------------------------------------------------------------------
+#define REG_AP_APB_U3DRD_NCR_STS_2 (U3DRD_NCR_APB_AB0_BASE_ADDR + 0x98)
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_31    (BIT_(31))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_30    (BIT_(30))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_29    (BIT_(29))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_28    (BIT_(28))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_27    (BIT_(27))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_26    (BIT_(26))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_25    (BIT_(25))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_24    (BIT_(24))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_23    (BIT_(23))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_22    (BIT_(22))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_21    (BIT_(21))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_20    (BIT_(20))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_19    (BIT_(19))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_18    (BIT_(18))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_17    (BIT_(17))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_16    (BIT_(16))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_15    (BIT_(15))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_14    (BIT_(14))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_13    (BIT_(13))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_12    (BIT_(12))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_11    (BIT_(11))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_10    (BIT_(10))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_9    (BIT_(9))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_8    (BIT_(8))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_7    (BIT_(7))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_6    (BIT_(6))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_5    (BIT_(5))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_4    (BIT_(4))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_3    (BIT_(3))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_2    (BIT_(2))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_1    (BIT_(1))
+#define BIT_AP_APB_U3DRD_NCR_STS_2_LOGIC_ANALYZER_TRACE_0_0    (BIT_(0))
+
+//--------------------------------------------------------------------------
+// Register Name   : REG_AP_APB_U3DRD_NCR_STS_3
+// Register Offset : 0x9c
+// Description     :
+//--------------------------------------------------------------------------
+#define REG_AP_APB_U3DRD_NCR_STS_3 (U3DRD_NCR_APB_AB0_BASE_ADDR + 0x9c)
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_31    (BIT_(31))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_30    (BIT_(30))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_29    (BIT_(29))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_28    (BIT_(28))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_27    (BIT_(27))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_26    (BIT_(26))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_25    (BIT_(25))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_24    (BIT_(24))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_23    (BIT_(23))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_22    (BIT_(22))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_21    (BIT_(21))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_20    (BIT_(20))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_19    (BIT_(19))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_18    (BIT_(18))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_17    (BIT_(17))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_16    (BIT_(16))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_15    (BIT_(15))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_14    (BIT_(14))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_13    (BIT_(13))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_12    (BIT_(12))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_11    (BIT_(11))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_10    (BIT_(10))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_9    (BIT_(9))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_8    (BIT_(8))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_7    (BIT_(7))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_6    (BIT_(6))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_5    (BIT_(5))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_4    (BIT_(4))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_3    (BIT_(3))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_2    (BIT_(2))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_1    (BIT_(1))
+#define BIT_AP_APB_U3DRD_NCR_STS_3_LOGIC_ANALYZER_TRACE_1_0    (BIT_(0))
+
+//--------------------------------------------------------------------------
+// Register Name   : REG_AP_APB_U3DRD_NCR_STS_4
+// Register Offset : 0xa0
+// Description     :
+//--------------------------------------------------------------------------
+#define REG_AP_APB_U3DRD_NCR_STS_4 (U3DRD_NCR_APB_AB0_BASE_ADDR + 0xa0)
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_31    (BIT_(31))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_30    (BIT_(30))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_29    (BIT_(29))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_28    (BIT_(28))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_27    (BIT_(27))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_26    (BIT_(26))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_25    (BIT_(25))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_24    (BIT_(24))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_23    (BIT_(23))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_22    (BIT_(22))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_21    (BIT_(21))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_20    (BIT_(20))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_19    (BIT_(19))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_18    (BIT_(18))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_17    (BIT_(17))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_16    (BIT_(16))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_15    (BIT_(15))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_14    (BIT_(14))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_13    (BIT_(13))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_12    (BIT_(12))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_11    (BIT_(11))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_10    (BIT_(10))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_9    (BIT_(9))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_8    (BIT_(8))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_7    (BIT_(7))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_6    (BIT_(6))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_5    (BIT_(5))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_4    (BIT_(4))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_3    (BIT_(3))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_2    (BIT_(2))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_1    (BIT_(1))
+#define BIT_AP_APB_U3DRD_NCR_STS_4_DEBUG_0_0    (BIT_(0))
+
+//--------------------------------------------------------------------------
+// Register Name   : REG_AP_APB_U3DRD_NCR_STS_5
+// Register Offset : 0xa4
+// Description     :
+//--------------------------------------------------------------------------
+#define REG_AP_APB_U3DRD_NCR_STS_5 (U3DRD_NCR_APB_AB0_BASE_ADDR + 0xa4)
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_31    (BIT_(31))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_30    (BIT_(30))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_29    (BIT_(29))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_28    (BIT_(28))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_27    (BIT_(27))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_26    (BIT_(26))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_25    (BIT_(25))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_24    (BIT_(24))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_23    (BIT_(23))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_22    (BIT_(22))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_21    (BIT_(21))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_20    (BIT_(20))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_19    (BIT_(19))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_18    (BIT_(18))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_17    (BIT_(17))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_16    (BIT_(16))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_15    (BIT_(15))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_14    (BIT_(14))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_13    (BIT_(13))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_12    (BIT_(12))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_11    (BIT_(11))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_10    (BIT_(10))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_9    (BIT_(9))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_8    (BIT_(8))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_7    (BIT_(7))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_6    (BIT_(6))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_5    (BIT_(5))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_4    (BIT_(4))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_3    (BIT_(3))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_2    (BIT_(2))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_1    (BIT_(1))
+#define BIT_AP_APB_U3DRD_NCR_STS_5_DEBUG_1_0    (BIT_(0))
+
+//--------------------------------------------------------------------------
+// Register Name   : REG_AP_APB_U3DRD_NCR_STS_6
+// Register Offset : 0xa8
+// Description     :
+//--------------------------------------------------------------------------
+#define REG_AP_APB_U3DRD_NCR_STS_6 (U3DRD_NCR_APB_AB0_BASE_ADDR + 0xa8)
+#define BIT_AP_APB_U3DRD_NCR_STS_6_DEBUG_2_2    (BIT_(2))
+#define BIT_AP_APB_U3DRD_NCR_STS_6_DEBUG_2_1    (BIT_(1))
+#define BIT_AP_APB_U3DRD_NCR_STS_6_DEBUG_2_0    (BIT_(0))
+
+//--------------------------------------------------------------------------
+// Register Name   : REG_AP_APB_U3DRD_NCR_STS_7
+// Register Offset : 0xac
+// Description     :
+//--------------------------------------------------------------------------
+#define REG_AP_APB_U3DRD_NCR_STS_7 (U3DRD_NCR_APB_AB0_BASE_ADDR + 0xac)
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_31    (BIT_(31))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_30    (BIT_(30))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_29    (BIT_(29))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_28    (BIT_(28))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_27    (BIT_(27))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_26    (BIT_(26))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_25    (BIT_(25))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_24    (BIT_(24))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_23    (BIT_(23))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_22    (BIT_(22))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_21    (BIT_(21))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_20    (BIT_(20))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_19    (BIT_(19))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_18    (BIT_(18))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_17    (BIT_(17))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_16    (BIT_(16))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_15    (BIT_(15))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_14    (BIT_(14))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_13    (BIT_(13))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_12    (BIT_(12))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_11    (BIT_(11))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_10    (BIT_(10))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_9    (BIT_(9))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_8    (BIT_(8))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_7    (BIT_(7))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_6    (BIT_(6))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_5    (BIT_(5))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_4    (BIT_(4))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_3    (BIT_(3))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_2    (BIT_(2))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_1    (BIT_(1))
+#define BIT_AP_APB_U3DRD_NCR_STS_7_RSVD0_0    (BIT_(0))
+
+//--------------------------------------------------------------------------
+// Register Name   : REG_AP_APB_U3DRD_NCR_STS_8
+// Register Offset : 0xb0
+// Description     :
+//--------------------------------------------------------------------------
+#define REG_AP_APB_U3DRD_NCR_STS_8 (U3DRD_NCR_APB_AB0_BASE_ADDR + 0xb0)
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_31    (BIT_(31))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_30    (BIT_(30))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_29    (BIT_(29))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_28    (BIT_(28))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_27    (BIT_(27))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_26    (BIT_(26))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_25    (BIT_(25))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_24    (BIT_(24))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_23    (BIT_(23))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_22    (BIT_(22))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_21    (BIT_(21))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_20    (BIT_(20))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_19    (BIT_(19))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_18    (BIT_(18))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_17    (BIT_(17))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_16    (BIT_(16))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_15    (BIT_(15))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_14    (BIT_(14))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_13    (BIT_(13))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_12    (BIT_(12))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_11    (BIT_(11))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_10    (BIT_(10))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_9    (BIT_(9))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_8    (BIT_(8))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_7    (BIT_(7))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_6    (BIT_(6))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_5    (BIT_(5))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_4    (BIT_(4))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_3    (BIT_(3))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_2    (BIT_(2))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_1    (BIT_(1))
+#define BIT_AP_APB_U3DRD_NCR_STS_8_RSVD0_0    (BIT_(0))
+
+//--------------------------------------------------------------------------
+// Register Name   : REG_AP_APB_U3DRD_NCR_STS_9
+// Register Offset : 0xb4
+// Description     :
+//--------------------------------------------------------------------------
+#define REG_AP_APB_U3DRD_NCR_STS_9 (U3DRD_NCR_APB_AB0_BASE_ADDR + 0xb4)
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_31    (BIT_(31))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_30    (BIT_(30))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_29    (BIT_(29))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_28    (BIT_(28))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_27    (BIT_(27))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_26    (BIT_(26))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_25    (BIT_(25))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_24    (BIT_(24))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_23    (BIT_(23))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_22    (BIT_(22))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_21    (BIT_(21))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_20    (BIT_(20))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_19    (BIT_(19))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_18    (BIT_(18))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_17    (BIT_(17))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_16    (BIT_(16))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_15    (BIT_(15))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_14    (BIT_(14))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_13    (BIT_(13))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_12    (BIT_(12))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_11    (BIT_(11))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_10    (BIT_(10))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_9    (BIT_(9))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_8    (BIT_(8))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_7    (BIT_(7))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_6    (BIT_(6))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_5    (BIT_(5))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_4    (BIT_(4))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_3    (BIT_(3))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_2    (BIT_(2))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_1    (BIT_(1))
+#define BIT_AP_APB_U3DRD_NCR_STS_9_RSVD0_0    (BIT_(0))
+
+//--------------------------------------------------------------------------
+// Register Name   : REG_AP_APB_U3DRD_NCR_STS_10
+// Register Offset : 0xb8
+// Description     :
+//--------------------------------------------------------------------------
+#define REG_AP_APB_U3DRD_NCR_STS_10 (U3DRD_NCR_APB_AB0_BASE_ADDR + 0xb8)
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_31    (BIT_(31))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_30    (BIT_(30))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_29    (BIT_(29))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_28    (BIT_(28))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_27    (BIT_(27))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_26    (BIT_(26))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_25    (BIT_(25))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_24    (BIT_(24))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_23    (BIT_(23))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_22    (BIT_(22))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_21    (BIT_(21))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_20    (BIT_(20))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_19    (BIT_(19))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_18    (BIT_(18))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_17    (BIT_(17))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_16    (BIT_(16))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_15    (BIT_(15))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_14    (BIT_(14))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_13    (BIT_(13))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_12    (BIT_(12))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_11    (BIT_(11))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_10    (BIT_(10))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_9    (BIT_(9))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_8    (BIT_(8))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_7    (BIT_(7))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_6    (BIT_(6))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_5    (BIT_(5))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_4    (BIT_(4))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_3    (BIT_(3))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_2    (BIT_(2))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_1    (BIT_(1))
+#define BIT_AP_APB_U3DRD_NCR_STS_10_RSVD0_0    (BIT_(0))
+
+//--------------------------------------------------------------------------
+// Register Name   : REG_AP_APB_U3DRD_NCR_STS_11
+// Register Offset : 0xbc
+// Description     :
+//--------------------------------------------------------------------------
+#define REG_AP_APB_U3DRD_NCR_STS_11 (U3DRD_NCR_APB_AB0_BASE_ADDR + 0xbc)
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_31    (BIT_(31))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_30    (BIT_(30))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_29    (BIT_(29))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_28    (BIT_(28))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_27    (BIT_(27))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_26    (BIT_(26))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_25    (BIT_(25))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_24    (BIT_(24))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_23    (BIT_(23))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_22    (BIT_(22))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_21    (BIT_(21))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_20    (BIT_(20))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_19    (BIT_(19))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_18    (BIT_(18))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_17    (BIT_(17))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_16    (BIT_(16))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_15    (BIT_(15))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_14    (BIT_(14))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_13    (BIT_(13))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_12    (BIT_(12))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_11    (BIT_(11))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_10    (BIT_(10))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_9    (BIT_(9))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_8    (BIT_(8))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_7    (BIT_(7))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_6    (BIT_(6))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_5    (BIT_(5))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_4    (BIT_(4))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_3    (BIT_(3))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_2    (BIT_(2))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_1    (BIT_(1))
+#define BIT_AP_APB_U3DRD_NCR_STS_11_RSVD0_0    (BIT_(0))
+
+
+
+#endif

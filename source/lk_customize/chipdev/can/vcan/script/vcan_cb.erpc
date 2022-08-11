@@ -1,0 +1,23 @@
+/*
+ * vcan_cb.erpc
+ *
+ * Copyright (c) 2019 Semidrive Semiconductor.
+ * All rights reserved.
+ *
+ * Description:
+ *
+ * Revision History:
+ * -----------------
+ */
+
+program vcan_cb
+
+@id(3)
+interface vcan_cb
+{
+    /******************* CAN callback function interface *********************/
+    oneway virCan_ControllerBusOff(uint8 Controller)
+    oneway virCan_SetWakeupEvent(uint8 Controller)
+    oneway virCan_RxIndication(uint16 Hrh, uint32 CanId, uint8 CanDlc, in list<uint8> CanSduPtr @length(CanDlc))
+    oneway virCan_TxConfirmation(uint16 canTxPduId)
+}

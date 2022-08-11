@@ -1,0 +1,2707 @@
+Archive member included to satisfy reference by file (symbol)
+
+/home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_aeabi_ldivmod.o)
+                              ./lib/cksum/adler32.o (__aeabi_ldivmod)
+/home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_aeabi_uldivmod.o)
+                              ./lib/libavb/avb_sysdeps_posix.o (__aeabi_uldivmod)
+/home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_udivmoddi4.o)
+                              /home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_aeabi_ldivmod.o) (__udivmoddi4)
+/home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_dvmd_tls.o)
+                              /home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_aeabi_ldivmod.o) (__aeabi_ldiv0)
+
+Allocating common symbols
+Common symbol       size              file
+
+i2c_ctx             0x70              ./driver/io_expander/i2c_wrapper.o
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 ./app/t_loader/end.o
+ .data          0x0000000000000000        0x0 ./app/t_loader/end.o
+ .bss           0x0000000000000000        0x0 ./app/t_loader/end.o
+ .comment       0x0000000000000000       0x80 ./app/t_loader/end.o
+ .text          0x0000000000000000        0x0 ./app/t_loader/main.o
+ .data          0x0000000000000000        0x0 ./app/t_loader/main.o
+ .bss           0x0000000000000000        0x0 ./app/t_loader/main.o
+ .text.board_setup
+                0x0000000000000000        0x4 ./app/t_loader/main.o
+ .data.board_str
+                0x0000000000000000        0x4 ./app/t_loader/main.o
+ .data.cpu_str  0x0000000000000000        0x4 ./app/t_loader/main.o
+ .data.prod_str
+                0x0000000000000000        0x4 ./app/t_loader/main.o
+ .rodata.str1.4
+                0x0000000000000000       0x21 ./app/t_loader/main.o
+ .comment       0x0000000000000000       0x80 ./app/t_loader/main.o
+ .data          0x0000000000000000        0x0 ./arch/armv7-r/arch_ops.o
+ .bss           0x0000000000000000        0x0 ./arch/armv7-r/arch_ops.o
+ .data          0x0000000000000000        0x0 ./arch/armv7-r/cache-ops.o
+ .bss           0x0000000000000000        0x0 ./arch/armv7-r/cache-ops.o
+ .text          0x0000000000000000        0x0 ./arch/armv7-r/exception.o
+ .data          0x0000000000000000        0x0 ./arch/armv7-r/exception.o
+ .bss           0x0000000000000000        0x0 ./arch/armv7-r/exception.o
+ .comment       0x0000000000000000       0x80 ./arch/armv7-r/exception.o
+ .data          0x0000000000000000        0x0 ./arch/armv7-r/exception_s.o
+ .bss           0x0000000000000000        0x0 ./arch/armv7-r/exception_s.o
+ .text          0x0000000000000000       0x90 ./arch/armv7-r/fast_fifo_wr.o
+ .data          0x0000000000000000        0x0 ./arch/armv7-r/fast_fifo_wr.o
+ .bss           0x0000000000000000        0x0 ./arch/armv7-r/fast_fifo_wr.o
+ .debug_line    0x0000000000000000       0x61 ./arch/armv7-r/fast_fifo_wr.o
+ .debug_info    0x0000000000000000       0x26 ./arch/armv7-r/fast_fifo_wr.o
+ .debug_abbrev  0x0000000000000000       0x14 ./arch/armv7-r/fast_fifo_wr.o
+ .debug_aranges
+                0x0000000000000000       0x20 ./arch/armv7-r/fast_fifo_wr.o
+ .debug_str     0x0000000000000000       0x5c ./arch/armv7-r/fast_fifo_wr.o
+ .ARM.attributes
+                0x0000000000000000       0x27 ./arch/armv7-r/fast_fifo_wr.o
+ .data          0x0000000000000000        0x0 ./arch/armv7-r/memclr_opt.o
+ .bss           0x0000000000000000        0x0 ./arch/armv7-r/memclr_opt.o
+ .data          0x0000000000000000        0x0 ./arch/armv7-r/memcpy_opt.o
+ .bss           0x0000000000000000        0x0 ./arch/armv7-r/memcpy_opt.o
+ .data          0x0000000000000000        0x0 ./arch/armv7-r/start.o
+ .bss           0x0000000000000000        0x0 ./arch/armv7-r/start.o
+ .text          0x0000000000000000        0x0 ./arch/armv7-r/vector.o
+ .data          0x0000000000000000        0x0 ./arch/armv7-r/vector.o
+ .bss           0x0000000000000000        0x0 ./arch/armv7-r/vector.o
+ .text          0x0000000000000000        0x0 ./board/d9_ref/board.o
+ .data          0x0000000000000000        0x0 ./board/d9_ref/board.o
+ .bss           0x0000000000000000        0x0 ./board/d9_ref/board.o
+ .comment       0x0000000000000000       0x80 ./board/d9_ref/board.o
+ .text          0x0000000000000000        0x0 ./board/d9_ref/board_info.o
+ .data          0x0000000000000000        0x0 ./board/d9_ref/board_info.o
+ .bss           0x0000000000000000        0x0 ./board/d9_ref/board_info.o
+ .debug_info    0x0000000000000000      0x19b ./board/d9_ref/board_info.o
+ .debug_abbrev  0x0000000000000000       0x52 ./board/d9_ref/board_info.o
+ .debug_aranges
+                0x0000000000000000       0x18 ./board/d9_ref/board_info.o
+ .debug_line    0x0000000000000000      0x18d ./board/d9_ref/board_info.o
+ .debug_str     0x0000000000000000      0x34b ./board/d9_ref/board_info.o
+ .comment       0x0000000000000000       0x80 ./board/d9_ref/board_info.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./board/d9_ref/board_info.o
+ .text          0x0000000000000000        0x0 ./board/d9_ref/i2c_pins.o
+ .data          0x0000000000000000        0x0 ./board/d9_ref/i2c_pins.o
+ .bss           0x0000000000000000        0x0 ./board/d9_ref/i2c_pins.o
+ .text.soc_i2c_pin_cfg
+                0x0000000000000000       0x24 ./board/d9_ref/i2c_pins.o
+ .rodata.i2c10_pins
+                0x0000000000000000       0x30 ./board/d9_ref/i2c_pins.o
+ .rodata.i2c4_pins
+                0x0000000000000000       0x30 ./board/d9_ref/i2c_pins.o
+ .debug_info    0x0000000000000000      0x646 ./board/d9_ref/i2c_pins.o
+ .debug_abbrev  0x0000000000000000      0x151 ./board/d9_ref/i2c_pins.o
+ .debug_loc     0x0000000000000000       0x74 ./board/d9_ref/i2c_pins.o
+ .debug_aranges
+                0x0000000000000000       0x20 ./board/d9_ref/i2c_pins.o
+ .debug_ranges  0x0000000000000000       0x10 ./board/d9_ref/i2c_pins.o
+ .debug_line    0x0000000000000000      0x254 ./board/d9_ref/i2c_pins.o
+ .debug_str     0x0000000000000000      0x791 ./board/d9_ref/i2c_pins.o
+ .comment       0x0000000000000000       0x80 ./board/d9_ref/i2c_pins.o
+ .debug_frame   0x0000000000000000       0x20 ./board/d9_ref/i2c_pins.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./board/d9_ref/i2c_pins.o
+ .text          0x0000000000000000        0x0 ./driver/analog/fsrefclk.o
+ .data          0x0000000000000000        0x0 ./driver/analog/fsrefclk.o
+ .bss           0x0000000000000000        0x0 ./driver/analog/fsrefclk.o
+ .text.ana_osc24_get_output_sel
+                0x0000000000000000       0x40 ./driver/analog/fsrefclk.o
+ .comment       0x0000000000000000       0x80 ./driver/analog/fsrefclk.o
+ .text          0x0000000000000000        0x0 ./driver/analog/xtal_24m.o
+ .data          0x0000000000000000        0x0 ./driver/analog/xtal_24m.o
+ .bss           0x0000000000000000        0x0 ./driver/analog/xtal_24m.o
+ .text.ana_is_xtal_ready
+                0x0000000000000000        0x8 ./driver/analog/xtal_24m.o
+ .text.ana_xtal_set_xgain
+                0x0000000000000000       0x14 ./driver/analog/xtal_24m.o
+ .debug_info    0x0000000000000000      0x27f ./driver/analog/xtal_24m.o
+ .debug_abbrev  0x0000000000000000      0x10e ./driver/analog/xtal_24m.o
+ .debug_loc     0x0000000000000000       0x81 ./driver/analog/xtal_24m.o
+ .debug_aranges
+                0x0000000000000000       0x28 ./driver/analog/xtal_24m.o
+ .debug_ranges  0x0000000000000000       0x18 ./driver/analog/xtal_24m.o
+ .debug_line    0x0000000000000000      0x1e2 ./driver/analog/xtal_24m.o
+ .debug_str     0x0000000000000000      0x3a8 ./driver/analog/xtal_24m.o
+ .comment       0x0000000000000000       0x80 ./driver/analog/xtal_24m.o
+ .debug_frame   0x0000000000000000       0x30 ./driver/analog/xtal_24m.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./driver/analog/xtal_24m.o
+ .text          0x0000000000000000        0x0 ./driver/clk/ckgen.o
+ .data          0x0000000000000000        0x0 ./driver/clk/ckgen.o
+ .bss           0x0000000000000000        0x0 ./driver/clk/ckgen.o
+ .text.ckgen_ip_slice_gate
+                0x0000000000000000       0x24 ./driver/clk/ckgen.o
+ .text.ckgen_ip_slice_ungate
+                0x0000000000000000       0x24 ./driver/clk/ckgen.o
+ .text.ckgen_bus_slice_postdiv_update
+                0x0000000000000000       0x2c ./driver/clk/ckgen.o
+ .text.ckgen_core_slice_cfg
+                0x0000000000000000       0x98 ./driver/clk/ckgen.o
+ .text.ckgen_core_slice_postdiv_update
+                0x0000000000000000       0x2c ./driver/clk/ckgen.o
+ .text.ckgen_core_slice_switch
+                0x0000000000000000       0x18 ./driver/clk/ckgen.o
+ .text.ckgen_cg_en
+                0x0000000000000000       0x10 ./driver/clk/ckgen.o
+ .text.ckgen_cg_dis
+                0x0000000000000000       0x10 ./driver/clk/ckgen.o
+ .comment       0x0000000000000000       0x80 ./driver/clk/ckgen.o
+ .text          0x0000000000000000        0x0 ./driver/ddr/dw_umctl2/fw/streaming_str.o
+ .data          0x0000000000000000        0x0 ./driver/ddr/dw_umctl2/fw/streaming_str.o
+ .bss           0x0000000000000000        0x0 ./driver/ddr/dw_umctl2/fw/streaming_str.o
+ .text.find_streaming_string
+                0x0000000000000000      0x1fc ./driver/ddr/dw_umctl2/fw/streaming_str.o
+ .bss.str_rdy.6829
+                0x0000000000000000        0x4 ./driver/ddr/dw_umctl2/fw/streaming_str.o
+ .rodata.find_streaming_string.str1.4
+                0x0000000000000000      0x21f ./driver/ddr/dw_umctl2/fw/streaming_str.o
+ .debug_info    0x0000000000000000      0xc2e ./driver/ddr/dw_umctl2/fw/streaming_str.o
+ .debug_abbrev  0x0000000000000000      0x276 ./driver/ddr/dw_umctl2/fw/streaming_str.o
+ .debug_loc     0x0000000000000000      0x421 ./driver/ddr/dw_umctl2/fw/streaming_str.o
+ .debug_aranges
+                0x0000000000000000       0x20 ./driver/ddr/dw_umctl2/fw/streaming_str.o
+ .debug_ranges  0x0000000000000000       0xc0 ./driver/ddr/dw_umctl2/fw/streaming_str.o
+ .debug_line    0x0000000000000000      0x40e ./driver/ddr/dw_umctl2/fw/streaming_str.o
+ .debug_str     0x0000000000000000      0x823 ./driver/ddr/dw_umctl2/fw/streaming_str.o
+ .comment       0x0000000000000000       0x80 ./driver/ddr/dw_umctl2/fw/streaming_str.o
+ .debug_frame   0x0000000000000000       0x48 ./driver/ddr/dw_umctl2/fw/streaming_str.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./driver/ddr/dw_umctl2/fw/streaming_str.o
+ .text          0x0000000000000000        0x0 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .data          0x0000000000000000        0x0 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .bss           0x0000000000000000        0x0 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .text.ddrphy_apb_memcpy
+                0x0000000000000000       0x1c ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .comment       0x0000000000000000       0x80 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .text          0x0000000000000000        0x0 ./driver/ddr/dw_umctl2/src/run_ddr_init_seq.o
+ .data          0x0000000000000000        0x0 ./driver/ddr/dw_umctl2/src/run_ddr_init_seq.o
+ .bss           0x0000000000000000        0x0 ./driver/ddr/dw_umctl2/src/run_ddr_init_seq.o
+ .text.gpt_partion_search
+                0x0000000000000000       0x94 ./driver/ddr/dw_umctl2/src/run_ddr_init_seq.o
+ .comment       0x0000000000000000       0x80 ./driver/ddr/dw_umctl2/src/run_ddr_init_seq.o
+ .text          0x0000000000000000        0x0 ./driver/funcsafe/eic.o
+ .data          0x0000000000000000        0x0 ./driver/funcsafe/eic.o
+ .bss           0x0000000000000000        0x0 ./driver/funcsafe/eic.o
+ .text.eic_inj_enable
+                0x0000000000000000       0x18 ./driver/funcsafe/eic.o
+ .text.eic_inj_disable
+                0x0000000000000000       0x1c ./driver/funcsafe/eic.o
+ .debug_info    0x0000000000000000      0x127 ./driver/funcsafe/eic.o
+ .debug_abbrev  0x0000000000000000       0xc3 ./driver/funcsafe/eic.o
+ .debug_loc     0x0000000000000000       0x60 ./driver/funcsafe/eic.o
+ .debug_aranges
+                0x0000000000000000       0x28 ./driver/funcsafe/eic.o
+ .debug_ranges  0x0000000000000000       0x18 ./driver/funcsafe/eic.o
+ .debug_line    0x0000000000000000      0x18e ./driver/funcsafe/eic.o
+ .debug_str     0x0000000000000000      0x1f2 ./driver/funcsafe/eic.o
+ .comment       0x0000000000000000       0x80 ./driver/funcsafe/eic.o
+ .debug_frame   0x0000000000000000       0x30 ./driver/funcsafe/eic.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./driver/funcsafe/eic.o
+ .text          0x0000000000000000        0x0 ./driver/funcsafe/sem.o
+ .data          0x0000000000000000        0x0 ./driver/funcsafe/sem.o
+ .bss           0x0000000000000000        0x0 ./driver/funcsafe/sem.o
+ .text.sem_ei_glb_en
+                0x0000000000000000        0xc ./driver/funcsafe/sem.o
+ .text.sem_input_status
+                0x0000000000000000       0x1c ./driver/funcsafe/sem.o
+ .debug_info    0x0000000000000000      0x124 ./driver/funcsafe/sem.o
+ .debug_abbrev  0x0000000000000000       0xb6 ./driver/funcsafe/sem.o
+ .debug_loc     0x0000000000000000       0x42 ./driver/funcsafe/sem.o
+ .debug_aranges
+                0x0000000000000000       0x28 ./driver/funcsafe/sem.o
+ .debug_ranges  0x0000000000000000       0x18 ./driver/funcsafe/sem.o
+ .debug_line    0x0000000000000000      0x18a ./driver/funcsafe/sem.o
+ .debug_str     0x0000000000000000      0x1f8 ./driver/funcsafe/sem.o
+ .comment       0x0000000000000000       0x80 ./driver/funcsafe/sem.o
+ .debug_frame   0x0000000000000000       0x30 ./driver/funcsafe/sem.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./driver/funcsafe/sem.o
+ .text          0x0000000000000000        0x0 ./driver/fuse_ctrl/fuse_ctrl.o
+ .data          0x0000000000000000        0x0 ./driver/fuse_ctrl/fuse_ctrl.o
+ .bss           0x0000000000000000        0x0 ./driver/fuse_ctrl/fuse_ctrl.o
+ .text.fuse_reload
+                0x0000000000000000       0x4c ./driver/fuse_ctrl/fuse_ctrl.o
+ .text.fuse_set_sticky_bit
+                0x0000000000000000       0x34 ./driver/fuse_ctrl/fuse_ctrl.o
+ .text.fuse_get_bank_lock
+                0x0000000000000000       0x48 ./driver/fuse_ctrl/fuse_ctrl.o
+ .text.fuse_lock_bank
+                0x0000000000000000       0x3c ./driver/fuse_ctrl/fuse_ctrl.o
+ .text.fuse_ctl_cfg_timing
+                0x0000000000000000       0x48 ./driver/fuse_ctrl/fuse_ctrl.o
+ .comment       0x0000000000000000       0x80 ./driver/fuse_ctrl/fuse_ctrl.o
+ .text          0x0000000000000000        0x0 ./driver/gpio/d_ip_gpio/d_ip_gpio.o
+ .data          0x0000000000000000        0x0 ./driver/gpio/d_ip_gpio/d_ip_gpio.o
+ .bss           0x0000000000000000        0x0 ./driver/gpio/d_ip_gpio/d_ip_gpio.o
+ .text.drv_gpio_cfg
+                0x0000000000000000       0x18 ./driver/gpio/d_ip_gpio/d_ip_gpio.o
+ .text.drv_gpio_wr
+                0x0000000000000000       0x14 ./driver/gpio/d_ip_gpio/d_ip_gpio.o
+ .debug_info    0x0000000000000000      0x297 ./driver/gpio/d_ip_gpio/d_ip_gpio.o
+ .debug_abbrev  0x0000000000000000       0xef ./driver/gpio/d_ip_gpio/d_ip_gpio.o
+ .debug_loc     0x0000000000000000       0x84 ./driver/gpio/d_ip_gpio/d_ip_gpio.o
+ .debug_aranges
+                0x0000000000000000       0x28 ./driver/gpio/d_ip_gpio/d_ip_gpio.o
+ .debug_ranges  0x0000000000000000       0x18 ./driver/gpio/d_ip_gpio/d_ip_gpio.o
+ .debug_line    0x0000000000000000      0x1e1 ./driver/gpio/d_ip_gpio/d_ip_gpio.o
+ .debug_str     0x0000000000000000      0x3bb ./driver/gpio/d_ip_gpio/d_ip_gpio.o
+ .comment       0x0000000000000000       0x80 ./driver/gpio/d_ip_gpio/d_ip_gpio.o
+ .debug_frame   0x0000000000000000       0x30 ./driver/gpio/d_ip_gpio/d_ip_gpio.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./driver/gpio/d_ip_gpio/d_ip_gpio.o
+ .text          0x0000000000000000        0x0 ./driver/gpio/gpio.o
+ .data          0x0000000000000000        0x0 ./driver/gpio/gpio.o
+ .bss           0x0000000000000000        0x0 ./driver/gpio/gpio.o
+ .text.gpio_cfg
+                0x0000000000000000       0x18 ./driver/gpio/gpio.o
+ .text.gpio_wr  0x0000000000000000       0x18 ./driver/gpio/gpio.o
+ .debug_info    0x0000000000000000      0x66d ./driver/gpio/gpio.o
+ .debug_abbrev  0x0000000000000000      0x117 ./driver/gpio/gpio.o
+ .debug_loc     0x0000000000000000      0x118 ./driver/gpio/gpio.o
+ .debug_aranges
+                0x0000000000000000       0x28 ./driver/gpio/gpio.o
+ .debug_ranges  0x0000000000000000       0x18 ./driver/gpio/gpio.o
+ .debug_line    0x0000000000000000      0x1f2 ./driver/gpio/gpio.o
+ .debug_str     0x0000000000000000      0x785 ./driver/gpio/gpio.o
+ .comment       0x0000000000000000       0x80 ./driver/gpio/gpio.o
+ .debug_frame   0x0000000000000000       0x58 ./driver/gpio/gpio.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./driver/gpio/gpio.o
+ .text          0x0000000000000000        0x0 ./driver/i2c/dw_i2c/src/dw_i2c.o
+ .data          0x0000000000000000        0x0 ./driver/i2c/dw_i2c/src/dw_i2c.o
+ .bss           0x0000000000000000        0x0 ./driver/i2c/dw_i2c/src/dw_i2c.o
+ .text.dw_i2c_config
+                0x0000000000000000       0x98 ./driver/i2c/dw_i2c/src/dw_i2c.o
+ .text.dw_i2c_add_bus
+                0x0000000000000000       0x18 ./driver/i2c/dw_i2c/src/dw_i2c.o
+ .text.dw_i2c_set_busconfig
+                0x0000000000000000       0x54 ./driver/i2c/dw_i2c/src/dw_i2c.o
+ .text.dw_i2c_transmit
+                0x0000000000000000       0xc0 ./driver/i2c/dw_i2c/src/dw_i2c.o
+ .text.dw_i2c_receive
+                0x0000000000000000       0xd4 ./driver/i2c/dw_i2c/src/dw_i2c.o
+ .text.dw_i2c_slave_receive
+                0x0000000000000000       0xc4 ./driver/i2c/dw_i2c/src/dw_i2c.o
+ .text.dw_i2c_write_reg_bytes
+                0x0000000000000000       0x38 ./driver/i2c/dw_i2c/src/dw_i2c.o
+ .text.dw_i2c_read_reg_bytes
+                0x0000000000000000       0x38 ./driver/i2c/dw_i2c/src/dw_i2c.o
+ .text.dw_i2c_scan_
+                0x0000000000000000       0x40 ./driver/i2c/dw_i2c/src/dw_i2c.o
+ .text.dw_i2c_scan
+                0x0000000000000000       0x40 ./driver/i2c/dw_i2c/src/dw_i2c.o
+ .text.dw_i2c_write_reg
+                0x0000000000000000       0x14 ./driver/i2c/dw_i2c/src/dw_i2c.o
+ .text.dw_i2c_write_reg_data
+                0x0000000000000000       0x3c ./driver/i2c/dw_i2c/src/dw_i2c.o
+ .text.dw_i2c_read_reg_data
+                0x0000000000000000       0x3c ./driver/i2c/dw_i2c/src/dw_i2c.o
+ .debug_info    0x0000000000000000     0x12d7 ./driver/i2c/dw_i2c/src/dw_i2c.o
+ .debug_abbrev  0x0000000000000000      0x36d ./driver/i2c/dw_i2c/src/dw_i2c.o
+ .debug_loc     0x0000000000000000     0x14c0 ./driver/i2c/dw_i2c/src/dw_i2c.o
+ .debug_aranges
+                0x0000000000000000       0x80 ./driver/i2c/dw_i2c/src/dw_i2c.o
+ .debug_ranges  0x0000000000000000      0x1a0 ./driver/i2c/dw_i2c/src/dw_i2c.o
+ .debug_line    0x0000000000000000      0x4db ./driver/i2c/dw_i2c/src/dw_i2c.o
+ .debug_str     0x0000000000000000      0x860 ./driver/i2c/dw_i2c/src/dw_i2c.o
+ .comment       0x0000000000000000       0x80 ./driver/i2c/dw_i2c/src/dw_i2c.o
+ .debug_frame   0x0000000000000000      0x248 ./driver/i2c/dw_i2c/src/dw_i2c.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./driver/i2c/dw_i2c/src/dw_i2c.o
+ .text          0x0000000000000000        0x0 ./driver/io_expander/TCA9539.o
+ .data          0x0000000000000000        0x0 ./driver/io_expander/TCA9539.o
+ .bss           0x0000000000000000        0x0 ./driver/io_expander/TCA9539.o
+ .text.TCA9539_init
+                0x0000000000000000       0xcc ./driver/io_expander/TCA9539.o
+ .text.TCA9539_set_pin_dir
+                0x0000000000000000       0x48 ./driver/io_expander/TCA9539.o
+ .text.TCA9539_write_pin_logic
+                0x0000000000000000       0x48 ./driver/io_expander/TCA9539.o
+ .text.TCA9539_read_pin_logic
+                0x0000000000000000       0x44 ./driver/io_expander/TCA9539.o
+ .text.TCA9539_set_pin_input_invert
+                0x0000000000000000       0x48 ./driver/io_expander/TCA9539.o
+ .text.TCA9539_deinit
+                0x0000000000000000       0x14 ./driver/io_expander/TCA9539.o
+ .bss.TCA9539_shadow
+                0x0000000000000000       0x40 ./driver/io_expander/TCA9539.o
+ .debug_info    0x0000000000000000      0x70c ./driver/io_expander/TCA9539.o
+ .debug_abbrev  0x0000000000000000      0x25d ./driver/io_expander/TCA9539.o
+ .debug_loc     0x0000000000000000      0x91c ./driver/io_expander/TCA9539.o
+ .debug_aranges
+                0x0000000000000000       0x48 ./driver/io_expander/TCA9539.o
+ .debug_ranges  0x0000000000000000       0x68 ./driver/io_expander/TCA9539.o
+ .debug_line    0x0000000000000000      0x21a ./driver/io_expander/TCA9539.o
+ .debug_str     0x0000000000000000      0x3df ./driver/io_expander/TCA9539.o
+ .comment       0x0000000000000000       0x80 ./driver/io_expander/TCA9539.o
+ .debug_frame   0x0000000000000000       0xcc ./driver/io_expander/TCA9539.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./driver/io_expander/TCA9539.o
+ .text          0x0000000000000000        0x0 ./driver/io_expander/TCA9539_defaultPinCfg.o
+ .data          0x0000000000000000        0x0 ./driver/io_expander/TCA9539_defaultPinCfg.o
+ .bss           0x0000000000000000        0x0 ./driver/io_expander/TCA9539_defaultPinCfg.o
+ .text.TCA9539_parse_cfg
+                0x0000000000000000       0x60 ./driver/io_expander/TCA9539_defaultPinCfg.o
+ .rodata.TCA9539_DEFAULT_CFG_TABLE
+                0x0000000000000000       0x30 ./driver/io_expander/TCA9539_defaultPinCfg.o
+ .debug_info    0x0000000000000000      0x201 ./driver/io_expander/TCA9539_defaultPinCfg.o
+ .debug_abbrev  0x0000000000000000      0x111 ./driver/io_expander/TCA9539_defaultPinCfg.o
+ .debug_loc     0x0000000000000000       0xe0 ./driver/io_expander/TCA9539_defaultPinCfg.o
+ .debug_aranges
+                0x0000000000000000       0x20 ./driver/io_expander/TCA9539_defaultPinCfg.o
+ .debug_ranges  0x0000000000000000       0x28 ./driver/io_expander/TCA9539_defaultPinCfg.o
+ .debug_line    0x0000000000000000      0x150 ./driver/io_expander/TCA9539_defaultPinCfg.o
+ .debug_str     0x0000000000000000      0x265 ./driver/io_expander/TCA9539_defaultPinCfg.o
+ .comment       0x0000000000000000       0x80 ./driver/io_expander/TCA9539_defaultPinCfg.o
+ .debug_frame   0x0000000000000000       0x34 ./driver/io_expander/TCA9539_defaultPinCfg.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./driver/io_expander/TCA9539_defaultPinCfg.o
+ .text          0x0000000000000000        0x0 ./driver/io_expander/i2c_wrapper.o
+ .data          0x0000000000000000        0x0 ./driver/io_expander/i2c_wrapper.o
+ .bss           0x0000000000000000        0x0 ./driver/io_expander/i2c_wrapper.o
+ .text.TCA9539_i2c_init
+                0x0000000000000000       0x4c ./driver/io_expander/i2c_wrapper.o
+ .text.TCA9539_i2c_write_reg
+                0x0000000000000000       0x68 ./driver/io_expander/i2c_wrapper.o
+ .text.TCA9539_i2c_read_reg
+                0x0000000000000000       0x64 ./driver/io_expander/i2c_wrapper.o
+ .text.TCA9539_i2c_deinit
+                0x0000000000000000       0x50 ./driver/io_expander/i2c_wrapper.o
+ .debug_info    0x0000000000000000      0x9ca ./driver/io_expander/i2c_wrapper.o
+ .debug_abbrev  0x0000000000000000      0x1e0 ./driver/io_expander/i2c_wrapper.o
+ .debug_loc     0x0000000000000000      0x211 ./driver/io_expander/i2c_wrapper.o
+ .debug_aranges
+                0x0000000000000000       0x38 ./driver/io_expander/i2c_wrapper.o
+ .debug_ranges  0x0000000000000000       0x78 ./driver/io_expander/i2c_wrapper.o
+ .debug_line    0x0000000000000000      0x2b9 ./driver/io_expander/i2c_wrapper.o
+ .debug_str     0x0000000000000000      0x96d ./driver/io_expander/i2c_wrapper.o
+ .comment       0x0000000000000000       0x80 ./driver/io_expander/i2c_wrapper.o
+ .debug_frame   0x0000000000000000       0xb4 ./driver/io_expander/i2c_wrapper.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./driver/io_expander/i2c_wrapper.o
+ COMMON         0x0000000000000000       0x70 ./driver/io_expander/i2c_wrapper.o
+ .text          0x0000000000000000        0x0 ./driver/mailbox/mailbox.o
+ .data          0x0000000000000000        0x0 ./driver/mailbox/mailbox.o
+ .bss           0x0000000000000000        0x0 ./driver/mailbox/mailbox.o
+ .text.mb_is_lock
+                0x0000000000000000       0x24 ./driver/mailbox/mailbox.o
+ .text.mb_cfg_mid
+                0x0000000000000000       0x40 ./driver/mailbox/mailbox.o
+ .text.mb_tx_smsg
+                0x0000000000000000       0xcc ./driver/mailbox/mailbox.o
+ .text.mb_is_rx_msg_in
+                0x0000000000000000       0x18 ./driver/mailbox/mailbox.o
+ .text.mb_rx_smsg
+                0x0000000000000000       0xc8 ./driver/mailbox/mailbox.o
+ .text.semphore_get_owner
+                0x0000000000000000       0x18 ./driver/mailbox/mailbox.o
+ .text.semphore_try_lock
+                0x0000000000000000       0x30 ./driver/mailbox/mailbox.o
+ .text.semphore_unlock
+                0x0000000000000000       0x1c ./driver/mailbox/mailbox.o
+ .debug_info    0x0000000000000000     0x189b ./driver/mailbox/mailbox.o
+ .debug_abbrev  0x0000000000000000      0x1c5 ./driver/mailbox/mailbox.o
+ .debug_loc     0x0000000000000000      0x739 ./driver/mailbox/mailbox.o
+ .debug_aranges
+                0x0000000000000000       0x58 ./driver/mailbox/mailbox.o
+ .debug_ranges  0x0000000000000000       0x78 ./driver/mailbox/mailbox.o
+ .debug_line    0x0000000000000000      0x332 ./driver/mailbox/mailbox.o
+ .debug_str     0x0000000000000000     0x13d2 ./driver/mailbox/mailbox.o
+ .comment       0x0000000000000000       0x80 ./driver/mailbox/mailbox.o
+ .debug_frame   0x0000000000000000       0xfc ./driver/mailbox/mailbox.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./driver/mailbox/mailbox.o
+ .text          0x0000000000000000        0x0 ./driver/mpu/mpu.o
+ .data          0x0000000000000000        0x0 ./driver/mpu/mpu.o
+ .bss           0x0000000000000000        0x0 ./driver/mpu/mpu.o
+ .text.mpu_region_cfg.part.0
+                0x0000000000000000       0x48 ./driver/mpu/mpu.o
+ .text.mpu_enable
+                0x0000000000000000       0x1c ./driver/mpu/mpu.o
+ .text.mpu_disable
+                0x0000000000000000       0x1c ./driver/mpu/mpu.o
+ .text.mpu_is_enabled
+                0x0000000000000000        0xc ./driver/mpu/mpu.o
+ .text.mpu_get_empty_rgn_id
+                0x0000000000000000       0x28 ./driver/mpu/mpu.o
+ .text.mpu_region_cfg
+                0x0000000000000000       0x1c ./driver/mpu/mpu.o
+ .text.mpu_setup_regions
+                0x0000000000000000       0x64 ./driver/mpu/mpu.o
+ .debug_info    0x0000000000000000      0x45e ./driver/mpu/mpu.o
+ .debug_abbrev  0x0000000000000000      0x1d2 ./driver/mpu/mpu.o
+ .debug_loc     0x0000000000000000      0x3ee ./driver/mpu/mpu.o
+ .debug_aranges
+                0x0000000000000000       0x50 ./driver/mpu/mpu.o
+ .debug_ranges  0x0000000000000000       0x98 ./driver/mpu/mpu.o
+ .debug_line    0x0000000000000000      0x28b ./driver/mpu/mpu.o
+ .debug_str     0x0000000000000000      0x2b7 ./driver/mpu/mpu.o
+ .comment       0x0000000000000000       0x80 ./driver/mpu/mpu.o
+ .debug_frame   0x0000000000000000       0xc0 ./driver/mpu/mpu.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./driver/mpu/mpu.o
+ .text          0x0000000000000000        0x0 ./driver/pll/sc_ss_pfpll.o
+ .data          0x0000000000000000        0x0 ./driver/pll/sc_ss_pfpll.o
+ .bss           0x0000000000000000        0x0 ./driver/pll/sc_ss_pfpll.o
+ .comment       0x0000000000000000       0x80 ./driver/pll/sc_ss_pfpll.o
+ .text          0x0000000000000000        0x0 ./driver/rstgen/rstgen.o
+ .data          0x0000000000000000        0x0 ./driver/rstgen/rstgen.o
+ .bss           0x0000000000000000        0x0 ./driver/rstgen/rstgen.o
+ .text.rg_rd_gpr
+                0x0000000000000000        0x8 ./driver/rstgen/rstgen.o
+ .text.rg_wr_gpr
+                0x0000000000000000        0x8 ./driver/rstgen/rstgen.o
+ .text.rg_get_reset_source
+                0x0000000000000000        0xc ./driver/rstgen/rstgen.o
+ .text.ramfunc_rg_core_reset
+                0x0000000000000000       0x4c ./driver/rstgen/rstgen.o
+ .text.rg_core_reset
+                0x0000000000000000        0x4 ./driver/rstgen/rstgen.o
+ .text.rg_glb_reset_en
+                0x0000000000000000       0x20 ./driver/rstgen/rstgen.o
+ .text.rg_glb_self_reset
+                0x0000000000000000       0x24 ./driver/rstgen/rstgen.o
+ .comment       0x0000000000000000       0x80 ./driver/rstgen/rstgen.o
+ .text          0x0000000000000000        0x0 ./driver/scr/scr.o
+ .data          0x0000000000000000        0x0 ./driver/scr/scr.o
+ .bss           0x0000000000000000        0x0 ./driver/scr/scr.o
+ .text.ramfunc_scr_bit_set
+                0x0000000000000000        0x4 ./driver/scr/scr.o
+ .text.scr_bits_wr
+                0x0000000000000000       0xac ./driver/scr/scr.o
+ .text.ramfunc_scr_bits_wr
+                0x0000000000000000        0x4 ./driver/scr/scr.o
+ .text.scr_bits_rd
+                0x0000000000000000       0x7c ./driver/scr/scr.o
+ .text.ramfunc_scr_bit_get
+                0x0000000000000000        0x4 ./driver/scr/scr.o
+ .comment       0x0000000000000000       0x80 ./driver/scr/scr.o
+ .text          0x0000000000000000        0x0 ./driver/testbench/testbench.o
+ .data          0x0000000000000000        0x0 ./driver/testbench/testbench.o
+ .bss           0x0000000000000000        0x0 ./driver/testbench/testbench.o
+ .debug_info    0x0000000000000000      0x194 ./driver/testbench/testbench.o
+ .debug_abbrev  0x0000000000000000       0x52 ./driver/testbench/testbench.o
+ .debug_aranges
+                0x0000000000000000       0x18 ./driver/testbench/testbench.o
+ .debug_line    0x0000000000000000      0x18d ./driver/testbench/testbench.o
+ .debug_str     0x0000000000000000      0x348 ./driver/testbench/testbench.o
+ .comment       0x0000000000000000       0x80 ./driver/testbench/testbench.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./driver/testbench/testbench.o
+ .text          0x0000000000000000        0x0 ./driver/timer/sdrv_timer/sdrv_timer.o
+ .data          0x0000000000000000        0x0 ./driver/timer/sdrv_timer/sdrv_timer.o
+ .bss           0x0000000000000000        0x0 ./driver/timer/sdrv_timer/sdrv_timer.o
+ .comment       0x0000000000000000       0x80 ./driver/timer/sdrv_timer/sdrv_timer.o
+ .text          0x0000000000000000        0x0 ./driver/uart/dwc_uart/dwc_uart.o
+ .data          0x0000000000000000        0x0 ./driver/uart/dwc_uart/dwc_uart.o
+ .bss           0x0000000000000000        0x0 ./driver/uart/dwc_uart/dwc_uart.o
+ .comment       0x0000000000000000       0x80 ./driver/uart/dwc_uart/dwc_uart.o
+ .text          0x0000000000000000        0x0 ./driver/uart/uart.o
+ .data          0x0000000000000000        0x0 ./driver/uart/uart.o
+ .bss           0x0000000000000000        0x0 ./driver/uart/uart.o
+ .text.uart_rx  0x0000000000000000       0x20 ./driver/uart/uart.o
+ .comment       0x0000000000000000       0x80 ./driver/uart/uart.o
+ .text          0x0000000000000000        0x0 ./driver/wdog/sdrv_wdt/sdrv_wdt.o
+ .data          0x0000000000000000        0x0 ./driver/wdog/sdrv_wdt/sdrv_wdt.o
+ .bss           0x0000000000000000        0x0 ./driver/wdog/sdrv_wdt/sdrv_wdt.o
+ .text.sdrv_wdt_cfg
+                0x0000000000000000       0x58 ./driver/wdog/sdrv_wdt/sdrv_wdt.o
+ .text.sdrv_wdt_enable
+                0x0000000000000000       0x10 ./driver/wdog/sdrv_wdt/sdrv_wdt.o
+ .text.sdrv_wdt_disable
+                0x0000000000000000       0x18 ./driver/wdog/sdrv_wdt/sdrv_wdt.o
+ .text.sdrv_wdt_refresh
+                0x0000000000000000       0x18 ./driver/wdog/sdrv_wdt/sdrv_wdt.o
+ .text.rf_sdrv_wdt_refresh_if_en
+                0x0000000000000000       0x18 ./driver/wdog/sdrv_wdt/sdrv_wdt.o
+ .text.sdrv_wdt_get_cnt
+                0x0000000000000000        0x4 ./driver/wdog/sdrv_wdt/sdrv_wdt.o
+ .text.sdrv_wdt_get_tmo_us
+                0x0000000000000000        0x4 ./driver/wdog/sdrv_wdt/sdrv_wdt.o
+ .text.sdrv_wdt_is_enabled
+                0x0000000000000000       0x14 ./driver/wdog/sdrv_wdt/sdrv_wdt.o
+ .rodata.sdrv_wdt_ops
+                0x0000000000000000       0x20 ./driver/wdog/sdrv_wdt/sdrv_wdt.o
+ .debug_info    0x0000000000000000      0x50e ./driver/wdog/sdrv_wdt/sdrv_wdt.o
+ .debug_abbrev  0x0000000000000000      0x16b ./driver/wdog/sdrv_wdt/sdrv_wdt.o
+ .debug_loc     0x0000000000000000      0x129 ./driver/wdog/sdrv_wdt/sdrv_wdt.o
+ .debug_aranges
+                0x0000000000000000       0x58 ./driver/wdog/sdrv_wdt/sdrv_wdt.o
+ .debug_ranges  0x0000000000000000       0x48 ./driver/wdog/sdrv_wdt/sdrv_wdt.o
+ .debug_line    0x0000000000000000      0x309 ./driver/wdog/sdrv_wdt/sdrv_wdt.o
+ .debug_str     0x0000000000000000      0x4e0 ./driver/wdog/sdrv_wdt/sdrv_wdt.o
+ .comment       0x0000000000000000       0x80 ./driver/wdog/sdrv_wdt/sdrv_wdt.o
+ .debug_frame   0x0000000000000000       0x9c ./driver/wdog/sdrv_wdt/sdrv_wdt.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./driver/wdog/sdrv_wdt/sdrv_wdt.o
+ .text          0x0000000000000000        0x0 ./driver/wdog/wdog.o
+ .data          0x0000000000000000        0x0 ./driver/wdog/wdog.o
+ .bss           0x0000000000000000        0x0 ./driver/wdog/wdog.o
+ .text.wdog_is_enabled
+                0x0000000000000000       0x1c ./driver/wdog/wdog.o
+ .text.wdog_cfg
+                0x0000000000000000       0x20 ./driver/wdog/wdog.o
+ .text.wdog_enable
+                0x0000000000000000       0x1c ./driver/wdog/wdog.o
+ .text.wdog_disable
+                0x0000000000000000       0x1c ./driver/wdog/wdog.o
+ .text.wdog_refresh
+                0x0000000000000000       0x1c ./driver/wdog/wdog.o
+ .text.wdog_get_cnt
+                0x0000000000000000       0x1c ./driver/wdog/wdog.o
+ .text.wdog_get_tmo_us
+                0x0000000000000000       0x1c ./driver/wdog/wdog.o
+ .text.wdog_get_self
+                0x0000000000000000        0xc ./driver/wdog/wdog.o
+ .debug_info    0x0000000000000000      0x838 ./driver/wdog/wdog.o
+ .debug_abbrev  0x0000000000000000      0x1ac ./driver/wdog/wdog.o
+ .debug_loc     0x0000000000000000       0xbc ./driver/wdog/wdog.o
+ .debug_aranges
+                0x0000000000000000       0x58 ./driver/wdog/wdog.o
+ .debug_ranges  0x0000000000000000       0x48 ./driver/wdog/wdog.o
+ .debug_line    0x0000000000000000      0x2a0 ./driver/wdog/wdog.o
+ .debug_str     0x0000000000000000      0x807 ./driver/wdog/wdog.o
+ .comment       0x0000000000000000       0x80 ./driver/wdog/wdog.o
+ .debug_frame   0x0000000000000000       0xec ./driver/wdog/wdog.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./driver/wdog/wdog.o
+ .text          0x0000000000000000        0x0 ./lib/boardinfo/boardinfo_hwid_hw.o
+ .data          0x0000000000000000        0x0 ./lib/boardinfo/boardinfo_hwid_hw.o
+ .bss           0x0000000000000000        0x0 ./lib/boardinfo/boardinfo_hwid_hw.o
+ .text.converthwid_to_usr
+                0x0000000000000000       0x10 ./lib/boardinfo/boardinfo_hwid_hw.o
+ .comment       0x0000000000000000       0x80 ./lib/boardinfo/boardinfo_hwid_hw.o
+ .text          0x0000000000000000        0x0 ./lib/boardinfo/boardinfo_hwid_usr.o
+ .data          0x0000000000000000        0x0 ./lib/boardinfo/boardinfo_hwid_usr.o
+ .bss           0x0000000000000000        0x0 ./lib/boardinfo/boardinfo_hwid_usr.o
+ .text.is_valid_hwid_usr
+                0x0000000000000000       0x14 ./lib/boardinfo/boardinfo_hwid_usr.o
+ .comment       0x0000000000000000       0x80 ./lib/boardinfo/boardinfo_hwid_usr.o
+ .text          0x0000000000000000        0x0 ./lib/cksum/adler32.o
+ .data          0x0000000000000000        0x0 ./lib/cksum/adler32.o
+ .bss           0x0000000000000000        0x0 ./lib/cksum/adler32.o
+ .text.adler32_combine_
+                0x0000000000000000       0x94 ./lib/cksum/adler32.o
+ .text.adler32  0x0000000000000000      0x260 ./lib/cksum/adler32.o
+ .text.adler32_combine
+                0x0000000000000000        0x8 ./lib/cksum/adler32.o
+ .text.adler32_combine64
+                0x0000000000000000        0x4 ./lib/cksum/adler32.o
+ .debug_info    0x0000000000000000      0x2c6 ./lib/cksum/adler32.o
+ .debug_abbrev  0x0000000000000000       0xd1 ./lib/cksum/adler32.o
+ .debug_loc     0x0000000000000000      0x549 ./lib/cksum/adler32.o
+ .debug_aranges
+                0x0000000000000000       0x38 ./lib/cksum/adler32.o
+ .debug_ranges  0x0000000000000000       0x28 ./lib/cksum/adler32.o
+ .debug_line    0x0000000000000000      0x211 ./lib/cksum/adler32.o
+ .debug_str     0x0000000000000000      0x270 ./lib/cksum/adler32.o
+ .comment       0x0000000000000000       0x80 ./lib/cksum/adler32.o
+ .debug_frame   0x0000000000000000       0x74 ./lib/cksum/adler32.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./lib/cksum/adler32.o
+ .text          0x0000000000000000        0x0 ./lib/cksum/crc16.o
+ .data          0x0000000000000000        0x0 ./lib/cksum/crc16.o
+ .bss           0x0000000000000000        0x0 ./lib/cksum/crc16.o
+ .text.update_crc16
+                0x0000000000000000       0x34 ./lib/cksum/crc16.o
+ .text.crc16    0x0000000000000000       0x40 ./lib/cksum/crc16.o
+ .debug_info    0x0000000000000000      0x133 ./lib/cksum/crc16.o
+ .debug_abbrev  0x0000000000000000       0xf5 ./lib/cksum/crc16.o
+ .debug_loc     0x0000000000000000      0x21d ./lib/cksum/crc16.o
+ .debug_aranges
+                0x0000000000000000       0x28 ./lib/cksum/crc16.o
+ .debug_ranges  0x0000000000000000       0x18 ./lib/cksum/crc16.o
+ .debug_line    0x0000000000000000       0x78 ./lib/cksum/crc16.o
+ .debug_str     0x0000000000000000      0x15a ./lib/cksum/crc16.o
+ .comment       0x0000000000000000       0x80 ./lib/cksum/crc16.o
+ .debug_frame   0x0000000000000000       0x30 ./lib/cksum/crc16.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./lib/cksum/crc16.o
+ .text          0x0000000000000000        0x0 ./lib/cksum/crc32.o
+ .data          0x0000000000000000        0x0 ./lib/cksum/crc32.o
+ .bss           0x0000000000000000        0x0 ./lib/cksum/crc32.o
+ .text.crc32_combine_
+                0x0000000000000000      0x170 ./lib/cksum/crc32.o
+ .text.get_crc_table
+                0x0000000000000000        0xc ./lib/cksum/crc32.o
+ .text.crc32_combine
+                0x0000000000000000        0x8 ./lib/cksum/crc32.o
+ .text.crc32_combine64
+                0x0000000000000000        0x4 ./lib/cksum/crc32.o
+ .comment       0x0000000000000000       0x80 ./lib/cksum/crc32.o
+ .text          0x0000000000000000        0x0 ./lib/cksum/debug.o
+ .data          0x0000000000000000        0x0 ./lib/cksum/debug.o
+ .bss           0x0000000000000000        0x0 ./lib/cksum/debug.o
+ .debug_line    0x0000000000000000        0x0 ./lib/cksum/debug.o
+ .debug_str     0x0000000000000000      0x112 ./lib/cksum/debug.o
+ .comment       0x0000000000000000       0x80 ./lib/cksum/debug.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./lib/cksum/debug.o
+ .text          0x0000000000000000        0x0 ./lib/libavb/avb_chain_partition_descriptor.o
+ .data          0x0000000000000000        0x0 ./lib/libavb/avb_chain_partition_descriptor.o
+ .bss           0x0000000000000000        0x0 ./lib/libavb/avb_chain_partition_descriptor.o
+ .text.avb_chain_partition_descriptor_validate_and_byteswap
+                0x0000000000000000      0x250 ./lib/libavb/avb_chain_partition_descriptor.o
+ .rodata.avb_chain_partition_descriptor_validate_and_byteswap.str1.4
+                0x0000000000000000       0xe3 ./lib/libavb/avb_chain_partition_descriptor.o
+ .debug_info    0x0000000000000000      0x3d2 ./lib/libavb/avb_chain_partition_descriptor.o
+ .debug_abbrev  0x0000000000000000      0x14b ./lib/libavb/avb_chain_partition_descriptor.o
+ .debug_loc     0x0000000000000000       0xae ./lib/libavb/avb_chain_partition_descriptor.o
+ .debug_aranges
+                0x0000000000000000       0x20 ./lib/libavb/avb_chain_partition_descriptor.o
+ .debug_ranges  0x0000000000000000       0x10 ./lib/libavb/avb_chain_partition_descriptor.o
+ .debug_line    0x0000000000000000      0x20f ./lib/libavb/avb_chain_partition_descriptor.o
+ .debug_str     0x0000000000000000      0x3d3 ./lib/libavb/avb_chain_partition_descriptor.o
+ .comment       0x0000000000000000       0x80 ./lib/libavb/avb_chain_partition_descriptor.o
+ .debug_frame   0x0000000000000000       0x3c ./lib/libavb/avb_chain_partition_descriptor.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./lib/libavb/avb_chain_partition_descriptor.o
+ .text          0x0000000000000000        0x0 ./lib/libavb/avb_cmdline.o
+ .data          0x0000000000000000        0x0 ./lib/libavb/avb_cmdline.o
+ .bss           0x0000000000000000        0x0 ./lib/libavb/avb_cmdline.o
+ .text.uint64_to_base10
+                0x0000000000000000       0x58 ./lib/libavb/avb_cmdline.o
+ .text.cmdline_append_option.isra.0
+                0x0000000000000000       0xa8 ./lib/libavb/avb_cmdline.o
+ .text.avb_sub_cmdline
+                0x0000000000000000      0x190 ./lib/libavb/avb_cmdline.o
+ .text.avb_append_options
+                0x0000000000000000      0x2f0 ./lib/libavb/avb_cmdline.o
+ .text.avb_new_cmdline_subst_list
+                0x0000000000000000        0x8 ./lib/libavb/avb_cmdline.o
+ .text.avb_free_cmdline_subst_list
+                0x0000000000000000       0x38 ./lib/libavb/avb_cmdline.o
+ .text.avb_add_root_digest_substitution
+                0x0000000000000000       0x80 ./lib/libavb/avb_cmdline.o
+ .rodata        0x0000000000000000       0x18 ./lib/libavb/avb_cmdline.o
+ .rodata.avb_add_root_digest_substitution.str1.4
+                0x0000000000000000       0x17 ./lib/libavb/avb_cmdline.o
+ .rodata.avb_append_options.str1.4
+                0x0000000000000000      0x1f7 ./lib/libavb/avb_cmdline.o
+ .rodata.avb_sub_cmdline.str1.4
+                0x0000000000000000       0x7e ./lib/libavb/avb_cmdline.o
+ .rodata.str1.4
+                0x0000000000000000       0x6b ./lib/libavb/avb_cmdline.o
+ .debug_info    0x0000000000000000     0x1639 ./lib/libavb/avb_cmdline.o
+ .debug_abbrev  0x0000000000000000      0x367 ./lib/libavb/avb_cmdline.o
+ .debug_loc     0x0000000000000000      0x8e5 ./lib/libavb/avb_cmdline.o
+ .debug_aranges
+                0x0000000000000000       0x50 ./lib/libavb/avb_cmdline.o
+ .debug_ranges  0x0000000000000000       0xe8 ./lib/libavb/avb_cmdline.o
+ .debug_line    0x0000000000000000      0x46e ./lib/libavb/avb_cmdline.o
+ .debug_str     0x0000000000000000      0xfa3 ./lib/libavb/avb_cmdline.o
+ .comment       0x0000000000000000       0x80 ./lib/libavb/avb_cmdline.o
+ .debug_frame   0x0000000000000000      0x134 ./lib/libavb/avb_cmdline.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./lib/libavb/avb_cmdline.o
+ .text          0x0000000000000000        0x0 ./lib/libavb/avb_crc32.o
+ .data          0x0000000000000000        0x0 ./lib/libavb/avb_crc32.o
+ .bss           0x0000000000000000        0x0 ./lib/libavb/avb_crc32.o
+ .text.avb_crc32
+                0x0000000000000000       0x34 ./lib/libavb/avb_crc32.o
+ .rodata.iavb_crc32_tab
+                0x0000000000000000      0x400 ./lib/libavb/avb_crc32.o
+ .debug_info    0x0000000000000000      0x19e ./lib/libavb/avb_crc32.o
+ .debug_abbrev  0x0000000000000000      0x113 ./lib/libavb/avb_crc32.o
+ .debug_loc     0x0000000000000000      0x13b ./lib/libavb/avb_crc32.o
+ .debug_aranges
+                0x0000000000000000       0x20 ./lib/libavb/avb_crc32.o
+ .debug_ranges  0x0000000000000000       0x30 ./lib/libavb/avb_crc32.o
+ .debug_line    0x0000000000000000      0x1eb ./lib/libavb/avb_crc32.o
+ .debug_str     0x0000000000000000      0x207 ./lib/libavb/avb_crc32.o
+ .comment       0x0000000000000000       0x80 ./lib/libavb/avb_crc32.o
+ .debug_frame   0x0000000000000000       0x2c ./lib/libavb/avb_crc32.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./lib/libavb/avb_crc32.o
+ .text          0x0000000000000000        0x0 ./lib/libavb/avb_crypto.o
+ .data          0x0000000000000000        0x0 ./lib/libavb/avb_crypto.o
+ .bss           0x0000000000000000        0x0 ./lib/libavb/avb_crypto.o
+ .text.avb_get_algorithm_data
+                0x0000000000000000       0x1c ./lib/libavb/avb_crypto.o
+ .text.avb_rsa_public_key_header_validate_and_byteswap
+                0x0000000000000000       0x68 ./lib/libavb/avb_crypto.o
+ .data.algorithm_data
+                0x0000000000000000       0x54 ./lib/libavb/avb_crypto.o
+ .rodata.padding_RSA2048_SHA256
+                0x0000000000000000       0xe0 ./lib/libavb/avb_crypto.o
+ .rodata.padding_RSA2048_SHA512
+                0x0000000000000000       0xc0 ./lib/libavb/avb_crypto.o
+ .rodata.padding_RSA4096_SHA256
+                0x0000000000000000      0x1e0 ./lib/libavb/avb_crypto.o
+ .rodata.padding_RSA4096_SHA512
+                0x0000000000000000      0x1c0 ./lib/libavb/avb_crypto.o
+ .rodata.padding_RSA8192_SHA256
+                0x0000000000000000      0x3e0 ./lib/libavb/avb_crypto.o
+ .rodata.padding_RSA8192_SHA512
+                0x0000000000000000      0x3c0 ./lib/libavb/avb_crypto.o
+ .debug_info    0x0000000000000000      0x34c ./lib/libavb/avb_crypto.o
+ .debug_abbrev  0x0000000000000000      0x145 ./lib/libavb/avb_crypto.o
+ .debug_loc     0x0000000000000000       0x6b ./lib/libavb/avb_crypto.o
+ .debug_aranges
+                0x0000000000000000       0x28 ./lib/libavb/avb_crypto.o
+ .debug_ranges  0x0000000000000000       0x18 ./lib/libavb/avb_crypto.o
+ .debug_line    0x0000000000000000      0x22c ./lib/libavb/avb_crypto.o
+ .debug_str     0x0000000000000000      0x449 ./lib/libavb/avb_crypto.o
+ .comment       0x0000000000000000       0x80 ./lib/libavb/avb_crypto.o
+ .debug_frame   0x0000000000000000       0x3c ./lib/libavb/avb_crypto.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./lib/libavb/avb_crypto.o
+ .text          0x0000000000000000        0x0 ./lib/libavb/avb_descriptor.o
+ .data          0x0000000000000000        0x0 ./lib/libavb/avb_descriptor.o
+ .bss           0x0000000000000000        0x0 ./lib/libavb/avb_descriptor.o
+ .text.count_descriptors
+                0x0000000000000000        0xc ./lib/libavb/avb_descriptor.o
+ .text.set_descriptors
+                0x0000000000000000       0x18 ./lib/libavb/avb_descriptor.o
+ .text.avb_descriptor_validate_and_byteswap
+                0x0000000000000000       0xf8 ./lib/libavb/avb_descriptor.o
+ .text.avb_descriptor_foreach
+                0x0000000000000000      0x334 ./lib/libavb/avb_descriptor.o
+ .text.avb_descriptor_get_all
+                0x0000000000000000       0x4c ./lib/libavb/avb_descriptor.o
+ .rodata.avb_descriptor_foreach.str1.4
+                0x0000000000000000       0xf4 ./lib/libavb/avb_descriptor.o
+ .rodata.avb_descriptor_validate_and_byteswap.str1.4
+                0x0000000000000000       0x50 ./lib/libavb/avb_descriptor.o
+ .debug_info    0x0000000000000000      0x833 ./lib/libavb/avb_descriptor.o
+ .debug_abbrev  0x0000000000000000      0x1ec ./lib/libavb/avb_descriptor.o
+ .debug_loc     0x0000000000000000      0x55e ./lib/libavb/avb_descriptor.o
+ .debug_aranges
+                0x0000000000000000       0x40 ./lib/libavb/avb_descriptor.o
+ .debug_ranges  0x0000000000000000       0x50 ./lib/libavb/avb_descriptor.o
+ .debug_line    0x0000000000000000      0x30e ./lib/libavb/avb_descriptor.o
+ .debug_str     0x0000000000000000      0x537 ./lib/libavb/avb_descriptor.o
+ .comment       0x0000000000000000       0x80 ./lib/libavb/avb_descriptor.o
+ .debug_frame   0x0000000000000000       0xd0 ./lib/libavb/avb_descriptor.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./lib/libavb/avb_descriptor.o
+ .text          0x0000000000000000        0x0 ./lib/libavb/avb_footer.o
+ .data          0x0000000000000000        0x0 ./lib/libavb/avb_footer.o
+ .bss           0x0000000000000000        0x0 ./lib/libavb/avb_footer.o
+ .comment       0x0000000000000000       0x80 ./lib/libavb/avb_footer.o
+ .text          0x0000000000000000        0x0 ./lib/libavb/avb_hash_descriptor.o
+ .data          0x0000000000000000        0x0 ./lib/libavb/avb_hash_descriptor.o
+ .bss           0x0000000000000000        0x0 ./lib/libavb/avb_hash_descriptor.o
+ .text.avb_hash_descriptor_validate_and_byteswap
+                0x0000000000000000      0x2fc ./lib/libavb/avb_hash_descriptor.o
+ .rodata.avb_hash_descriptor_validate_and_byteswap.str1.4
+                0x0000000000000000       0x9f ./lib/libavb/avb_hash_descriptor.o
+ .debug_info    0x0000000000000000      0x3e9 ./lib/libavb/avb_hash_descriptor.o
+ .debug_abbrev  0x0000000000000000      0x14b ./lib/libavb/avb_hash_descriptor.o
+ .debug_loc     0x0000000000000000       0x95 ./lib/libavb/avb_hash_descriptor.o
+ .debug_aranges
+                0x0000000000000000       0x20 ./lib/libavb/avb_hash_descriptor.o
+ .debug_ranges  0x0000000000000000       0x10 ./lib/libavb/avb_hash_descriptor.o
+ .debug_line    0x0000000000000000      0x211 ./lib/libavb/avb_hash_descriptor.o
+ .debug_str     0x0000000000000000      0x3cc ./lib/libavb/avb_hash_descriptor.o
+ .comment       0x0000000000000000       0x80 ./lib/libavb/avb_hash_descriptor.o
+ .debug_frame   0x0000000000000000       0x44 ./lib/libavb/avb_hash_descriptor.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./lib/libavb/avb_hash_descriptor.o
+ .text          0x0000000000000000        0x0 ./lib/libavb/avb_hashtree_descriptor.o
+ .data          0x0000000000000000        0x0 ./lib/libavb/avb_hashtree_descriptor.o
+ .bss           0x0000000000000000        0x0 ./lib/libavb/avb_hashtree_descriptor.o
+ .text.avb_hashtree_descriptor_validate_and_byteswap
+                0x0000000000000000      0x594 ./lib/libavb/avb_hashtree_descriptor.o
+ .rodata.avb_hashtree_descriptor_validate_and_byteswap.str1.4
+                0x0000000000000000       0xa7 ./lib/libavb/avb_hashtree_descriptor.o
+ .debug_info    0x0000000000000000      0x491 ./lib/libavb/avb_hashtree_descriptor.o
+ .debug_abbrev  0x0000000000000000      0x14b ./lib/libavb/avb_hashtree_descriptor.o
+ .debug_loc     0x0000000000000000       0x95 ./lib/libavb/avb_hashtree_descriptor.o
+ .debug_aranges
+                0x0000000000000000       0x20 ./lib/libavb/avb_hashtree_descriptor.o
+ .debug_ranges  0x0000000000000000       0x10 ./lib/libavb/avb_hashtree_descriptor.o
+ .debug_line    0x0000000000000000      0x263 ./lib/libavb/avb_hashtree_descriptor.o
+ .debug_str     0x0000000000000000      0x447 ./lib/libavb/avb_hashtree_descriptor.o
+ .comment       0x0000000000000000       0x80 ./lib/libavb/avb_hashtree_descriptor.o
+ .debug_frame   0x0000000000000000       0x44 ./lib/libavb/avb_hashtree_descriptor.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./lib/libavb/avb_hashtree_descriptor.o
+ .text          0x0000000000000000        0x0 ./lib/libavb/avb_kernel_cmdline_descriptor.o
+ .data          0x0000000000000000        0x0 ./lib/libavb/avb_kernel_cmdline_descriptor.o
+ .bss           0x0000000000000000        0x0 ./lib/libavb/avb_kernel_cmdline_descriptor.o
+ .text.avb_kernel_cmdline_descriptor_validate_and_byteswap
+                0x0000000000000000      0x1a4 ./lib/libavb/avb_kernel_cmdline_descriptor.o
+ .rodata.avb_kernel_cmdline_descriptor_validate_and_byteswap.str1.4
+                0x0000000000000000       0xaf ./lib/libavb/avb_kernel_cmdline_descriptor.o
+ .debug_info    0x0000000000000000      0x328 ./lib/libavb/avb_kernel_cmdline_descriptor.o
+ .debug_abbrev  0x0000000000000000      0x139 ./lib/libavb/avb_kernel_cmdline_descriptor.o
+ .debug_loc     0x0000000000000000       0x95 ./lib/libavb/avb_kernel_cmdline_descriptor.o
+ .debug_aranges
+                0x0000000000000000       0x20 ./lib/libavb/avb_kernel_cmdline_descriptor.o
+ .debug_ranges  0x0000000000000000       0x10 ./lib/libavb/avb_kernel_cmdline_descriptor.o
+ .debug_line    0x0000000000000000      0x1f8 ./lib/libavb/avb_kernel_cmdline_descriptor.o
+ .debug_str     0x0000000000000000      0x397 ./lib/libavb/avb_kernel_cmdline_descriptor.o
+ .comment       0x0000000000000000       0x80 ./lib/libavb/avb_kernel_cmdline_descriptor.o
+ .debug_frame   0x0000000000000000       0x3c ./lib/libavb/avb_kernel_cmdline_descriptor.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./lib/libavb/avb_kernel_cmdline_descriptor.o
+ .text          0x0000000000000000        0x0 ./lib/libavb/avb_property_descriptor.o
+ .data          0x0000000000000000        0x0 ./lib/libavb/avb_property_descriptor.o
+ .bss           0x0000000000000000        0x0 ./lib/libavb/avb_property_descriptor.o
+ .text.avb_property_descriptor_validate_and_byteswap
+                0x0000000000000000      0x258 ./lib/libavb/avb_property_descriptor.o
+ .text.property_lookup_desc_foreach
+                0x0000000000000000       0xc0 ./lib/libavb/avb_property_descriptor.o
+ .text.avb_property_lookup
+                0x0000000000000000       0x50 ./lib/libavb/avb_property_descriptor.o
+ .text.avb_property_lookup_uint64
+                0x0000000000000000      0x104 ./lib/libavb/avb_property_descriptor.o
+ .rodata.avb_property_descriptor_validate_and_byteswap.str1.4
+                0x0000000000000000       0xa7 ./lib/libavb/avb_property_descriptor.o
+ .rodata.avb_property_lookup_uint64.str1.4
+                0x0000000000000000       0x18 ./lib/libavb/avb_property_descriptor.o
+ .rodata.property_lookup_desc_foreach.str1.4
+                0x0000000000000000       0x25 ./lib/libavb/avb_property_descriptor.o
+ .debug_info    0x0000000000000000      0x7a8 ./lib/libavb/avb_property_descriptor.o
+ .debug_abbrev  0x0000000000000000      0x240 ./lib/libavb/avb_property_descriptor.o
+ .debug_loc     0x0000000000000000      0x5c1 ./lib/libavb/avb_property_descriptor.o
+ .debug_aranges
+                0x0000000000000000       0x38 ./lib/libavb/avb_property_descriptor.o
+ .debug_ranges  0x0000000000000000       0x68 ./lib/libavb/avb_property_descriptor.o
+ .debug_line    0x0000000000000000      0x32e ./lib/libavb/avb_property_descriptor.o
+ .debug_str     0x0000000000000000      0x4a8 ./lib/libavb/avb_property_descriptor.o
+ .comment       0x0000000000000000       0x80 ./lib/libavb/avb_property_descriptor.o
+ .debug_frame   0x0000000000000000       0xd4 ./lib/libavb/avb_property_descriptor.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./lib/libavb/avb_property_descriptor.o
+ .text          0x0000000000000000        0x0 ./lib/libavb/avb_rsa.o
+ .data          0x0000000000000000        0x0 ./lib/libavb/avb_rsa.o
+ .bss           0x0000000000000000        0x0 ./lib/libavb/avb_rsa.o
+ .text.montMul  0x0000000000000000      0x114 ./lib/libavb/avb_rsa.o
+ .text.avb_rsa_verify
+                0x0000000000000000      0x500 ./lib/libavb/avb_rsa.o
+ .rodata.avb_rsa_verify.str1.4
+                0x0000000000000000      0x16c ./lib/libavb/avb_rsa.o
+ .debug_info    0x0000000000000000      0xbe6 ./lib/libavb/avb_rsa.o
+ .debug_abbrev  0x0000000000000000      0x281 ./lib/libavb/avb_rsa.o
+ .debug_loc     0x0000000000000000      0xb3d ./lib/libavb/avb_rsa.o
+ .debug_aranges
+                0x0000000000000000       0x28 ./lib/libavb/avb_rsa.o
+ .debug_ranges  0x0000000000000000       0xe0 ./lib/libavb/avb_rsa.o
+ .debug_line    0x0000000000000000      0x368 ./lib/libavb/avb_rsa.o
+ .debug_str     0x0000000000000000      0x392 ./lib/libavb/avb_rsa.o
+ .comment       0x0000000000000000       0x80 ./lib/libavb/avb_rsa.o
+ .debug_frame   0x0000000000000000       0x78 ./lib/libavb/avb_rsa.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./lib/libavb/avb_rsa.o
+ .text          0x0000000000000000        0x0 ./lib/libavb/avb_sha256.o
+ .data          0x0000000000000000        0x0 ./lib/libavb/avb_sha256.o
+ .bss           0x0000000000000000        0x0 ./lib/libavb/avb_sha256.o
+ .text.SHA256_transform
+                0x0000000000000000      0x16c ./lib/libavb/avb_sha256.o
+ .text.avb_sha256_init
+                0x0000000000000000       0x64 ./lib/libavb/avb_sha256.o
+ .text.avb_sha256_update
+                0x0000000000000000       0x7c ./lib/libavb/avb_sha256.o
+ .text.avb_sha256_final
+                0x0000000000000000      0x120 ./lib/libavb/avb_sha256.o
+ .rodata.sha256_k
+                0x0000000000000000      0x100 ./lib/libavb/avb_sha256.o
+ .debug_info    0x0000000000000000      0x45c ./lib/libavb/avb_sha256.o
+ .debug_abbrev  0x0000000000000000      0x21b ./lib/libavb/avb_sha256.o
+ .debug_loc     0x0000000000000000      0x424 ./lib/libavb/avb_sha256.o
+ .debug_aranges
+                0x0000000000000000       0x38 ./lib/libavb/avb_sha256.o
+ .debug_ranges  0x0000000000000000       0x28 ./lib/libavb/avb_sha256.o
+ .debug_line    0x0000000000000000      0x34a ./lib/libavb/avb_sha256.o
+ .debug_str     0x0000000000000000      0x2c6 ./lib/libavb/avb_sha256.o
+ .comment       0x0000000000000000       0x80 ./lib/libavb/avb_sha256.o
+ .debug_frame   0x0000000000000000       0xc0 ./lib/libavb/avb_sha256.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./lib/libavb/avb_sha256.o
+ .text          0x0000000000000000        0x0 ./lib/libavb/avb_sha512.o
+ .data          0x0000000000000000        0x0 ./lib/libavb/avb_sha512.o
+ .bss           0x0000000000000000        0x0 ./lib/libavb/avb_sha512.o
+ .text.SHA512_transform
+                0x0000000000000000      0x3d8 ./lib/libavb/avb_sha512.o
+ .text.avb_sha512_init
+                0x0000000000000000       0x3c ./lib/libavb/avb_sha512.o
+ .text.avb_sha512_update
+                0x0000000000000000       0x7c ./lib/libavb/avb_sha512.o
+ .text.avb_sha512_final
+                0x0000000000000000      0x144 ./lib/libavb/avb_sha512.o
+ .rodata.sha512_h0
+                0x0000000000000000       0x40 ./lib/libavb/avb_sha512.o
+ .rodata.sha512_k
+                0x0000000000000000      0x280 ./lib/libavb/avb_sha512.o
+ .debug_info    0x0000000000000000      0x442 ./lib/libavb/avb_sha512.o
+ .debug_abbrev  0x0000000000000000      0x20e ./lib/libavb/avb_sha512.o
+ .debug_loc     0x0000000000000000      0x406 ./lib/libavb/avb_sha512.o
+ .debug_aranges
+                0x0000000000000000       0x38 ./lib/libavb/avb_sha512.o
+ .debug_ranges  0x0000000000000000       0x28 ./lib/libavb/avb_sha512.o
+ .debug_line    0x0000000000000000      0x3a9 ./lib/libavb/avb_sha512.o
+ .debug_str     0x0000000000000000      0x2b2 ./lib/libavb/avb_sha512.o
+ .comment       0x0000000000000000       0x80 ./lib/libavb/avb_sha512.o
+ .debug_frame   0x0000000000000000       0xb8 ./lib/libavb/avb_sha512.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./lib/libavb/avb_sha512.o
+ .text          0x0000000000000000        0x0 ./lib/libavb/avb_slot_verify.o
+ .data          0x0000000000000000        0x0 ./lib/libavb/avb_slot_verify.o
+ .bss           0x0000000000000000        0x0 ./lib/libavb/avb_slot_verify.o
+ .text.load_full_partition
+                0x0000000000000000      0x1dc ./lib/libavb/avb_slot_verify.o
+ .text.read_persistent_digest
+                0x0000000000000000      0x2e0 ./lib/libavb/avb_slot_verify.o
+ .text.load_and_verify_vbmeta
+                0x0000000000000000     0x1548 ./lib/libavb/avb_slot_verify.o
+ .text.avb_slot_verify_data_free
+                0x0000000000000000       0x90 ./lib/libavb/avb_slot_verify.o
+ .text.avb_slot_verify_result_to_string
+                0x0000000000000000       0xb4 ./lib/libavb/avb_slot_verify.o
+ .text.avb_slot_verify_data_calculate_vbmeta_digest
+                0x0000000000000000       0xc0 ./lib/libavb/avb_slot_verify.o
+ .text.avb_slot_verify
+                0x0000000000000000      0x468 ./lib/libavb/avb_slot_verify.o
+ .rodata.avb_slot_verify.str1.4
+                0x0000000000000000      0x22d ./lib/libavb/avb_slot_verify.o
+ .rodata.avb_slot_verify_data_calculate_vbmeta_digest.str1.4
+                0x0000000000000000       0x28 ./lib/libavb/avb_slot_verify.o
+ .rodata.avb_slot_verify_result_to_string.str1.4
+                0x0000000000000000       0xe8 ./lib/libavb/avb_slot_verify.o
+ .rodata.load_and_verify_vbmeta.str1.4
+                0x0000000000000000      0x67c ./lib/libavb/avb_slot_verify.o
+ .rodata.load_full_partition.str1.4
+                0x0000000000000000       0xac ./lib/libavb/avb_slot_verify.o
+ .rodata.read_persistent_digest.str1.4
+                0x0000000000000000      0x168 ./lib/libavb/avb_slot_verify.o
+ .debug_info    0x0000000000000000     0x3f1f ./lib/libavb/avb_slot_verify.o
+ .debug_abbrev  0x0000000000000000      0x484 ./lib/libavb/avb_slot_verify.o
+ .debug_loc     0x0000000000000000     0x2c8b ./lib/libavb/avb_slot_verify.o
+ .debug_aranges
+                0x0000000000000000       0x50 ./lib/libavb/avb_slot_verify.o
+ .debug_ranges  0x0000000000000000      0x438 ./lib/libavb/avb_slot_verify.o
+ .debug_line    0x0000000000000000      0x95c ./lib/libavb/avb_slot_verify.o
+ .debug_str     0x0000000000000000     0x195a ./lib/libavb/avb_slot_verify.o
+ .comment       0x0000000000000000       0x80 ./lib/libavb/avb_slot_verify.o
+ .debug_frame   0x0000000000000000      0x158 ./lib/libavb/avb_slot_verify.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./lib/libavb/avb_slot_verify.o
+ .text          0x0000000000000000        0x0 ./lib/libavb/avb_sysdeps_posix.o
+ .data          0x0000000000000000        0x0 ./lib/libavb/avb_sysdeps_posix.o
+ .bss           0x0000000000000000        0x0 ./lib/libavb/avb_sysdeps_posix.o
+ .text.avb_memcmp
+                0x0000000000000000        0x4 ./lib/libavb/avb_sysdeps_posix.o
+ .text.avb_memset
+                0x0000000000000000        0x4 ./lib/libavb/avb_sysdeps_posix.o
+ .text.avb_strcmp
+                0x0000000000000000        0x4 ./lib/libavb/avb_sysdeps_posix.o
+ .text.avb_abort
+                0x0000000000000000        0x4 ./lib/libavb/avb_sysdeps_posix.o
+ .text.avb_print
+                0x0000000000000000       0x10 ./lib/libavb/avb_sysdeps_posix.o
+ .text.avb_malloc_
+                0x0000000000000000       0x10 ./lib/libavb/avb_sysdeps_posix.o
+ .text.avb_free
+                0x0000000000000000        0x4 ./lib/libavb/avb_sysdeps_posix.o
+ .text.avb_div_by_10
+                0x0000000000000000       0x28 ./lib/libavb/avb_sysdeps_posix.o
+ .comment       0x0000000000000000       0x80 ./lib/libavb/avb_sysdeps_posix.o
+ .text          0x0000000000000000        0x0 ./lib/libavb/avb_util.o
+ .data          0x0000000000000000        0x0 ./lib/libavb/avb_util.o
+ .bss           0x0000000000000000        0x0 ./lib/libavb/avb_util.o
+ .text.avb_htobe32
+                0x0000000000000000       0x1c ./lib/libavb/avb_util.o
+ .text.avb_htobe64
+                0x0000000000000000       0x48 ./lib/libavb/avb_util.o
+ .text.avb_validate_utf8
+                0x0000000000000000       0x9c ./lib/libavb/avb_util.o
+ .text.avb_strstr
+                0x0000000000000000       0x5c ./lib/libavb/avb_util.o
+ .text.avb_strv_find_str
+                0x0000000000000000       0x34 ./lib/libavb/avb_util.o
+ .text.avb_safe_add_to.part.0
+                0x0000000000000000       0x40 ./lib/libavb/avb_util.o
+ .text.avb_safe_add_to
+                0x0000000000000000       0x34 ./lib/libavb/avb_util.o
+ .text.avb_safe_add
+                0x0000000000000000       0x40 ./lib/libavb/avb_util.o
+ .text.avb_str_concat
+                0x0000000000000000       0x8c ./lib/libavb/avb_util.o
+ .text.avb_malloc
+                0x0000000000000000       0x48 ./lib/libavb/avb_util.o
+ .text.avb_calloc
+                0x0000000000000000       0x18 ./lib/libavb/avb_util.o
+ .text.avb_strdup
+                0x0000000000000000       0x24 ./lib/libavb/avb_util.o
+ .text.avb_replace
+                0x0000000000000000      0x178 ./lib/libavb/avb_util.o
+ .text.avb_strdupv
+                0x0000000000000000      0x128 ./lib/libavb/avb_util.o
+ .text.avb_uppercase
+                0x0000000000000000       0x1c ./lib/libavb/avb_util.o
+ .text.avb_bin2hex
+                0x0000000000000000       0x64 ./lib/libavb/avb_util.o
+ .rodata.avb_bin2hex.str1.4
+                0x0000000000000000       0x11 ./lib/libavb/avb_util.o
+ .rodata.avb_malloc.str1.4
+                0x0000000000000000       0x20 ./lib/libavb/avb_util.o
+ .rodata.avb_safe_add_to.part.0.str1.4
+                0x0000000000000000       0x3e ./lib/libavb/avb_util.o
+ .rodata.avb_str_concat.str1.4
+                0x0000000000000000       0x48 ./lib/libavb/avb_util.o
+ .rodata.avb_strdupv.str1.4
+                0x0000000000000000       0x5a ./lib/libavb/avb_util.o
+ .comment       0x0000000000000000       0x80 ./lib/libavb/avb_util.o
+ .text          0x0000000000000000        0x0 ./lib/libavb/avb_vbmeta_image.o
+ .data          0x0000000000000000        0x0 ./lib/libavb/avb_vbmeta_image.o
+ .bss           0x0000000000000000        0x0 ./lib/libavb/avb_vbmeta_image.o
+ .text.avb_vbmeta_image_header_to_host_byte_order
+                0x0000000000000000      0x63c ./lib/libavb/avb_vbmeta_image.o
+ .text.avb_vbmeta_image_verify
+                0x0000000000000000      0xb90 ./lib/libavb/avb_vbmeta_image.o
+ .text.avb_vbmeta_verify_result_to_string
+                0x0000000000000000       0x90 ./lib/libavb/avb_vbmeta_image.o
+ .rodata.avb_vbmeta_image_verify.str1.4
+                0x0000000000000000      0x326 ./lib/libavb/avb_vbmeta_image.o
+ .rodata.avb_vbmeta_verify_result_to_string.str1.4
+                0x0000000000000000       0x9a ./lib/libavb/avb_vbmeta_image.o
+ .debug_info    0x0000000000000000      0xfa0 ./lib/libavb/avb_vbmeta_image.o
+ .debug_abbrev  0x0000000000000000      0x246 ./lib/libavb/avb_vbmeta_image.o
+ .debug_loc     0x0000000000000000      0x781 ./lib/libavb/avb_vbmeta_image.o
+ .debug_aranges
+                0x0000000000000000       0x30 ./lib/libavb/avb_vbmeta_image.o
+ .debug_ranges  0x0000000000000000       0x38 ./lib/libavb/avb_vbmeta_image.o
+ .debug_line    0x0000000000000000      0x4d1 ./lib/libavb/avb_vbmeta_image.o
+ .debug_str     0x0000000000000000      0x858 ./lib/libavb/avb_vbmeta_image.o
+ .comment       0x0000000000000000       0x80 ./lib/libavb/avb_vbmeta_image.o
+ .debug_frame   0x0000000000000000       0x80 ./lib/libavb/avb_vbmeta_image.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./lib/libavb/avb_vbmeta_image.o
+ .text          0x0000000000000000        0x0 ./lib/libavb/avb_version.o
+ .data          0x0000000000000000        0x0 ./lib/libavb/avb_version.o
+ .bss           0x0000000000000000        0x0 ./lib/libavb/avb_version.o
+ .text.avb_version_string
+                0x0000000000000000        0xc ./lib/libavb/avb_version.o
+ .rodata.avb_version_string.str1.4
+                0x0000000000000000        0x6 ./lib/libavb/avb_version.o
+ .debug_info    0x0000000000000000       0x9e ./lib/libavb/avb_version.o
+ .debug_abbrev  0x0000000000000000       0x65 ./lib/libavb/avb_version.o
+ .debug_aranges
+                0x0000000000000000       0x20 ./lib/libavb/avb_version.o
+ .debug_ranges  0x0000000000000000       0x10 ./lib/libavb/avb_version.o
+ .debug_line    0x0000000000000000       0x8a ./lib/libavb/avb_version.o
+ .debug_str     0x0000000000000000      0x1bf ./lib/libavb/avb_version.o
+ .comment       0x0000000000000000       0x80 ./lib/libavb/avb_version.o
+ .debug_frame   0x0000000000000000       0x20 ./lib/libavb/avb_version.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./lib/libavb/avb_version.o
+ .text          0x0000000000000000        0x0 ./lib/mem_image/mem_image.o
+ .data          0x0000000000000000        0x0 ./lib/mem_image/mem_image.o
+ .bss           0x0000000000000000        0x0 ./lib/mem_image/mem_image.o
+ .comment       0x0000000000000000       0x80 ./lib/mem_image/mem_image.o
+ .text          0x0000000000000000        0x0 ./lib/mini_libc/__aeabi_helper.o
+ .data          0x0000000000000000        0x0 ./lib/mini_libc/__aeabi_helper.o
+ .bss           0x0000000000000000        0x0 ./lib/mini_libc/__aeabi_helper.o
+ .text.__aeabi_memcpy
+                0x0000000000000000        0x4 ./lib/mini_libc/__aeabi_helper.o
+ .text.__aeabi_memclr
+                0x0000000000000000        0x4 ./lib/mini_libc/__aeabi_helper.o
+ .debug_info    0x0000000000000000      0x14c ./lib/mini_libc/__aeabi_helper.o
+ .debug_abbrev  0x0000000000000000       0xb1 ./lib/mini_libc/__aeabi_helper.o
+ .debug_loc     0x0000000000000000       0xa5 ./lib/mini_libc/__aeabi_helper.o
+ .debug_aranges
+                0x0000000000000000       0x28 ./lib/mini_libc/__aeabi_helper.o
+ .debug_ranges  0x0000000000000000       0x18 ./lib/mini_libc/__aeabi_helper.o
+ .debug_line    0x0000000000000000      0x111 ./lib/mini_libc/__aeabi_helper.o
+ .debug_str     0x0000000000000000      0x1f3 ./lib/mini_libc/__aeabi_helper.o
+ .comment       0x0000000000000000       0x80 ./lib/mini_libc/__aeabi_helper.o
+ .debug_frame   0x0000000000000000       0x30 ./lib/mini_libc/__aeabi_helper.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./lib/mini_libc/__aeabi_helper.o
+ .text          0x0000000000000000        0x0 ./lib/mini_libc/libc_call.o
+ .data          0x0000000000000000        0x0 ./lib/mini_libc/libc_call.o
+ .bss           0x0000000000000000        0x0 ./lib/mini_libc/libc_call.o
+ .debug_info    0x0000000000000000      0x194 ./lib/mini_libc/libc_call.o
+ .debug_abbrev  0x0000000000000000       0x52 ./lib/mini_libc/libc_call.o
+ .debug_aranges
+                0x0000000000000000       0x18 ./lib/mini_libc/libc_call.o
+ .debug_line    0x0000000000000000      0x18d ./lib/mini_libc/libc_call.o
+ .debug_str     0x0000000000000000      0x345 ./lib/mini_libc/libc_call.o
+ .comment       0x0000000000000000       0x80 ./lib/mini_libc/libc_call.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./lib/mini_libc/libc_call.o
+ .text          0x0000000000000000        0x0 ./lib/mini_libc/mem_libc.o
+ .data          0x0000000000000000        0x0 ./lib/mini_libc/mem_libc.o
+ .bss           0x0000000000000000        0x0 ./lib/mini_libc/mem_libc.o
+ .text.mini_memset_s
+                0x0000000000000000       0x20 ./lib/mini_libc/mem_libc.o
+ .text.mini_memmove_s
+                0x0000000000000000       0x68 ./lib/mini_libc/mem_libc.o
+ .text.mini_mem_rvscpy_s
+                0x0000000000000000       0x34 ./lib/mini_libc/mem_libc.o
+ .text.mini_mem_rvs_s
+                0x0000000000000000       0x30 ./lib/mini_libc/mem_libc.o
+ .comment       0x0000000000000000       0x80 ./lib/mini_libc/mem_libc.o
+ .text          0x0000000000000000        0x0 ./lib/mini_libc/mini_printf.o
+ .data          0x0000000000000000        0x0 ./lib/mini_libc/mini_printf.o
+ .bss           0x0000000000000000        0x0 ./lib/mini_libc/mini_printf.o
+ .text.write_char
+                0x0000000000000000       0x20 ./lib/mini_libc/mini_printf.o
+ .text.usb_printf
+                0x0000000000000000      0x3b8 ./lib/mini_libc/mini_printf.o
+ .bss.local_index
+                0x0000000000000000        0x1 ./lib/mini_libc/mini_printf.o
+ .bss.send_buf  0x0000000000000000       0x80 ./lib/mini_libc/mini_printf.o
+ .comment       0x0000000000000000       0x80 ./lib/mini_libc/mini_printf.o
+ .text          0x0000000000000000        0x0 ./lib/mini_libc/rand.o
+ .data          0x0000000000000000        0x0 ./lib/mini_libc/rand.o
+ .bss           0x0000000000000000        0x0 ./lib/mini_libc/rand.o
+ .text.srand    0x0000000000000000        0xc ./lib/mini_libc/rand.o
+ .text.rand32   0x0000000000000000       0x24 ./lib/mini_libc/rand.o
+ .bss.state     0x0000000000000000        0x4 ./lib/mini_libc/rand.o
+ .debug_info    0x0000000000000000      0x1f7 ./lib/mini_libc/rand.o
+ .debug_abbrev  0x0000000000000000       0xa6 ./lib/mini_libc/rand.o
+ .debug_aranges
+                0x0000000000000000       0x28 ./lib/mini_libc/rand.o
+ .debug_ranges  0x0000000000000000       0x18 ./lib/mini_libc/rand.o
+ .debug_line    0x0000000000000000      0x1b9 ./lib/mini_libc/rand.o
+ .debug_str     0x0000000000000000      0x36c ./lib/mini_libc/rand.o
+ .comment       0x0000000000000000       0x80 ./lib/mini_libc/rand.o
+ .debug_frame   0x0000000000000000       0x30 ./lib/mini_libc/rand.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./lib/mini_libc/rand.o
+ .text          0x0000000000000000        0x0 ./lib/mini_libc/str_libc.o
+ .data          0x0000000000000000        0x0 ./lib/mini_libc/str_libc.o
+ .bss           0x0000000000000000        0x0 ./lib/mini_libc/str_libc.o
+ .text.mini_strtoull
+                0x0000000000000000       0xb8 ./lib/mini_libc/str_libc.o
+ .comment       0x0000000000000000       0x80 ./lib/mini_libc/str_libc.o
+ .text          0x0000000000000000        0x0 ./lib/partition/ab_partition_parser.o
+ .data          0x0000000000000000        0x0 ./lib/partition/ab_partition_parser.o
+ .bss           0x0000000000000000        0x0 ./lib/partition/ab_partition_parser.o
+ .text.itoa.part.0
+                0x0000000000000000       0x74 ./lib/partition/ab_partition_parser.o
+ .text.strlcpy  0x0000000000000000       0x48 ./lib/partition/ab_partition_parser.o
+ .text.itoa     0x0000000000000000        0xc ./lib/partition/ab_partition_parser.o
+ .text.ptdev_deactivate_slot
+                0x0000000000000000       0x30 ./lib/partition/ab_partition_parser.o
+ .text.ptdev_find_boot_slot
+                0x0000000000000000       0xd8 ./lib/partition/ab_partition_parser.o
+ .text.ptdev_fill_partition_meta
+                0x0000000000000000      0x104 ./lib/partition/ab_partition_parser.o
+ .text.ptdev_fill_slot_meta
+                0x0000000000000000      0x13c ./lib/partition/ab_partition_parser.o
+ .data.suffix_delimiter
+                0x0000000000000000        0x4 ./lib/partition/ab_partition_parser.o
+ .rodata.ptdev_fill_partition_meta.str1.4
+                0x0000000000000000        0xc ./lib/partition/ab_partition_parser.o
+ .rodata.ptdev_fill_slot_meta.str1.4
+                0x0000000000000000        0x7 ./lib/partition/ab_partition_parser.o
+ .rodata.ptdev_find_boot_slot.str1.4
+                0x0000000000000000       0x12 ./lib/partition/ab_partition_parser.o
+ .comment       0x0000000000000000       0x80 ./lib/partition/ab_partition_parser.o
+ .text          0x0000000000000000        0x0 ./lib/partition/partition_parser.o
+ .data          0x0000000000000000        0x0 ./lib/partition/partition_parser.o
+ .bss           0x0000000000000000        0x0 ./lib/partition/partition_parser.o
+ .text.reflect  0x0000000000000000       0x30 ./lib/partition/partition_parser.o
+ .text.ptdev_get_info
+                0x0000000000000000       0x40 ./lib/partition/partition_parser.o
+ .text.ptdev_dump
+                0x0000000000000000        0x4 ./lib/partition/partition_parser.o
+ .text.ptdev_gpt_exists
+                0x0000000000000000        0x4 ./lib/partition/partition_parser.o
+ .text.partition_is_readonly
+                0x0000000000000000       0x2c ./lib/partition/partition_parser.o
+ .text.ptdev_setup
+                0x0000000000000000       0x14 ./lib/partition/partition_parser.o
+ .text.part_is_active
+                0x0000000000000000        0x8 ./lib/partition/partition_parser.o
+ .text.get_partition_size_by_name
+                0x0000000000000000       0x28 ./lib/partition/partition_parser.o
+ .text.load_partition_force_size_by_name
+                0x0000000000000000       0x84 ./lib/partition/partition_parser.o
+ .rodata.partition_is_readonly.str1.4
+                0x0000000000000000       0x19 ./lib/partition/partition_parser.o
+ .comment       0x0000000000000000       0x80 ./lib/partition/partition_parser.o
+ .text          0x0000000000000000        0x0 ./lib/storage_device/storage_dev_mmc.o
+ .data          0x0000000000000000        0x0 ./lib/storage_device/storage_dev_mmc.o
+ .bss           0x0000000000000000        0x0 ./lib/storage_device/storage_dev_mmc.o
+ .debug_info    0x0000000000000000      0x898 ./lib/storage_device/storage_dev_mmc.o
+ .debug_abbrev  0x0000000000000000      0x18b ./lib/storage_device/storage_dev_mmc.o
+ .debug_aranges
+                0x0000000000000000       0x18 ./lib/storage_device/storage_dev_mmc.o
+ .debug_line    0x0000000000000000      0x15c ./lib/storage_device/storage_dev_mmc.o
+ .debug_str     0x0000000000000000      0x59a ./lib/storage_device/storage_dev_mmc.o
+ .comment       0x0000000000000000       0x80 ./lib/storage_device/storage_dev_mmc.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./lib/storage_device/storage_dev_mmc.o
+ .text          0x0000000000000000        0x0 ./lib/storage_device/storage_dev_ospi.o
+ .data          0x0000000000000000        0x0 ./lib/storage_device/storage_dev_ospi.o
+ .bss           0x0000000000000000        0x0 ./lib/storage_device/storage_dev_ospi.o
+ .comment       0x0000000000000000       0x80 ./lib/storage_device/storage_dev_ospi.o
+ .text          0x0000000000000000        0x0 ./lib/storage_device/storage_device.o
+ .data          0x0000000000000000        0x0 ./lib/storage_device/storage_device.o
+ .bss           0x0000000000000000        0x0 ./lib/storage_device/storage_device.o
+ .comment       0x0000000000000000       0x80 ./lib/storage_device/storage_device.o
+ .text          0x0000000000000000        0x0 ./lib/str/str.o
+ .data          0x0000000000000000        0x0 ./lib/str/str.o
+ .bss           0x0000000000000000        0x0 ./lib/str/str.o
+ .text.set_str_resume
+                0x0000000000000000        0x4 ./lib/str/str.o
+ .comment       0x0000000000000000       0x80 ./lib/str/str.o
+ .text          0x0000000000000000        0x0 ./service/srv_pin/srv_pin.o
+ .data          0x0000000000000000        0x0 ./service/srv_pin/srv_pin.o
+ .bss           0x0000000000000000        0x0 ./service/srv_pin/srv_pin.o
+ .comment       0x0000000000000000       0x80 ./service/srv_pin/srv_pin.o
+ .text          0x0000000000000000        0x0 ./service/srv_timer/srv_timer.o
+ .data          0x0000000000000000        0x0 ./service/srv_timer/srv_timer.o
+ .bss           0x0000000000000000        0x0 ./service/srv_timer/srv_timer.o
+ .text.tmr_is_enabled
+                0x0000000000000000       0x18 ./service/srv_timer/srv_timer.o
+ .comment       0x0000000000000000       0x80 ./service/srv_timer/srv_timer.o
+ .text          0x0000000000000000        0x0 ./soc/kunlun/cache_ops_wrapper.o
+ .data          0x0000000000000000        0x0 ./soc/kunlun/cache_ops_wrapper.o
+ .bss           0x0000000000000000        0x0 ./soc/kunlun/cache_ops_wrapper.o
+ .text.clean_cache_range
+                0x0000000000000000       0x34 ./soc/kunlun/cache_ops_wrapper.o
+ .text.clean_invalidate_cache_range
+                0x0000000000000000       0x34 ./soc/kunlun/cache_ops_wrapper.o
+ .text.invalidate_cache_range
+                0x0000000000000000       0x34 ./soc/kunlun/cache_ops_wrapper.o
+ .debug_info    0x0000000000000000      0x2fa ./soc/kunlun/cache_ops_wrapper.o
+ .debug_abbrev  0x0000000000000000       0xe1 ./soc/kunlun/cache_ops_wrapper.o
+ .debug_loc     0x0000000000000000      0x1e0 ./soc/kunlun/cache_ops_wrapper.o
+ .debug_aranges
+                0x0000000000000000       0x30 ./soc/kunlun/cache_ops_wrapper.o
+ .debug_ranges  0x0000000000000000       0x20 ./soc/kunlun/cache_ops_wrapper.o
+ .debug_line    0x0000000000000000      0x278 ./soc/kunlun/cache_ops_wrapper.o
+ .debug_str     0x0000000000000000      0x3f9 ./soc/kunlun/cache_ops_wrapper.o
+ .comment       0x0000000000000000       0x80 ./soc/kunlun/cache_ops_wrapper.o
+ .debug_frame   0x0000000000000000       0x7c ./soc/kunlun/cache_ops_wrapper.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./soc/kunlun/cache_ops_wrapper.o
+ .text          0x0000000000000000        0x0 ./soc/kunlun/fusemap.o
+ .data          0x0000000000000000        0x0 ./soc/kunlun/fusemap.o
+ .bss           0x0000000000000000        0x0 ./soc/kunlun/fusemap.o
+ .comment       0x0000000000000000       0x80 ./soc/kunlun/fusemap.o
+ .text          0x0000000000000000        0x0 ./soc/kunlun/glb_timer.o
+ .data          0x0000000000000000        0x0 ./soc/kunlun/glb_timer.o
+ .bss           0x0000000000000000        0x0 ./soc/kunlun/glb_timer.o
+ .comment       0x0000000000000000       0x80 ./soc/kunlun/glb_timer.o
+ .text          0x0000000000000000        0x0 ./soc/kunlun/glb_wdog.o
+ .data          0x0000000000000000        0x0 ./soc/kunlun/glb_wdog.o
+ .bss           0x0000000000000000        0x0 ./soc/kunlun/glb_wdog.o
+ .rodata.g_hw_wdog_inst
+                0x0000000000000000        0xc ./soc/kunlun/glb_wdog.o
+ .rodata.str1.4
+                0x0000000000000000        0xd ./soc/kunlun/glb_wdog.o
+ .debug_info    0x0000000000000000      0x667 ./soc/kunlun/glb_wdog.o
+ .debug_abbrev  0x0000000000000000       0xfb ./soc/kunlun/glb_wdog.o
+ .debug_aranges
+                0x0000000000000000       0x18 ./soc/kunlun/glb_wdog.o
+ .debug_line    0x0000000000000000      0x1ff ./soc/kunlun/glb_wdog.o
+ .debug_str     0x0000000000000000      0x78d ./soc/kunlun/glb_wdog.o
+ .comment       0x0000000000000000       0x80 ./soc/kunlun/glb_wdog.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./soc/kunlun/glb_wdog.o
+ .text          0x0000000000000000        0x0 ./soc/kunlun/kick_cores.o
+ .data          0x0000000000000000        0x0 ./soc/kunlun/kick_cores.o
+ .bss           0x0000000000000000        0x0 ./soc/kunlun/kick_cores.o
+ .text.soc_stop_secondary_core
+                0x0000000000000000       0x5c ./soc/kunlun/kick_cores.o
+ .text.soc_start_cpu_core
+                0x0000000000000000      0x1f4 ./soc/kunlun/kick_cores.o
+ .text.soc_kick_cpu
+                0x0000000000000000       0xdc ./soc/kunlun/kick_cores.o
+ .debug_info    0x0000000000000000      0xb93 ./soc/kunlun/kick_cores.o
+ .debug_abbrev  0x0000000000000000      0x153 ./soc/kunlun/kick_cores.o
+ .debug_loc     0x0000000000000000      0x378 ./soc/kunlun/kick_cores.o
+ .debug_aranges
+                0x0000000000000000       0x30 ./soc/kunlun/kick_cores.o
+ .debug_ranges  0x0000000000000000       0x50 ./soc/kunlun/kick_cores.o
+ .debug_line    0x0000000000000000      0x3ab ./soc/kunlun/kick_cores.o
+ .debug_str     0x0000000000000000      0x80c ./soc/kunlun/kick_cores.o
+ .comment       0x0000000000000000       0x80 ./soc/kunlun/kick_cores.o
+ .debug_frame   0x0000000000000000       0x94 ./soc/kunlun/kick_cores.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./soc/kunlun/kick_cores.o
+ .text          0x0000000000000000        0x0 ./soc/kunlun/plat_interrupt.o
+ .data          0x0000000000000000        0x0 ./soc/kunlun/plat_interrupt.o
+ .bss           0x0000000000000000        0x0 ./soc/kunlun/plat_interrupt.o
+ .debug_line    0x0000000000000000        0x0 ./soc/kunlun/plat_interrupt.o
+ .debug_str     0x0000000000000000      0x11c ./soc/kunlun/plat_interrupt.o
+ .comment       0x0000000000000000       0x80 ./soc/kunlun/plat_interrupt.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./soc/kunlun/plat_interrupt.o
+ .text          0x0000000000000000        0x0 ./soc/kunlun/safe/pin_cfg/uart_pins.o
+ .data          0x0000000000000000        0x0 ./soc/kunlun/safe/pin_cfg/uart_pins.o
+ .bss           0x0000000000000000        0x0 ./soc/kunlun/safe/pin_cfg/uart_pins.o
+ .comment       0x0000000000000000       0x80 ./soc/kunlun/safe/pin_cfg/uart_pins.o
+ .text          0x0000000000000000        0x0 ./soc/kunlun/safe/soc.o
+ .data          0x0000000000000000        0x0 ./soc/kunlun/safe/soc.o
+ .bss           0x0000000000000000        0x0 ./soc/kunlun/safe/soc.o
+ .text.soc_early_init
+                0x0000000000000000        0x4 ./soc/kunlun/safe/soc.o
+ .text.soc_pre_boot
+                0x0000000000000000        0x4 ./soc/kunlun/safe/soc.o
+ .text.soc_init
+                0x0000000000000000       0x30 ./soc/kunlun/safe/soc.o
+ .text.soc_clock_init
+                0x0000000000000000       0xac ./soc/kunlun/safe/soc.o
+ .text.soc_get_bt_pin
+                0x0000000000000000       0x10 ./soc/kunlun/safe/soc.o
+ .text.soc_get_core_id
+                0x0000000000000000        0x4 ./soc/kunlun/safe/soc.o
+ .text.soc_remap_to_zero
+                0x0000000000000000       0x30 ./soc/kunlun/safe/soc.o
+ .text.soc_get_reset_source
+                0x0000000000000000        0xc ./soc/kunlun/safe/soc.o
+ .text.soc_rd_storage_reg
+                0x0000000000000000       0x10 ./soc/kunlun/safe/soc.o
+ .text.soc_wr_storage_reg
+                0x0000000000000000        0xc ./soc/kunlun/safe/soc.o
+ .text.soc_wdog_reset_en
+                0x0000000000000000        0x4 ./soc/kunlun/safe/soc.o
+ .text.soc_gpio_mux
+                0x0000000000000000        0x4 ./soc/kunlun/safe/soc.o
+ .text.soc_wdt_is_hw_en
+                0x0000000000000000       0x20 ./soc/kunlun/safe/soc.o
+ .text.soc_to_dma_address
+                0x0000000000000000       0x1c ./soc/kunlun/safe/soc.o
+ .comment       0x0000000000000000       0x80 ./soc/kunlun/safe/soc.o
+ .text          0x0000000000000000        0x0 ./soc/kunlun/send_char.o
+ .data          0x0000000000000000        0x0 ./soc/kunlun/send_char.o
+ .bss           0x0000000000000000        0x0 ./soc/kunlun/send_char.o
+ .comment       0x0000000000000000       0x80 ./soc/kunlun/send_char.o
+ .text          0x0000000000000000        0x0 ./soc/kunlun/soc.o
+ .data          0x0000000000000000        0x0 ./soc/kunlun/soc.o
+ .bss           0x0000000000000000        0x0 ./soc/kunlun/soc.o
+ .text.soc_read_fuse
+                0x0000000000000000        0x4 ./soc/kunlun/soc.o
+ .text.soc_sense_fuse
+                0x0000000000000000       0x18 ./soc/kunlun/soc.o
+ .text.soc_assert_reset
+                0x0000000000000000       0x60 ./soc/kunlun/soc.o
+ .text.system_reset
+                0x0000000000000000       0x14 ./soc/kunlun/soc.o
+ .text.soc_get_lc
+                0x0000000000000000       0x3c ./soc/kunlun/soc.o
+ .text.fuse_get_cores
+                0x0000000000000000       0x2c ./soc/kunlun/soc.o
+ .text.soc_get_rand
+                0x0000000000000000        0x4 ./soc/kunlun/soc.o
+ .comment       0x0000000000000000       0x80 ./soc/kunlun/soc.o
+ .text          0x0000000000000000        0x0 ./soc/kunlun/soc_share.o
+ .data          0x0000000000000000        0x0 ./soc/kunlun/soc_share.o
+ .bss           0x0000000000000000        0x0 ./soc/kunlun/soc_share.o
+ .text.soc_read_uuid
+                0x0000000000000000       0x2c ./soc/kunlun/soc_share.o
+ .text.soc_read_dev_id
+                0x0000000000000000       0x2c ./soc/kunlun/soc_share.o
+ .debug_info    0x0000000000000000      0x30d ./soc/kunlun/soc_share.o
+ .debug_abbrev  0x0000000000000000      0x10d ./soc/kunlun/soc_share.o
+ .debug_loc     0x0000000000000000       0xd4 ./soc/kunlun/soc_share.o
+ .debug_aranges
+                0x0000000000000000       0x28 ./soc/kunlun/soc_share.o
+ .debug_ranges  0x0000000000000000       0x18 ./soc/kunlun/soc_share.o
+ .debug_line    0x0000000000000000      0x1f4 ./soc/kunlun/soc_share.o
+ .debug_str     0x0000000000000000      0x386 ./soc/kunlun/soc_share.o
+ .comment       0x0000000000000000       0x80 ./soc/kunlun/soc_share.o
+ .debug_frame   0x0000000000000000       0x50 ./soc/kunlun/soc_share.o
+ .ARM.attributes
+                0x0000000000000000       0x37 ./soc/kunlun/soc_share.o
+ .text          0x0000000000000000       0xa0 /home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_aeabi_ldivmod.o)
+ .data          0x0000000000000000        0x0 /home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_aeabi_ldivmod.o)
+ .bss           0x0000000000000000        0x0 /home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_aeabi_ldivmod.o)
+ .debug_frame   0x0000000000000000       0x44 /home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_aeabi_ldivmod.o)
+ .ARM.attributes
+                0x0000000000000000       0x1b /home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_aeabi_ldivmod.o)
+ .text          0x0000000000000000       0x30 /home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_aeabi_uldivmod.o)
+ .data          0x0000000000000000        0x0 /home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_aeabi_uldivmod.o)
+ .bss           0x0000000000000000        0x0 /home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_aeabi_uldivmod.o)
+ .debug_frame   0x0000000000000000       0x2c /home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_aeabi_uldivmod.o)
+ .ARM.attributes
+                0x0000000000000000       0x1b /home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_aeabi_uldivmod.o)
+ .text          0x0000000000000000      0x144 /home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_udivmoddi4.o)
+ .data          0x0000000000000000        0x0 /home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_udivmoddi4.o)
+ .bss           0x0000000000000000        0x0 /home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_udivmoddi4.o)
+ .ARM.extab     0x0000000000000000        0x0 /home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_udivmoddi4.o)
+ .ARM.exidx     0x0000000000000000        0x8 /home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_udivmoddi4.o)
+ .debug_frame   0x0000000000000000       0x40 /home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_udivmoddi4.o)
+ .ARM.attributes
+                0x0000000000000000       0x2b /home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_udivmoddi4.o)
+ .text          0x0000000000000000        0x4 /home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_dvmd_tls.o)
+ .data          0x0000000000000000        0x0 /home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_dvmd_tls.o)
+ .bss           0x0000000000000000        0x0 /home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_dvmd_tls.o)
+ .ARM.attributes
+                0x0000000000000000       0x1b /home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a(_dvmd_tls.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD ./app/t_loader/end.o
+LOAD ./app/t_loader/main.o
+LOAD ./arch/armv7-r/arch_ops.o
+LOAD ./arch/armv7-r/cache-ops.o
+LOAD ./arch/armv7-r/exception.o
+LOAD ./arch/armv7-r/exception_s.o
+LOAD ./arch/armv7-r/fast_fifo_wr.o
+LOAD ./arch/armv7-r/memclr_opt.o
+LOAD ./arch/armv7-r/memcpy_opt.o
+LOAD ./arch/armv7-r/start.o
+LOAD ./arch/armv7-r/vector.o
+LOAD ./board/d9_ref/board.o
+LOAD ./board/d9_ref/board_info.o
+LOAD ./board/d9_ref/i2c_pins.o
+LOAD ./driver/analog/fsrefclk.o
+LOAD ./driver/analog/xtal_24m.o
+LOAD ./driver/clk/ckgen.o
+LOAD ./driver/ddr/dw_umctl2/fw/streaming_str.o
+LOAD ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+LOAD ./driver/ddr/dw_umctl2/src/run_ddr_init_seq.o
+LOAD ./driver/funcsafe/eic.o
+LOAD ./driver/funcsafe/sem.o
+LOAD ./driver/fuse_ctrl/fuse_ctrl.o
+LOAD ./driver/gpio/d_ip_gpio/d_ip_gpio.o
+LOAD ./driver/gpio/gpio.o
+LOAD ./driver/i2c/dw_i2c/src/dw_i2c.o
+LOAD ./driver/io_expander/TCA9539.o
+LOAD ./driver/io_expander/TCA9539_defaultPinCfg.o
+LOAD ./driver/io_expander/i2c_wrapper.o
+LOAD ./driver/mailbox/mailbox.o
+LOAD ./driver/mpu/mpu.o
+LOAD ./driver/pll/sc_ss_pfpll.o
+LOAD ./driver/rstgen/rstgen.o
+LOAD ./driver/scr/scr.o
+LOAD ./driver/testbench/testbench.o
+LOAD ./driver/timer/sdrv_timer/sdrv_timer.o
+LOAD ./driver/uart/dwc_uart/dwc_uart.o
+LOAD ./driver/uart/uart.o
+LOAD ./driver/wdog/sdrv_wdt/sdrv_wdt.o
+LOAD ./driver/wdog/wdog.o
+LOAD ./lib/boardinfo/boardinfo_hwid_hw.o
+LOAD ./lib/boardinfo/boardinfo_hwid_usr.o
+LOAD ./lib/cksum/adler32.o
+LOAD ./lib/cksum/crc16.o
+LOAD ./lib/cksum/crc32.o
+LOAD ./lib/cksum/debug.o
+LOAD ./lib/libavb/avb_chain_partition_descriptor.o
+LOAD ./lib/libavb/avb_cmdline.o
+LOAD ./lib/libavb/avb_crc32.o
+LOAD ./lib/libavb/avb_crypto.o
+LOAD ./lib/libavb/avb_descriptor.o
+LOAD ./lib/libavb/avb_footer.o
+LOAD ./lib/libavb/avb_hash_descriptor.o
+LOAD ./lib/libavb/avb_hashtree_descriptor.o
+LOAD ./lib/libavb/avb_kernel_cmdline_descriptor.o
+LOAD ./lib/libavb/avb_property_descriptor.o
+LOAD ./lib/libavb/avb_rsa.o
+LOAD ./lib/libavb/avb_sha256.o
+LOAD ./lib/libavb/avb_sha512.o
+LOAD ./lib/libavb/avb_slot_verify.o
+LOAD ./lib/libavb/avb_sysdeps_posix.o
+LOAD ./lib/libavb/avb_util.o
+LOAD ./lib/libavb/avb_vbmeta_image.o
+LOAD ./lib/libavb/avb_version.o
+LOAD ./lib/mem_image/mem_image.o
+LOAD ./lib/mini_libc/__aeabi_helper.o
+LOAD ./lib/mini_libc/libc_call.o
+LOAD ./lib/mini_libc/mem_libc.o
+LOAD ./lib/mini_libc/mini_printf.o
+LOAD ./lib/mini_libc/rand.o
+LOAD ./lib/mini_libc/str_libc.o
+LOAD ./lib/partition/ab_partition_parser.o
+LOAD ./lib/partition/partition_parser.o
+LOAD ./lib/storage_device/storage_dev_mmc.o
+LOAD ./lib/storage_device/storage_dev_ospi.o
+LOAD ./lib/storage_device/storage_device.o
+LOAD ./lib/str/str.o
+LOAD ./service/srv_pin/srv_pin.o
+LOAD ./service/srv_timer/srv_timer.o
+LOAD ./soc/kunlun/cache_ops_wrapper.o
+LOAD ./soc/kunlun/fusemap.o
+LOAD ./soc/kunlun/glb_timer.o
+LOAD ./soc/kunlun/glb_wdog.o
+LOAD ./soc/kunlun/kick_cores.o
+LOAD ./soc/kunlun/plat_interrupt.o
+LOAD ./soc/kunlun/safe/pin_cfg/uart_pins.o
+LOAD ./soc/kunlun/safe/soc.o
+LOAD ./soc/kunlun/send_char.o
+LOAD ./soc/kunlun/soc.o
+LOAD ./soc/kunlun/soc_share.o
+LOAD /home/zhangk/d9/source/toolchain/gcc_linaro/gcc-arm-none-eabi-7.3.1/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7-ar/fpv3/softfp/libgcc.a
+                0x0000000000100000                . = 0x100000
+                0x0000000000100000                __rom_start = .
+
+.text           0x0000000000100000     0x4d10
+ *(.text.vector)
+ .text.vector   0x0000000000100000       0x50 ./arch/armv7-r/vector.o
+                0x0000000000100020                __fiq_
+ *(.text.test_section)
+ *(.text*)
+ .text.load_partition_by_configs
+                0x0000000000100050      0x128 ./app/t_loader/main.o
+ .text.load_ddr_data
+                0x0000000000100178      0x198 ./app/t_loader/main.o
+ .text.board_setup_later
+                0x0000000000100310        0x4 ./app/t_loader/main.o
+                0x0000000000100310                board_setup_later
+ .text.__main   0x0000000000100314      0x1e4 ./app/t_loader/main.o
+                0x0000000000100314                __main
+ .text          0x00000000001004f8       0x90 ./arch/armv7-r/arch_ops.o
+                0x00000000001004f8                arch_rd_sctlr
+                0x0000000000100500                arch_wr_sctlr
+                0x0000000000100508                arch_rd_mpuir
+                0x0000000000100510                arch_rd_mpurbar
+                0x0000000000100518                arch_wr_mpurbar
+                0x0000000000100520                arch_rd_mpurser
+                0x0000000000100528                arch_wr_mpurser
+                0x0000000000100530                arch_rd_mpuracr
+                0x0000000000100538                arch_wr_mpuracr
+                0x0000000000100540                arch_rd_mpurgnr
+                0x0000000000100548                arch_wr_mpurgnr
+                0x0000000000100550                arch_rd_ccsidr
+                0x0000000000100558                arch_disable_interrupt
+                0x0000000000100560                arch_enable_interrupt
+                0x0000000000100568                arch_disable_async_abort
+                0x0000000000100578                arch_enable_async_abort
+ .text          0x0000000000100588      0x268 ./arch/armv7-r/cache-ops.o
+                0x0000000000100588                arch_disable_cache
+                0x00000000001005e4                arch_enable_cache
+                0x0000000000100640                clean_invalidate_cache_v7
+                0x00000000001006d4                invalidate_cache_v7
+                0x0000000000100768                arch_clean_cache_range
+                0x000000000010078c                arch_clean_invalidate_cache_range
+                0x00000000001007b0                arch_invalidate_cache_range
+                0x00000000001007d4                arch_sync_cache_range
+ .text.default_exception_hdlr
+                0x00000000001007f0        0x4 ./arch/armv7-r/exception.o
+                0x00000000001007f0                default_exception_hdlr
+ *fill*         0x00000000001007f4        0x4 
+ .text          0x00000000001007f8       0x18 ./arch/armv7-r/exception_s.o
+                0x00000000001007f8                default_exception_hdlr_s
+ .text          0x0000000000100810       0x7c ./arch/armv7-r/memclr_opt.o
+                0x0000000000100810                memclr_aligned
+ *fill*         0x000000000010088c        0x4 
+ .text          0x0000000000100890       0x6c ./arch/armv7-r/memcpy_opt.o
+                0x0000000000100890                memcpy_aligned
+ *fill*         0x00000000001008fc        0x4 
+ .text          0x0000000000100900      0x290 ./arch/armv7-r/start.o
+                0x0000000000100900                _start
+                0x0000000000100900                reset_hdlr
+ .text.board_setup
+                0x0000000000100b90        0x4 ./board/d9_ref/board.o
+                0x0000000000100b90                board_setup
+ .text.ana_osc24_output_sel
+                0x0000000000100b94       0xa8 ./driver/analog/fsrefclk.o
+                0x0000000000100b94                ana_osc24_output_sel
+ .text.ckgen_ip_slice_cfg
+                0x0000000000100c3c       0x78 ./driver/clk/ckgen.o
+                0x0000000000100c3c                ckgen_ip_slice_cfg
+ .text.ckgen_bus_slice_cfg
+                0x0000000000100cb4       0xe0 ./driver/clk/ckgen.o
+                0x0000000000100cb4                ckgen_bus_slice_cfg
+ .text.ckgen_bus_slice_switch
+                0x0000000000100d94       0x18 ./driver/clk/ckgen.o
+                0x0000000000100d94                ckgen_bus_slice_switch
+ .text.ckgen_uuu_slice_cfg
+                0x0000000000100dac       0x30 ./driver/clk/ckgen.o
+                0x0000000000100dac                ckgen_uuu_slice_cfg
+ .text.dwc_ddrphy_fw_monitor_loop
+                0x0000000000100ddc       0xac ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+                0x0000000000100ddc                dwc_ddrphy_fw_monitor_loop
+ .text._dwc_ddrphy_phyinit_userCustom_H_readMsgBlock_
+                0x0000000000100e88      0x238 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+                0x0000000000100e88                _dwc_ddrphy_phyinit_userCustom_H_readMsgBlock_
+ .text._timing_reg_update_after_training_
+                0x00000000001010c0      0x338 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+                0x00000000001010c0                _timing_reg_update_after_training_
+ .text.load_ddr_training_fw_piecewise
+                0x00000000001013f8      0x1a8 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+                0x00000000001013f8                load_ddr_training_fw_piecewise
+ .text.load_ddr_training_fw
+                0x00000000001015a0      0x1c4 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+                0x00000000001015a0                load_ddr_training_fw
+ .text.run_ddr_diag
+                0x0000000000101764        0x4 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+                0x0000000000101764                run_ddr_diag
+ .text.run_ddr_init_seq
+                0x0000000000101768      0x1d4 ./driver/ddr/dw_umctl2/src/run_ddr_init_seq.o
+                0x0000000000101768                run_ddr_init_seq
+ .text.fuse_program_raw
+                0x000000000010193c       0x5c ./driver/fuse_ctrl/fuse_ctrl.o
+ .text.fuse_read
+                0x0000000000101998       0x14 ./driver/fuse_ctrl/fuse_ctrl.o
+                0x0000000000101998                fuse_read
+ .text.fuse_sense
+                0x00000000001019ac       0x58 ./driver/fuse_ctrl/fuse_ctrl.o
+                0x00000000001019ac                fuse_sense
+ .text.cmd_fuse_sense
+                0x0000000000101a04       0x2c ./driver/fuse_ctrl/fuse_ctrl.o
+                0x0000000000101a04                cmd_fuse_sense
+ .text.fuse_program
+                0x0000000000101a30       0x9c ./driver/fuse_ctrl/fuse_ctrl.o
+                0x0000000000101a30                fuse_program
+ .text.cmd_fuse_program
+                0x0000000000101acc       0x30 ./driver/fuse_ctrl/fuse_ctrl.o
+                0x0000000000101acc                cmd_fuse_program
+ .text.sc_pfpll_program
+                0x0000000000101afc       0xec ./driver/pll/sc_ss_pfpll.o
+                0x0000000000101afc                sc_pfpll_program
+ .text.sc_pfpll_is_enabled
+                0x0000000000101be8        0x8 ./driver/pll/sc_ss_pfpll.o
+                0x0000000000101be8                sc_pfpll_is_enabled
+ .text.rg_module_reset
+                0x0000000000101bf0       0x60 ./driver/rstgen/rstgen.o
+                0x0000000000101bf0                rg_module_reset
+ .text.rg_dis_isolation
+                0x0000000000101c50       0x10 ./driver/rstgen/rstgen.o
+                0x0000000000101c50                rg_dis_isolation
+ .text.scr_bit_set
+                0x0000000000101c60       0x44 ./driver/scr/scr.o
+                0x0000000000101c60                scr_bit_set
+ .text.scr_bit_clr
+                0x0000000000101ca4       0x48 ./driver/scr/scr.o
+                0x0000000000101ca4                scr_bit_clr
+ .text.scr_bit_get
+                0x0000000000101cec       0x3c ./driver/scr/scr.o
+                0x0000000000101cec                scr_bit_get
+ .text.sdrv_tmr_init
+                0x0000000000101d28       0x48 ./driver/timer/sdrv_timer/sdrv_timer.o
+                0x0000000000101d28                sdrv_tmr_init
+ .text.sdrv_tmr_get_freq
+                0x0000000000101d70        0xc ./driver/timer/sdrv_timer/sdrv_timer.o
+                0x0000000000101d70                sdrv_tmr_get_freq
+ .text.sdrv_tmr_tick
+                0x0000000000101d7c       0x1c ./driver/timer/sdrv_timer/sdrv_timer.o
+                0x0000000000101d7c                sdrv_tmr_tick
+ .text.sdrv_tmr_is_enabled
+                0x0000000000101d98       0x10 ./driver/timer/sdrv_timer/sdrv_timer.o
+                0x0000000000101d98                sdrv_tmr_is_enabled
+ .text.dwc_uart_init
+                0x0000000000101da8       0x9c ./driver/uart/dwc_uart/dwc_uart.o
+ .text.dwc_uart_tx
+                0x0000000000101e44       0x28 ./driver/uart/dwc_uart/dwc_uart.o
+ .text.dwc_uart_rx
+                0x0000000000101e6c       0x28 ./driver/uart/dwc_uart/dwc_uart.o
+ .text.uart_init
+                0x0000000000101e94       0x30 ./driver/uart/uart.o
+                0x0000000000101e94                uart_init
+ .text.uart_tx  0x0000000000101ec4       0x20 ./driver/uart/uart.o
+                0x0000000000101ec4                uart_tx
+ .text.uart_is_enabled
+                0x0000000000101ee4       0x1c ./driver/uart/uart.o
+                0x0000000000101ee4                uart_is_enabled
+ .text.sys_recognize_hwid_from_hw
+                0x0000000000101f00       0xd8 ./lib/boardinfo/boardinfo_hwid_hw.o
+                0x0000000000101f00                sys_recognize_hwid_from_hw
+ .text.get_part_id
+                0x0000000000101fd8       0x80 ./lib/boardinfo/boardinfo_hwid_usr.o
+                0x0000000000101fd8                get_part_id
+ .text.crc32    0x0000000000102058       0xfc ./lib/cksum/crc32.o
+                0x0000000000102058                crc32
+ .text.avb_footer_validate_and_byteswap
+                0x0000000000102154      0x20c ./lib/libavb/avb_footer.o
+                0x0000000000102154                avb_footer_validate_and_byteswap
+ .text.avb_memcpy
+                0x0000000000102360        0x4 ./lib/libavb/avb_sysdeps_posix.o
+                0x0000000000102360                avb_memcpy
+ .text.avb_strlen
+                0x0000000000102364        0x4 ./lib/libavb/avb_sysdeps_posix.o
+                0x0000000000102364                avb_strlen
+ .text.avb_printv
+                0x0000000000102368       0x34 ./lib/libavb/avb_sysdeps_posix.o
+                0x0000000000102368                avb_printv
+ .text.avb_be32toh
+                0x000000000010239c        0x4 ./lib/libavb/avb_util.o
+                0x000000000010239c                avb_be32toh
+ .text.avb_be64toh
+                0x00000000001023a0        0x8 ./lib/libavb/avb_util.o
+                0x00000000001023a0                avb_be64toh
+ .text.avb_safe_memcmp
+                0x00000000001023a8       0x2c ./lib/libavb/avb_util.o
+                0x00000000001023a8                avb_safe_memcmp
+ .text.avb_basename
+                0x00000000001023d4       0x3c ./lib/libavb/avb_util.o
+                0x00000000001023d4                avb_basename
+ .text.mem_image_init
+                0x0000000000102410       0x38 ./lib/mem_image/mem_image.o
+                0x0000000000102410                mem_image_init
+ .text.mem_image_delete_entry
+                0x0000000000102448       0xa0 ./lib/mem_image/mem_image.o
+                0x0000000000102448                mem_image_delete_entry
+ .text.mem_image_seek
+                0x00000000001024e8       0x88 ./lib/mem_image/mem_image.o
+                0x00000000001024e8                mem_image_seek
+ .text.mem_image_get_entry
+                0x0000000000102570      0x138 ./lib/mem_image/mem_image.o
+                0x0000000000102570                mem_image_get_entry
+ .text.mini_memcpy_s
+                0x00000000001026a8       0xc8 ./lib/mini_libc/mem_libc.o
+                0x00000000001026a8                mini_memcpy_s
+ .text.mini_memclr_s
+                0x0000000000102770       0x74 ./lib/mini_libc/mem_libc.o
+                0x0000000000102770                mini_memclr_s
+ .text.mini_memcmp_s
+                0x00000000001027e4       0x50 ./lib/mini_libc/mem_libc.o
+                0x00000000001027e4                mini_memcmp_s
+ .text.memcpy   0x0000000000102834        0xc ./lib/mini_libc/mem_libc.o
+                0x0000000000102834                memcpy
+ .text.memset   0x0000000000102840       0x1c ./lib/mini_libc/mem_libc.o
+                0x0000000000102840                memset
+ .text.mini_printf
+                0x000000000010285c      0x2c4 ./lib/mini_libc/mini_printf.o
+                0x000000000010285c                mini_printf
+ .text.mini_sprintf
+                0x0000000000102b20      0x310 ./lib/mini_libc/mini_printf.o
+                0x0000000000102b20                mini_sprintf
+ .text.mini_strlen
+                0x0000000000102e30       0x14 ./lib/mini_libc/str_libc.o
+                0x0000000000102e30                mini_strlen
+ .text.mini_strcpy
+                0x0000000000102e44       0x1c ./lib/mini_libc/str_libc.o
+                0x0000000000102e44                mini_strcpy
+ .text.mini_strncmp_s
+                0x0000000000102e60       0x44 ./lib/mini_libc/str_libc.o
+                0x0000000000102e60                mini_strncmp_s
+ .text.mini_strcmp_s
+                0x0000000000102ea4       0x58 ./lib/mini_libc/str_libc.o
+                0x0000000000102ea4                mini_strcmp_s
+ .text.mini_strtoul
+                0x0000000000102efc       0xa0 ./lib/mini_libc/str_libc.o
+                0x0000000000102efc                mini_strtoul
+ .text.strstr   0x0000000000102f9c       0x48 ./lib/partition/ab_partition_parser.o
+                0x0000000000102f9c                strstr
+ .text.ptdev_activate_slot
+                0x0000000000102fe4       0x30 ./lib/partition/ab_partition_parser.o
+                0x0000000000102fe4                ptdev_activate_slot
+ .text.ptdev_scan_for_multislot
+                0x0000000000103014       0xec ./lib/partition/ab_partition_parser.o
+                0x0000000000103014                ptdev_scan_for_multislot
+ .text.ptdev_find_active_slot
+                0x0000000000103100      0x10c ./lib/partition/ab_partition_parser.o
+                0x0000000000103100                ptdev_find_active_slot
+ .text.ptdev_multislot_is_supported
+                0x000000000010320c        0x4 ./lib/partition/ab_partition_parser.o
+                0x000000000010320c                ptdev_multislot_is_supported
+ .text.mbr_fill_name
+                0x0000000000103210       0xa0 ./lib/partition/partition_parser.o
+ .text.ptdev_read_gpt
+                0x00000000001032b0      0x688 ./lib/partition/partition_parser.o
+ .text.ptdev_read_mbr
+                0x0000000000103938      0x2e4 ./lib/partition/partition_parser.o
+ .text.ptdev_get_partition_count
+                0x0000000000103c1c        0x4 ./lib/partition/partition_parser.o
+                0x0000000000103c1c                ptdev_get_partition_count
+ .text.ptdev_get_partition_entries
+                0x0000000000103c20        0x4 ./lib/partition/partition_parser.o
+                0x0000000000103c20                ptdev_get_partition_entries
+ .text.ptdev_read_table
+                0x0000000000103c24       0xc0 ./lib/partition/partition_parser.o
+                0x0000000000103c24                ptdev_read_table
+ .text.init_partition_dev.isra.2
+                0x0000000000103ce4       0x74 ./lib/partition/partition_parser.o
+ .text.ptdev_get_index
+                0x0000000000103d58       0x90 ./lib/partition/partition_parser.o
+                0x0000000000103d58                ptdev_get_index
+ .text.ptdev_get_size
+                0x0000000000103de8       0x38 ./lib/partition/partition_parser.o
+                0x0000000000103de8                ptdev_get_size
+ .text.ptdev_get_offset
+                0x0000000000103e20       0x40 ./lib/partition/partition_parser.o
+                0x0000000000103e20                ptdev_get_offset
+ .text.get_partition_addr
+                0x0000000000103e60       0x94 ./lib/partition/partition_parser.o
+ .text.load_partition_data.constprop.3
+                0x0000000000103ef4       0xa8 ./lib/partition/partition_parser.o
+ .text.get_partition_addr_by_name
+                0x0000000000103f9c       0x18 ./lib/partition/partition_parser.o
+                0x0000000000103f9c                get_partition_addr_by_name
+ .text.get_img_actual_size
+                0x0000000000103fb4       0xec ./lib/partition/partition_parser.o
+                0x0000000000103fb4                get_img_actual_size
+ .text.load_partition_by_name
+                0x00000000001040a0      0x10c ./lib/partition/partition_parser.o
+                0x00000000001040a0                load_partition_by_name
+ .text.ospi_init
+                0x00000000001041ac       0x14 ./lib/storage_device/storage_dev_ospi.o
+                0x00000000001041ac                ospi_init
+ .text.ospi_release
+                0x00000000001041c0        0x4 ./lib/storage_device/storage_dev_ospi.o
+                0x00000000001041c0                ospi_release
+ .text.ospi_get_block_size
+                0x00000000001041c4        0x8 ./lib/storage_device/storage_dev_ospi.o
+                0x00000000001041c4                ospi_get_block_size
+ .text.ospi_read
+                0x00000000001041cc       0x14 ./lib/storage_device/storage_dev_ospi.o
+                0x00000000001041cc                ospi_read
+ .text.ospi_read_ptr
+                0x00000000001041e0        0x8 ./lib/storage_device/storage_dev_ospi.o
+                0x00000000001041e0                ospi_read_ptr
+ .text.ospi_write
+                0x00000000001041e8        0x8 ./lib/storage_device/storage_dev_ospi.o
+                0x00000000001041e8                ospi_write
+ .text.ospi_erase
+                0x00000000001041f0        0x8 ./lib/storage_device/storage_dev_ospi.o
+                0x00000000001041f0                ospi_erase
+ .text.ospi_get_capacity
+                0x00000000001041f8        0x8 ./lib/storage_device/storage_dev_ospi.o
+                0x00000000001041f8                ospi_get_capacity
+ .text.ospi_get_erase_group_size
+                0x0000000000104200        0x8 ./lib/storage_device/storage_dev_ospi.o
+                0x0000000000104200                ospi_get_erase_group_size
+ .text.setup_storage_dev
+                0x0000000000104208       0x9c ./lib/storage_device/storage_device.o
+                0x0000000000104208                setup_storage_dev
+ .text.str_get_pt_configs
+                0x00000000001042a4        0x4 ./lib/str/str.o
+                0x00000000001042a4                str_get_pt_configs
+ .text.str_get_pt_configs_cnt
+                0x00000000001042a8        0x4 ./lib/str/str.o
+                0x00000000001042a8                str_get_pt_configs_cnt
+ .text.is_str_enter
+                0x00000000001042ac        0x4 ./lib/str/str.o
+                0x00000000001042ac                is_str_enter
+ .text.is_str_resume
+                0x00000000001042b0        0x4 ./lib/str/str.o
+                0x00000000001042b0                is_str_resume
+ .text.str_save_ddr_freq
+                0x00000000001042b4        0x4 ./lib/str/str.o
+                0x00000000001042b4                str_save_ddr_freq
+ .text.ddr_self_exit
+                0x00000000001042b8        0x4 ./lib/str/str.o
+                0x00000000001042b8                ddr_self_exit
+ .text.srv_pin_cfg
+                0x00000000001042bc       0xdc ./service/srv_pin/srv_pin.o
+                0x00000000001042bc                srv_pin_cfg
+ .text.tmr_enable
+                0x0000000000104398       0x18 ./service/srv_timer/srv_timer.o
+                0x0000000000104398                tmr_enable
+ .text.udelay   0x00000000001043b0       0x3c ./service/srv_timer/srv_timer.o
+                0x00000000001043b0                udelay
+ .text.tmr_tick
+                0x00000000001043ec       0x2c ./service/srv_timer/srv_timer.o
+                0x00000000001043ec                tmr_tick
+ .text.fuse_get_parity_type
+                0x0000000000104418       0x20 ./soc/kunlun/fusemap.o
+                0x0000000000104418                fuse_get_parity_type
+ .text.fuse_get_red_pos
+                0x0000000000104438       0x18 ./soc/kunlun/fusemap.o
+                0x0000000000104438                fuse_get_red_pos
+ .text.fuse_get_ecc_pos
+                0x0000000000104450       0x20 ./soc/kunlun/fusemap.o
+                0x0000000000104450                fuse_get_ecc_pos
+ .text.soc_uart1_pin_cfg
+                0x0000000000104470        0xc ./soc/kunlun/safe/pin_cfg/uart_pins.o
+                0x0000000000104470                soc_uart1_pin_cfg
+ .text.soc_uart3_pin_cfg
+                0x000000000010447c        0xc ./soc/kunlun/safe/pin_cfg/uart_pins.o
+                0x000000000010447c                soc_uart3_pin_cfg
+ .text.soc_uart4_pin_cfg
+                0x0000000000104488        0xc ./soc/kunlun/safe/pin_cfg/uart_pins.o
+                0x0000000000104488                soc_uart4_pin_cfg
+ .text.soc_config_clk
+                0x0000000000104494      0x238 ./soc/kunlun/safe/soc.o
+                0x0000000000104494                soc_config_clk
+ .text.soc_pin_cfg
+                0x00000000001046cc       0x20 ./soc/kunlun/safe/soc.o
+                0x00000000001046cc                soc_pin_cfg
+ .text.irq_handler
+                0x00000000001046ec        0x4 ./soc/kunlun/safe/soc.o
+                0x00000000001046ec                irq_handler
+ .text.send_char
+                0x00000000001046f0       0x28 ./soc/kunlun/send_char.o
+                0x00000000001046f0                send_char
+ .text.soc_deassert_reset
+                0x0000000000104718       0xf0 ./soc/kunlun/soc.o
+                0x0000000000104718                soc_deassert_reset
+ .text.soc_dis_isolation
+                0x0000000000104808       0x70 ./soc/kunlun/soc.o
+                0x0000000000104808                soc_dis_isolation
+ .text.soc_get_module_base
+                0x0000000000104878      0x498 ./soc/kunlun/soc.o
+                0x0000000000104878                soc_get_module_base
+
+.glue_7         0x0000000000104d10        0x0
+ .glue_7        0x0000000000104d10        0x0 linker stubs
+
+.glue_7t        0x0000000000104d10        0x0
+ .glue_7t       0x0000000000104d10        0x0 linker stubs
+
+.vfp11_veneer   0x0000000000104d10        0x0
+ .vfp11_veneer  0x0000000000104d10        0x0 linker stubs
+
+.v4_bx          0x0000000000104d10        0x0
+ .v4_bx         0x0000000000104d10        0x0 linker stubs
+
+.iplt           0x0000000000104d10        0x0
+ .iplt          0x0000000000104d10        0x0 ./app/t_loader/end.o
+
+TEST_SECTION    0x0000000000104d10        0x0
+                0x0000000000104d10                __start_TEST_SECTION = .
+ *(TEST_SECTION*)
+                0x0000000000104d10                __stop_TEST_SECTION = .
+
+shell_cmd       0x0000000000104d10       0x18
+                0x0000000000104d10                __start_shell_cmd = .
+ *(shell_cmd*)
+ shell_cmd      0x0000000000104d10       0x18 ./driver/fuse_ctrl/fuse_ctrl.o
+                0x0000000000104d10                _shell_cmd_cmd_fuse_sense_
+                0x0000000000104d1c                _shell_cmd_cmd_fuse_program_
+                0x0000000000104d28                __stop_shell_cmd = .
+
+.rodata         0x0000000000104d28      0xcbc
+                0x0000000000104d28                __rodata_start = .
+ *(.rodata .rodata.*)
+ .rodata.__main.str1.4
+                0x0000000000104d28       0x3b ./app/t_loader/main.o
+ *fill*         0x0000000000104d63        0x1 
+ .rodata.load_ddr_data.str1.4
+                0x0000000000104d64       0xd1 ./app/t_loader/main.o
+ *fill*         0x0000000000104e35        0x3 
+ .rodata.load_partition_by_configs.str1.4
+                0x0000000000104e38       0x8d ./app/t_loader/main.o
+ *fill*         0x0000000000104ec5        0x3 
+ .rodata.fsrc_ctrl
+                0x0000000000104ec8       0x50 ./driver/analog/fsrefclk.o
+ .rodata.load_ddr_training_fw.str1.4
+                0x0000000000104f18      0x18f ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ *fill*         0x00000000001050a7        0x1 
+ .rodata.load_ddr_training_fw_piecewise.str1.4
+                0x00000000001050a8       0x4d ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ *fill*         0x00000000001050f5        0x3 
+ .rodata.run_ddr_init_seq.str1.4
+                0x00000000001050f8       0x13 ./driver/ddr/dw_umctl2/src/run_ddr_init_seq.o
+ *fill*         0x000000000010510b        0x1 
+ .rodata.ecc_v  0x000000000010510c       0x20 ./driver/fuse_ctrl/fuse_ctrl.o
+ .rodata.str1.4
+                0x000000000010512c       0x4c ./driver/fuse_ctrl/fuse_ctrl.o
+ .rodata.uart_ctl
+                0x0000000000105178        0xc ./driver/uart/dwc_uart/dwc_uart.o
+                0x0000000000105178                uart_ctl
+ .rodata.crc_table
+                0x0000000000105184      0x400 ./lib/cksum/crc32.o
+ .rodata.avb_footer_validate_and_byteswap.str1.4
+                0x0000000000105584       0x6c ./lib/libavb/avb_footer.o
+ .rodata.avb_print.str1.4
+                0x00000000001055f0       0x6c ./lib/libavb/avb_sysdeps_posix.o
+                                          0x3 (size before relaxing)
+ .rodata.assic  0x00000000001055f0       0x10 ./lib/mini_libc/mini_printf.o
+ .rodata.dec_base
+                0x0000000000105600       0x28 ./lib/mini_libc/mini_printf.o
+ .rodata.str1.4
+                0x0000000000105628        0xb ./lib/partition/ab_partition_parser.o
+ *fill*         0x0000000000105633        0x1 
+ .rodata.__func__.7522
+                0x0000000000105634       0x17 ./lib/partition/partition_parser.o
+ *fill*         0x000000000010564b        0x1 
+ .rodata.get_img_actual_size.str1.4
+                0x000000000010564c       0x3a ./lib/partition/partition_parser.o
+ *fill*         0x0000000000105686        0x2 
+ .rodata.get_partition_addr.str1.4
+                0x0000000000105688       0x3b ./lib/partition/partition_parser.o
+ *fill*         0x00000000001056c3        0x1 
+ .rodata.init_partition_dev.isra.2.str1.4
+                0x00000000001056c4       0x2a ./lib/partition/partition_parser.o
+ *fill*         0x00000000001056ee        0x2 
+ .rodata.load_partition_by_name.str1.4
+                0x00000000001056f0       0x16 ./lib/partition/partition_parser.o
+ *fill*         0x0000000000105706        0x2 
+ .rodata.mbr_fill_name.str1.4
+                0x0000000000105708       0x28 ./lib/partition/partition_parser.o
+ .rodata.ptdev_read_gpt.str1.4
+                0x0000000000105730      0x1b5 ./lib/partition/partition_parser.o
+ *fill*         0x00000000001058e5        0x3 
+ .rodata.ptdev_read_table.str1.4
+                0x00000000001058e8       0x54 ./lib/partition/partition_parser.o
+ .rodata.glb_timer
+                0x000000000010593c        0x8 ./soc/kunlun/glb_timer.o
+                0x000000000010593c                glb_timer
+ .rodata.sdrv_tmr_ops
+                0x0000000000105944       0x10 ./soc/kunlun/glb_timer.o
+                0x0000000000105944                sdrv_tmr_ops
+ .rodata.uart1_pins
+                0x0000000000105954       0x30 ./soc/kunlun/safe/pin_cfg/uart_pins.o
+                0x0000000000105954                uart1_pins
+ .rodata.uart3_pins
+                0x0000000000105984       0x30 ./soc/kunlun/safe/pin_cfg/uart_pins.o
+                0x0000000000105984                uart3_pins
+ .rodata.uart4_pins
+                0x00000000001059b4       0x30 ./soc/kunlun/safe/pin_cfg/uart_pins.o
+                0x00000000001059b4                uart4_pins
+
+.rel.dyn        0x00000000001059e4        0x0
+ .rel.iplt      0x00000000001059e4        0x0 ./app/t_loader/end.o
+
+.ddr_fw_sec     0x00000000001059e4        0x4
+                0x00000000001059e4                __ddr_fw_start = .
+ *(ddr_fw_sec*)
+ ddr_fw_sec     0x00000000001059e4        0x1 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+                0x00000000001059e4                ddrphy_fw_dummy
+                0x00000000001059e8                . = ALIGN (0x8)
+ *fill*         0x00000000001059e5        0x3 
+                0x00000000001059e8                __ddr_fw_end = .
+
+.dummy_post_rodata
+                0x00000000001059e8        0x0
+                0x00000000001059e8                __rodata_end = .
+
+.data           0x0000000000105a00      0x4c0
+                0x0000000000105a00                __data_start = .
+ *(.data .data.*)
+ .data.pt_configs
+                0x0000000000105a00      0x498 ./app/t_loader/main.o
+ .data.tty      0x0000000000105e98        0x2 ./app/t_loader/main.o
+                0x0000000000105e98                tty
+ *fill*         0x0000000000105e9a        0x2 
+ .data.suffix_slot
+                0x0000000000105e9c        0x8 ./lib/partition/ab_partition_parser.o
+                0x0000000000105e9c                suffix_slot
+                0x0000000000105ec0                . = ALIGN (0x20)
+ *fill*         0x0000000000105ea4       0x1c 
+                0x0000000000105ec0                __data_end = .
+                0x0000000000105a00                __load_data_start = LOADADDR (.data)
+
+.igot.plt       0x0000000000105ec0        0x0
+ .igot.plt      0x0000000000105ec0        0x0 ./app/t_loader/end.o
+
+.app_para_section
+ *(.app_para_section)
+
+.ddr_init_seq_sec
+                0x0000000000111000        0x0
+                0x0000000000111000                __ddr_init_seq_start = .
+ *(ddr_init_seq_sec*)
+                0x0000000000111000                . = ALIGN (0x8)
+                0x0000000000111000                __ddr_init_seq_end = .
+
+.checksum       0x0000000000114fe0       0x20
+ *(.checksum)
+ .checksum      0x0000000000114fe0       0x20 ./app/t_loader/end.o
+                0x0000000000114fe0                checksum
+                0x0000000000115000                __rom_end = .
+
+.bss            0x0000000000115000     0x1c60
+                0x0000000000115000                __bss_start = .
+ *(.bss.prebss.*)
+ *(.bss .bss.*)
+ .bss.buffer    0x0000000000115000      0x400 ./app/t_loader/main.o
+ .bss.usr_id    0x0000000000115400        0x4 ./app/t_loader/main.o
+ .bss.CDD_ChA_RR_0_1
+                0x0000000000115404        0x1 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .bss.CDD_ChA_RR_1_0
+                0x0000000000115405        0x1 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .bss.CDD_ChA_RW_0_0
+                0x0000000000115406        0x1 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .bss.CDD_ChA_RW_0_1
+                0x0000000000115407        0x1 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .bss.CDD_ChA_RW_1_0
+                0x0000000000115408        0x1 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .bss.CDD_ChA_RW_1_1
+                0x0000000000115409        0x1 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .bss.CDD_ChA_WW_0_1
+                0x000000000011540a        0x1 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .bss.CDD_ChA_WW_1_0
+                0x000000000011540b        0x1 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .bss.CDD_ChB_RR_0_1
+                0x000000000011540c        0x1 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .bss.CDD_ChB_RR_1_0
+                0x000000000011540d        0x1 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .bss.CDD_ChB_RW_0_0
+                0x000000000011540e        0x1 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .bss.CDD_ChB_RW_0_1
+                0x000000000011540f        0x1 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .bss.CDD_ChB_RW_1_0
+                0x0000000000115410        0x1 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .bss.CDD_ChB_RW_1_1
+                0x0000000000115411        0x1 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .bss.CDD_ChB_WW_0_1
+                0x0000000000115412        0x1 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .bss.CDD_ChB_WW_1_0
+                0x0000000000115413        0x1 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .bss.CDD_RW_0_0
+                0x0000000000115414        0x1 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .bss.is_ddr4   0x0000000000115415        0x1 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ *fill*         0x0000000000115416        0x2 
+ .bss.para      0x0000000000115418       0x80 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .bss.uart_enabled
+                0x0000000000115498        0x4 ./driver/uart/uart.o
+ .bss.lock      0x000000000011549c        0x4 ./lib/mini_libc/mini_printf.o
+                0x000000000011549c                lock
+ .bss.boot_slot_index
+                0x00000000001154a0        0x8 ./lib/partition/ab_partition_parser.o
+ .bss.data.7330
+                0x00000000001154a8      0x200 ./lib/partition/partition_parser.o
+ *fill*         0x00000000001156a8      0x158 
+ .bss.last_block_buf.7508
+                0x0000000000115800      0x200 ./lib/partition/partition_parser.o
+ .bss.part_dev.7458
+                0x0000000000115a00       0x20 ./lib/partition/partition_parser.o
+ .bss.ptdev.7467
+                0x0000000000115a20        0x4 ./lib/partition/partition_parser.o
+ *fill*         0x0000000000115a24        0x4 
+ .bss.s_entries.7284
+                0x0000000000115a28     0x1200 ./lib/partition/partition_parser.o
+ .bss.storage.7466
+                0x0000000000116c28        0x4 ./lib/partition/partition_parser.o
+ .bss.ospi_info
+                0x0000000000116c2c        0x4 ./lib/storage_device/storage_dev_ospi.o
+ .bss.storage_local.6957
+                0x0000000000116c30       0x2c ./lib/storage_device/storage_device.o
+ *(.gnu.linkonce.b.*)
+ *(COMMON)
+                0x0000000000116c60                . = ALIGN (0x20)
+ *fill*         0x0000000000116c5c        0x4 
+                0x0000000000116c60                __bss_end = .
+
+.bss_2          0x0000000000116c60        0x0
+                0x0000000000116c60                __bss_2_start = .
+ *(.bss_2)
+                0x0000000000116c60                . = ALIGN (0x20)
+                0x0000000000116c60                __bss_2_end = .
+
+.stack          0x0000000000116c60     0x5000
+                0x0000000000116c60                __stack_start = .
+                0x000000000011bc60                . = (. + 0x5000)
+ *fill*         0x0000000000116c60     0x5000 
+                0x000000000011bc60                . = ALIGN (0x20)
+                0x000000000011bc60                __stack_end = .
+
+.tb_trigger     0x000000000011bc60       0x40
+                0x000000000011bc60                __tb_trigger_start = .
+                0x000000000011bca0                . = (. + 0x40)
+ *fill*         0x000000000011bc60       0x40 
+                0x000000000011bca0                __tb_trigger_end = .
+                0x000000000011bca0                __heap_start = .
+                0x000000000011bca0                _end = .
+                0x0000000000140000                . = 0x140000
+                0x0000000000140000                _end_of_ram = .
+
+/DISCARD/
+ *(.comment .note .eh_frame)
+OUTPUT(/home/zhangk/d9/source/sdk/source/BareMetal_Suite/build/kunlun/safe/safe_t_loader.elf elf32-littlearm)
+
+.ARM.attributes
+                0x0000000000000000       0x37
+ .ARM.attributes
+                0x0000000000000000       0x37 ./app/t_loader/end.o
+ .ARM.attributes
+                0x0000000000000037       0x37 ./app/t_loader/main.o
+ .ARM.attributes
+                0x000000000000006e       0x27 ./arch/armv7-r/arch_ops.o
+ .ARM.attributes
+                0x0000000000000095       0x27 ./arch/armv7-r/cache-ops.o
+ .ARM.attributes
+                0x00000000000000bc       0x37 ./arch/armv7-r/exception.o
+ .ARM.attributes
+                0x00000000000000f3       0x27 ./arch/armv7-r/exception_s.o
+ .ARM.attributes
+                0x000000000000011a       0x27 ./arch/armv7-r/memclr_opt.o
+ .ARM.attributes
+                0x0000000000000141       0x27 ./arch/armv7-r/memcpy_opt.o
+ .ARM.attributes
+                0x0000000000000168       0x27 ./arch/armv7-r/start.o
+ .ARM.attributes
+                0x000000000000018f       0x27 ./arch/armv7-r/vector.o
+ .ARM.attributes
+                0x00000000000001b6       0x37 ./board/d9_ref/board.o
+ .ARM.attributes
+                0x00000000000001ed       0x37 ./driver/analog/fsrefclk.o
+ .ARM.attributes
+                0x0000000000000224       0x37 ./driver/clk/ckgen.o
+ .ARM.attributes
+                0x000000000000025b       0x37 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .ARM.attributes
+                0x0000000000000292       0x37 ./driver/ddr/dw_umctl2/src/run_ddr_init_seq.o
+ .ARM.attributes
+                0x00000000000002c9       0x37 ./driver/fuse_ctrl/fuse_ctrl.o
+ .ARM.attributes
+                0x0000000000000300       0x37 ./driver/pll/sc_ss_pfpll.o
+ .ARM.attributes
+                0x0000000000000337       0x37 ./driver/rstgen/rstgen.o
+ .ARM.attributes
+                0x000000000000036e       0x37 ./driver/scr/scr.o
+ .ARM.attributes
+                0x00000000000003a5       0x37 ./driver/timer/sdrv_timer/sdrv_timer.o
+ .ARM.attributes
+                0x00000000000003dc       0x37 ./driver/uart/dwc_uart/dwc_uart.o
+ .ARM.attributes
+                0x0000000000000413       0x37 ./driver/uart/uart.o
+ .ARM.attributes
+                0x000000000000044a       0x37 ./lib/boardinfo/boardinfo_hwid_hw.o
+ .ARM.attributes
+                0x0000000000000481       0x37 ./lib/boardinfo/boardinfo_hwid_usr.o
+ .ARM.attributes
+                0x00000000000004b8       0x37 ./lib/cksum/crc32.o
+ .ARM.attributes
+                0x00000000000004ef       0x37 ./lib/libavb/avb_footer.o
+ .ARM.attributes
+                0x0000000000000526       0x37 ./lib/libavb/avb_sysdeps_posix.o
+ .ARM.attributes
+                0x000000000000055d       0x37 ./lib/libavb/avb_util.o
+ .ARM.attributes
+                0x0000000000000594       0x37 ./lib/mem_image/mem_image.o
+ .ARM.attributes
+                0x00000000000005cb       0x37 ./lib/mini_libc/mem_libc.o
+ .ARM.attributes
+                0x0000000000000602       0x37 ./lib/mini_libc/mini_printf.o
+ .ARM.attributes
+                0x0000000000000639       0x37 ./lib/mini_libc/str_libc.o
+ .ARM.attributes
+                0x0000000000000670       0x37 ./lib/partition/ab_partition_parser.o
+ .ARM.attributes
+                0x00000000000006a7       0x37 ./lib/partition/partition_parser.o
+ .ARM.attributes
+                0x00000000000006de       0x37 ./lib/storage_device/storage_dev_ospi.o
+ .ARM.attributes
+                0x0000000000000715       0x37 ./lib/storage_device/storage_device.o
+ .ARM.attributes
+                0x000000000000074c       0x37 ./lib/str/str.o
+ .ARM.attributes
+                0x0000000000000783       0x37 ./service/srv_pin/srv_pin.o
+ .ARM.attributes
+                0x00000000000007ba       0x37 ./service/srv_timer/srv_timer.o
+ .ARM.attributes
+                0x00000000000007f1       0x37 ./soc/kunlun/fusemap.o
+ .ARM.attributes
+                0x0000000000000828       0x37 ./soc/kunlun/glb_timer.o
+ .ARM.attributes
+                0x000000000000085f       0x37 ./soc/kunlun/safe/pin_cfg/uart_pins.o
+ .ARM.attributes
+                0x0000000000000896       0x37 ./soc/kunlun/safe/soc.o
+ .ARM.attributes
+                0x00000000000008cd       0x37 ./soc/kunlun/send_char.o
+ .ARM.attributes
+                0x0000000000000904       0x37 ./soc/kunlun/soc.o
+
+.debug_info     0x0000000000000000    0x19814
+ .debug_info    0x0000000000000000       0x9b ./app/t_loader/end.o
+ .debug_info    0x000000000000009b     0x2000 ./app/t_loader/main.o
+ .debug_info    0x000000000000209b       0x26 ./arch/armv7-r/arch_ops.o
+ .debug_info    0x00000000000020c1       0x26 ./arch/armv7-r/cache-ops.o
+ .debug_info    0x00000000000020e7      0x2ad ./arch/armv7-r/exception.o
+ .debug_info    0x0000000000002394       0x26 ./arch/armv7-r/exception_s.o
+ .debug_info    0x00000000000023ba       0x26 ./arch/armv7-r/memclr_opt.o
+ .debug_info    0x00000000000023e0       0x26 ./arch/armv7-r/memcpy_opt.o
+ .debug_info    0x0000000000002406       0x26 ./arch/armv7-r/start.o
+ .debug_info    0x000000000000242c       0x26 ./arch/armv7-r/vector.o
+ .debug_info    0x0000000000002452      0x231 ./board/d9_ref/board.o
+ .debug_info    0x0000000000002683      0x4ff ./driver/analog/fsrefclk.o
+ .debug_info    0x0000000000002b82      0x6d1 ./driver/clk/ckgen.o
+ .debug_info    0x0000000000003253     0x2d20 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .debug_info    0x0000000000005f73     0x13a8 ./driver/ddr/dw_umctl2/src/run_ddr_init_seq.o
+ .debug_info    0x000000000000731b      0xe3e ./driver/fuse_ctrl/fuse_ctrl.o
+ .debug_info    0x0000000000008159      0x2c4 ./driver/pll/sc_ss_pfpll.o
+ .debug_info    0x000000000000841d      0x4a0 ./driver/rstgen/rstgen.o
+ .debug_info    0x00000000000088bd      0x88c ./driver/scr/scr.o
+ .debug_info    0x0000000000009149     0x1314 ./driver/timer/sdrv_timer/sdrv_timer.o
+ .debug_info    0x000000000000a45d      0x4bc ./driver/uart/dwc_uart/dwc_uart.o
+ .debug_info    0x000000000000a919      0x8b4 ./driver/uart/uart.o
+ .debug_info    0x000000000000b1cd      0xc21 ./lib/boardinfo/boardinfo_hwid_hw.o
+ .debug_info    0x000000000000bdee      0x24f ./lib/boardinfo/boardinfo_hwid_usr.o
+ .debug_info    0x000000000000c03d      0x576 ./lib/cksum/crc32.o
+ .debug_info    0x000000000000c5b3      0x2e7 ./lib/libavb/avb_footer.o
+ .debug_info    0x000000000000c89a      0xc78 ./lib/libavb/avb_sysdeps_posix.o
+ .debug_info    0x000000000000d512      0xfb0 ./lib/libavb/avb_util.o
+ .debug_info    0x000000000000e4c2      0xe8c ./lib/mem_image/mem_image.o
+ .debug_info    0x000000000000f34e      0x61d ./lib/mini_libc/mem_libc.o
+ .debug_info    0x000000000000f96b      0x745 ./lib/mini_libc/mini_printf.o
+ .debug_info    0x00000000000100b0      0x324 ./lib/mini_libc/str_libc.o
+ .debug_info    0x00000000000103d4     0x1c0b ./lib/partition/ab_partition_parser.o
+ .debug_info    0x0000000000011fdf     0x2786 ./lib/partition/partition_parser.o
+ .debug_info    0x0000000000014765      0xd2e ./lib/storage_device/storage_dev_ospi.o
+ .debug_info    0x0000000000015493      0xb3e ./lib/storage_device/storage_device.o
+ .debug_info    0x0000000000015fd1      0x1d4 ./lib/str/str.o
+ .debug_info    0x00000000000161a5      0x432 ./service/srv_pin/srv_pin.o
+ .debug_info    0x00000000000165d7      0x6f7 ./service/srv_timer/srv_timer.o
+ .debug_info    0x0000000000016cce      0x284 ./soc/kunlun/fusemap.o
+ .debug_info    0x0000000000016f52      0x661 ./soc/kunlun/glb_timer.o
+ .debug_info    0x00000000000175b3      0x318 ./soc/kunlun/safe/pin_cfg/uart_pins.o
+ .debug_info    0x00000000000178cb      0xf56 ./soc/kunlun/safe/soc.o
+ .debug_info    0x0000000000018821      0x593 ./soc/kunlun/send_char.o
+ .debug_info    0x0000000000018db4      0xa60 ./soc/kunlun/soc.o
+
+.debug_abbrev   0x0000000000000000     0x4f2d
+ .debug_abbrev  0x0000000000000000       0x56 ./app/t_loader/end.o
+ .debug_abbrev  0x0000000000000056      0x4fa ./app/t_loader/main.o
+ .debug_abbrev  0x0000000000000550       0x14 ./arch/armv7-r/arch_ops.o
+ .debug_abbrev  0x0000000000000564       0x14 ./arch/armv7-r/cache-ops.o
+ .debug_abbrev  0x0000000000000578       0xdc ./arch/armv7-r/exception.o
+ .debug_abbrev  0x0000000000000654       0x14 ./arch/armv7-r/exception_s.o
+ .debug_abbrev  0x0000000000000668       0x14 ./arch/armv7-r/memclr_opt.o
+ .debug_abbrev  0x000000000000067c       0x14 ./arch/armv7-r/memcpy_opt.o
+ .debug_abbrev  0x0000000000000690       0x14 ./arch/armv7-r/start.o
+ .debug_abbrev  0x00000000000006a4       0x14 ./arch/armv7-r/vector.o
+ .debug_abbrev  0x00000000000006b8       0x9d ./board/d9_ref/board.o
+ .debug_abbrev  0x0000000000000755      0x18f ./driver/analog/fsrefclk.o
+ .debug_abbrev  0x00000000000008e4      0x16e ./driver/clk/ckgen.o
+ .debug_abbrev  0x0000000000000a52      0x4af ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .debug_abbrev  0x0000000000000f01      0x30b ./driver/ddr/dw_umctl2/src/run_ddr_init_seq.o
+ .debug_abbrev  0x000000000000120c      0x323 ./driver/fuse_ctrl/fuse_ctrl.o
+ .debug_abbrev  0x000000000000152f       0xe2 ./driver/pll/sc_ss_pfpll.o
+ .debug_abbrev  0x0000000000001611      0x192 ./driver/rstgen/rstgen.o
+ .debug_abbrev  0x00000000000017a3      0x230 ./driver/scr/scr.o
+ .debug_abbrev  0x00000000000019d3      0x27a ./driver/timer/sdrv_timer/sdrv_timer.o
+ .debug_abbrev  0x0000000000001c4d      0x143 ./driver/uart/dwc_uart/dwc_uart.o
+ .debug_abbrev  0x0000000000001d90      0x187 ./driver/uart/uart.o
+ .debug_abbrev  0x0000000000001f17      0x31e ./lib/boardinfo/boardinfo_hwid_hw.o
+ .debug_abbrev  0x0000000000002235      0x13f ./lib/boardinfo/boardinfo_hwid_usr.o
+ .debug_abbrev  0x0000000000002374      0x1dd ./lib/cksum/crc32.o
+ .debug_abbrev  0x0000000000002551      0x113 ./lib/libavb/avb_footer.o
+ .debug_abbrev  0x0000000000002664      0x2a7 ./lib/libavb/avb_sysdeps_posix.o
+ .debug_abbrev  0x000000000000290b      0x33b ./lib/libavb/avb_util.o
+ .debug_abbrev  0x0000000000002c46      0x2e7 ./lib/mem_image/mem_image.o
+ .debug_abbrev  0x0000000000002f2d      0x1dc ./lib/mini_libc/mem_libc.o
+ .debug_abbrev  0x0000000000003109      0x21d ./lib/mini_libc/mini_printf.o
+ .debug_abbrev  0x0000000000003326      0x103 ./lib/mini_libc/str_libc.o
+ .debug_abbrev  0x0000000000003429      0x496 ./lib/partition/ab_partition_parser.o
+ .debug_abbrev  0x00000000000038bf      0x5a4 ./lib/partition/partition_parser.o
+ .debug_abbrev  0x0000000000003e63      0x23a ./lib/storage_device/storage_dev_ospi.o
+ .debug_abbrev  0x000000000000409d      0x21f ./lib/storage_device/storage_device.o
+ .debug_abbrev  0x00000000000042bc      0x12a ./lib/str/str.o
+ .debug_abbrev  0x00000000000043e6      0x176 ./service/srv_pin/srv_pin.o
+ .debug_abbrev  0x000000000000455c      0x153 ./service/srv_timer/srv_timer.o
+ .debug_abbrev  0x00000000000046af      0x107 ./soc/kunlun/fusemap.o
+ .debug_abbrev  0x00000000000047b6       0xf2 ./soc/kunlun/glb_timer.o
+ .debug_abbrev  0x00000000000048a8      0x117 ./soc/kunlun/safe/pin_cfg/uart_pins.o
+ .debug_abbrev  0x00000000000049bf      0x278 ./soc/kunlun/safe/soc.o
+ .debug_abbrev  0x0000000000004c37      0x105 ./soc/kunlun/send_char.o
+ .debug_abbrev  0x0000000000004d3c      0x1f1 ./soc/kunlun/soc.o
+
+.debug_aranges  0x0000000000000000      0xb48
+ .debug_aranges
+                0x0000000000000000       0x18 ./app/t_loader/end.o
+ .debug_aranges
+                0x0000000000000018       0x38 ./app/t_loader/main.o
+ .debug_aranges
+                0x0000000000000050       0x20 ./arch/armv7-r/arch_ops.o
+ .debug_aranges
+                0x0000000000000070       0x20 ./arch/armv7-r/cache-ops.o
+ .debug_aranges
+                0x0000000000000090       0x20 ./arch/armv7-r/exception.o
+ .debug_aranges
+                0x00000000000000b0       0x20 ./arch/armv7-r/exception_s.o
+ .debug_aranges
+                0x00000000000000d0       0x20 ./arch/armv7-r/memclr_opt.o
+ .debug_aranges
+                0x00000000000000f0       0x20 ./arch/armv7-r/memcpy_opt.o
+ .debug_aranges
+                0x0000000000000110       0x20 ./arch/armv7-r/start.o
+ .debug_aranges
+                0x0000000000000130       0x20 ./arch/armv7-r/vector.o
+ .debug_aranges
+                0x0000000000000150       0x20 ./board/d9_ref/board.o
+ .debug_aranges
+                0x0000000000000170       0x28 ./driver/analog/fsrefclk.o
+ .debug_aranges
+                0x0000000000000198       0x78 ./driver/clk/ckgen.o
+ .debug_aranges
+                0x0000000000000210       0x50 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .debug_aranges
+                0x0000000000000260       0x28 ./driver/ddr/dw_umctl2/src/run_ddr_init_seq.o
+ .debug_aranges
+                0x0000000000000288       0x70 ./driver/fuse_ctrl/fuse_ctrl.o
+ .debug_aranges
+                0x00000000000002f8       0x28 ./driver/pll/sc_ss_pfpll.o
+ .debug_aranges
+                0x0000000000000320       0x58 ./driver/rstgen/rstgen.o
+ .debug_aranges
+                0x0000000000000378       0x40 ./driver/scr/scr.o
+ .debug_aranges
+                0x00000000000003b8       0x38 ./driver/timer/sdrv_timer/sdrv_timer.o
+ .debug_aranges
+                0x00000000000003f0       0x30 ./driver/uart/dwc_uart/dwc_uart.o
+ .debug_aranges
+                0x0000000000000420       0x38 ./driver/uart/uart.o
+ .debug_aranges
+                0x0000000000000458       0x28 ./lib/boardinfo/boardinfo_hwid_hw.o
+ .debug_aranges
+                0x0000000000000480       0x28 ./lib/boardinfo/boardinfo_hwid_usr.o
+ .debug_aranges
+                0x00000000000004a8       0x40 ./lib/cksum/crc32.o
+ .debug_aranges
+                0x00000000000004e8       0x20 ./lib/libavb/avb_footer.o
+ .debug_aranges
+                0x0000000000000508       0x70 ./lib/libavb/avb_sysdeps_posix.o
+ .debug_aranges
+                0x0000000000000578       0xb8 ./lib/libavb/avb_util.o
+ .debug_aranges
+                0x0000000000000630       0x38 ./lib/mem_image/mem_image.o
+ .debug_aranges
+                0x0000000000000668       0x60 ./lib/mini_libc/mem_libc.o
+ .debug_aranges
+                0x00000000000006c8       0x38 ./lib/mini_libc/mini_printf.o
+ .debug_aranges
+                0x0000000000000700       0x48 ./lib/mini_libc/str_libc.o
+ .debug_aranges
+                0x0000000000000748       0x78 ./lib/partition/ab_partition_parser.o
+ .debug_aranges
+                0x00000000000007c0       0xd8 ./lib/partition/partition_parser.o
+ .debug_aranges
+                0x0000000000000898       0x60 ./lib/storage_device/storage_dev_ospi.o
+ .debug_aranges
+                0x00000000000008f8       0x20 ./lib/storage_device/storage_device.o
+ .debug_aranges
+                0x0000000000000918       0x48 ./lib/str/str.o
+ .debug_aranges
+                0x0000000000000960       0x20 ./service/srv_pin/srv_pin.o
+ .debug_aranges
+                0x0000000000000980       0x38 ./service/srv_timer/srv_timer.o
+ .debug_aranges
+                0x00000000000009b8       0x30 ./soc/kunlun/fusemap.o
+ .debug_aranges
+                0x00000000000009e8       0x18 ./soc/kunlun/glb_timer.o
+ .debug_aranges
+                0x0000000000000a00       0x30 ./soc/kunlun/safe/pin_cfg/uart_pins.o
+ .debug_aranges
+                0x0000000000000a30       0x90 ./soc/kunlun/safe/soc.o
+ .debug_aranges
+                0x0000000000000ac0       0x20 ./soc/kunlun/send_char.o
+ .debug_aranges
+                0x0000000000000ae0       0x68 ./soc/kunlun/soc.o
+
+.debug_line     0x0000000000000000     0x87e7
+ .debug_line    0x0000000000000000      0x107 ./app/t_loader/end.o
+ .debug_line    0x0000000000000107      0x724 ./app/t_loader/main.o
+ .debug_line    0x000000000000082b       0x5f ./arch/armv7-r/arch_ops.o
+ .debug_line    0x000000000000088a       0xe4 ./arch/armv7-r/cache-ops.o
+ .debug_line    0x000000000000096e      0x1ba ./arch/armv7-r/exception.o
+ .debug_line    0x0000000000000b28       0x42 ./arch/armv7-r/exception_s.o
+ .debug_line    0x0000000000000b6a       0x5a ./arch/armv7-r/memclr_opt.o
+ .debug_line    0x0000000000000bc4       0x56 ./arch/armv7-r/memcpy_opt.o
+ .debug_line    0x0000000000000c1a       0xea ./arch/armv7-r/start.o
+ .debug_line    0x0000000000000d04       0x43 ./arch/armv7-r/vector.o
+ .debug_line    0x0000000000000d47      0x1ab ./board/d9_ref/board.o
+ .debug_line    0x0000000000000ef2      0x25a ./driver/analog/fsrefclk.o
+ .debug_line    0x000000000000114c      0x35f ./driver/clk/ckgen.o
+ .debug_line    0x00000000000014ab      0x939 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .debug_line    0x0000000000001de4      0x449 ./driver/ddr/dw_umctl2/src/run_ddr_init_seq.o
+ .debug_line    0x000000000000222d      0x49c ./driver/fuse_ctrl/fuse_ctrl.o
+ .debug_line    0x00000000000026c9      0x225 ./driver/pll/sc_ss_pfpll.o
+ .debug_line    0x00000000000028ee      0x284 ./driver/rstgen/rstgen.o
+ .debug_line    0x0000000000002b72      0x2fa ./driver/scr/scr.o
+ .debug_line    0x0000000000002e6c      0x2c9 ./driver/timer/sdrv_timer/sdrv_timer.o
+ .debug_line    0x0000000000003135      0x2e2 ./driver/uart/dwc_uart/dwc_uart.o
+ .debug_line    0x0000000000003417      0x28d ./driver/uart/uart.o
+ .debug_line    0x00000000000036a4      0x2e1 ./lib/boardinfo/boardinfo_hwid_hw.o
+ .debug_line    0x0000000000003985      0x1d8 ./lib/boardinfo/boardinfo_hwid_usr.o
+ .debug_line    0x0000000000003b5d      0x236 ./lib/cksum/crc32.o
+ .debug_line    0x0000000000003d93      0x1d5 ./lib/libavb/avb_footer.o
+ .debug_line    0x0000000000003f68      0x361 ./lib/libavb/avb_sysdeps_posix.o
+ .debug_line    0x00000000000042c9      0x4e2 ./lib/libavb/avb_util.o
+ .debug_line    0x00000000000047ab      0x3e0 ./lib/mem_image/mem_image.o
+ .debug_line    0x0000000000004b8b      0x3b9 ./lib/mini_libc/mem_libc.o
+ .debug_line    0x0000000000004f44      0x4fa ./lib/mini_libc/mini_printf.o
+ .debug_line    0x000000000000543e      0x2f1 ./lib/mini_libc/str_libc.o
+ .debug_line    0x000000000000572f      0x669 ./lib/partition/ab_partition_parser.o
+ .debug_line    0x0000000000005d98      0x907 ./lib/partition/partition_parser.o
+ .debug_line    0x000000000000669f      0x33d ./lib/storage_device/storage_dev_ospi.o
+ .debug_line    0x00000000000069dc      0x2a2 ./lib/storage_device/storage_device.o
+ .debug_line    0x0000000000006c7e      0x1d3 ./lib/str/str.o
+ .debug_line    0x0000000000006e51      0x289 ./service/srv_pin/srv_pin.o
+ .debug_line    0x00000000000070da      0x226 ./service/srv_timer/srv_timer.o
+ .debug_line    0x0000000000007300      0x23f ./soc/kunlun/fusemap.o
+ .debug_line    0x000000000000753f      0x20b ./soc/kunlun/glb_timer.o
+ .debug_line    0x000000000000774a      0x261 ./soc/kunlun/safe/pin_cfg/uart_pins.o
+ .debug_line    0x00000000000079ab      0x5e0 ./soc/kunlun/safe/soc.o
+ .debug_line    0x0000000000007f8b      0x216 ./soc/kunlun/send_char.o
+ .debug_line    0x00000000000081a1      0x646 ./soc/kunlun/soc.o
+
+.debug_str      0x0000000000000000     0x47ef
+ .debug_str     0x0000000000000000      0x177 ./app/t_loader/end.o
+                                        0x1b4 (size before relaxing)
+ .debug_str     0x0000000000000177     0x117b ./app/t_loader/main.o
+                                       0x1452 (size before relaxing)
+ .debug_str     0x00000000000012f2       0x58 ./arch/armv7-r/arch_ops.o
+ .debug_str     0x000000000000134a        0xc ./arch/armv7-r/cache-ops.o
+                                         0x59 (size before relaxing)
+ .debug_str     0x0000000000001356       0x57 ./arch/armv7-r/exception.o
+                                        0x38f (size before relaxing)
+ .debug_str     0x00000000000013ad        0xe ./arch/armv7-r/exception_s.o
+                                         0x5b (size before relaxing)
+ .debug_str     0x00000000000013bb        0xd ./arch/armv7-r/memclr_opt.o
+                                         0x5a (size before relaxing)
+ .debug_str     0x00000000000013c8        0xd ./arch/armv7-r/memcpy_opt.o
+                                         0x5a (size before relaxing)
+ .debug_str     0x00000000000013d5        0x8 ./arch/armv7-r/start.o
+                                         0x55 (size before relaxing)
+ .debug_str     0x00000000000013dd        0x9 ./arch/armv7-r/vector.o
+                                         0x56 (size before relaxing)
+ .debug_str     0x00000000000013e6       0x47 ./board/d9_ref/board.o
+                                        0x398 (size before relaxing)
+ .debug_str     0x000000000000142d      0x14a ./driver/analog/fsrefclk.o
+                                        0x45b (size before relaxing)
+ .debug_str     0x0000000000001577      0x1a3 ./driver/clk/ckgen.o
+                                        0x4bd (size before relaxing)
+ .debug_str     0x000000000000171a      0xcb3 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+                                       0x1470 (size before relaxing)
+ .debug_str     0x00000000000023cd      0x188 ./driver/ddr/dw_umctl2/src/run_ddr_init_seq.o
+                                        0xe3f (size before relaxing)
+ .debug_str     0x0000000000002555      0x259 ./driver/fuse_ctrl/fuse_ctrl.o
+                                        0x990 (size before relaxing)
+ .debug_str     0x00000000000027ae       0x9d ./driver/pll/sc_ss_pfpll.o
+                                        0x3ba (size before relaxing)
+ .debug_str     0x000000000000284b       0xda ./driver/rstgen/rstgen.o
+                                        0x40a (size before relaxing)
+ .debug_str     0x0000000000002925       0xd8 ./driver/scr/scr.o
+                                        0x433 (size before relaxing)
+ .debug_str     0x00000000000029fd      0x3ae ./driver/timer/sdrv_timer/sdrv_timer.o
+                                        0xf81 (size before relaxing)
+ .debug_str     0x0000000000002dab       0x98 ./driver/uart/dwc_uart/dwc_uart.o
+                                        0x4fc (size before relaxing)
+ .debug_str     0x0000000000002e43       0x5b ./driver/uart/uart.o
+                                        0x8ad (size before relaxing)
+ .debug_str     0x0000000000002e9e       0xa0 ./lib/boardinfo/boardinfo_hwid_hw.o
+                                        0x774 (size before relaxing)
+ .debug_str     0x0000000000002f3e       0x27 ./lib/boardinfo/boardinfo_hwid_usr.o
+                                        0x2fb (size before relaxing)
+ .debug_str     0x0000000000002f65       0xed ./lib/cksum/crc32.o
+                                        0x284 (size before relaxing)
+ .debug_str     0x0000000000003052      0x118 ./lib/libavb/avb_footer.o
+                                        0x2bf (size before relaxing)
+ .debug_str     0x000000000000316a       0xe1 ./lib/libavb/avb_sysdeps_posix.o
+                                        0x6e2 (size before relaxing)
+ .debug_str     0x000000000000324b      0x203 ./lib/libavb/avb_util.o
+                                        0x4ea (size before relaxing)
+ .debug_str     0x000000000000344e      0x142 ./lib/mem_image/mem_image.o
+                                        0x7ce (size before relaxing)
+ .debug_str     0x0000000000003590       0xfa ./lib/mini_libc/mem_libc.o
+                                        0x2c1 (size before relaxing)
+ .debug_str     0x000000000000368a       0xba ./lib/mini_libc/mini_printf.o
+                                        0x2a3 (size before relaxing)
+ .debug_str     0x0000000000003744       0x41 ./lib/mini_libc/str_libc.o
+                                        0x23d (size before relaxing)
+ .debug_str     0x0000000000003785      0x4b9 ./lib/partition/ab_partition_parser.o
+                                        0xba8 (size before relaxing)
+ .debug_str     0x0000000000003c3e      0x474 ./lib/partition/partition_parser.o
+                                        0xe27 (size before relaxing)
+ .debug_str     0x00000000000040b2      0x102 ./lib/storage_device/storage_dev_ospi.o
+                                        0x73b (size before relaxing)
+ .debug_str     0x00000000000041b4       0x28 ./lib/storage_device/storage_device.o
+                                        0x6c3 (size before relaxing)
+ .debug_str     0x00000000000041dc       0x83 ./lib/str/str.o
+                                        0x281 (size before relaxing)
+ .debug_str     0x000000000000425f      0x131 ./service/srv_pin/srv_pin.o
+                                        0x45b (size before relaxing)
+ .debug_str     0x0000000000004390       0xba ./service/srv_timer/srv_timer.o
+                                        0x7c8 (size before relaxing)
+ .debug_str     0x000000000000444a       0x47 ./soc/kunlun/fusemap.o
+                                        0x3bf (size before relaxing)
+ .debug_str     0x0000000000004491       0x19 ./soc/kunlun/glb_timer.o
+                                        0x798 (size before relaxing)
+ .debug_str     0x00000000000044aa       0xad ./soc/kunlun/safe/pin_cfg/uart_pins.o
+                                        0x407 (size before relaxing)
+ .debug_str     0x0000000000004557      0x200 ./soc/kunlun/safe/soc.o
+                                        0xbe0 (size before relaxing)
+ .debug_str     0x0000000000004757        0xc ./soc/kunlun/send_char.o
+                                        0x72c (size before relaxing)
+ .debug_str     0x0000000000004763       0x8c ./soc/kunlun/soc.o
+                                        0x881 (size before relaxing)
+
+.debug_loc      0x0000000000000000     0xd99e
+ .debug_loc     0x0000000000000000      0x566 ./app/t_loader/main.o
+ .debug_loc     0x0000000000000566       0x21 ./board/d9_ref/board.o
+ .debug_loc     0x0000000000000587      0x1dd ./driver/analog/fsrefclk.o
+ .debug_loc     0x0000000000000764      0xddc ./driver/clk/ckgen.o
+ .debug_loc     0x0000000000001540     0x13e1 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .debug_loc     0x0000000000002921      0x218 ./driver/ddr/dw_umctl2/src/run_ddr_init_seq.o
+ .debug_loc     0x0000000000002b39      0x7d7 ./driver/fuse_ctrl/fuse_ctrl.o
+ .debug_loc     0x0000000000003310      0x2a4 ./driver/pll/sc_ss_pfpll.o
+ .debug_loc     0x00000000000035b4      0x3d6 ./driver/rstgen/rstgen.o
+ .debug_loc     0x000000000000398a      0x8be ./driver/scr/scr.o
+ .debug_loc     0x0000000000004248       0xf1 ./driver/timer/sdrv_timer/sdrv_timer.o
+ .debug_loc     0x0000000000004339      0x25d ./driver/uart/dwc_uart/dwc_uart.o
+ .debug_loc     0x0000000000004596      0x1b7 ./driver/uart/uart.o
+ .debug_loc     0x000000000000474d      0x235 ./lib/boardinfo/boardinfo_hwid_hw.o
+ .debug_loc     0x0000000000004982      0x230 ./lib/boardinfo/boardinfo_hwid_usr.o
+ .debug_loc     0x0000000000004bb2      0x691 ./lib/cksum/crc32.o
+ .debug_loc     0x0000000000005243       0x71 ./lib/libavb/avb_footer.o
+ .debug_loc     0x00000000000052b4      0x243 ./lib/libavb/avb_sysdeps_posix.o
+ .debug_loc     0x00000000000054f7      0xda2 ./lib/libavb/avb_util.o
+ .debug_loc     0x0000000000006299      0x4f8 ./lib/mem_image/mem_image.o
+ .debug_loc     0x0000000000006791      0xc5d ./lib/mini_libc/mem_libc.o
+ .debug_loc     0x00000000000073ee      0xd7e ./lib/mini_libc/mini_printf.o
+ .debug_loc     0x000000000000816c      0x7d3 ./lib/mini_libc/str_libc.o
+ .debug_loc     0x000000000000893f     0x103a ./lib/partition/ab_partition_parser.o
+ .debug_loc     0x0000000000009979     0x28aa ./lib/partition/partition_parser.o
+ .debug_loc     0x000000000000c223      0x1b2 ./lib/storage_device/storage_dev_ospi.o
+ .debug_loc     0x000000000000c3d5      0x113 ./lib/storage_device/storage_device.o
+ .debug_loc     0x000000000000c4e8      0x307 ./service/srv_pin/srv_pin.o
+ .debug_loc     0x000000000000c7ef       0x58 ./service/srv_timer/srv_timer.o
+ .debug_loc     0x000000000000c847       0xe2 ./soc/kunlun/fusemap.o
+ .debug_loc     0x000000000000c929       0x63 ./soc/kunlun/safe/pin_cfg/uart_pins.o
+ .debug_loc     0x000000000000c98c      0x58c ./soc/kunlun/safe/soc.o
+ .debug_loc     0x000000000000cf18       0x1f ./soc/kunlun/send_char.o
+ .debug_loc     0x000000000000cf37      0xa67 ./soc/kunlun/soc.o
+
+.debug_ranges   0x0000000000000000     0x1ba8
+ .debug_ranges  0x0000000000000000       0x90 ./app/t_loader/main.o
+ .debug_ranges  0x0000000000000090       0x10 ./arch/armv7-r/exception.o
+ .debug_ranges  0x00000000000000a0       0x10 ./board/d9_ref/board.o
+ .debug_ranges  0x00000000000000b0       0x18 ./driver/analog/fsrefclk.o
+ .debug_ranges  0x00000000000000c8       0x68 ./driver/clk/ckgen.o
+ .debug_ranges  0x0000000000000130      0xb20 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .debug_ranges  0x0000000000000c50       0x70 ./driver/ddr/dw_umctl2/src/run_ddr_init_seq.o
+ .debug_ranges  0x0000000000000cc0       0xd0 ./driver/fuse_ctrl/fuse_ctrl.o
+ .debug_ranges  0x0000000000000d90       0x18 ./driver/pll/sc_ss_pfpll.o
+ .debug_ranges  0x0000000000000da8       0x60 ./driver/rstgen/rstgen.o
+ .debug_ranges  0x0000000000000e08       0xf8 ./driver/scr/scr.o
+ .debug_ranges  0x0000000000000f00       0x28 ./driver/timer/sdrv_timer/sdrv_timer.o
+ .debug_ranges  0x0000000000000f28       0x20 ./driver/uart/dwc_uart/dwc_uart.o
+ .debug_ranges  0x0000000000000f48       0x28 ./driver/uart/uart.o
+ .debug_ranges  0x0000000000000f70       0x40 ./lib/boardinfo/boardinfo_hwid_hw.o
+ .debug_ranges  0x0000000000000fb0       0x18 ./lib/boardinfo/boardinfo_hwid_usr.o
+ .debug_ranges  0x0000000000000fc8       0x48 ./lib/cksum/crc32.o
+ .debug_ranges  0x0000000000001010       0x10 ./lib/libavb/avb_footer.o
+ .debug_ranges  0x0000000000001020       0x60 ./lib/libavb/avb_sysdeps_posix.o
+ .debug_ranges  0x0000000000001080      0x158 ./lib/libavb/avb_util.o
+ .debug_ranges  0x00000000000011d8       0x58 ./lib/mem_image/mem_image.o
+ .debug_ranges  0x0000000000001230       0x88 ./lib/mini_libc/mem_libc.o
+ .debug_ranges  0x00000000000012b8      0x1e0 ./lib/mini_libc/mini_printf.o
+ .debug_ranges  0x0000000000001498       0xb0 ./lib/mini_libc/str_libc.o
+ .debug_ranges  0x0000000000001548      0x1a8 ./lib/partition/ab_partition_parser.o
+ .debug_ranges  0x00000000000016f0      0x1e0 ./lib/partition/partition_parser.o
+ .debug_ranges  0x00000000000018d0       0x50 ./lib/storage_device/storage_dev_ospi.o
+ .debug_ranges  0x0000000000001920       0x10 ./lib/storage_device/storage_device.o
+ .debug_ranges  0x0000000000001930       0x38 ./lib/str/str.o
+ .debug_ranges  0x0000000000001968       0xd8 ./service/srv_pin/srv_pin.o
+ .debug_ranges  0x0000000000001a40       0x28 ./service/srv_timer/srv_timer.o
+ .debug_ranges  0x0000000000001a68       0x20 ./soc/kunlun/fusemap.o
+ .debug_ranges  0x0000000000001a88       0x20 ./soc/kunlun/safe/pin_cfg/uart_pins.o
+ .debug_ranges  0x0000000000001aa8       0x80 ./soc/kunlun/safe/soc.o
+ .debug_ranges  0x0000000000001b28       0x10 ./soc/kunlun/send_char.o
+ .debug_ranges  0x0000000000001b38       0x70 ./soc/kunlun/soc.o
+
+.debug_frame    0x0000000000000000     0x1cb0
+ .debug_frame   0x0000000000000000       0xc8 ./app/t_loader/main.o
+ .debug_frame   0x00000000000000c8       0x20 ./arch/armv7-r/exception.o
+ .debug_frame   0x00000000000000e8       0x20 ./board/d9_ref/board.o
+ .debug_frame   0x0000000000000108       0x6c ./driver/analog/fsrefclk.o
+ .debug_frame   0x0000000000000174      0x14c ./driver/clk/ckgen.o
+ .debug_frame   0x00000000000002c0      0x118 ./driver/ddr/dw_umctl2/src/dw_umctl2.o
+ .debug_frame   0x00000000000003d8       0x54 ./driver/ddr/dw_umctl2/src/run_ddr_init_seq.o
+ .debug_frame   0x000000000000042c      0x14c ./driver/fuse_ctrl/fuse_ctrl.o
+ .debug_frame   0x0000000000000578       0x40 ./driver/pll/sc_ss_pfpll.o
+ .debug_frame   0x00000000000005b8       0xc4 ./driver/rstgen/rstgen.o
+ .debug_frame   0x000000000000067c       0xd0 ./driver/scr/scr.o
+ .debug_frame   0x000000000000074c       0x6c ./driver/timer/sdrv_timer/sdrv_timer.o
+ .debug_frame   0x00000000000007b8       0x70 ./driver/uart/dwc_uart/dwc_uart.o
+ .debug_frame   0x0000000000000828       0x84 ./driver/uart/uart.o
+ .debug_frame   0x00000000000008ac       0x44 ./lib/boardinfo/boardinfo_hwid_hw.o
+ .debug_frame   0x00000000000008f0       0x30 ./lib/boardinfo/boardinfo_hwid_usr.o
+ .debug_frame   0x0000000000000920       0xa4 ./lib/cksum/crc32.o
+ .debug_frame   0x00000000000009c4       0x3c ./lib/libavb/avb_footer.o
+ .debug_frame   0x0000000000000a00       0xf4 ./lib/libavb/avb_sysdeps_posix.o
+ .debug_frame   0x0000000000000af4      0x2e4 ./lib/libavb/avb_util.o
+ .debug_frame   0x0000000000000dd8       0xb0 ./lib/mem_image/mem_image.o
+ .debug_frame   0x0000000000000e88      0x16c ./lib/mini_libc/mem_libc.o
+ .debug_frame   0x0000000000000ff4      0x118 ./lib/mini_libc/mini_printf.o
+ .debug_frame   0x000000000000110c       0xd0 ./lib/mini_libc/str_libc.o
+ .debug_frame   0x00000000000011dc      0x1b4 ./lib/partition/ab_partition_parser.o
+ .debug_frame   0x0000000000001390      0x384 ./lib/partition/partition_parser.o
+ .debug_frame   0x0000000000001714       0xa8 ./lib/storage_device/storage_dev_ospi.o
+ .debug_frame   0x00000000000017bc       0x3c ./lib/storage_device/storage_device.o
+ .debug_frame   0x00000000000017f8       0x80 ./lib/str/str.o
+ .debug_frame   0x0000000000001878       0x3c ./service/srv_pin/srv_pin.o
+ .debug_frame   0x00000000000018b4       0x70 ./service/srv_timer/srv_timer.o
+ .debug_frame   0x0000000000001924       0x4c ./soc/kunlun/fusemap.o
+ .debug_frame   0x0000000000001970       0x40 ./soc/kunlun/safe/pin_cfg/uart_pins.o
+ .debug_frame   0x00000000000019b0      0x1ac ./soc/kunlun/safe/soc.o
+ .debug_frame   0x0000000000001b5c       0x30 ./soc/kunlun/send_char.o
+ .debug_frame   0x0000000000001b8c      0x124 ./soc/kunlun/soc.o

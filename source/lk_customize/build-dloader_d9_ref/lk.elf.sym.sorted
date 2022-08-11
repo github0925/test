@@ -1,0 +1,1386 @@
+
+
+
+
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_loc	00000000 .debug_loc
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    df *ABS*	00000000 ab_partition_parser.c
+00000000 l    df *ABS*	00000000 adler32.c
+00000000 l    df *ABS*	00000000 _aeabi_ldivmod.o
+00000000 l    df *ABS*	00000000 _aeabi_uldivmod.o
+00000000 l    df *ABS*	00000000 app.c
+00000000 l    df *ABS*	00000000 arch.c
+00000000 l    df *ABS*	00000000 _arm_addsubdf3.o
+00000000 l    df *ABS*	00000000 arm_gic.c
+00000000 l    df *ABS*	00000000 arm_gic_hal.c
+00000000 l    df *ABS*	00000000 atexit.c
+00000000 l    df *ABS*	00000000 atoi.c
+00000000 l    df *ABS*	00000000 avb_chain_partition_descriptor.c
+00000000 l    df *ABS*	00000000 avb_cmdline.c
+00000000 l    df *ABS*	00000000 avb_crc32.c
+00000000 l    df *ABS*	00000000 avb_crypto.c
+00000000 l    df *ABS*	00000000 avb_descriptor.c
+00000000 l    df *ABS*	00000000 avb_footer.c
+00000000 l    df *ABS*	00000000 avb_hash_descriptor.c
+00000000 l    df *ABS*	00000000 avb_hashtree_descriptor.c
+00000000 l    df *ABS*	00000000 avb_kernel_cmdline_descriptor.c
+00000000 l    df *ABS*	00000000 avb_property_descriptor.c
+00000000 l    df *ABS*	00000000 avb_rsa.c
+00000000 l    df *ABS*	00000000 avb_sha256.c
+00000000 l    df *ABS*	00000000 avb_sha512.c
+00000000 l    df *ABS*	00000000 avb_slot_verify.c
+00000000 l    df *ABS*	00000000 avb_sysdeps_posix.c
+00000000 l    df *ABS*	00000000 avb_util.c
+00000000 l    df *ABS*	00000000 avb_vbmeta_image.c
+00000000 l    df *ABS*	00000000 avb_version.c
+00000000 l    df *ABS*	00000000 bio.c
+00000000 l    df *ABS*	00000000 bipc.c
+00000000 l    df *ABS*	00000000 bsearch.c
+00000000 l    df *ABS*	00000000 cache.c
+00000000 l    df *ABS*	00000000 cadence_ospi.c
+00000000 l    df *ABS*	00000000 cbuf.c
+00000000 l    df *ABS*	00000000 class_fastboot.c
+00000000 l    df *ABS*	00000000 clkgen_drv.c
+00000000 l    df *ABS*	00000000 clkgen_drv_test.c
+00000000 l    df *ABS*	00000000 clkgen_hal.c
+00000000 l    df *ABS*	00000000 clkgen_hal_ip_test.c
+00000000 l    df *ABS*	00000000 com_platform.c
+00000000 l    df *ABS*	00000000 console.c
+00000000 l    df *ABS*	00000000 console.c
+00000000 l    df *ABS*	00000000 crc16.c
+00000000 l    df *ABS*	00000000 crc32.c
+00000000 l    df *ABS*	00000000 ctype.c
+00000000 l    df *ABS*	00000000 dcf_common.c
+00000000 l    df *ABS*	00000000 dcf_file.c
+00000000 l    df *ABS*	00000000 dcf_notify.c
+00000000 l    df *ABS*	00000000 dcf_select.c
+00000000 l    df *ABS*	00000000 dcf_service.c
+00000000 l    df *ABS*	00000000 debug.c
+00000000 l    df *ABS*	00000000 debug.c
+00000000 l    df *ABS*	00000000 debug.c
+00000000 l    df *ABS*	00000000 debug.c
+00000000 l    df *ABS*	00000000 debug.c
+00000000 l    df *ABS*	00000000 debug.c
+00000000 l    df *ABS*	00000000 debug.c
+00000000 l    df *ABS*	00000000 dloader.c
+00000000 l    df *ABS*	00000000 _dvmd_tls.o
+00000000 l    df *ABS*	00000000 dw_usb_ll.c
+00000000 l    df *ABS*	00000000 eabi.c
+00000000 l    df *ABS*	00000000 earlycopy.c
+00000000 l    df *ABS*	00000000 eic.c
+00000000 l    df *ABS*	00000000 errno.c
+00000000 l    df *ABS*	00000000 event.c
+00000000 l    df *ABS*	00000000 fastboot_common.c
+00000000 l    df *ABS*	00000000 faults.c
+00000000 l    df *ABS*	00000000 fpu.c
+00000000 l    df *ABS*	00000000 fuse_ctrl.c
+00000000 l    df *ABS*	00000000 hal_port.c
+00000000 l    df *ABS*	00000000 heap_wrapper.c
+00000000 l    df *ABS*	00000000 init.c
+00000000 l    df *ABS*	00000000 init.c
+00000000 l    df *ABS*	00000000 init.c
+00000000 l    df *ABS*	00000000 interrupt.c
+00000000 l    df *ABS*	00000000 io.c
+00000000 l    df *ABS*	00000000 libgcc2.c
+00000000 l    df *ABS*	00000000 lk_customize/build-dloader_d9_ref/lk/arch/arm/arm/asm.o
+00000000 l    df *ABS*	00000000 lk_customize/build-dloader_d9_ref/lk/arch/arm/arm/cache-ops.o
+00000000 l    df *ABS*	00000000 lk_customize/build-dloader_d9_ref/lk/arch/arm/arm/exceptions.o
+00000000 l    df *ABS*	00000000 lk_customize/build-dloader_d9_ref/lk/arch/arm/arm/ops.o
+00000000 l    df *ABS*	00000000 lk_customize/build-dloader_d9_ref/lk/arch/arm/arm/start.o
+00000000 l    df *ABS*	00000000 lk_customize/build-dloader_d9_ref/lk/arch/arm/arm/usercopy.o
+00000000 l    df *ABS*	00000000 lk_customize/build-dloader_d9_ref/lk/lib/libc/string/arch/arm/arm/memcpy.o
+00000000 l    df *ABS*	00000000 lk_customize/build-dloader_d9_ref/lk/lib/libc/string/arch/arm/arm/memset.o
+00000000 l    df *ABS*	00000000 main.c
+00000000 l    df *ABS*	00000000 mbox_hal_weak.c
+00000000 l    df *ABS*	00000000 md5.c
+00000000 l    df *ABS*	00000000 mem.c
+00000000 l    df *ABS*	00000000 memchr.c
+00000000 l    df *ABS*	00000000 memcmp.c
+00000000 l    df *ABS*	00000000 miniheap.c
+00000000 l    df *ABS*	00000000 mmc_dwcmshc.c
+00000000 l    df *ABS*	00000000 mmc_hal.c
+00000000 l    df *ABS*	00000000 mmc_sdhci.c
+00000000 l    df *ABS*	00000000 mmu.c
+00000000 l    df *ABS*	00000000 mp.c
+00000000 l    df *ABS*	00000000 mpu.c
+00000000 l    df *ABS*	00000000 mutex.c
+00000000 l    df *ABS*	00000000 new.cpp
+00000000 l    df *ABS*	00000000 novm.c
+00000000 l    df *ABS*	00000000 page_alloc.c
+00000000 l    df *ABS*	00000000 partition.c
+00000000 l    df *ABS*	00000000 partition_parser.c
+00000000 l    df *ABS*	00000000 platform.c
+00000000 l    df *ABS*	00000000 port.c
+00000000 l    df *ABS*	00000000 Port_PBcfg.c
+00000000 l    df *ABS*	00000000 power.c
+00000000 l    df *ABS*	00000000 printf.c
+00000000 l    df *ABS*	00000000 pure_virtual.cpp
+00000000 l    df *ABS*	00000000 qsort.c
+00000000 l    df *ABS*	00000000 rand.c
+00000000 l    df *ABS*	00000000 reboot.c
+00000000 l    df *ABS*	00000000 res.c
+00000000 l    df *ABS*	00000000 rstgen_drv.c
+00000000 l    df *ABS*	00000000 rstgen_hal.c
+00000000 l    df *ABS*	00000000 scr.c
+00000000 l    df *ABS*	00000000 scr_hal.c
+00000000 l    df *ABS*	00000000 sd_boot_img.c
+00000000 l    df *ABS*	00000000 sdhci.c
+00000000 l    df *ABS*	00000000 sd_port.c
+00000000 l    df *ABS*	00000000 semaphore.c
+00000000 l    df *ABS*	00000000 sem.c
+00000000 l    df *ABS*	00000000 semidrive_parser.c
+00000000 l    df *ABS*	00000000 shell.c
+00000000 l    df *ABS*	00000000 spi_nor.c
+00000000 l    df *ABS*	00000000 spi_nor_hal.c
+00000000 l    df *ABS*	00000000 stdio.c
+00000000 l    df *ABS*	00000000 storage_device.c
+00000000 l    df *ABS*	00000000 storage_dev_memdisk.c
+00000000 l    df *ABS*	00000000 storage_dev_mmc.c
+00000000 l    df *ABS*	00000000 storage_dev_ospi.c
+00000000 l    df *ABS*	00000000 strcat.c
+00000000 l    df *ABS*	00000000 strchr.c
+00000000 l    df *ABS*	00000000 strcmp.c
+00000000 l    df *ABS*	00000000 strcoll.c
+00000000 l    df *ABS*	00000000 strcpy.c
+00000000 l    df *ABS*	00000000 strdup.c
+00000000 l    df *ABS*	00000000 strerror.c
+00000000 l    df *ABS*	00000000 strlcat.c
+00000000 l    df *ABS*	00000000 strlcpy.c
+00000000 l    df *ABS*	00000000 strlen.c
+00000000 l    df *ABS*	00000000 strncat.c
+00000000 l    df *ABS*	00000000 strncmp.c
+00000000 l    df *ABS*	00000000 strncpy.c
+00000000 l    df *ABS*	00000000 strnicmp.c
+00000000 l    df *ABS*	00000000 strnlen.c
+00000000 l    df *ABS*	00000000 strpbrk.c
+00000000 l    df *ABS*	00000000 strrchr.c
+00000000 l    df *ABS*	00000000 strspn.c
+00000000 l    df *ABS*	00000000 strstr.c
+00000000 l    df *ABS*	00000000 strtok.c
+00000000 l    df *ABS*	00000000 strtol.c
+00000000 l    df *ABS*	00000000 strtoll.c
+00000000 l    df *ABS*	00000000 strxfrm.c
+00000000 l    df *ABS*	00000000 subdev.c
+00000000 l    df *ABS*	00000000 sys_diagnosis.c
+00000000 l    df *ABS*	00000000 target_init.c
+00000000 l    df *ABS*	00000000 tcm.c
+00000000 l    df *ABS*	00000000 thread.c
+00000000 l    df *ABS*	00000000 thread.c
+00000000 l    df *ABS*	00000000 timer.c
+00000000 l    df *ABS*	00000000 timer.c
+00000000 l    df *ABS*	00000000 timer_drv.c
+00000000 l    df *ABS*	00000000 timer_hal.c
+00000000 l    df *ABS*	00000000 uart.c
+00000000 l    df *ABS*	00000000 uart_drv.c
+00000000 l    df *ABS*	00000000 uart_hal.c
+00000000 l    df *ABS*	00000000 usbc.c
+00000000 l    df *ABS*	00000000 usb_hal.c
+00000000 l    df *ABS*	00000000 wdg_drv.c
+00000000 l    df *ABS*	00000000 wdg_drv_test.c
+00000000 l    df *ABS*	00000000 wdg_hal.c
+00000000 l    df *ABS*	00000000 wdg_hal_ip_test.c
+00000000 l    df *ABS*	00000000 winusb.c
+00020000 g       *ABS*	00000000 TCM_SIZE
+004b0000 g       *ABS*	00000000 TCM_BASE
+004b0000 g       .tcm	00000000 __tcm_end
+004b0000 g       .tcm	00000000 __tcm_start
+004b0000 l    d  .tcm	00000000 .tcm
+30000000 g       .text	00000000 _start
+30000000 l    d  .text	00000000 .text
+30000040 g       .text	00000000 arm_reset
+30000040  w      .text	00000000 platform_reset
+300001e4 g     F .text	00000058 target_early_init
+3000023c g     F .text	00000002 target_init
+30000240 g     F .text	00000140 platform_cpu_reset
+30000380  w    F .text	00000002 os_platform_early_init
+30000384 g     F .text	00000124 platform_early_init
+300004a8 g     F .text	00000014 platform_init
+300004bc g     F .text	0000002c _dputc
+300004e8 g     F .text	0000001e dgetc
+30000508 g     F .text	00000088 platform_halt
+30000590 g     F .text	00000004 platform_dputc
+30000594 g     F .text	00000004 platform_dgetc
+30000598 l     F .text	0000003c save_char
+300005d4 g     F .text	00000032 uart_init
+30000608 g     F .text	00000052 uart_init_early
+3000065c g     F .text	00000014 uart_putc
+30000670 g     F .text	0000003c uart_getc
+300006ac g     F .text	00000004 uart_get_current_port
+300006b0 g     F .text	00000052 register_int_handler
+30000704 g     F .text	0000004e mask_interrupt
+30000754 g     F .text	0000004e unmask_interrupt
+300007a4 g     F .text	00000046 arm_gic_init_early
+300007ec l     F .text	00000032 platform_tick
+30000820 g     F .text	0000006c timer_init_early
+3000088c g     F .text	00000064 platform_set_oneshot_timer
+300008f0 g     F .text	0000001e platform_stop_timer
+30000910 g     F .text	0000001c current_time_hires
+3000092c g     F .text	0000001c current_time
+30000948 g     F .text	00000000 arm_context_switch
+30000960 g     F .text	00000000 arm_save_mode_regs
+300009bc g     F .text	00000000 arm_chain_load
+300009d4 g     F .text	00000000 arch_disable_cache
+30000a30 g     F .text	00000000 arch_enable_cache
+30000a8c l       .text	00000000 flush_invalidate_cache_v7
+30000b20 l       .text	00000000 invalidate_cache_v7
+30000bb4 g     F .text	00000000 arch_clean_cache_range_asm
+30000bd8 g     F .text	00000000 arch_clean_invalidate_cache_range_asm
+30000bfc g     F .text	00000000 arch_invalidate_cache_range_asm
+30000c20 g     F .text	00000000 arch_sync_cache_range_asm
+30000c3c g     F .text	00000000 _arch_enable_ints
+30000c4c g     F .text	00000000 _arch_disable_ints
+30000c5c g     F .text	00000000 _atomic_swap
+30000c74 g     F .text	00000000 _atomic_add
+30000c90 g     F .text	00000000 _atomic_and
+30000cac g     F .text	00000000 _atomic_or
+30000cc8 g     F .text	00000000 arch_spin_trylock
+30000ce4 g     F .text	00000000 arch_spin_lock
+30000d08 g     F .text	00000000 arch_spin_unlock
+30000d20 g     F .text	00000000 arch_idle
+30000d28 g     F .text	00000000 arm_invalidate_tlb
+30000d34 g     F .text	00000000 arm_undefined
+30000d8c g     F .text	00000000 arm_syscall
+30000de4 g     F .text	00000000 arm_prefetch_abort
+30000e40 g     F .text	00000000 arm_data_abort
+30000e9c g     F .text	00000000 arm_reserved
+30000ea0 g     F .text	00000000 arm_irq
+30000f24 g     F .text	00000000 arm_fiq
+30000f80 g     F .text	00000000 arch_copy_to_user
+30000fa0 g     F .text	00000000 arch_copy_from_user
+30000fc0 g     F .text	00000000 arch_strlcpy_from_user
+30001014 l     F .text	000002ca dump_mode_regs
+300012e0 l     F .text	000000aa exception_die
+3000138c  w    F .text	0000000e arm_syscall_handler
+3000139c g     F .text	000000f0 arm_undefined_handler
+3000148c g     F .text	000001ba arm_data_abort_handler
+30001648 g     F .text	000000f0 arm_prefetch_abort_handler
+30001738 g     F .text	00000010 arm_fpu_set_enable
+30001748 g     F .text	0000007e arm_fpu_undefined_instruction
+300017c8 g     F .text	00000020 arm_fpu_thread_initialize
+300017e8 g     F .text	00000056 arm_fpu_thread_swap
+30001840 l     F .text	00000022 initial_thread_func
+30001864 g     F .text	00000038 arch_thread_initialize
+3000189c g     F .text	00000018 arch_context_switch
+300018b4 g     F .text	00000104 mpu_add_region
+300019b8 g     F .text	00000026 mpu_enable
+300019e0 g     F .text	00000054 tcm_get_size
+30001a34 g     F .text	000000d6 tcm_enable
+30001b0c g     F .text	00000004 arch_clean_cache_range
+30001b10 g     F .text	00000004 arch_clean_invalidate_cache_range
+30001b14 g     F .text	00000004 arch_invalidate_cache_range
+30001b18 g     F .text	00000080 arch_early_init
+30001b98 g     F .text	00000004 arch_init
+30001b9c g     F .text	000000d0 lk_init_level
+30001c6c l     F .text	0000006c bootstrap2
+30001cd8 g     F .text	000000ea lk_main
+30001dc4 l     F .text	0000000c app_thread_entry
+30001dd0 g     F .text	000000a0 apps_init
+30001e70 l     F .text	00000004 shell_entry
+30001e74 l     F .text	00000004 shell_init
+30001e78 l     F .text	0000017c erase_nor_flash_partition
+30001ff4 l     F .text	00000134 patch_sfs
+30002128 l     F .text	00000034 cmd_reboot_proc
+3000215c g     F .text	00000060 dloader_md5_emmc
+300021bc l     F .text	00000326 parse_partition_name
+300024e4 g     F .text	000001da dloader_erase
+300026c0 g     F .text	000001cc dloader_read
+3000288c l     F .text	00000092 backup_boot
+30002920 l     F .text	00000092 restore_boot
+300029b4 l     F .text	0000005e response_error
+30002a14 l     F .text	000000ec erase_emmc_one_boot_area
+30002b00 l     F .text	000000f2 erase_boot_areas
+30002bf4 l     F .text	00000272 flash_emmc_one_boot_area
+30002e68 l     F .text	0000008a cmd_read_efuse_proc
+30002ef4 l     F .text	000006e4 cmd_erase_proc
+300035d8 g     F .text	0000008c dloader_init_emmc
+30003664 g     F .text	0000023c dloader_main
+300038a0 l     F .text	00000008 dloader_entry
+300038a8 l     F .text	000000fe padding_avb_footer.part.7.constprop.16
+300039a8 l     F .text	00000094 str2hex.constprop.15
+30003a3c l     F .text	00000234 cmd_program_efuse_proc
+30003c70 l     F .text	0000005a cmd_md5_proc
+30003ccc g     F .text	00001d36 cmd_flash_storage
+30005a04 l     F .text	000000ee cmd_flash_proc
+30005af4 g     F .text	00000030 sfs_crc32
+30005b24 g     F .text	00000148 get_sfs_info
+30005c6c g     F .text	000005f2 parse_gpt_table_from_buffer
+30006260 g     F .text	000005f8 gpt_partition_round
+30006858 g     F .text	0000000e clkgen_get_default_config
+30006868 g     F .text	00000044 clkgen_fsrefclk_sel
+300068ac g     F .text	0000004a clkgen_gating_enable
+300068f8 g     F .text	000000c8 clkgen_ip_slice_set
+300069c0 g     F .text	0000000c clkgen_ip_ctl_get
+300069cc g     F .text	000000b0 clkgen_ip_ctl_set
+30006a7c g     F .text	00000238 clkgen_bus_slice_switch
+30006cb4 g     F .text	00000032 clkgen_bus_ctl_get
+30006ce8 g     F .text	00000240 clkgen_bus_ctl_set
+30006f28 g     F .text	00000124 clkgen_core_slice_switch
+3000704c g     F .text	0000000e clkgen_core_ctl_get
+3000705c g     F .text	00000110 clkgen_core_ctl_set
+3000716c g     F .text	0000012a clkgen_mon_ip_slice
+30007298 g     F .text	00000130 clkgen_mon_bus_slice
+300073c8 g     F .text	0000012a clkgen_mon_core_slice
+300074f4 g     F .text	0000007c clkgen_uuu_clock_wrapper
+30007570 g     F .text	00000010 clkgen_uuu_ctl_get
+30007580 g     F .text	00000056 clkgen_uuu_ctl_set
+300075d8 g     F .text	0000003c clkgen_ipslice_debug_enable
+30007614 g     F .text	0000002c clkgen_ipslice_debug_disable
+30007640 g     F .text	00000040 clkgen_busslice_debug_enable
+30007680 g     F .text	00000004 clkgen_busslice_debug_disable
+30007684 g     F .text	00000038 clkgen_coreslice_debug_enable
+300076bc g     F .text	00000004 clkgen_coreslice_debug_disable
+300076c0 g     F .text	0000003e clkgen_uuuslice_debug_enable
+30007700 g     F .text	0000002c clkgen_uuuslice_debug_disable
+3000772c g     F .text	0000003c platform_earlycopy
+30007768 l     F .text	00000078 fuse_program_raw
+300077e0 g     F .text	0000000e fuse_read
+300077f0 g     F .text	00000072 fuse_sense
+30007864 g     F .text	0000003e cmd_fuse_sense
+300078a4 g     F .text	00000088 fuse_program
+3000792c g     F .text	00000014 cmd_fuse_program
+30007940 l     F .text	0000001a arm_gic_init_percpu
+3000795c l     F .text	00000002 arm_gic_suspend_cpu
+30007960 g     F .text	00000056 arm_gic_register_int_handler
+300079b8 g     F .text	00000096 arm_gic_init
+30007a50 l     F .text	00000044 arm_gic_resume_cpu
+30007a94 g     F .text	00000046 arm_gic_set_priority
+30007adc g     F .text	00000040 arm_gic_mask_interrupt
+30007b1c g     F .text	00000040 arm_gic_unmask_interrupt
+30007b5c g     F .text	00000070 platform_irq
+30007bcc g     F .text	00000018 platform_fiq
+30007be4 l     F .text	00000034 sdhci_set_bus_power_on
+30007c18 l     F .text	00000106 sdhci_dumpregs.isra.7
+30007d20 g     F .text	00000130 sdhci_irq_handle
+30007e50 g     F .text	00000044 sdhci_reset
+30007e94 g     F .text	0000003a sdhci_set_uhs_mode
+30007ed0 g     F .text	0000003c sdhci_set_bus_width
+30007f0c g     F .text	000004e0 sdhci_send_command
+300083ec l     F .text	0000010a sdhci_data_thread
+300084f8 g     F .text	0000017e sdhci_execute_tuning
+30008678 g     F .text	00000184 sdhci_init
+300087fc l     F .text	00000040 mmc_get_card_status.isra.4
+3000883c l     F .text	000000d2 mmc_switch_cmd
+30008910 l     F .text	00000024 mmc_set_bus_width
+30008934 l     F .text	00000034 mmc_set_hs_interface
+30008968 l     F .text	0000006e mmc_set_ddr_mode
+300089d8 l     F .text	00000040 mmc_send_app_cmd.isra.9
+30008a18 l     F .text	00000094 mmc_parse_response
+30008aac l     F .text	00000060 mmc_stop_command
+30008b0c l     F .text	0000009a mmc_set_hs200_mode
+30008ba8 l     F .text	00000078 mmc_get_ext_csd.isra.13
+30008c20 l     F .text	00000046 mmc_sdhci_switch_part.part.16
+30008c68 g     F .text	000000f6 mmc_set_hs400_mode
+30008d60 g     F .text	0000013e mmc_sd_card_init
+30008ea0 g     F .text	0000005e mmc_sd_set_bus_width
+30008f00 g     F .text	00000076 mmc_sd_set_hs
+30008f78 g     F .text	00000bb4 mmc_sdhci_init
+30009b2c g     F .text	000000e2 mmc_sdhci_read
+30009c10 g     F .text	000000dc mmc_sdhci_write
+30009cec g     F .text	00000322 mmc_sdhci_erase
+3000a010 g     F .text	00000012 mmc_sdhci_switch_part
+3000a024 l     F .text	0000002a scr_write_signal.isra.4
+3000a050 l     F .text	0000002a scr_read_signal.isra.5
+3000a07c l     F .text	000000f4 Port_SetGPIOSCR
+3000a170 g     F .text	000002c2 Port_Init
+3000a434 g     F .text	000000dc Port_SetPinMode
+3000a510 g     F .text	0000002e Port_SetHandle
+3000a540 g     F .text	00000008 rstgen_get_default_config
+3000a548 g     F .text	0000003c rstgen_init
+3000a584 g     F .text	00000014 rstgen_global_rst_enable
+3000a598 g     F .text	00000016 rstgen_global_rst_disable
+3000a5b0 g     F .text	0000001a rstgen_sw_self_rst
+3000a5cc g     F .text	0000001a rstgen_sw_oth_rst
+3000a5e8 g     F .text	00000008 rstgen_get_rst_sta
+3000a5f0 g     F .text	0000000e rstgen_iso_enable
+3000a600 g     F .text	0000000a rstgen_iso_status
+3000a60c g     F .text	0000000c rstgen_iso_disable
+3000a618 g     F .text	0000004a rstgen_core_reset
+3000a664 g     F .text	00000052 rstgen_core_ctl
+3000a6b8 g     F .text	0000004a rstgen_module_ctl
+3000a704 g     F .text	0000000a rstgen_module_status
+3000a710 g     F .text	0000000c rstgen_core_status
+3000a71c g     F .text	00000098 scr_get
+3000a7b4 g     F .text	00000092 scr_is_locked
+3000a848 g     F .text	000000d4 scr_set
+3000a91c l     F .text	00000092 cospi_capture_set
+3000a9b0 g     F .text	00000082 cospi_cancel
+3000aa34 l     F .text	00000052 cospi_wait_idle
+3000aa88 g     F .text	00000008 cospi_unlock
+3000aa90 l     F .text	0000007e cospi_early_init
+3000ab10 l     F .text	00000036 cospi_wait_for_bit.constprop.16
+3000ab48 l     F .text	0000003c cospi_exec_flash_cmd
+3000ab84 g     F .text	000001c4 cospi_command_read
+3000ad48 g     F .text	000000c2 cospi_command_write
+3000ae0c g     F .text	000001ee cospi_xfer
+3000affc l     F .text	000002dc cospi_data_thread
+3000b2d8 g     F .text	000000d6 cospi_irq_handle
+3000b3b0 l     F .text	000002d8 cospi_phy_training
+3000b688 g     F .text	00000030 cospi_baudrate_set
+3000b6b8 g     F .text	0000012e cospi_lock
+3000b7e8 g     F .text	000001ae spi_nor_host_init
+3000b998 g     F .text	00000050 timer_drv_cntr_set
+3000b9e8 g     F .text	00000030 timer_drv_cntr_get
+3000ba18 g     F .text	0000002e timer_drv_ovf_set
+3000ba48 g     F .text	00000014 timer_drv_cascade_set
+3000ba5c g     F .text	00000016 timer_drv_clk_init
+3000ba74 g     F .text	0000000e timer_drv_int_sta_enable
+3000ba84 g     F .text	00000010 timer_drv_int_sta_disable
+3000ba94 g     F .text	0000000e timer_drv_int_sig_enable
+3000baa4 g     F .text	00000010 timer_drv_int_sig_disable
+3000bab4 g     F .text	0000005a timer_drv_ovf_irq_handle
+3000bb10 g     F .text	00000220 timer_drv_func_irq_handle
+3000bd30 g     F .text	0000000e timer_drv_int_sta_clear
+3000bd40 g     F .text	0000021c uart_drv_init
+3000bf5c g     F .text	0000001c uart_drv_putc
+3000bf78 g     F .text	00000016 uart_drv_int_cbk_register
+3000bf90 g     F .text	0000001e uart_drv_int_src_enable
+3000bfb0 g     F .text	00000028 uart_drv_int_src_disable
+3000bfd8 g     F .text	00000152 uart_drv_irq_handle
+3000c12c l     F .text	0000007e dw_usbc_dataoutstagecb.isra.12
+3000c1ac l     F .text	0000002e dw_usbc_wakeup.part.17
+3000c1dc l     F .text	0000016e dw_usbc_ep_trans
+3000c34c l     F .text	0000003a create_trb.isra.7.constprop.21
+3000c388 g     F .text	000001f8 dw_usbc_setup_endpoint
+3000c580 g     F .text	00000078 dw_usbc_ep0_send
+3000c5f8 g     F .text	0000006c dw_usbc_ep0_recv
+3000c664 g     F .text	00000254 usbc_init
+3000c8b8 g     F .text	00000054 usbc_queue_rx
+3000c90c g     F .text	00000050 usbc_queue_tx
+3000c95c g     F .text	0000003e usbc_set_active
+3000c99c g     F .text	0000001a usbc_set_address
+3000c9b8 g     F .text	00000002 usbc_ep0_ack
+3000c9bc g     F .text	00000030 usbc_ep0_stall
+3000c9ec g     F .text	000008bc usbc_irq
+3000d2a8 g     F .text	00000020 usbc_is_highspeed
+3000d2c8 g     F .text	0000001a usbc_setup_endpoint
+3000d2e4 g     F .text	00000008 usbc_ep0_send
+3000d2ec g     F .text	00000002 dump_registers
+3000d2f0 g     F .text	000000fa dw_usb_dev_ll_por_srst
+3000d3ec g     F .text	00000030 dw_usb_ll_enable_irq
+3000d41c g     F .text	0000000e dw_usb_ll_mask_irq
+3000d42c g     F .text	0000000e dw_usb_ll_unmask_irq
+3000d43c g     F .text	00000050 dw_usb_ll_runstop
+3000d48c g     F .text	000000f6 dw_usb_ll_set_ep_cmd
+3000d584 g     F .text	0000001a dw_usb_ll_set_ep_config
+3000d5a0 g     F .text	0000001a dw_usb_ll_set_ep_xfer_config
+3000d5bc g     F .text	00000010 dw_usb_ll_get_ep_transfer_index
+3000d5cc g     F .text	0000004c dw_usb_ll_set_link_state
+3000d618 g     F .text	0000001e dw_usb_ll_disconnect_evt
+3000d638 g     F .text	00000078 dw_usb_ll_wakeup
+3000d6b0 g     F .text	0000001a dw_usb_ll_set_ep_stall
+3000d6cc g     F .text	0000001a dw_usb_ll_clear_ep_stall
+3000d6e8 g     F .text	0000001a dw_usb_ll_ep_start_transfer
+3000d704 g     F .text	0000001a dw_usb_ll_ep_update_transfer
+3000d720 g     F .text	0000001e dw_usb_ll_ep_end_transfer
+3000d740 g     F .text	0000001a dw_usb_ll_set_ep_new_config
+3000d75c g     F .text	00000032 dw_usb_ll_set_ep_event_buffer
+3000d790 g     F .text	00000012 dw_usb_ll_get_ep_event_count
+3000d7a4 g     F .text	0000000e dw_usb_ll_clear_ep_event
+3000d7b4 g     F .text	0000001a dw_usb_ll_ep_open
+3000d7d0 g     F .text	0000001c dw_usb_ll_ep_close
+3000d7ec g     F .text	0000001e dw_usb_ll_set_address
+3000d80c g     F .text	0000000c dw_usb_ll_get_cur_speed
+3000d818 g     F .text	00000008 dw_usb_ll_get_ncr_evt
+3000d820 g     F .text	00000010 dw_usb_ll_clr_ncr_evt
+3000d830 l     F .text	00000066 wdg_unlock
+3000d898 l     F .text	000000b8 wdg_addr_to_number
+3000d950 g     F .text	00000090 wdg_get_default_config
+3000d9e0 g     F .text	0000009c wdg_set_timeout
+3000da7c g     F .text	00000096 wdg_set_window_limit
+3000db14 g     F .text	00000096 wdg_set_seq_delta
+3000dbac g     F .text	000000ba wdg_refesh_mechanism_select
+3000dc68 g     F .text	00000066 wdg_get_refesh_mechanism
+3000dcd0 g     F .text	0000017e wdg_init
+3000de50 g     F .text	00000070 wdg_deInit
+3000dec0 g     F .text	0000008a wdg_set_testmode_config
+3000df4c g     F .text	00000092 wdg_enable
+3000dfe0 g     F .text	00000080 wdg_disable
+3000e060 g     F .text	00000098 wdg_enable_Interrupts
+3000e0f8 g     F .text	0000009a wdg_disable_Interrupts
+3000e194 g     F .text	00000064 wdg_get_status_flag
+3000e1f8 g     F .text	00000076 wdg_clear_status_flag
+3000e270 g     F .text	00000096 wdg_refresh
+3000e308 g     F .text	00000066 wdg_set_reset_cnt
+3000e370 g     F .text	00000056 wdg_get_reset_cnt
+3000e3c8 g     F .text	0000005e wdg_clear_reset_cnt
+3000e428 g     F .text	00000056 wdg_get_ext_reset_cnt
+3000e480 g     F .text	0000005e wdg_clear_ext_reset_cnt
+3000e4e0 g     F .text	00000110 wdg_Int_register
+3000e5f0 g     F .text	0000010e wdg_int_unregister
+3000e700 g     F .text	00000088 wdg_int_clear
+3000e788 g     F .text	0000005e wdg_halt_enable
+3000e7e8 g     F .text	0000005e wdg_halt_disable
+3000e848 g     F .text	00000054 wdg_get_cnt
+3000e89c g     F .text	000000be wdg_set_reset
+3000e95c g     F .text	00000028 mbox_init
+3000e984 g     F .text	0000001a dcf_init
+3000e9a0 l     F .text	00000020 sysd_sem_handler
+3000e9c0 l     F .text	000000f0 sysd_worker
+3000eab0 g     F .text	0000002c sysd_start
+3000eadc l     F .text	00000098 hal_clock_get_instance
+3000eb74 l     F .text	00000026 hal_clock_release_handle.part.2
+3000eb9c l     F .text	00000048 hal_clock_release_instance
+3000ebe4 g     F .text	00000038 hal_clock_creat_handle
+3000ec1c g     F .text	00000010 hal_clock_release_handle
+3000ec2c g     F .text	00000066 hal_clock_enable
+3000ec94 g     F .text	0000006a hal_clock_ipclk_set
+3000ed00 g     F .text	00000004 hal_arm_gic_create_handle
+3000ed04 g     F .text	00000004 hal_arm_gic_release_handle
+3000ed08 g     F .text	0000003e hal_arm_gic_init
+3000ed48 g     F .text	00000010 hal_arm_gic_enable_interrupt
+3000ed58 g     F .text	00000010 hal_arm_gic_disable_interrupt
+3000ed68 g     F .text	0000001c hal_arm_gic_register_interrupt
+3000ed84 g     F .text	00000002 hal_mb_init
+3000ed88 g     F .text	00000004 hal_mb_create_handle
+3000ed8c g     F .text	00000128 hal_mmc_creat_handle
+3000eeb4 g     F .text	00000060 hal_mmc_release_handle
+3000ef14 g     F .text	000000e0 hal_mmc_init
+3000eff4 g     F .text	00000144 hal_mmc_read
+3000f138 g     F .text	0000012e hal_mmc_write
+3000f268 g     F .text	0000010c hal_mmc_erase
+3000f374 g     F .text	0000003e hal_mmc_get_capacity
+3000f3b4 g     F .text	0000002e hal_mmc_get_block_size
+3000f3e4 g     F .text	0000002e hal_mmc_get_erase_grp_size
+3000f414 g     F .text	00000030 hal_mmc_switch_part
+3000f444 l     F .text	00000146 mshc_clkgen_config.isra.4
+3000f58c l     F .text	000000fa mshc_set_uhs_mode
+3000f688 l     F .text	000000cc mshc_init
+3000f754 l     F .text	000000a8 mshc_set_clk
+3000f7fc g     F .text	000000aa mmc_platform_init
+3000f8a8 g     F .text	000000d2 hal_port_creat_handle
+3000f97c g     F .text	0000006e hal_port_release_handle
+3000f9ec g     F .text	00000042 hal_port_init
+3000fa30 g     F .text	0000003e hal_port_set_pin_mode
+3000fa70 g     F .text	0000005e parse_paddr_ppc
+3000fad0 g     F .text	00000080 parse_paddr_rpc
+3000fb50 g     F .text	0000009a res_parse_info
+3000fbec g     F .text	00000048 res_get_info_by_id
+3000fc34 g     F .text	00000048 p2ap
+3000fc7c g     F .text	000000ec hal_rstgen_creat_handle
+3000fd68 g     F .text	00000018 hal_rstgen_release_handle
+3000fd80 g     F .text	00000004 hal_rstgen_init
+3000fd84 g     F .text	00000030 hal_rstgen_core_reset
+3000fdb4 g     F .text	00000040 hal_rstgen_module_reset
+3000fdf4 g     F .text	00000002 hal_scr_create_handle
+3000fdf8 g     F .text	0000002e hal_scr_delete_handle
+3000fe28 g     F .text	00000030 hal_scr_get
+3000fe58 g     F .text	00000030 hal_scr_set
+3000fe88 g     F .text	0000012a hal_spi_nor_creat_handle
+3000ffb4 g     F .text	00000074 hal_spi_nor_release_handle
+30010028 g     F .text	000000aa hal_spi_nor_init
+300100d4 g     F .text	0000014a hal_spi_nor_read
+30010220 g     F .text	000000ee hal_spi_nor_write
+30010310 g     F .text	0000008c hal_spi_nor_erase
+3001039c g     F .text	00000030 hal_spi_nor_get_capacity
+300103cc g     F .text	00000030 hal_spi_nor_get_flash_id
+300103fc l     F .text	0000000e hal_timer_func_irq_handle
+3001040c l     F .text	0000000e hal_timer_ovf_irq_handle
+3001041c g     F .text	0000011c hal_timer_creat_handle
+30010538 g     F .text	00000046 hal_timer_global_init
+30010580 g     F .text	00000024 hal_timer_ovf_init
+300105a4 g     F .text	0000001c hal_timer_int_src_enable
+300105c0 g     F .text	0000001c hal_timer_int_src_disable
+300105dc g     F .text	00000096 hal_timer_int_cbk_register
+30010674 g     F .text	0000000a hal_timer_int_sta_clear
+30010680 g     F .text	00000050 hal_timer_glb_cntr_get
+300106d0 l     F .text	0000000e hal_uart_irq_handle
+300106e0 g     F .text	00000114 hal_uart_creat_handle
+300107f4 g     F .text	00000042 hal_uart_init
+30010838 g     F .text	00000010 hal_uart_putc
+30010848 g     F .text	0000002e hal_uart_int_cbk_register
+30010878 g     F .text	00000008 hal_uart_int_src_enable
+30010880 g     F .text	00000008 hal_uart_int_src_disable
+30010888 l     F .text	0000008e hal_usb_append_interface
+30010918 g     F .text	00000008 hal_usb_append_interface_highspeed
+30010920 g     F .text	00000008 hal_usb_append_interface_lowspeed
+30010928 g     F .text	0000001a hal_set_usb_id
+30010944 g     F .text	00000082 hal_usb_add_string
+300109c8 g     F .text	0000002e hal_usb_register_callback
+300109f8 g     F .text	00000260 hal_usbc_callback
+30010c58 g     F .text	00000004 hal_usb_irq
+30010c5c g     F .text	00000006 hal_usb_setup
+30010c64 g     F .text	00000012 hal_usb_start
+30010c78 g     F .text	00000010 hal_usb_stop
+30010c88 g     F .text	00000004 hal_usb_init
+30010c8c g     F .text	00000004 hal_usb_read
+30010c90 g     F .text	00000004 hal_usb_write
+30010c94 g     F .text	0000004a hal_usb_creat_handle
+30010ce0 g     F .text	00000010 hal_usb_release_handle
+30010cf0 g     F .text	00000004 hal_usb_is_highspeed
+30010cf4 g     F .text	00000004 hal_usb_setup_endpoint
+30010cf8 l     F .text	00000036 usb_read_complete
+30010d30 l     F .text	00000032 usb_write_complete
+30010d64 l     F .text	00000068 fastboot_usb_cb
+30010dcc g     F .text	0000002c fastboot_register_cmd
+30010df8 g     F .text	00000022 fastboot_register_var
+30010e1c  w    F .text	00000050 fastboot_ack
+30010e6c  w    F .text	0000004a fastboot_info
+30010eb8  w    F .text	00000012 fastboot_fail
+30010ecc g     F .text	000000d4 fastboot_handler
+30010fa0  w    F .text	00000012 fastboot_okay
+30010fb4 g     F .text	000000ae cmd_getvar
+30011064  w    F .text	0000009a cmd_download
+30011100  w    F .text	0000000e fastboot_online
+30011110  w    F .text	00000004 fastboot_offline
+30011114 g     F .text	000000d4 fastboot_usb_read
+300111e8 g     F .text	000000b4 fastboot_usb_write
+3001129c g     F .text	00000100 fastboot_init
+3001139c g     F .text	0000001e fastboot_stop
+300113bc l     F .text	000000a8 winusb_dev_event_cb
+30011464 g     F .text	0000002c hal_winusb_init
+30011490 g     F .text	000000d0 hal_wdg_creat_handle
+30011560 g     F .text	00000010 hal_wdg_release_handle
+30011570 g     F .text	0000003c hal_wdg_init
+300115ac g     F .text	00000056 hal_wdg_deinit
+30011604 g     F .text	0000002e hal_wdg_enable
+30011634 g     F .text	00000016 hal_wdg_enable_interrupts
+3001164c g     F .text	00000016 hal_wdg_set_timeout
+30011664 l     F .text	00000158 threadload
+300117bc l     F .text	000000ae cmd_threadstats
+3001186c l     F .text	00000048 cmd_threadload
+300118b4 g     F .text	0000002a event_init
+300118e0 g     F .text	0000004a event_wait_timeout
+3001192c g     F .text	0000006c event_signal
+30011998 g     F .text	0000000a event_unsignal
+300119a4 g     F .text	00000012 kernel_init
+300119b8 g     F .text	0000002c mutex_init
+300119e4 g     F .text	00000048 mutex_destroy
+30011a2c g     F .text	00000058 mutex_acquire_timeout
+30011a84 g     F .text	00000062 mutex_release
+30011ae8 l     F .text	0000002a init_thread_struct
+30011b14 l     F .text	000001a2 thread_resched
+30011cb8 l     F .text	00000068 thread_sleep_handler
+30011d20 g     F .text	0000004c thread_timer_tick
+30011d6c g     F .text	00000124 thread_create_etc
+30011e90 g     F .text	0000001e thread_create
+30011eb0 g     F .text	00000088 thread_yield
+30011f38 g     F .text	00000082 thread_resume
+30011fbc g     F .text	000000d2 thread_preempt
+30012090 g     F .text	0000007c thread_sleep
+3001210c g     F .text	0000007c thread_init_early
+30012188 g     F .text	0000000c thread_init
+30012194 g     F .text	00000034 thread_become_idle
+300121c8 g     F .text	00000068 wait_queue_block
+30012230 g     F .text	000000b8 thread_join
+300122e8 g     F .text	000000d6 wait_queue_wake_one
+300123c0 g     F .text	00000104 wait_queue_wake_all
+300124c4 g     F .text	000000a0 thread_detach
+30012564 g     F .text	00000018 thread_detach_and_resume
+3001257c g     F .text	00000080 thread_exit
+300125fc g     F .text	00000012 wait_queue_destroy
+30012610 g     F .text	00000078 thread_unblock_from_wait_queue
+30012688 l     F .text	00000026 wait_queue_timeout_handler
+300126b0 l     F .text	00000056 insert_timer_in_queue.constprop.2
+30012708 l     F .text	000000dc timer_tick
+300127e4 l     F .text	000000d8 timer_set
+300128bc g     F .text	0000001a timer_initialize
+300128d8 g     F .text	0000001a timer_set_oneshot
+300128f4 g     F .text	0000001c timer_set_periodic
+30012910 g     F .text	000000a6 timer_cancel
+300129b8 g     F .text	0000001a timer_init
+300129d4 g     F .text	0000000e port_init
+300129e4 g     F .text	00000040 platform_mpu_r5_common
+30012a24 g     F .text	0000001e sem_enable_intr
+30012a44 g     F .text	00000024 sem_signal_status
+30012a68 g     F .text	00000030 sem_map_signal
+30012a98 l     F .text	0000008a waite_idle
+30012b24 g     F .text	0000009e spi_nor_read
+30012bc4 l     F .text	00000056 training_data_check
+30012c1c g     F .text	000000ac spi_nor_erase
+30012cc8 g     F .text	00000098 spi_nor_write
+30012d60 g     F .text	000001dc spi_nor_init
+30012f3c g     F .text	00000002 spi_nor_deinit
+30012f40 g     F .text	00000008 spi_nor_get_capacity
+30012f48 g     F .text	00000010 spi_nor_get_flash_id
+30012f58 g     F .text	000000fc crc32
+30013054 l     F .text	00000094 novm_init_helper
+300130e8 l     F .text	0000003c novm_init
+30013124 g     F .text	0000007a novm_alloc_helper
+300131a0 g     F .text	00000032 novm_alloc_unaligned
+300131d4 g     F .text	0000001a novm_alloc_pages
+300131f0 l     F .text	00000006 bio_default_read_block
+300131f8 l     F .text	000001d6 bio_default_read
+300133d0 l     F .text	0000027c bio_default_write
+3001364c l     F .text	0000004c bdev_dec_ref
+30013698 l     F .text	00000006 bio_default_write_block
+300136a0 l     F .text	0000004c bio_write.part.2
+300136ec l     F .text	00000092 bio_default_erase
+30013780 g     F .text	00000060 bio_open
+300137e0 g     F .text	00000004 bio_close
+300137e4 g     F .text	0000004e bio_read
+30013834 g     F .text	00000010 bio_write
+30013844 g     F .text	00000030 bio_write_block
+30013874 g     F .text	00000050 bio_erase
+300138c4 g     F .text	0000008e bio_initialize_bdev
+30013954 g     F .text	00000044 bio_register_device
+30013998 l     F .text	00000014 mem_bdev_write_block
+300139ac l     F .text	00000010 mem_bdev_write
+300139bc l     F .text	00000016 mem_bdev_read_block
+300139d4 l     F .text	00000012 mem_bdev_read
+300139e8 g     F .text	00000062 create_membdev
+30013a4c l     F .text	0000001a cmd_echo
+30013a68 l     F .text	0000005c cmd_help_impl
+30013ac4 l     F .text	00000006 cmd_help_panic
+30013acc l     F .text	00000006 cmd_help
+30013ad4 l     F .text	00000240 read_debug_line
+30013d14 l     F .text	00000052 match_command
+30013d68 l     F .text	00000090 convert_args
+30013df8 l     F .text	00000324 command_loop
+3001411c g     F .text	000000a0 console_init
+300141bc g     F .text	00000034 console_start
+300141f0 g     F .text	00000022 spin
+30014214 g     F .text	0000002c _panic
+30014240 g     F .text	000000ee hexdump
+30014330 g     F .text	000000ee hexdump8_ex
+30014420 g     F .text	000001f8 fastboot_common_init
+30014618 g     F .text	00000008 fastboot_common_okay
+30014620 g     F .text	00000008 fastboot_common_fail
+30014628 l     F .text	000000a8 heap_free_delayed_list
+300146d0 g     F .text	00000016 heap_init
+300146e8 g     F .text	0000002c malloc
+30014714 g     F .text	00000038 memalign
+3001474c g     F .text	0000003e calloc
+3001478c g     F .text	00000004 free
+30014790 g     F .text	0000005a heap_delayed_free
+300147ec g     F .text	00000004 page_alloc
+300147f0 g     F .text	00000004 page_first_alloc
+300147f4 g     F .text	0000001c avb_htobe32
+30014810 g     F .text	00000046 avb_htobe64
+30014858 g     F .text	00000000 bcopy
+30014864 g     F .text	00000000 memcpy
+30014864 g     F .text	00000000 memmove
+30014968 g     F .text	00000000 bzero
+30014970 g     F .text	00000000 memset
+30014a04 l     F .text	00000028 hexval
+30014a2c g     F .text	00000092 atol
+30014ac0 g     F .text	0000006c atoul
+30014b2c g     F .text	000000b8 atoull
+30014be4 g     F .text	00000104 strtoul
+30014ce8 g     F .text	00000014 isspace
+30014cfc g     F .text	0000001c isxdigit
+30014d18 g     F .text	0000000c isprint
+30014d24 g     F .text	0000000a __geterrno
+30014d30 l     F .text	0000002c _vsnprintf_output
+30014d5c l     F .text	000000ba longlong_to_string
+30014e18 l     F .text	00000062 exponent_to_string
+30014e7c l     F .text	000002e0 double_to_hexstring.isra.0
+3001515c l     F .text	00000052 longlong_to_hexstring.constprop.1
+300151b0 l     F .text	000002b8 double_to_string.constprop.2
+30015468 g     F .text	00000638 _printf_engine
+30015aa0 g     F .text	00000030 vsnprintf
+30015ad0 g     F .text	0000001e snprintf
+30015af0 g     F .text	00000022 sprintf
+30015b14 l     F .text	0000000c _fprintf_output_func
+30015b20 g     F .text	00000020 putchar
+30015b40 g     F .text	00000018 fputs
+30015b58 g     F .text	00000030 fwrite
+30015b88 g     F .text	00000026 getchar
+30015bb0 g     F .text	0000002c _printf
+30015bdc g     F .text	00000018 _vprintf
+30015bf4 g     F .text	0000003e memcmp
+30015c34 g     F .text	00000018 strchr
+30015c4c g     F .text	0000001c strcmp
+30015c68 g     F .text	00000020 strdup
+30015c88 g     F .text	00000062 strlcat
+30015cec g     F .text	00000044 strlcpy
+30015d30 g     F .text	00000018 strlen
+30015d48 g     F .text	0000001c strncpy
+30015d64 g     F .text	00000040 strncmp
+30015da4 g     F .text	00000044 strnlen
+30015de8 g     F .text	0000001c strrchr
+30015e04 g     F .text	0000003c strstr
+30015e40 l     F .text	00000748 MD5Transform
+30016588 g     F .text	00000118 md5
+300166a0 l     F .text	0000005a write_gpt_partition_array
+300166fc l     F .text	000000a6 mbr_fill_name
+300167a4 l     F .text	00000026 ptdev_verify_mbr_signature.part.0
+300167cc l     F .text	00000270 ptdev_parse_gpt_header.isra.2
+30016a3c l     F .text	00000756 restore_gpt
+30017194 l     F .text	00000b3a ptdev_read_gpt
+30017cd0 g     F .text	0000001a ptdev_get_partition_count
+30017cec g     F .text	0000001a ptdev_get_partition_entries
+30017d08 g     F .text	0000013e ptdev_read_table
+30017e48 g     F .text	00000098 ptdev_get_index
+30017ee0 g     F .text	0000004c ptdev_get_size
+30017f2c g     F .text	00000054 ptdev_get_offset
+30017f80 g     F .text	00000070 ptdev_dump
+30017ff0 l     F .text	0000056c write_gpt
+3001855c g     F .text	000004c0 ptdev_write_table
+30018a1c g     F .text	0000001c ptdev_setup
+30018a38 g     F .text	000000a4 ptdev_activate_slot
+30018adc g     F .text	00000116 ptdev_scan_for_multislot
+30018bf4 g     F .text	000000a0 ptdev_find_active_slot
+30018c94 g     F .text	0000001a ptdev_multislot_is_supported
+30018cb0 g     F .text	000001ac setup_storage_dev
+30018e5c g     F .text	00000058 memdisk_init
+30018eb4 g     F .text	00000020 memdisk_read
+30018ed4 g     F .text	00000036 memdisk_write
+30018f0c g     F .text	0000001e memdisk_erase
+30018f2c g     F .text	00000012 memdisk_get_capacity
+30018f40 g     F .text	0000000e memdisk_get_block_size
+30018f50 g     F .text	00000012 memdisk_release
+30018f64 l     F .text	0000016a mmc_write_zero.isra.0
+300190d0 g     F .text	0000005a mmc_init
+3001912c g     F .text	0000001e mmc_release
+3001914c g     F .text	00000020 mmc_get_block_size
+3001916c g     F .text	0000001c mmc_read
+30019188 g     F .text	0000001c mmc_write
+300191a4 g     F .text	0000001c mmc_switch_part
+300191c0 g     F .text	000001e4 mmc_erase
+300193a4 g     F .text	0000000e mmc_get_capacity
+300193b4 g     F .text	0000000a mmc_get_erase_group_size
+300193c0 g     F .text	0000004c ospi_init
+3001940c g     F .text	0000001e ospi_release
+3001942c g     F .text	00000006 ospi_get_block_size
+30019434 g     F .text	0000001c ospi_read
+30019450 g     F .text	0000001c ospi_write
+3001946c g     F .text	0000001c ospi_erase
+30019488 g     F .text	00000004 ospi_need_erase
+3001948c g     F .text	0000001c ospi_get_capacity
+300194a8 g     F .text	00000066 ospi_get_id
+30019510 g     F .text	00000008 ospi_get_erase_group_size
+30019518 l     F .text	000000c4 heap_insert_free_chunk
+300195dc g     F .text	000001b4 miniheap_alloc
+30019790 g     F .text	00000010 miniheap_free
+300197a0 g     F .text	00000040 miniheap_init
+300197e0 l     F .text	0000008c __debug_stdio_write
+3001986c l     F .text	0000001a __debug_stdio_read
+30019888 g     F .text	0000000e io_write
+30019898 g     F .text	0000000e io_read
+300198a8 g     F .text	00000034 cbuf_initialize
+300198dc g     F .text	00000024 cbuf_space_avail
+30019900 g     F .text	0000006e cbuf_write_char
+30019970 g     F .text	00000096 cbuf_read_char
+30019a08 g     F .text	00000000 .hidden __aeabi_drsub
+30019a10 g     F .text	0000027a .hidden __aeabi_dsub
+30019a10 g     F .text	0000027a .hidden __subdf3
+30019a14 g     F .text	00000276 .hidden __adddf3
+30019a14 g     F .text	00000276 .hidden __aeabi_dadd
+30019c8c g     F .text	0000001e .hidden __aeabi_ui2d
+30019c8c g     F .text	0000001e .hidden __floatunsidf
+30019cac g     F .text	00000022 .hidden __aeabi_i2d
+30019cac g     F .text	00000022 .hidden __floatsidf
+30019cd0 g     F .text	00000042 .hidden __aeabi_f2d
+30019cd0 g     F .text	00000042 .hidden __extendsfdf2
+30019d14 g     F .text	0000006a .hidden __aeabi_ul2d
+30019d14 g     F .text	0000006a .hidden __floatundidf
+30019d24 g     F .text	0000005a .hidden __aeabi_l2d
+30019d24 g     F .text	0000005a .hidden __floatdidf
+30019d80 g     F .text	00000000 .hidden __aeabi_ldivmod
+30019e20 g     F .text	00000000 .hidden __aeabi_uldivmod
+30019e50 g     F .text	00000142 .hidden __udivmoddi4
+30019f94  w    F .text	00000002 .hidden __aeabi_idiv0
+30019f94  w    F .text	00000002 .hidden __aeabi_ldiv0
+30019f98 l     F .text	00000008 __arm_context_switch_from_thumb
+30019fa0 l     F .text	00000008 __thread_preempt_from_arm
+30019fa8 g       .text	00000000 __exidx_start
+30019fa8 l    d  .ARM.exidx	00000000 .ARM.exidx
+30019fb0 g       .ARM.exidx	00000000 __exidx_end
+30019fb0 g       .rodata	00000000 __fault_handler_table_start
+30019fb0 g       .rodata	00000000 __rodata_start
+30019fb0 l    d  .rodata	00000000 .rodata
+30019fc8 g       .rodata	00000000 __fault_handler_table_end
+30019fe4 l     O .rodata	00000008 uart10_rx
+30019fe4 l     O .rodata	00000008 uart10_tx
+30019fe4 l       .rodata	00000000 .LANCHOR0
+3001a0b4 l     O .rodata	00000000 _cmd_list
+3001a50c l     O .rodata	00000014 g_racr_config
+3001a50c l       .rodata	00000000 .LANCHOR0
+3001a6ac l       .rodata	00000000 .LANCHOR26
+3001a6dc l     O .rodata	0000000e __func__.10016
+3001a6dc l       .rodata	00000000 .LANCHOR6
+3001a6ec l     O .rodata	0000000d __func__.10033
+3001a6ec l       .rodata	00000000 .LANCHOR7
+3001a6fc l     O .rodata	00000012 __func__.10044
+3001a6fc l       .rodata	00000000 .LANCHOR25
+3001a710 l     O .rodata	00000011 __func__.10052
+3001a710 l       .rodata	00000000 .LANCHOR2
+3001a724 l     O .rodata	0000000f __func__.9424
+3001a724 l       .rodata	00000000 .LANCHOR11
+3001a734 l     O .rodata	00000013 __func__.9446
+3001a734 l       .rodata	00000000 .LANCHOR29
+3001a748 l     O .rodata	00000016 __func__.9481
+3001a748 l       .rodata	00000000 .LANCHOR34
+3001a760 l     O .rodata	00000017 __func__.9488
+3001a760 l       .rodata	00000000 .LANCHOR40
+3001a778 l     O .rodata	0000001a __func__.9499
+3001a778 l       .rodata	00000000 .LANCHOR0
+3001a794 l     O .rodata	00000015 __func__.9533
+3001a794 l       .rodata	00000000 .LANCHOR32
+3001a7ac l     O .rodata	00000019 __func__.9566
+3001a7ac l       .rodata	00000000 .LANCHOR15
+3001a7c8 l     O .rodata	00000010 __func__.9588
+3001a7c8 l       .rodata	00000000 .LANCHOR37
+3001a7d8 l     O .rodata	00000016 __func__.9607
+3001a7d8 l       .rodata	00000000 .LANCHOR36
+3001a7f0 l     O .rodata	0000000a __func__.9623
+3001a7f0 l       .rodata	00000000 .LANCHOR1
+3001a7fc l     O .rodata	0000000b __func__.9634
+3001a7fc l       .rodata	00000000 .LANCHOR35
+3001a808 l     O .rodata	00000010 __func__.9655
+3001a808 l       .rodata	00000000 .LANCHOR33
+3001a818 l     O .rodata	00000017 __func__.9675
+3001a818 l       .rodata	00000000 .LANCHOR38
+3001a830 l     O .rodata	0000000e __func__.9691
+3001a830 l       .rodata	00000000 .LANCHOR39
+3001a840 l     O .rodata	00000015 __func__.9768
+3001a840 l       .rodata	00000000 .LANCHOR5
+3001a858 l     O .rodata	0000000f __func__.9789
+3001a858 l       .rodata	00000000 .LANCHOR41
+3001a868 l     O .rodata	00000019 __func__.9802
+3001a868 l       .rodata	00000000 .LANCHOR13
+3001a884 l     O .rodata	00000016 __func__.9821
+3001a884 l       .rodata	00000000 .LANCHOR14
+3001a89c l     O .rodata	0000000c __func__.9828
+3001a89c l       .rodata	00000000 .LANCHOR8
+3001a8a8 l     O .rodata	0000000d __func__.9834
+3001a8a8 l       .rodata	00000000 .LANCHOR9
+3001a8b8 l     O .rodata	0000000e __func__.9855
+3001a8b8 l       .rodata	00000000 .LANCHOR20
+3001a8c8 l     O .rodata	00000017 __func__.9872
+3001a8c8 l       .rodata	00000000 .LANCHOR22
+3001a8e0 l     O .rodata	00000010 __func__.9888
+3001a8e0 l       .rodata	00000000 .LANCHOR21
+3001a8f0 l     O .rodata	0000000b __func__.9898
+3001a8f0 l       .rodata	00000000 .LANCHOR23
+3001a8fc l     O .rodata	0000000f __func__.9906
+3001a8fc l       .rodata	00000000 .LANCHOR19
+3001a90c l     O .rodata	00000014 __func__.9930
+3001a90c l       .rodata	00000000 .LANCHOR18
+3001a920 l     O .rodata	0000000f __func__.9947
+3001a920 l       .rodata	00000000 .LANCHOR30
+3001a930 l     O .rodata	00000017 __func__.9957
+3001a930 l       .rodata	00000000 .LANCHOR31
+3001a948 l     O .rodata	00000050 _cmd_list
+3001b8d4 l     O .rodata	00000064 err_info
+3001b8d4 l       .rodata	00000000 .LANCHOR12
+3001bf24 l     O .rodata	0000000d __func__.5839
+3001bf24 l       .rodata	00000000 .LANCHOR1
+3001bf34 l     O .rodata	00000400 crc32_table_sfs
+3001bf34 l       .rodata	00000000 .LANCHOR0
+3001c3a4 l     O .rodata	0000000a __func__.5933
+3001c3a4 l       .rodata	00000000 .LANCHOR0
+3001c3b0 l     O .rodata	00000014 __func__.5998
+3001c3b0 l       .rodata	00000000 .LANCHOR1
+3001c6fc l     O .rodata	0000000f __func__.5786
+3001c6fc l       .rodata	00000000 .LANCHOR0
+3001c70c l     O .rodata	00000020 _cmd_list
+3001c740 l     O .rodata	00000020 ecc_v
+3001c740 l       .rodata	00000000 .LANCHOR1
+3001c788 l     O .rodata	0000000d __PRETTY_FUNCTION__.7696
+3001c788 l       .rodata	00000000 .LANCHOR3
+3001c7c8 l     O .rodata	00000114 gicd_itargetsr
+3001c7c8 l       .rodata	00000000 .LANCHOR2
+3001cd50 l     O .rodata	00000013 __func__.8629
+3001cd50 l       .rodata	00000000 .LANCHOR0
+3001d824 l     O .rodata	00000020 taac_unit
+3001d824 l       .rodata	00000000 .LANCHOR1
+3001d844 l     O .rodata	00000040 taac_value
+3001d844 l       .rodata	00000000 .LANCHOR2
+3001d884 l     O .rodata	00000020 xfer_rate_unit
+3001d884 l       .rodata	00000000 .LANCHOR4
+3001d8a4 l     O .rodata	00000040 xfer_rate_value
+3001d8a4 l       .rodata	00000000 .LANCHOR3
+3001d8e4 l     O .rodata	00000014 PIN_MAX_NUMBER
+3001d8e4 l       .rodata	00000000 .LANCHOR6
+3001d8f8 l     O .rodata	00000138 scr_mshc2_canfd_signals
+3001d8f8 l       .rodata	00000000 .LANCHOR5
+3001da30 l     O .rodata	00000048 scr_safety_mux1_signals
+3001da30 l       .rodata	00000000 .LANCHOR3
+3001da78 l     O .rodata	00000090 scr_safety_mux_signals
+3001da78 l       .rodata	00000000 .LANCHOR1
+3001db08 l     O .rodata	000000a8 scr_sec_mux2_signals
+3001db08 l       .rodata	00000000 .LANCHOR2
+3001dbb0 l     O .rodata	00000150 scr_sec_mux_signals
+3001dbb0 l       .rodata	00000000 .LANCHOR0
+3001e4d0 l       .rodata	00000000 .LANCHOR0
+3001e730 l     O .rodata	0000000c __func__.8051
+3001e730 l       .rodata	00000000 .LANCHOR2
+3001eba0 l     O .rodata	00000014 g_clk_select
+3001eba0 l       .rodata	00000000 .LANCHOR0
+3001ec3c l     O .rodata	00000068 s_ClkgenDrvInterface
+3001ec3c l       .rodata	00000000 .LANCHOR3
+3001ee24 l     O .rodata	00000013 __FUNCTION__.9401
+3001ee24 l       .rodata	00000000 .LANCHOR0
+3001ef8c l     O .rodata	000007a8 Port_kConfiguration
+3001ef8c l       .rodata	00000000 .LANCHOR2
+3001f7ec l       .rodata	00000000 .LANCHOR1
+3001f85c l     O .rodata	00000024 addrmap_tab
+3001f85c l       .rodata	00000000 .LANCHOR3
+3001f880 g     O .rodata	00000014 g_ce_mem_res
+3001f894 g     O .rodata	00000018 g_ce_reg_res
+3001f8ac g     O .rodata	000001f8 g_ckgen_res
+3001faa4 g     O .rodata	00000008 g_cssys_res
+3001faac g     O .rodata	00000008 g_ddr_cfg_res
+3001fab4 g     O .rodata	0000001c g_ddr_res
+3001fad0 g     O .rodata	00000008 g_disp_mux_res
+3001fad8 g     O .rodata	00000008 g_dma_mux_res
+3001fae0 g     O .rodata	00000008 g_dma_res
+3001fae8 g     O .rodata	00000008 g_efuse_res
+3001faf0 g     O .rodata	00000008 g_ftbu_res
+3001faf8 g     O .rodata	00000008 g_gic_res
+3001fb00 g     O .rodata	00000008 g_gpio_res
+3001fb08 g     O .rodata	00000018 g_gpv_res
+3001fb20 g     O .rodata	00000008 g_gpv_sec_m_reg_res
+3001fb28 g     O .rodata	00000010 g_i2c_res
+3001fb38 g     O .rodata	00000384 g_iomuxc_res
+3001febc g     O .rodata	00000008 g_mac_res
+3001fec4 g     O .rodata	00000008 g_mb_res
+3001fecc g     O .rodata	00000010 g_mshc_res
+3001fedc g     O .rodata	0000000c g_ospi_reg_res
+3001fee8 g     O .rodata	0000000c g_ospi_res
+3001fef4 g     O .rodata	00000014 g_platform_res
+3001ff08 g     O .rodata	00000008 g_pll_res
+3001ff10 l     O .rodata	00000138 g_res_cat
+3001ff10 l       .rodata	00000000 .LANCHOR2
+30020048 g     O .rodata	00000008 g_romc_reg_res
+30020050 g     O .rodata	00000008 g_romc_res
+30020058 g     O .rodata	0000006c g_rstgen_res
+300200c4 g     O .rodata	00000008 g_scr_hpi_res
+300200cc g     O .rodata	00000150 g_scr_res
+3002021c g     O .rodata	00000008 g_sec_storage_res
+30020224 g     O .rodata	00000008 g_spi_res
+3002022c g     O .rodata	0000000c g_sys_cnt_res
+30020238 g     O .rodata	00000008 g_timer_res
+30020240 g     O .rodata	0000000c g_uart_res
+3002024c g     O .rodata	00000008 g_usb_res
+30020254 g     O .rodata	00000008 g_usbphy_res
+3002025c g     O .rodata	0000000c g_watchdog_res
+30020268 g     O .rodata	00000008 g_xtal_res
+30020270 g     O .rodata	00000024 mem_info_ce_mem
+30020294 g     O .rodata	00000034 mem_info_ddr
+300202c8 g     O .rodata	0000000c mem_info_dma
+300202d4 g     O .rodata	0000000c mem_info_gic
+300202e0 g     O .rodata	0000000c mem_info_mac
+300202ec g     O .rodata	0000000c mem_info_mb
+300202f8 g     O .rodata	0000001c mem_info_mshc
+30020314 g     O .rodata	00000014 mem_info_ospi
+30020328 g     O .rodata	00000024 mem_info_platform
+3002034c g     O .rodata	0000000c mem_info_romc
+30020358 l     O .rodata	0000003c s_RstgenDrvInterface
+30020358 l       .rodata	00000000 .LANCHOR2
+3002044c l     O .rodata	00000060 timer_addr2irq_table
+3002044c l       .rodata	00000000 .LANCHOR2
+300204ac l     O .rodata	00000080 uart_addr2irq_table
+300204ac l       .rodata	00000000 .LANCHOR2
+30020548 l     O .rodata	00000009 cfg_descr
+30020570 l     O .rodata	0000000a devqual_descr
+30020668 l     O .rodata	00000004 langid
+3002066c l     O .rodata	00000014 __FUNCTION__.5420
+3002066c l       .rodata	00000000 .LANCHOR1
+300206cc l     O .rodata	0000005c g_watchdog_res_capability
+300206cc l       .rodata	00000000 .LANCHOR3
+30020728 l     O .rodata	0000006c s_WdgDrvInterface
+30020728 l       .rodata	00000000 .LANCHOR2
+30020794 l     O .rodata	00000020 _cmd_list
+300209a4 l     O .rodata	00000000 _cmd_list
+300209a4 l     O .rodata	00000014 __FUNCTION__.7825
+300209a4 l       .rodata	00000000 .LANCHOR1
+300209b8 l     O .rodata	0000000d __FUNCTION__.7844
+300209b8 l       .rodata	00000000 .LANCHOR5
+30020b50 l     O .rodata	00000400 crc_table
+30020b50 l       .rodata	00000000 .LANCHOR0
+30020f50 l     O .rodata	00000000 _cmd_list
+30020f60 l     O .rodata	0000000d __PRETTY_FUNCTION__.7814
+30020f60 l       .rodata	00000000 .LANCHOR0
+30020f90 l     O .rodata	00000030 _cmd_list
+300210a0 l     O .rodata	0000000d __func__.7751
+300210a0 l       .rodata	00000000 .LANCHOR4
+300210b0 l     O .rodata	0000000c __func__.7757
+300210b0 l       .rodata	00000000 .LANCHOR0
+300210bc l     O .rodata	00000004 cfg_str
+300210bc l       .rodata	00000000 .LANCHOR5
+30021178 l     O .rodata	0000000a manufacturer
+30021178 l       .rodata	00000000 .LANCHOR1
+30021184 l     O .rodata	00000003 product
+30021184 l       .rodata	00000000 .LANCHOR2
+300211d4 l     O .rodata	00000010 hextable
+300211d4 l       .rodata	00000000 .LANCHOR1
+300211e4 l     O .rodata	00000010 hextable_caps
+300211e4 l       .rodata	00000000 .LANCHOR0
+300211f4 l     O .rodata	0000000c __func__.6036
+300211f4 l       .rodata	00000000 .LANCHOR0
+30021200 l     O .rodata	00000014 __func__.6064
+30021200 l       .rodata	00000000 .LANCHOR3
+30021214 l     O .rodata	0000000f __func__.6106
+30021214 l       .rodata	00000000 .LANCHOR2
+30021bd0 l     O .rodata	00000010 sub_part_guid
+30021bd0 l       .rodata	00000000 .LANCHOR1
+30021eb4 l     O .rodata	0000000f __func__.5911
+30021eb4 l       .rodata	00000000 .LANCHOR0
+30021ec4 l     O .rodata	0000000a __func__.5926
+30021ec4 l       .rodata	00000000 .LANCHOR1
+30022030 l     O .rodata	0000000a __PRETTY_FUNCTION__.7716
+30022030 l       .rodata	00000000 .LANCHOR1
+30022070 l     O .rodata	00000008 console_io_hooks
+30022078 g       .apps	00000000 __apps_start
+30022078 g       .apps	00000000 __drivers
+30022078 g       .apps	00000000 __drivers_end
+30022078 g     O .apps	00000014 _app_shell
+30022078 l    d  .apps	00000000 .apps
+3002208c g     O .apps	00000014 _app_dloader
+300220a0 g       .apps	00000000 __apps_end
+300220a0 g       .lk_init	00000000 __lk_init
+300220a0 g     O .lk_init	00000010 _init_struct_arm_gic_resume_cpu
+300220a0 l    d  .lk_init	00000000 .lk_init
+300220b0 g     O .lk_init	00000010 _init_struct_arm_gic_suspend_cpu
+300220c0 g     O .lk_init	00000010 _init_struct_arm_gic_init_percpu
+300220d0 g     O .lk_init	00000010 _init_struct_cospi
+300220e0 g     O .lk_init	00000010 _init_struct_novm
+300220f0 g       .early_copy	00000000 __earlycopy_start
+300220f0 g       .lk_init	00000000 __lk_init_end
+300220f0 l    d  .early_copy	00000000 .early_copy
+300220fc g       .early_copy	00000000 __earlycopy_end
+300220fc g       .early_copy	00000000 __rodata_end
+30022100 g       .data	00000000 __data_start
+30022100 g       .data	00000000 __data_start_rom
+30022100 g     O .data	00000000 __arm_in_handler
+30022100 l    d  .data	00000000 .data
+30022104 l       .data	00000000 .LANCHOR24
+30022104 l     O .data	00000010 mmc_cfg
+30022114 l       .data	00000000 .LANCHOR28
+30022114 l     O .data	0000000c ospi_cfg
+30022120 l     O .data	00000010 sd_mmc_cfg
+30022130 l       .data	00000000 .LANCHOR4
+30022130 l     O .data	000006c0 storage_dl_state
+300227f0 l       .data	00000000 .LANCHOR7
+300227f0 l     O .data	00000004 run_in_domain
+300227f4 g     O .data	00002970 x9_pins
+30025168 g     O .data	000000a0 g_mmc_priv_res
+30025168 l       .data	00000000 .LANCHOR0
+30025208 g     O .data	00000018 sdhci_dwcmshc_ops
+30025208 l       .data	00000000 .LANCHOR1
+30025220 g     O .data	00000038 mem_info_init
+30025220 l       .data	00000000 .LANCHOR0
+30025258 l       .data	00000000 .LANCHOR0
+30025258 l     O .data	00000030 s_spi_nor_priv_res
+30025288 g     O .data	0000000c usb_irq
+30025288 l       .data	00000000 .LANCHOR1
+30025294 l       .data	00000000 .LANCHOR3
+30025294 l     O .data	00000054 config
+300252e8 l       .data	00000000 .LANCHOR2
+300252e8 l     O .data	00000012 usb_str_os
+300252fc l       .data	00000000 .LANCHOR4
+300252fc l     O .data	000000d8 spi_nor_ids
+300253e0 g     O .data	00000020 training_pattern
+300253e0 l       .data	00000000 .LANCHOR2
+30025400 l       .data	00000000 .LANCHOR1
+30025400 l     O .data	00000024 bdevs
+30025424 l       .data	00000000 .LANCHOR0
+30025424 l     O .data	00000001 echo
+30025428 g     O .data	00000008 delayed_free_list
+30025428 l       .data	00000000 .LANCHOR1
+30025430  w    O .data	0000000c __stdio_FILEs
+3002543c g     O .data	00000008 suffix_slot
+3002543c l       .data	00000000 .LANCHOR0
+30025444 g     O .data	00000004 memdisk_name
+30025444 l       .data	00000000 .LANCHOR0
+30025448 g     O .data	00000008 console_io
+30025450 l       .data	00000000 .LANCHOR0
+30025450 l     O .data	00000008 print_callbacks
+30025458 g       .commands	00000000 __commands_start
+30025458 g     O .commands	0000000c _cmd_block_dcc
+30025458 l    d  .commands	00000000 .commands
+30025464 g     O .commands	0000000c _cmd_block_dloader
+30025470 g     O .commands	0000000c _cmd_block_fuse
+3002547c g     O .commands	0000000c _cmd_block_kernel
+30025488 g     O .commands	0000000c _cmd_block_platform_power
+30025494 g     O .commands	0000000c _cmd_block_crc
+300254a0 g     O .commands	0000000c _cmd_block_help
+300254ac g       .commands	00000000 __commands_end
+300254ac g       .commands	00000000 __ctor_end
+300254ac g       .commands	00000000 __ctor_list
+300254ac g       .commands	00000000 __data_end
+300254ac g       .commands	00000000 __devices
+300254ac g       .commands	00000000 __devices_end
+300254ac g       .commands	00000000 __dtor_end
+300254ac g       .commands	00000000 __dtor_list
+30025800 g       .nocache	00000000 _nocacheable_start
+30025800 l    d  .nocache	00000000 .nocache
+30025800 l       .nocache	00000000 .LANCHOR0
+30025800 l     O .nocache	00000001 i.5730
+30025802 l     O .nocache	00000002 i.5732
+30025804 l       .nocache	00000000 .LANCHOR4
+30025804 l     O .nocache	00000017 fs_if_descriptor
+3002581c l     O .nocache	00000017 hs_if_descriptor
+30025834 l     O .nocache	00000012 dev_descr
+30025848 l       .nocache	00000000 .LANCHOR0
+30025848 l     O .nocache	00000028 ext_comp_desc
+30025870 l     O .nocache	00000044 ext_prop_desc
+30025c00 g       .bss	00000000 __bss_start
+30025c00 g       .nocache	00000000 _nocacheable_end
+30025c00 l       .bss	00000000 .LANCHOR1
+30025c00 l    d  .bss	00000000 .bss
+30025c00 l     O .bss	00000004 uart_handle
+30025c04 l       .bss	00000000 .LANCHOR0
+30025c04 l     O .bss	00000030 uart_rx_buf
+30025c34 g     O .bss	0000000c timer_context
+30025c34 l       .bss	00000000 .LANCHOR0
+30025c40 l       .bss	00000000 .LANCHOR1
+30025c40 l     O .bss	00000004 timer_handle
+30025c60 g     O .bss	00001000 abort_stack
+30026c60 g     O .bss	00000010 lk_boot_args
+30026c60 l       .bss	00000000 .LANCHOR0
+30026c70 l       .bss	00000000 .LANCHOR3
+30026c70 l     O .bss	00000004 current_dl_state
+30026c74 l       .bss	00000000 .LANCHOR16
+30026c74 l     O .bss	00000001 do_md5_check
+30026c78 l       .bss	00000000 .LANCHOR10
+30026c78 l     O .bss	00000040 err_response.9422
+30026cb8 l       .bss	00000000 .LANCHOR27
+30026cb8 l     O .bss	00000040 max_download_size.9967
+30026cf8 l       .bss	00000000 .LANCHOR17
+30026cf8 l     O .bss	00000010 md5_received
+30026d08 l       .bss	00000000 .LANCHOR0
+30026d08 l     O .bss	00000100 int_handler_table_per_cpu
+30026e08 l       .bss	00000000 .LANCHOR1
+30026e08 l     O .bss	00000790 int_handler_table_shared
+30027598 l       .bss	00000000 .LANCHOR4
+30027598 l     O .bss	00000004 Port_kConfigPtr
+3002759c l       .bss	00000000 .LANCHOR8
+3002759c l     O .bss	00000010 g_port_handle
+300275ac g     O .bss	00000004 g_dummy
+300275ac l       .bss	00000000 .LANCHOR0
+300275b0 l       .bss	00000000 .LANCHOR1
+300275b0 l     O .bss	000000d0 s_cospi
+30027680 l     O .bss	00002000 event_buff
+30029680 l       .bss	00000000 .LANCHOR0
+30029680 l     O .bss	00000670 g_usbc
+30029d00 l       .bss	00000000 .LANCHOR1
+30029d00 l     O .bss	00000800 setup_buff
+3002a500 l       .bss	00000000 .LANCHOR1
+3002a500 l     O .bss	00000020 g_tsr
+3002a520 l       .bss	00000000 .LANCHOR1
+3002a520 l     O .bss	00000001 dcf_inited
+3002a524 l       .bss	00000000 .LANCHOR0
+3002a524 l     O .bss	00000004 mbox_handle
+3002a528 l       .bss	00000000 .LANCHOR0
+3002a528 l     O .bss	00000040 sem_handle
+3002a568 l       .bss	00000000 .LANCHOR1
+3002a568 l     O .bss	00000ef4 total_signals
+3002b45c g     O .bss	00000004 clkgen_spin_lock
+3002b45c l       .bss	00000000 .LANCHOR2
+3002b460 l       .bss	00000000 .LANCHOR0
+3002b460 l     O .bss	00000024 g_ClkgenInstance
+3002b484 g     O .bss	00000004 spin_lock_states
+3002b484 l       .bss	00000000 .LANCHOR1
+3002b488 l       .bss	00000000 .LANCHOR0
+3002b488 l     O .bss	00000001 initialized.7480
+3002b4a0 l       .bss	00000000 .LANCHOR3
+3002b4a0 l     O .bss	00000200 local_buf
+3002b6a0 l       .bss	00000000 .LANCHOR2
+3002b6a0 l     O .bss	00000740 s_mmc_dev
+3002bde0 l       .bss	00000000 .LANCHOR1
+3002bde0 l     O .bss	000000a0 s_mmc_handle
+3002be80 l       .bss	00000000 .LANCHOR2
+3002be80 l     O .bss	00000004 g_handle.9435
+3002be84 g     O .bss	00000004 port_spin_lock
+3002be84 l       .bss	00000000 .LANCHOR0
+3002be88 l       .bss	00000000 .LANCHOR1
+3002be88 l     O .bss	00000010 s_port_handle
+3002be98 l       .bss	00000000 .LANCHOR1
+3002be98 l     O .bss	00000044 g_RstgenInstance
+3002bedc g     O .bss	00000004 rstgen_spin_lock
+3002bedc l       .bss	00000000 .LANCHOR0
+3002bee0 l       .bss	00000000 .LANCHOR4
+3002bee0 l     O .bss	00000100 local_buf
+3002bfe0 l       .bss	00000000 .LANCHOR3
+3002bfe0 l     O .bss	00000140 s_spi_nor_dev
+3002c120 l       .bss	00000000 .LANCHOR1
+3002c120 l     O .bss	00000058 s_spi_nor_handle
+3002c178 g     O .bss	00000004 spi_nor_spin_lock
+3002c178 l       .bss	00000000 .LANCHOR2
+3002c17c g     O .bss	000003c0 g_timer_instance
+3002c17c l       .bss	00000000 .LANCHOR1
+3002c53c g     O .bss	00000004 timer_spin_lock
+3002c53c l       .bss	00000000 .LANCHOR0
+3002c540 g     O .bss	00000340 g_uart_instance
+3002c540 l       .bss	00000000 .LANCHOR1
+3002c880 g     O .bss	00000004 uart_spin_lock
+3002c880 l       .bss	00000000 .LANCHOR0
+3002c884 l       .bss	00000000 .LANCHOR0
+3002c884 l     O .bss	00000004 cmdlist
+3002c8a0 g     O .bss	00000200 fb_cmd_buf
+3002c8a0 l       .bss	00000000 .LANCHOR2
+3002caa0 l       .bss	00000000 .LANCHOR1
+3002caa0 l     O .bss	00000004 varlist
+3002caa4 l       .bss	00000000 .LANCHOR1
+3002caa4 l     O .bss	000003a0 g_WdgInstance
+3002ce44 g     O .bss	00000004 wdg_spin_lock
+3002ce44 l       .bss	00000000 .LANCHOR0
+3002ce48 l       .bss	00000000 .LANCHOR0
+3002ce48 l     O .bss	00000008 last_idle_time.7540
+3002ce50 l       .bss	00000000 .LANCHOR1
+3002ce50 l     O .bss	00000030 old_stats.7539
+3002ce80 l       .bss	00000000 .LANCHOR2
+3002ce80 l     O .bss	00000001 showthreadload.7555
+3002ce84 l       .bss	00000000 .LANCHOR3
+3002ce84 l     O .bss	0000001c tltimer.7556
+3002cea0 l       .bss	00000000 .LANCHOR0
+3002cea0 l     O .bss	00000188 _idle_thread
+3002d028 l       .bss	00000000 .LANCHOR4
+3002d028 l     O .bss	0000001c preempt_timer
+3002d044 l       .bss	00000000 .LANCHOR3
+3002d044 l     O .bss	00000100 run_queue
+3002d144 l       .bss	00000000 .LANCHOR2
+3002d144 l     O .bss	00000004 run_queue_bitmap
+3002d148 l       .bss	00000000 .LANCHOR6
+3002d148 l     O .bss	00000008 thread_list
+3002d150 g     O .bss	00000004 thread_lock
+3002d150 l       .bss	00000000 .LANCHOR5
+3002d158 g     O .bss	00000030 thread_stats
+3002d158 l       .bss	00000000 .LANCHOR1
+3002d188 g     O .bss	00000004 timer_lock
+3002d188 l       .bss	00000000 .LANCHOR1
+3002d1a0 l       .bss	00000000 .LANCHOR0
+3002d1a0 l     O .bss	00000020 timers
+3002d1c0 l       .bss	00000000 .LANCHOR0
+3002d1c0 l     O .bss	00000008 write_port_list
+3002d1c8 l       .bss	00000000 .LANCHOR3
+3002d1c8 l     O .bss	00000008 devid
+3002d1e0 g     O .bss	00000020 training_buf
+3002d1e0 l       .bss	00000000 .LANCHOR0
+3002d200 g     O .bss	00000038 arena
+3002d200 l       .bss	00000000 .LANCHOR0
+3002d238 l       .bss	00000000 .LANCHOR1
+3002d238 l     O .bss	00000600 mem_allocation_map.7677
+3002d838 l       .bss	00000000 .LANCHOR6
+3002d838 l     O .bss	00000001 abort_script
+3002d83c l       .bss	00000000 .LANCHOR1
+3002d83c l     O .bss	00000004 command_list
+3002d840 l       .bss	00000000 .LANCHOR5
+3002d840 l     O .bss	00000004 command_lock
+3002d844 l       .bss	00000000 .LANCHOR3
+3002d844 l     O .bss	00000004 debug_buffer
+3002d848 l       .bss	00000000 .LANCHOR4
+3002d848 l     O .bss	00000004 history
+3002d84c l       .bss	00000000 .LANCHOR2
+3002d84c l     O .bss	00000004 history_next
+3002d850 g     O .bss	00000004 lastresult
+3002d850 l       .bss	00000000 .LANCHOR7
+3002d854 l       .bss	00000000 .LANCHOR3
+3002d854 l     O .bss	00000011 serialno.7748
+3002d868 g     O .bss	00000004 delayed_free_lock
+3002d868 l       .bss	00000000 .LANCHOR0
+3002d86c l       .bss	00000000 .LANCHOR0
+3002d86c l     O .bss	00000004 _errno
+3002d870 l       .bss	00000000 .LANCHOR1
+3002d870 l     O .bss	00000008 boot_slot_index
+3002d878 l       .bss	00000000 .LANCHOR0
+3002d878 l     O .bss	00000050 theheap
+3002d8c8 g     O .bss	00001000 log_buf
+3002e8c8 g     O .bss	00000004 log_buf_index
+3002e8c8 l       .bss	00000000 .LANCHOR1
+3002e8cc g       *ABS*	00000000 __LMA_tcm
+3002e8cc g       .bss	00000000 __bss_end
+3002e8cc g       .bss	00000000 _end
+30600000 g       .bss	00000000 _end_of_ram
+lk_customize/build-dloader_d9_ref/lk.elf:     file format elf32-littlearm
+SYMBOL TABLE:

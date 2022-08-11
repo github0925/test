@@ -1,0 +1,105 @@
+/*!
+ * The Clear BSD License
+ * Copyright (c) 2016, Freescale Semiconductor, Inc.
+ * Copyright 2016-2017 NXP
+ * All rights reserved.
+ *
+ *
+ * Redistribution and use in source and binary forms, with or without modification,
+ * are permitted (subject to the limitations in the disclaimer below) provided
+ * that the following conditions are met:
+ *
+ * o Redistributions of source code must retain the above copyright notice, this list
+ *   of conditions and the following disclaimer.
+ *
+ * o Redistributions in binary form must reproduce the above copyright notice, this
+ *   list of conditions and the following disclaimer in the documentation and/or
+ *   other materials provided with the distribution.
+ *
+ * o Neither the name of the copyright holder nor the names of its
+ *   contributors may be used to endorse or promote products derived from this
+ *   software without specific prior written permission.
+ *
+ * NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE GRANTED BY THIS LICENSE.
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+ * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+ * WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
+ * ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
+ * ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+program TempAlarm
+
+type SensorAddress = uint8
+
+struct SensorReadResult
+{
+    SensorAddress address
+    float temp
+}
+
+struct AlarmInfo
+{
+    float temp
+    bool enabled
+}
+
+struct SensorInfo
+{
+    SensorAddress address
+    float readInterval //!< Seconds, default 1s.
+    AlarmInfo highAlarm
+    AlarmInfo lowAlarm
+}
+
+enum AlarmType
+{
+    kHighAlarm,
+    kLowAlarm,
+    kBothAlarms, //!< Only used for enable/disable.
+}
+
+type SensorInfoList = list<SensorInfo>
+type SavedState = binary
+
+//! Calls from Linux to M4.
+interface Temp
+{
+    add_sensor(SensorAddress address) -> bool
+    remove_sensor(SensorAddress address) -> bool
+
+    set_interval(SensorAddress address, float interval) -> bool
+
+    set_alarm(SensorAddress address, AlarmType alarmType, float alarmTemp) -> bool
+    enable_alarm(SensorAddress address, AlarmType alarmType) -> bool
+    disable_alarm(SensorAddress address, AlarmType alarmType) -> bool
+
+    get_one_sensor(SensorAddress address) -> SensorInfo
+    //get_all_sensors_a(out SensorInfoList infos @length(count), out uint32 count, ) -> bool
+    get_all_sensors_b() -> SensorInfoList
+
+    save_settings() -> SavedState
+    load_settings(SavedState savedState) -> bool
+
+    //! Reads one sensor synchronously.
+    read_one_sensor(SensorAddress address) -> float
+
+    //! Sends read_results() asynchronously.
+    read_sensors(list<SensorAddress> addresses @length(count), uint32 count) -> bool
+}
+
+//! Asynchronous events from M4 to Linux.
+interface TempAsync
+{
+    //! Void return so we can verify the message was received.
+    alarm_fired(SensorAddress addr, float temp) -> void
+
+    //! Oneway since it's less important than an alarm.
+    oneway read_results(list<SensorReadResult> results @length(count), uint32 count)
+}
+

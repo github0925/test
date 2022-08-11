@@ -1,0 +1,56 @@
+
+#include <per/per_disp.h>
+#include <module_helper_hal_internal.h>
+#include <pll_init.h>
+/*init*/
+static struct res_handle_item sx_s2[] = {
+    {RSTGEN_ID_MODULE_LVDS_SS, RST_RELEASE},
+    {RSTGEN_ID_MODULE_DC1, RST_RELEASE},
+    {RSTGEN_ID_MODULE_DC2, RST_RELEASE},
+    {RSTGEN_ID_MODULE_DC3, RST_RELEASE},
+    {RSTGEN_ID_MODULE_DC4, RST_RELEASE},
+    {RSTGEN_ID_MODULE_DC5, RST_RELEASE},
+    {RSTGEN_ID_MODULE_DP1, RST_RELEASE},
+    {RSTGEN_ID_MODULE_DP2, RST_RELEASE},
+    {RSTGEN_ID_MODULE_DP3, RST_RELEASE},
+    {RSTGEN_ID_MODULE_DISP_MUX, RST_RELEASE},
+    {CLK_ID_PLL_DISP_ROOT, PLL_DISP_ROOT},
+    {CLK_ID_PLL_DISP_DIVA, PLL_DISP_DIV_A},
+    {CLK_ID_PLL_DISP_DIVB, PLL_DISP_DIV_B},
+    {CLK_ID_PLL_LVDS1_ROOT, PLL_LVDS1_ROOT},
+    {CLK_ID_PLL_LVDS1_DIVA, PLL_LVDS1_DIV_A},
+    {CLK_ID_PLL_LVDS1_DIVB, PLL_LVDS1_DIV_B},
+    {CLK_ID_PLL_LVDS2_ROOT, PLL_LVDS2_ROOT},
+    {CLK_ID_PLL_LVDS2_DIVA, PLL_LVDS2_DIV_A},
+    {CLK_ID_PLL_LVDS2_DIVB, PLL_LVDS2_DIV_B},
+    {CLK_ID_PLL_LVDS3_ROOT, PLL_LVDS3_ROOT},
+    {CLK_ID_PLL_LVDS3_DIVA, PLL_LVDS3_DIV_A},
+    {CLK_ID_PLL_LVDS3_DIVB, PLL_LVDS3_DIV_B},
+    {CLK_ID_PLL_LVDS4_ROOT, PLL_LVDS4_ROOT},
+    {CLK_ID_PLL_LVDS4_DIVA, PLL_LVDS4_DIV_A},
+    {CLK_ID_PLL_LVDS4_DIVB, PLL_LVDS4_DIV_B},
+
+    NULL_RES_HANDLE_ITEM,
+};
+
+/*uninit*/
+static struct res_handle_item sx_s0[] = {
+    {RSTGEN_ID_MODULE_DISP_MUX, RST_HOLD},
+    {RSTGEN_ID_MODULE_LVDS_SS, RST_HOLD},
+    NULL_RES_HANDLE_ITEM,
+};
+
+struct res_handle_item
+    *per_disp_state_table[MAX_DISP_STATE][MAX_DISP_STATE] = {
+    /*SYS_S0    SYS_S1  SYS_S2i1    SYS_S2*/
+    /*SYS_S0*/{&sx_s0[0], NULL, NULL, &sx_s2[0]},
+    /*SYS_S1*/{&sx_s0[0], NULL, NULL, &sx_s2[0]},
+    /*SYS_S2i1*/{&sx_s0[0], NULL, NULL, &sx_s2[0]},
+    /*SYS_S2*/{&sx_s0[0], NULL, NULL, NULL},
+};
+
+static void per_disp_state_init(void)
+{
+}
+
+

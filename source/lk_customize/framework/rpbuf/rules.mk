@@ -1,0 +1,11 @@
+LOCAL_DIR := $(GET_LOCAL_DIR)
+MODULE := $(LOCAL_DIR)
+
+GLOBAL_INCLUDES := \
+	$(LOCAL_DIR)/include/ $(GLOBAL_INCLUDES) \
+
+GLOBAL_DEFINES += CONFIG_ENABLE_RPBUF=1
+MODULE_SRCS += \
+	$(LOCAL_DIR)/rpbuf_core.c
+
+include make/module.mk

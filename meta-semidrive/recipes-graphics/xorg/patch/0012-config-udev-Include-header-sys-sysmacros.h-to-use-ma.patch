@@ -1,0 +1,49 @@
+From 8d8451258681fed8f04024aa2a40b709c14f4cd5 Mon Sep 17 00:00:00 2001
+From: Manoj Gupta <manojgupta@chromium.org>
+Date: Tue, 13 Nov 2018 11:35:25 -0800
+Subject: [PATCH 12/12] config/udev: Include header <sys/sysmacros.h> to use
+ major/minor
+
+glibc 2.25 has dropped sys/sysmacros.h from sys/types.h, so add
+it explicitly in config/udev.c.
+
+This is similar to the commit 84e3b96b531363e47f6789aacfcae4aa60135e2e
+
+Signed-off-by: Manoj Gupta <manojgupta@chromium.org>
+Reviewed-by: Adam Jackson <ajax@redhat.com>
+---
+ config/udev.c           | 4 ++++
+ include/dix-config.h.in | 3 +++
+ 2 files changed, 7 insertions(+)
+
+diff --git a/config/udev.c b/config/udev.c
+index 3a73189..51adba2 100644
+--- a/config/udev.c
++++ b/config/udev.c
+@@ -39,6 +39,10 @@
+ #include "globals.h"
+ #include "systemd-logind.h"
+ 
++#ifdef HAVE_SYS_SYSMACROS_H
++#include <sys/sysmacros.h>
++#endif
++
+ #define UDEV_XKB_PROP_KEY "xkb"
+ 
+ #define LOG_PROPERTY(path, prop, val)                                   \
+diff --git a/include/dix-config.h.in b/include/dix-config.h.in
+index c18f623..0e6e44a 100644
+--- a/include/dix-config.h.in
++++ b/include/dix-config.h.in
+@@ -515,5 +515,8 @@
+ /* Have epoll_create1() */
+ #undef HAVE_EPOLL_CREATE1
+ 
++/* Have <sys/sysmacros.h> header */
++#undef HAVE_SYS_SYSMACROS_H
++
+ #endif /* _DIX_CONFIG_H_ */
+
+-- 
+2.7.4
+

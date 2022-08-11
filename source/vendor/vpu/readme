@@ -1,0 +1,37 @@
+This directory consists of two main sections
+
+1:VPU related parts of openMax
+
+
+2:VPU user-space libraries and kernel drivers
+	1) directory view
+
+
+	-----libvpu
+	|		|----Android.mk
+	|		|
+	|		|----vdi
+	|		|	  |
+	|		|	  |-----linux
+	|		|			  |----driver
+	|		|					|-----readme
+	|		|					|-----vpucoda988
+	|		|					|-----wave412
+	|		|----vpuapi
+	|				|-----Android.mk
+	|				|-----coda9
+	|				|
+	|				|-----wave
+	|						|
+	|						|----coda7q
+	|						|----common
+	|						|----wave4
+	|
+	|-----readme
+
+	2) description
+		A: Libvpu compiles dynamic libraries libvpu.so (32-bit and 64-bit) and static libraries libvpu.a;
+		B: Driver users need configuration that can be compiled as vpucoda.ko and vpuwave.ko;
+		　　for specific compilation methods refer to vdi/linux/readme
+
+

@@ -1,0 +1,13 @@
+#ifndef __lk_customize_build_dloader_d9_ref_lk_customize_application_system_dloader_module_config_h_H
+#define __lk_customize_build_dloader_d9_ref_lk_customize_application_system_dloader_module_config_h_H
+#define MODULE_COMPILEFLAGS ""
+#define MODULE_CFLAGS ""
+#define MODULE_CPPFLAGS ""
+#define MODULE_ASMFLAGS ""
+#define MODULE_LDFLAGS ""
+#define MODULE_OPTFLAGS ""
+#define MODULE_INCLUDES ""
+#define MODULE_SRCDEPS ""
+#define MODULE_DEPS "_LIB_FASTBOOT_COMMON_LIB_PARTITION_LIB_STORAGE_DEVICE_LIB_MD5_LIB_LIBAVB_EXTERNAL_LIB_CKSUM_"
+#define MODULE_SRCS "_LK_CUSTOMIZE_APPLICATION_SYSTEM_DLOADER_DLOADER_C_LK_CUSTOMIZE_APPLICATION_SYSTEM_DLOADER_SD_BOOT_IMG_C_LK_CUSTOMIZE_APPLICATION_SYSTEM_DLOADER_SEMIDRIVE_PARSER_C_"
+#endif

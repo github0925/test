@@ -1,0 +1,22 @@
+LOCAL_DIR := $(GET_LOCAL_DIR)
+
+MODULE := $(LOCAL_DIR)
+
+MODULE_SRCS += \
+	$(LOCAL_DIR)/virt_com.cpp
+
+ifeq ($(SUPPORT_VIRTCAN_SERVER), true)
+MODULE_DEFINES += VCAN_SERVER_SUPPORT=1
+endif
+
+ifeq ($(SUPPORT_VIRTLIN_SERVER), true)
+MODULE_DEFINES += VLIN_SERVER_SUPPORT=1
+endif
+
+ifeq ($(SUPPORT_SDPE_CTRL_SERVER), true)
+MODULE_DEFINES += SDPE_CTRL_SERVER_SUPPORT=1
+endif
+
+MODULE_DEPS += lib/storage_device lib/partition
+
+include make/module.mk

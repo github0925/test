@@ -1,0 +1,16 @@
+Index: alsa-lib-1.1.5_2/src/pcm/pcm_direct.c
+===================================================================
+--- alsa-lib-1.1.5_2.orig/src/pcm/pcm_direct.c
++++ alsa-lib-1.1.5_2/src/pcm/pcm_direct.c
+@@ -1341,9 +1341,10 @@ int snd_pcm_direct_initialize_slave(snd_
+ 		return ret;
+ 	}
+
+-	if (dmix->type == SND_PCM_TYPE_DSHARE) {
++	if (dmix->type == SND_PCM_TYPE_DSHARE || dmix->type == SND_PCM_TYPE_DMIX) {
+ 		const snd_pcm_channel_area_t *dst_areas;
+ 		dst_areas = snd_pcm_mmap_areas(spcm);
++		printf("Dmix type: %d, pcm areas (%p) silence\n", dmix->type, dst_areas->addr);
+ 		snd_pcm_areas_silence(dst_areas, 0, spcm->channels,
+ 				      spcm->buffer_size, spcm->format);
+ 	}

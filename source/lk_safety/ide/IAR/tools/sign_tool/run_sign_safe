@@ -1,0 +1,22 @@
+#!/bin/bash
+if [ -L $0 ]
+then
+    BASE_DIR=`dirname $(readlink $0)`
+else
+    BASE_DIR=`dirname $0`
+fi
+
+LOADADDR=0x100000
+ENTRYPOINT=0x100000
+
+if [[ -n $2 ]];then
+    LOADADDR=$2
+fi
+
+if [[ -n $3 ]];then
+    ENTRYPOINT=$3
+fi
+
+
+$BASE_DIR/atb_signer sign --sec_ver 1234 --pkg_ver 1 --rcp key=$BASE_DIR/test/keys/TestRSA512_ossl.pem rot=2 --iib img=$1 to=$LOADADDR entry=$ENTRYPOINT ctl=12345678900d900d uuid=12345678ab --dgst sha256 aes_key_id=1 --of $1.safe.signed
+

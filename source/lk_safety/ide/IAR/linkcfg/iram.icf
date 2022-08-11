@@ -1,0 +1,55 @@
+define memory mem with size = 4G;
+define region RAM_region           = mem:[from 0x00100000 to 0x0013FFFF];
+define region RPC_region           = mem:[from 0x001FC000 to 0x001FFFFF];
+define region TCM_region           = mem:[from 0x004B0000 to 0x004CFFFF];
+define region EXTRAM_region        = mem:[from 0x30000000 to 0x31FFFFFF];
+
+define block CSTACK    with alignment = 8, size = 0x1000 { };
+define block IRQ_STACK with alignment = 8, size = 0x200  { };
+define block FIQ_STACK with alignment = 8, size = 0x100  { };
+define block ABT_STACK with alignment = 8, size = 0x80  { };
+define block UND_STACK with alignment = 8, size = 0x80  { };
+define block SYS_STACK with alignment = 8, size = 0x800  { };
+define block SVC_STACK with alignment = 8, size = 0x800  { };
+ 
+define block INTER_HEAP with alignment = 4, maximum size = 0x20000, expanding size{};
+
+define block EXTER_HEAP with alignment = 4, maximum size = 0x02000000, expanding size{};
+
+define block NO_CACHE { section .nocache };
+define block FAULT_TABLE { section .rodata.fault_handler_table };
+define block APPS { section .apps };
+define block COMMANDS { section .commands };
+define block LK_INIT { section .lk_init };
+define block INIT_ARRAY { section .ctos, section .init_array };
+define block EARLY_COPY { section .early_copy};
+define block EXTMEM { section .ext.mem, section .ext.mem.* };
+define block SLT_MODULE { section .slt_module_test };
+
+place at start of RAM_region { section .vectors };
+place in RAM_region { section .cstartup };
+place in RAM_region { ro, block EARLY_COPY };
+place in RAM_region { block SLT_MODULE };
+place in RAM_region { block FAULT_TABLE };
+place in RAM_region { block APPS };
+place in RAM_region { block LK_INIT };
+place in RAM_region { block INIT_ARRAY };
+place in RAM_region { block COMMANDS };
+place in RAM_region { rw };
+place in RAM_region { block NO_CACHE };
+place in RAM_region { zi };
+place in RAM_region { block IRQ_STACK };
+place in RAM_region { block FIQ_STACK };
+place in RAM_region { block ABT_STACK };
+place in RAM_region { block UND_STACK };
+place in RAM_region { block SYS_STACK };
+place in RAM_region { block SVC_STACK };
+place in RAM_region { block CSTACK };
+
+place in RPC_region { section .sdpe_rpc_buf };
+
+place in TCM_region { block INTER_HEAP };
+
+place in EXTRAM_region { block EXTMEM };
+place in EXTRAM_region { block EXTER_HEAP };
+

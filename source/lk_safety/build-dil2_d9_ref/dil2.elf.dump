@@ -1,0 +1,1839 @@
+
+build-dil2_d9_ref/dil2.elf:     file format elf32-littlearm
+build-dil2_d9_ref/dil2.elf
+architecture: arm, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x00100000
+
+Program Header:
+0x70000001 off    0x00018bb0 vaddr 0x00117bb0 paddr 0x00117bb0 align 2**2
+         filesz 0x00000008 memsz 0x00000008 flags r--
+    LOAD off    0x00001000 vaddr 0x00100000 paddr 0x00100000 align 2**12
+         filesz 0x0002cb68 memsz 0x0003330c flags rwx
+private flags = 5000400: [Version5 EABI] [hard-float ABI]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .bss          0000678c  0012cb80  0012cb80  0002db68  2**5
+                  ALLOC
+  1 .tcm          00000000  004b0000  004b0000  0002db68  2**0
+                  CONTENTS
+  2 .text         00017bb0  00100000  00100000  00001000  2**4
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  3 .ARM.exidx    00000008  00117bb0  00117bb0  00018bb0  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .rodata       0000798c  00117bb8  00117bb8  00018bb8  2**3
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  5 .apps         00000014  0011f544  0011f544  00020544  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  6 .lk_init      00000060  0011f558  0011f558  00020558  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  7 .early_copy   0000000c  0011f5b8  0011f5b8  000205b8  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  8 .data         0000d5a0  0011f5c8  0011f5c8  000205c8  2**3
+                  CONTENTS, ALLOC, LOAD, DATA
+  9 .nocache      00000000  0012cc00  0012cc00  0002dc00  2**10
+                  CONTENTS
+ 10 .ext.mem      00000000  0013330c  0013330c  0002dc00  2**0
+                  CONTENTS
+ 11 .ARM.attributes 00000039  00000000  00000000  0002dc00  2**0
+                  CONTENTS, READONLY
+ 12 .debug_aranges 00003fb8  00000000  00000000  0002dc40  2**3
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_info   000c791d  00000000  00000000  00031bf8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_abbrev 0001af44  00000000  00000000  000f9515  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 15 .debug_line   0002ab06  00000000  00000000  00114459  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 16 .debug_frame  0000c0e0  00000000  00000000  0013ef60  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 17 .debug_str    0001a78a  00000000  00000000  0014b040  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 18 .debug_ranges 0000d5d8  00000000  00000000  001657ca  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 19 .debug_loc    0006652b  00000000  00000000  00172da2  2**0
+                  CONTENTS, READONLY, DEBUGGING
+SYMBOL TABLE:
+0012cb80 l    d  .bss	00000000 .bss
+004b0000 l    d  .tcm	00000000 .tcm
+00100000 l    d  .text	00000000 .text
+00117bb0 l    d  .ARM.exidx	00000000 .ARM.exidx
+00117bb8 l    d  .rodata	00000000 .rodata
+0011f544 l    d  .apps	00000000 .apps
+0011f558 l    d  .lk_init	00000000 .lk_init
+0011f5b8 l    d  .early_copy	00000000 .early_copy
+0011f5c8 l    d  .data	00000000 .data
+0012cc00 l    d  .nocache	00000000 .nocache
+0013330c l    d  .ext.mem	00000000 .ext.mem
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    d  .debug_loc	00000000 .debug_loc
+00000000 l    df *ABS*	00000000 cache.c
+00000000 l    df *ABS*	00000000 arm_debug.c
+00000000 l    df *ABS*	00000000 faults.c
+00100f34 l     F .text	000002ca dump_mode_regs
+00101200 l     F .text	000000aa exception_die
+00000000 l    df *ABS*	00000000 fpu.c
+00000000 l    df *ABS*	00000000 mpu.c
+00118124 l       .rodata	00000000 .LANCHOR0
+00118124 l     O .rodata	00000018 g_racr_config
+00000000 l    df *ABS*	00000000 build-dil2_d9_ref/arch/arm/arm/start.o
+00100024 l       .text	00000000 arm_undefined_const
+00100028 l       .text	00000000 FreeRTOS_SWI_Handler_const
+0010002c l       .text	00000000 arm_prefetch_abort_const
+00100030 l       .text	00000000 arm_data_abort_const
+00100034 l       .text	00000000 arm_reserved_const
+00100038 l       .text	00000000 FreeRTOS_IRQ_Handler_const
+0010003c l       .text	00000000 arm_fiq_const
+00100020 l       .text	00000000 platform_reset_const
+00000000 l    df *ABS*	00000000 build-dil2_d9_ref/arch/arm/arm/asm.o
+00000000 l    df *ABS*	00000000 build-dil2_d9_ref/arch/arm/arm/cache-ops.o
+001009b0 l       .text	00000000 flush_invalidate_cache_v7
+00100a44 l       .text	00000000 invalidate_cache_v7
+00000000 l    df *ABS*	00000000 build-dil2_d9_ref/arch/arm/arm/ops.o
+00000000 l    df *ABS*	00000000 build-dil2_d9_ref/arch/arm/arm/exceptions.o
+00000000 l    df *ABS*	00000000 build-dil2_d9_ref/arch/arm/arm/usercopy.o
+00000000 l    df *ABS*	00000000 arch.c
+00000000 l    df *ABS*	00000000 target_init.c
+00000000 l    df *ABS*	00000000 port.c
+00117bd8 l       .rodata	00000000 .LANCHOR0
+00117bd0 l       .rodata	00000000 .LANCHOR1
+00000000 l    df *ABS*	00000000 platform.c
+00100250 l     F .text	000000f0 vector_remap
+00100340 l     F .text	0000005c platform_core_reset
+00000000 l    df *ABS*	00000000 debug.c
+00000000 l    df *ABS*	00000000 uart.c
+00100518 l     F .text	0000003c save_char
+0012cb84 l       .bss	00000000 .LANCHOR0
+0012cb80 l       .bss	00000000 .LANCHOR1
+0012cb80 l     O .bss	00000004 safety_log_handle
+0012cb84 l     O .bss	0000001c uart_rx_buf
+00000000 l    df *ABS*	00000000 timer.c
+0012cba0 l       .bss	00000000 .LANCHOR0
+0012cba0 l     O .bss	00000004 kernel_tick
+00000000 l    df *ABS*	00000000 interrupt.c
+00000000 l    df *ABS*	00000000 str.c
+00000000 l    df *ABS*	00000000 build-dil2_d9_ref/platform/kunlun/safety/tcm_init.o
+00000000 l    df *ABS*	00000000 init.c
+00000000 l    df *ABS*	00000000 main.c
+0012dfc0 l       .bss	00000000 .LANCHOR0
+00101a80 l     F .text	0000006c bootstrap2
+00000000 l    df *ABS*	00000000 safety_init.c
+00101aec l     F .text	0000002e setup_pll
+00101b38 l     F .text	00000148 safety_init
+0011827c l       .rodata	00000000 .LANCHOR1
+001182a4 l       .rodata	00000000 .LANCHOR2
+00101c80 l     F .text	0000002c safety_os_entry
+00000000 l    df *ABS*	00000000 soc_init.c
+00101b1c l     F .text	0000001c setup_pll
+00118518 l     O .rodata	00000020 refclk_ResIdx
+00000000 l    df *ABS*	00000000 hpi_qos_init.c
+00000000 l    df *ABS*	00000000 scr_init.c
+00000000 l    df *ABS*	00000000 clkgen_drv.c
+00000000 l    df *ABS*	00000000 clkgen_drv_test.c
+00000000 l    df *ABS*	00000000 sram_conf.c
+00000000 l    df *ABS*	00000000 ce.c
+0012e1e4 l       .bss	00000000 .LANCHOR1
+0011f5cc l       .data	00000000 .LANCHOR2
+0012e1e0 l       .bss	00000000 .LANCHOR4
+0011f5cc l     O .data	00000058 inheap
+00000000 l    df *ABS*	00000000 sx_hash.c
+00000000 l    df *ABS*	00000000 sx_cipher.c
+00000000 l    df *ABS*	00000000 sx_pke_conf.c
+00000000 l    df *ABS*	00000000 sx_rsa_pad.c
+00000000 l    df *ABS*	00000000 sx_dma.c
+00000000 l    df *ABS*	00000000 sx_rsa.c
+00000000 l    df *ABS*	00000000 sx_trng.c
+00000000 l    df *ABS*	00000000 sx_ecc_keygen.c
+00000000 l    df *ABS*	00000000 sx_ecdsa.c
+00000000 l    df *ABS*	00000000 sx_sm2.c
+00000000 l    df *ABS*	00000000 sx_dsa.c
+00000000 l    df *ABS*	00000000 sx_srp.c
+00000000 l    df *ABS*	00000000 sx_eddsa.c
+00000000 l    df *ABS*	00000000 sx_pke_funcs.c
+00000000 l    df *ABS*	00000000 sx_ecc.c
+00000000 l    df *ABS*	00000000 sx_math.c
+00000000 l    df *ABS*	00000000 sx_prime.c
+00000000 l    df *ABS*	00000000 Dio.c
+0012e960 l       .bss	00000000 .LANCHOR0
+0012e960 l     O .bss	00000008 g_dio_handle
+00000000 l    df *ABS*	00000000 dwc_mipi_dsi_host.c
+00103e80 l     F .text	00000016 dsi_check_version
+00103e98 l     F .text	00000006 dsi_power_enable
+00103ea0 l     F .text	0000000a dsi_get_power_status
+00103eac l     F .text	00000012 dsi_timeout_clock_division
+00103ec0 l     F .text	0000000e dsi_tx_escape_division
+00103ed0 l     F .text	00000006 dsi_video_vcid
+00103ed8 l     F .text	0000000a dsi_get_video_vcid
+00103ee4 l     F .text	00000010 dsi_dpi_color_coding
+00103ef4 l     F .text	0000000a dsi_dpi_get_color_coding
+00103f00 l     F .text	0000001a dsi_dpi_get_color_depth
+00118820 l       .rodata	00000000 .LANCHOR0
+00103f1c l     F .text	0000001a dsi_dpi_get_color_config
+0011882c l       .rodata	00000000 .LANCHOR1
+00103f38 l     F .text	00000012 dsi_dpi_18_loosely_packet_en
+00103f4c l     F .text	00000012 dsi_dpi_color_mode_pol
+00103f60 l     F .text	00000012 dsi_dpi_shut_down_pol
+00103f74 l     F .text	00000012 dsi_dpi_hsync_pol
+00103f88 l     F .text	00000012 dsi_dpi_vsync_pol
+00103f9c l     F .text	00000010 dsi_dpi_data_en_pol
+00103fac l     F .text	00000012 dsi_eotp_rx_en
+00103fc0 l     F .text	00000010 dsi_eotp_tx_en
+00103fd0 l     F .text	00000012 dsi_bta_en
+00103fe4 l     F .text	00000012 dsi_ecc_rx_en
+00103ff8 l     F .text	00000012 dsi_crc_rx_en
+0010400c l     F .text	00000012 dsi_eotp_tx_lp_en
+00104020 l     F .text	00000010 dsi_rx_vcid
+00104030 l     F .text	00000008 dsi_video_mode
+00104038 l     F .text	00000008 dsi_cmd_mode
+00104040 l     F .text	0000000a dsi_is_cmd_mode
+0010404c l     F .text	00000012 dsi_video_mode_lp_cmd_en
+00104060 l     F .text	00000012 dsi_video_mode_frame_ack_en
+00104074 l     F .text	0000000c dsi_video_mode_lp_hfp_en
+00104080 l     F .text	00000012 dsi_video_mode_lp_hbp_en
+00104094 l     F .text	00000012 dsi_video_mode_lp_vact_en
+001040a8 l     F .text	00000012 dsi_video_mode_lp_vfp_en
+001040bc l     F .text	00000012 dsi_video_mode_lp_vbp_en
+001040d0 l     F .text	00000012 dsi_video_mode_lp_vsa_en
+001040e4 l     F .text	0000001c dsi_dpi_hporch_lp_en
+00104100 l     F .text	00000030 dsi_dpi_vporch_lp_en
+00104130 l     F .text	00000010 dsi_video_mode_mode_type
+00104140 l     F .text	00000012 dsi_vpg_orientation_act
+00104154 l     F .text	00000012 dsi_vpg_mode_act
+00104168 l     F .text	00000012 dsi_enable_vpg_act
+0010417c l     F .text	00000006 dsi_dpi_video_packet_size
+00104184 l     F .text	00000006 dsi_dpi_chunk_num
+0010418c l     F .text	00000006 dsi_dpi_null_packet_size
+00104194 l     F .text	00000006 dsi_dpi_hsync_time
+0010419c l     F .text	00000006 dsi_dpi_hbp_time
+001041a4 l     F .text	00000006 dsi_dpi_hline_time
+001041ac l     F .text	00000006 dsi_dpi_vsync
+001041b4 l     F .text	00000006 dsi_dpi_vbp
+001041bc l     F .text	00000006 dsi_dpi_vfp
+001041c4 l     F .text	00000006 dsi_dpi_vact
+001041cc l     F .text	00000010 dsi_tear_effect_ack_en
+001041dc l     F .text	00000012 dsi_cmd_ack_request_en
+001041f0 l     F .text	00000080 dsi_cmd_mode_lp_cmd_en
+00104270 l     F .text	00000036 dsi_set_packet_header
+001042a8 l     F .text	00000006 dsi_set_packet_payload
+001042b0 l     F .text	00000008 dsi_get_rx_payload
+001042b8 l     F .text	0000000e dsi_is_bta_returned
+001042c8 l     F .text	0000000a dsi_is_rx_payload_fifo_full
+001042d4 l     F .text	0000000a dsi_is_rx_payload_fifo_empty
+001042e0 l     F .text	0000000a dsi_is_tx_payload_fifo_full
+001042ec l     F .text	0000000a dsi_is_tx_payload_fifo_empty
+001042f8 l     F .text	0000000a dsi_is_tx_cmd_fifo_full
+00104304 l     F .text	0000000a dsi_is_tx_cmd_fifo_empty
+00104310 l     F .text	0000000e dsi_lp_rx_timeout
+00104320 l     F .text	0000000e dsi_hs_tx_timeout
+00104330 l     F .text	00000006 dsi_hs_read_presp_timeout
+00104338 l     F .text	00000008 dsi_lp_read_presp_timeout
+00104340 l     F .text	00000012 dsi_hs_write_presp_timeout
+00104354 l     F .text	00000008 dsi_bta_presp_timeout
+0010435c l     F .text	00000016 dsi_nc_clk_en
+00104374 l     F .text	0000000c dsi_nc_clk_status
+00104380 l     F .text	0000000a dsi_int0_status
+0010438c l     F .text	0000000c dsi_int1_status
+00104398 l     F .text	00000008 dsi_int0_mask
+001043a0 l     F .text	00000008 dsi_int_get_mask_0
+001043a8 l     F .text	00000008 dsi_int1_mask
+001043b0 l     F .text	00000008 dsi_int_get_mask_1
+001043b8 l     F .text	00000008 dsi_force_int_0
+001043c0 l     F .text	00000008 dsi_force_int_1
+001043c8 l     F .text	00000008 dsi_max_read_time
+001043d0 l     F .text	00000014 dsi_activate_shadow_registers
+001043e4 l     F .text	0000000c dsi_read_state_shadow_registers
+001043f0 l     F .text	00000014 dsi_request_registers_change
+00104404 l     F .text	00000016 dsi_external_pin_registers_change
+0010441c l     F .text	0000000c dsi_get_dpi_video_vc_act
+00104428 l     F .text	0000000a dsi_get_loosely18_en_act
+00104434 l     F .text	00000004 dsi_get_dpi_color_coding_act
+00104438 l     F .text	0000000c dsi_get_lp_cmd_en_act
+00104444 l     F .text	0000000c dsi_get_frame_bta_ack_en_act
+00104450 l     F .text	0000000c dsi_get_lp_hfp_en_act
+0010445c l     F .text	0000000c dsi_get_lp_hbp_en_act
+00104468 l     F .text	0000000c dsi_get_lp_vact_en_act
+00104474 l     F .text	0000000c dsi_get_lp_vfp_en_act
+00104480 l     F .text	0000000c dsi_get_lp_vbp_en_act
+0010448c l     F .text	0000000c dsi_get_lp_vsa_en_act
+00104498 l     F .text	0000000c dsi_get_vid_mode_type_act
+001044a4 l     F .text	0000000c dsi_get_vid_pkt_size_act
+001044b0 l     F .text	0000000c dsi_get_vid_num_chunks_act
+001044bc l     F .text	0000000c dsi_get_vid_null_size_act
+001044c8 l     F .text	0000000c dsi_get_vid_hsa_time_act
+001044d4 l     F .text	0000000c dsi_get_vid_hbp_time_act
+001044e0 l     F .text	0000000c dsi_get_vid_hline_time_act
+001044ec l     F .text	0000000c dsi_get_vsa_lines_act
+001044f8 l     F .text	0000000c dsi_get_vbp_lines_act
+00104504 l     F .text	0000000c dsi_get_vfp_lines_act
+00104510 l     F .text	0000000c dsi_get_v_active_lines_act
+0010451c l     F .text	0000000c dsi_get_send_3d_cfg_act
+00104528 l     F .text	0000000c dsi_get_right_left_act
+00104534 l     F .text	0000000c dsi_get_second_vsync_act
+00104540 l     F .text	0000000e dsi_get_format_3d_act
+00104550 l     F .text	0000000c dsi_get_mode_3d_act
+0010455c l     F .text	0000001a dsi_dphy_clklane_hs2lp_config
+00104578 l     F .text	00000014 dsi_dphy_clklane_lp2hs_config
+0010458c l     F .text	0000001a dsi_dphy_datalane_hs2lp_config
+001045a8 l     F .text	00000014 dsi_dphy_datalane_lp2hs_config
+001045bc l     F .text	00000016 dsi_dphy_enableclk
+001045d4 l     F .text	00000016 dsi_dphy_reset
+001045ec l     F .text	00000014 dsi_dphy_shutdown
+00104600 l     F .text	00000016 dsi_dphy_force_pll
+00104618 l     F .text	0000000c dsi_dphy_get_force_pll
+00104624 l     F .text	00000016 dsi_dphy_stop_wait_time
+0010463c l     F .text	00000016 dsi_dphy_n_lanes
+00104654 l     F .text	0000000e dsi_dphy_get_n_lanes
+00104664 l     F .text	00000014 dsi_dphy_enable_hs_clk
+00104678 l     F .text	0000000a dsi_dphy_get_status
+00104684 l     F .text	00000014 dsi_dphy_test_clear
+00104698 l     F .text	0000008e dsi_dphy_write
+00118820 l     O .rodata	0000000c CSWTCH.193
+0011882c l     O .rodata	00000005 CSWTCH.195
+00000000 l    df *ABS*	00000000 disp_dsi_api.c
+00118628 l       .rodata	00000000 .LANCHOR0
+00000000 l    df *ABS*	00000000 disp_dsi.c
+00104f1c l     F .text	00000004 dsi_init
+00104f20 l     F .text	000001f8 dsi_config
+0012e968 l       .bss	00000000 .LANCHOR0
+00105118 l     F .text	00000004 dsi_deinit
+00000000 l    df *ABS*	00000000 disp_drv.c
+0012ea68 l       .bss	00000000 .LANCHOR0
+0012ecac l       .bss	00000000 .LANCHOR1
+00118834 l       .rodata	00000000 .LANCHOR3
+00118860 l       .rodata	00000000 .LANCHOR4
+0012ec20 l       .bss	00000000 .LANCHOR2
+0012ecac l     O .bss	00000005 run_status.8452
+00118834 l     O .rodata	0000002c CSWTCH.4
+00118860 l     O .rodata	00000018 CSWTCH.7
+00000000 l    df *ABS*	00000000 disp_interface.c
+00118898 l       .rodata	00000000 .LANCHOR0
+00118898 l     O .rodata	0000000c if_module_driver
+00000000 l    df *ABS*	00000000 disp_panel.c
+00000000 l    df *ABS*	00000000 disp_ctrl.c
+00105a0c l     F .text	0000006a dc_triggle
+0012ecb4 l       .bss	00000000 .LANCHOR0
+0012ecc8 l       .bss	00000000 .LANCHOR1
+00105a78 l     F .text	0000000a dc_check_triggle_status
+00105a84 l     F .text	00000014 set_tcon_ctrl_en
+00105a98 l     F .text	00000012 dc_reset
+00105aac l     F .text	0000015a dc_clear_layers
+00105c08 l     F .text	00000016 dc_vsync_enable
+00105c20 l     F .text	00000464 dc_csc_set
+00106088 l     F .text	00000780 dc_init
+00106808 l     F .text	00000428 dc_update_layer
+00106c30 l     F .text	00000022 dc_irq_handler
+00106c54 l     F .text	0000017e dc_update
+0012ecb4 l     O .bss	00000014 dc_triggle_type
+0012ecc8 l     O .bss	00000005 first_triggle.8595
+00000000 l    df *ABS*	00000000 disp_lvds.c
+00106dd4 l     F .text	00000004 lvds_init
+00106dd8 l     F .text	000000ae lvds_channel_config
+00106e88 l     F .text	0000018a lvds_config
+0012ecd0 l       .bss	00000000 .LANCHOR0
+00118920 l       .rodata	00000000 .LANCHOR1
+00107014 l     F .text	00000004 lvds_deinit
+0012ecd0 l     O .bss	00000004 base.6297
+00118920 l     O .rodata	00000010 CSWTCH.22
+00000000 l    df *ABS*	00000000 disp_parallel.c
+00107018 l     F .text	00000004 parallel_init
+0010701c l     F .text	00000002 parallel_config
+00107020 l     F .text	00000004 parallel_deinit
+00000000 l    df *ABS*	00000000 dw_i2c.c
+00107024 l     F .text	000000c8 dw_i2c_config
+001070ec l     F .text	00000238 i2c_irq_handler
+00107324 l     F .text	00000020 dw_i2c_wait_fifo_clear
+00107344 l     F .text	00000036 dw_i2c_wait_bus_not_busy
+00118930 l       .rodata	00000000 .LANCHOR0
+00118930 l     O .rodata	00000013 __func__.8800
+00000000 l    df *ABS*	00000000 dw_i2c_test.c
+00000000 l    df *ABS*	00000000 arm_gic.c
+00107b04 l     F .text	0000001a arm_gic_init_percpu
+00107b20 l     F .text	00000002 arm_gic_suspend_cpu
+00107b24 l     F .text	0000005c __arm_gic_get_priority_shift
+0012ecd4 l       .bss	00000000 .LANCHOR0
+0012edd4 l       .bss	00000000 .LANCHOR1
+001189dc l       .rodata	00000000 .LANCHOR2
+00107c68 l     F .text	00000044 arm_gic_resume_cpu
+0011899c l       .rodata	00000000 .LANCHOR3
+0012ecd4 l     O .bss	00000100 int_handler_table_per_cpu
+0012edd4 l     O .bss	00000790 int_handler_table_shared
+0011899c l     O .rodata	0000000d __PRETTY_FUNCTION__.7728
+001189dc l     O .rodata	00000114 gicd_itargetsr
+00000000 l    df *ABS*	00000000 pll.c
+00118b40 l       .rodata	00000000 .LANCHOR0
+00000000 l    df *ABS*	00000000 pmu_drv.c
+00108260 l     F .text	00000012 pmu_check.part.0
+00118db8 l       .rodata	00000000 .LANCHOR0
+00118dc4 l       .rodata	00000000 .LANCHOR1
+00118dd0 l       .rodata	00000000 .LANCHOR2
+00118de0 l       .rodata	00000000 .LANCHOR3
+00118df8 l       .rodata	00000000 .LANCHOR4
+00118e18 l       .rodata	00000000 .LANCHOR5
+00118e34 l       .rodata	00000000 .LANCHOR6
+00118e44 l       .rodata	00000000 .LANCHOR7
+00118e5c l       .rodata	00000000 .LANCHOR8
+00118e74 l       .rodata	00000000 .LANCHOR9
+00118e98 l       .rodata	00000000 .LANCHOR10
+00118eb8 l       .rodata	00000000 .LANCHOR11
+00118ed4 l       .rodata	00000000 .LANCHOR12
+00118ef0 l       .rodata	00000000 .LANCHOR13
+00118f0c l       .rodata	00000000 .LANCHOR14
+00118f2c l       .rodata	00000000 .LANCHOR15
+00118f50 l       .rodata	00000000 .LANCHOR16
+00118f74 l       .rodata	00000000 .LANCHOR17
+00118f98 l       .rodata	00000000 .LANCHOR18
+00118fb8 l       .rodata	00000000 .LANCHOR19
+00118fd8 l       .rodata	00000000 .LANCHOR20
+00119000 l       .rodata	00000000 .LANCHOR21
+00119028 l       .rodata	00000000 .LANCHOR22
+00119048 l       .rodata	00000000 .LANCHOR23
+00119068 l       .rodata	00000000 .LANCHOR24
+00119088 l       .rodata	00000000 .LANCHOR25
+001190ac l       .rodata	00000000 .LANCHOR26
+001190d4 l       .rodata	00000000 .LANCHOR27
+001190fc l       .rodata	00000000 .LANCHOR28
+0011911c l       .rodata	00000000 .LANCHOR29
+00119138 l       .rodata	00000000 .LANCHOR30
+00119158 l       .rodata	00000000 .LANCHOR31
+00119174 l       .rodata	00000000 .LANCHOR32
+00119190 l       .rodata	00000000 .LANCHOR33
+00118db8 l     O .rodata	00000009 __func__.7892
+00118dc4 l     O .rodata	00000009 __func__.7896
+00118dd0 l     O .rodata	0000000f __func__.7911
+00118de0 l     O .rodata	00000015 __func__.7917
+00118df8 l     O .rodata	0000001e __func__.7922
+00118e18 l     O .rodata	0000001b __func__.7926
+00118e34 l     O .rodata	0000000e __func__.7931
+00118e44 l     O .rodata	00000018 __func__.7937
+00118e5c l     O .rodata	00000016 __func__.7943
+00118e74 l     O .rodata	00000022 __func__.7951
+00118e98 l     O .rodata	00000020 __func__.7964
+00118eb8 l     O .rodata	0000001a __func__.7977
+00118ed4 l     O .rodata	0000001b __func__.7990
+00118ef0 l     O .rodata	0000001b __func__.8003
+00118f0c l     O .rodata	0000001f __func__.8017
+00118f2c l     O .rodata	00000022 __func__.8029
+00118f50 l     O .rodata	00000024 __func__.8036
+00118f74 l     O .rodata	00000022 __func__.8044
+00118f98 l     O .rodata	0000001e __func__.8051
+00118fb8 l     O .rodata	00000020 __func__.8058
+00118fd8 l     O .rodata	00000027 __func__.8065
+00119000 l     O .rodata	00000026 __func__.8072
+00119028 l     O .rodata	0000001e __func__.8080
+00119048 l     O .rodata	0000001f __func__.8086
+00119068 l     O .rodata	0000001f __func__.8093
+00119088 l     O .rodata	00000021 __func__.8100
+001190ac l     O .rodata	00000028 __func__.8107
+001190d4 l     O .rodata	00000027 __func__.8114
+001190fc l     O .rodata	0000001f __func__.8122
+0011911c l     O .rodata	0000001c __func__.8128
+00119138 l     O .rodata	0000001d __func__.8134
+00119158 l     O .rodata	0000001c __func__.8140
+00119174 l     O .rodata	0000001b __func__.8145
+00119190 l     O .rodata	0000001c __func__.8150
+00000000 l    df *ABS*	00000000 sd_port.c
+00108e2c l     F .text	0000002a scr_write_signal.isra.4
+00108e58 l     F .text	0000002a scr_read_signal.isra.5
+00108e84 l     F .text	000000f4 Port_SetGPIOSCR
+00119398 l       .rodata	00000000 .LANCHOR3
+001193e0 l       .rodata	00000000 .LANCHOR1
+00119470 l       .rodata	00000000 .LANCHOR2
+00119518 l       .rodata	00000000 .LANCHOR0
+0012f564 l       .bss	00000000 .LANCHOR4
+00119260 l       .rodata	00000000 .LANCHOR5
+0012f568 l       .bss	00000000 .LANCHOR8
+0011f894 l       .data	00000000 .LANCHOR7
+00119248 l       .rodata	00000000 .LANCHOR6
+0012f564 l     O .bss	00000004 Port_kConfigPtr
+0012f568 l     O .bss	00000010 g_port_handle
+0011f894 l     O .data	00000004 run_in_domain
+00119248 l     O .rodata	00000014 PIN_MAX_NUMBER
+00119260 l     O .rodata	00000138 scr_mshc2_canfd_signals
+00119398 l     O .rodata	00000048 scr_safety_mux1_signals
+001193e0 l     O .rodata	00000090 scr_safety_mux_signals
+00119470 l     O .rodata	000000a8 scr_sec_mux2_signals
+00119518 l     O .rodata	00000150 scr_sec_mux_signals
+00000000 l    df *ABS*	00000000 Port_PBcfg.c
+00000000 l    df *ABS*	00000000 rstgen_drv.c
+00000000 l    df *ABS*	00000000 rtc_drv.c
+00000000 l    df *ABS*	00000000 scr.c
+00119e64 l       .rodata	00000000 .LANCHOR0
+00000000 l    df *ABS*	00000000 timer_drv.c
+00000000 l    df *ABS*	00000000 uart_drv.c
+00000000 l    df *ABS*	00000000 sdm_display.c
+00119ebc l       .rodata	00000000 .LANCHOR0
+0012f578 l       .bss	00000000 .LANCHOR1
+0012f580 l       .bss	00000000 .LANCHOR5
+0012f580 l     O .bss	00000004 is_inited
+00119ebc l     O .rodata	00000018 __FUNCTION__.6420
+00000000 l    df *ABS*	00000000 backlight.c
+00000000 l    df *ABS*	00000000 dcf_common.c
+00000000 l    df *ABS*	00000000 dcf_file.c
+00000000 l    df *ABS*	00000000 dcf_select.c
+00000000 l    df *ABS*	00000000 dcf_notify.c
+00000000 l    df *ABS*	00000000 dcf_service.c
+00000000 l    df *ABS*	00000000 clkgen_hal.c
+0010a434 l     F .text	0000008c hal_clock_get_instance
+0012f594 l       .bss	00000000 .LANCHOR1
+0012f584 l       .bss	00000000 .LANCHOR2
+0012f588 l       .bss	00000000 .LANCHOR0
+0011b864 l       .rodata	00000000 .LANCHOR3
+0010a4c0 l     F .text	00000026 hal_clock_release_handle.part.2
+0010a4e8 l     F .text	00000048 hal_clock_release_instance
+0011a684 l       .rodata	00000000 .LANCHOR4
+0011a038 l       .rodata	00000000 .LANCHOR5
+0011a9f8 l       .rodata	00000000 .LANCHOR6
+0011a094 l       .rodata	00000000 .LANCHOR7
+0011b4f0 l       .rodata	00000000 .LANCHOR8
+0011a318 l       .rodata	00000000 .LANCHOR9
+0011b8cc l       .rodata	00000000 .LANCHOR10
+0011b488 l       .rodata	00000000 .LANCHOR11
+0011a1a8 l       .rodata	00000000 .LANCHOR12
+0011a374 l       .rodata	00000000 .LANCHOR13
+00119fe0 l       .rodata	00000000 .LANCHOR14
+0012f588 l     O .bss	0000000c g_ClkgenInstance
+0011a038 l     O .rodata	0000005c bus.8703
+0011a094 l     O .rodata	00000114 bus.8720
+0011a1a8 l     O .rodata	00000170 bus.8743
+0011a318 l     O .rodata	0000005c bus.8766
+0011a374 l     O .rodata	000001b8 core.8748
+0011a684 l     O .rodata	00000374 ip.8697
+0011a9f8 l     O .rodata	00000a90 ip.8714
+0011b488 l     O .rodata	00000068 ip.8738
+0011b4f0 l     O .rodata	00000374 ip.8760
+0011b864 l     O .rodata	00000068 s_ClkgenDrvInterface
+0011b8cc l     O .rodata	000000a0 uuu.8731
+00000000 l    df *ABS*	00000000 clkgen_hal_ip_test.c
+00000000 l    df *ABS*	00000000 boot_ss.c
+0011b984 l       .rodata	00000000 .LANCHOR0
+0011b994 l       .rodata	00000000 .LANCHOR1
+0011b984 l     O .rodata	0000000d __func__.8959
+0011b994 l     O .rodata	0000000a __func__.8985
+00000000 l    df *ABS*	00000000 boot_ss_cfg.c
+0011b96c l       .rodata	00000000 .LANCHOR0
+0011bad4 l       .rodata	00000000 .LANCHOR1
+00122208 l     O .data	00000068 ap1_cfg
+001222e8 l     O .data	00000068 ap2_cfg
+00122368 l     O .data	00000068 mp_cfg
+0012f598 l     O .bss	00000004 ap2_pll
+0012f59c l     O .bss	00000004 ap2_post_core_rst
+0012f5a0 l     O .bss	0000000c ap2_pre_core_clk
+0012f5ac l     O .bss	00000004 ap2_pre_gating
+0012f5b0 l     O .bss	00000004 ap2_pre_module_rst
+0012f5b4 l     O .bss	00000010 ap2_pre_uuu_clk
+0012f5c4 l     O .bss	00000004 mp_post_core_rst
+00122270 l     O .data	00000004 ap1_iso_rst
+001222d0 l     O .data	00000004 ap1_pre_module_rst
+001222cc l     O .data	00000004 ap1_pre_gating
+001222d4 l     O .data	00000010 ap1_pre_uuu_clk
+001222c0 l     O .data	0000000c ap1_pre_core_clk
+00122274 l     O .data	00000008 ap1_pll
+0012227c l     O .data	00000018 ap1_post_core_clk_gating
+001222a0 l     O .data	00000020 ap1_post_uuu_clk
+00122298 l     O .data	00000008 ap1_post_module_rst
+00122294 l     O .data	00000004 ap1_post_core_rst
+00122350 l     O .data	00000008 ap2_post_core_clk_gating
+00122358 l     O .data	00000010 ap2_post_uuu_clk
+001223d0 l     O .data	0000000c mp_pre_core_clk
+0011bad4 l     O .rodata	0000000b __func__.8506
+00000000 l    df *ABS*	00000000 crypto_hal.c
+00000000 l    df *ABS*	00000000 sd_rsa.c
+00000000 l    df *ABS*	00000000 sd_aes.c
+00000000 l    df *ABS*	00000000 sd_cmac.c
+00000000 l    df *ABS*	00000000 sd_hash.c
+00000000 l    df *ABS*	00000000 sd_hmac.c
+00000000 l    df *ABS*	00000000 sd_rng.c
+00000000 l    df *ABS*	00000000 sd_ecc.c
+00000000 l    df *ABS*	00000000 sd_sm2.c
+00000000 l    df *ABS*	00000000 sd_dsa.c
+00000000 l    df *ABS*	00000000 sd_ecdsa.c
+00000000 l    df *ABS*	00000000 hal_dio.c
+0012f5cc l       .bss	00000000 .LANCHOR1
+0012f5c8 l       .bss	00000000 .LANCHOR0
+0012f5cc l     O .bss	00000008 s_dio_handle
+00000000 l    df *ABS*	00000000 disp_hal.c
+0011bde0 l       .rodata	00000000 .LANCHOR0
+00122488 l       .data	00000000 .LANCHOR2
+0011bdf8 l       .rodata	00000000 .LANCHOR1
+001225a8 l       .data	00000000 .LANCHOR3
+0011bd78 l       .rodata	00000000 .LANCHOR4
+001223dc l       .data	00000000 .LANCHOR6
+0011bdc8 l       .rodata	00000000 .LANCHOR5
+0012f5d4 l       .bss	00000000 .LANCHOR7
+0012f5d8 l       .bss	00000000 .LANCHOR8
+0012f920 l       .bss	00000000 .LANCHOR10
+0011be24 l       .rodata	00000000 .LANCHOR9
+0012f924 l       .bss	00000000 .LANCHOR11
+001223e4 l       .data	00000000 .LANCHOR12
+0011be0c l       .rodata	00000000 .LANCHOR13
+0011be48 l       .rodata	00000000 .LANCHOR14
+0012f920 l     O .bss	00000001 index.8781
+0012f924 l     O .bss	00000004 res_count
+0011bdc8 l     O .rodata	00000018 CSWTCH.17
+0011bde0 l     O .rodata	00000018 __FUNCTION__.8692
+0011bdf8 l     O .rodata	00000011 __FUNCTION__.8702
+0011be0c l     O .rodata	00000018 __FUNCTION__.8756
+0011be24 l     O .rodata	00000024 __FUNCTION__.8782
+0011be48 l     O .rodata	0000001a __FUNCTION__.8788
+00000000 l    df *ABS*	00000000 disp_link.c
+0010c02c l     F .text	00000050 disp_link_get_cfg_info
+0012f934 l       .bss	00000000 .LANCHOR0
+0012f940 l       .bss	00000000 .LANCHOR2
+0012f928 l       .bss	00000000 .LANCHOR1
+0012f938 l       .bss	00000000 .LANCHOR3
+0012f930 l       .bss	00000000 .LANCHOR4
+0012f944 l       .bss	00000000 .LANCHOR5
+0012f92c l       .bss	00000000 .LANCHOR6
+0011c060 l       .rodata	00000000 .LANCHOR8
+0011c07c l       .rodata	00000000 .LANCHOR9
+0011c094 l       .rodata	00000000 .LANCHOR10
+0011c098 l       .rodata	00000000 .LANCHOR7
+0012f92c l     O .bss	00000004 base.6187
+0012f930 l     O .bss	00000004 base.6191
+0012f934 l     O .bss	00000004 cfg_get.6329
+0012f938 l     O .bss	00000005 dc_pll_sel
+0012f940 l     O .bss	00000004 g_display_res
+0012f944 l     O .bss	00000001 lvds_sample_sync
+0012f928 l     O .bss	00000004 res_count
+0011c060 l     O .rodata	0000001c CSWTCH.106
+0011c07c l     O .rodata	00000018 CSWTCH.109
+0011c094 l     O .rodata	00000004 CSWTCH.113
+0011c098 l     O .rodata	00000014 CSWTCH.97
+00000000 l    df *ABS*	00000000 gpioirq_weak.c
+0011c0ac l       .rodata	00000000 .LANCHOR0
+0011c0c8 l       .rodata	00000000 .LANCHOR1
+0011c0e0 l       .rodata	00000000 .LANCHOR2
+0011c0ac l     O .rodata	0000001a __func__.5741
+0011c0c8 l     O .rodata	00000016 __func__.5745
+0011c0e0 l     O .rodata	00000014 __func__.5749
+00000000 l    df *ABS*	00000000 i2c_hal.c
+0011c148 l       .rodata	00000000 .LANCHOR1
+0013016c l       .bss	00000000 .LANCHOR2
+00130168 l       .bss	00000000 .LANCHOR3
+0012fce8 l       .bss	00000000 .LANCHOR5
+0012f948 l       .bss	00000000 .LANCHOR4
+0011c108 l       .rodata	00000000 .LANCHOR6
+0011c2c0 l       .rodata	00000000 .LANCHOR7
+0011c118 l       .rodata	00000000 .LANCHOR0
+0011c130 l       .rodata	00000000 .LANCHOR8
+0012f948 l     O .bss	000003a0 g_i2c
+0012fce8 l     O .bss	00000480 g_i2cInstance
+00130168 l     O .bss	00000001 g_i2c_init
+0011c108 l     O .rodata	00000010 __func__.8373
+0011c118 l     O .rodata	00000015 __func__.8385
+0011c130 l     O .rodata	00000016 __func__.8420
+0011c2c0 l     O .rodata	00000030 s_i2cDrvInterface
+00000000 l    df *ABS*	00000000 i2c_hal_ip_test.c
+00000000 l    df *ABS*	00000000 arm_gic_hal.c
+00130170 l       .bss	00000000 .LANCHOR0
+00130170 l     O .bss	00000001 initialized.7868
+00000000 l    df *ABS*	00000000 module_helper_hal.c
+0010cc30 l     F .text	00000028 init_per_items
+00122734 l       .data	00000000 .LANCHOR0
+00130171 l       .bss	00000000 .LANCHOR1
+00130171 l     O .bss	00000001 have_init
+00122734 l     O .data	00000070 module_per_table
+00000000 l    df *ABS*	00000000 res_clk.c
+0010cd88 l     F .text	00000078 calculate_pll_rate
+0010ce00 l     F .text	00000060 get_clk_by_id_internal
+00122818 l       .data	00000000 .LANCHOR0
+0010ce60 l     F .text	00000060 clk_get_refcount
+0010cec0 l     F .text	0000003c res_clk_get_rate
+0010cefc l     F .text	00000040 get_ckgen_uuu_ctl
+0010cf3c l     F .text	00000040 set_ckgen_uuu_ctl
+0010cf7c l     F .text	000000c8 get_ckgen_uuu_rate
+0010d044 l     F .text	000000bc is_valid_pll_config.isra.1.part.2
+0010d100 l     F .text	00000028 clk_test_refcount_bit.part.12
+0010d128 l     F .text	00000070 clk_clear_refcount_bit
+0010d198 l     F .text	00000060 res_clk_dec_refcount
+0010d1f8 l     F .text	000000c6 res_clk_inc_refcount
+0010d2c0 l     F .text	00000040 clk_is_enable
+0010d300 l     F .text	00000064 clk_set_depends_on
+0010d364 l     F .text	00000074 get_pll_rate.isra.20
+0010d3d8 l     F .text	00000048 get_ckgen_core_ctl
+0011c3c0 l       .rodata	00000000 .LANCHOR1
+0010d420 l     F .text	00000048 set_ckgen_core_ctl
+0011c3d4 l       .rodata	00000000 .LANCHOR2
+0010d468 l     F .text	00000048 get_ckgen_ip_ctl
+0011c3e8 l       .rodata	00000000 .LANCHOR3
+0010d4b0 l     F .text	00000048 set_ckgen_ip_ctl
+0011c3fc l       .rodata	00000000 .LANCHOR4
+0010d4f8 l     F .text	00000062 clk_set_moreprecise.constprop.30
+0010d55c l     F .text	0000004a set_ckgen_bus_ctl.constprop.31
+0011c3ac l       .rodata	00000000 .LANCHOR5
+0010d5a8 l     F .text	0000004a get_ckgen_bus_ctl.constprop.32
+0011c398 l       .rodata	00000000 .LANCHOR6
+0010d5f4 l     F .text	000000aa clk_is_hw_enable
+0010d6a0 l     F .text	0000000e is_clk_can_access.part.27
+0010d6b0 l     F .text	0000017a clk_set_parent
+0010d82c l     F .text	000001cc clk_get_rate
+0010d9f8 l     F .text	000001c4 clk_endis
+0010dbbc l     F .text	00000006 clk_disable
+0010dbc4 l     F .text	00000006 clk_enable
+0010dbcc l     F .text	00000060 clk_get_refcount_by_perid.constprop.33
+0010dc2c l     F .text	000000fc res_clk_is_valid_request
+00130174 l       .bss	00000000 .LANCHOR8
+00130178 l       .bss	00000000 .LANCHOR7
+0010dd28 l     F .text	00000186 res_clk_round_rate
+0012a910 l       .data	00000000 .LANCHOR9
+0010deb0 l     F .text	0000010c get_ckgen_bus_ip_round_rate_clk
+0010dfbc l     F .text	0000024e res_clk_set_rate
+00130180 l       .bss	00000000 .LANCHOR10
+0010e24c l     F .text	0000042a clk_set_rate
+0010e984 l     F .text	0000051c clk_round_rate
+0013017c l       .bss	00000000 .LANCHOR11
+00122820 l     O .data	00007da0 init_clks_table
+00130174 l     O .bss	00000004 cur_clkid
+00130178 l     O .bss	00000004 cur_per_id
+0013017c l     O .bss	00000004 dont_change_pll
+00130180 l     O .bss	00000004 set_rate_overwrite_allow
+001227a4 l     O .data	00000014 CLK_ID_NOC_BUS_tab
+001227b8 l     O .data	00000018 DISP_DP123_DC12345_tab
+001227d0 l     O .data	00000020 DISP_EXT_AUD1234_tab
+001227f0 l     O .data	00000018 DISP_MIPI_CSI123_PIX_tab
+00122808 l     O .data	00000010 SOC_UUU_CKGEN_tab
+0012a5c0 l     O .data	00000004 pll_1_cfg
+0012a5c4 l     O .data	00000004 pll_2_cfg
+0012a5c8 l     O .data	00000004 pll_3_cfg
+0012a5cc l     O .data	00000004 pll_4_cfg
+0012a5d0 l     O .data	00000004 pll_5_cfg
+0012a5d4 l     O .data	00000004 pll_6_cfg
+0012a5d8 l     O .data	00000004 pll_7_cfg
+0012a904 l     O .data	00000004 pll_lvds1234_disp_cfg
+0012a8e8 l     O .data	00000004 pll_cpu1a_cfg
+0012a8ec l     O .data	00000004 pll_cpu1b_cfg
+0012a8f0 l     O .data	00000004 pll_cpu2_cfg
+0012a8f4 l     O .data	00000004 pll_gpu1_cfg
+0012a8f8 l     O .data	00000004 pll_gpu2_cfg
+0012a908 l     O .data	00000004 pll_vpu_cfg
+0012a90c l     O .data	00000004 pll_vsn_cfg
+0012a900 l     O .data	00000004 pll_hpi_cfg
+0012a8fc l     O .data	00000004 pll_his_cfg
+0012a8ac l     O .data	0000003c pll_config_database
+0012a7ec l     O .data	00000030 pll_cfg_2000M
+0012a72c l     O .data	00000030 pll_cfg_1600M
+0012a78c l     O .data	00000030 pll_cfg_1800M
+0012a6fc l     O .data	00000030 pll_cfg_1592M
+0012a69c l     O .data	00000030 pll_cfg_1474dot56M
+0012a60c l     O .data	00000030 pll_cfg_1083M
+0012a5dc l     O .data	00000030 pll_cfg_1064M
+0012a63c l     O .data	00000030 pll_cfg_1328M
+0012a66c l     O .data	00000030 pll_cfg_1456M
+0012a6cc l     O .data	00000030 pll_cfg_1496M
+0012a75c l     O .data	00000030 pll_cfg_1656M
+0012a7bc l     O .data	00000030 pll_cfg_1896M
+0012a81c l     O .data	00000030 pll_cfg_2079M
+0012a84c l     O .data	00000030 pll_cfg_2128M
+0012a87c l     O .data	00000030 pll_cfg_2664M
+0012a910 l     O .data	00000004 round_rate_filter_en
+0011c398 l     O .rodata	00000012 __func__.9354
+0011c3ac l     O .rodata	00000012 __func__.9362
+0011c3c0 l     O .rodata	00000013 __func__.9445
+0011c3d4 l     O .rodata	00000013 __func__.9452
+0011c3e8 l     O .rodata	00000011 __func__.9520
+0011c3fc l     O .rodata	00000011 __func__.9527
+00000000 l    df *ABS*	00000000 res_rstgen.c
+0010f6e4 l     F .text	0000000e rstgen_is_released
+0010f6f4 l     F .text	000000d4 rstgen_endis
+0010f7c8 l     F .text	00000006 rstgen_hold
+0010f7d0 l     F .text	00000006 rstgen_release
+0010f7d8 l     F .text	000000ac res_rstgen_dec_refcount
+0010f884 l     F .text	000000a4 res_rstgen_inc_refcount
+0012a914 l       .data	00000000 .LANCHOR0
+0012a91c l     O .data	00001db0 init_rstgens_table
+00000000 l    df *ABS*	00000000 per_disp.c
+0012c70c l     O .data	00000018 sx_s0
+0012c724 l     O .data	000000d0 sx_s2
+00000000 l    df *ABS*	00000000 pll_hal.c
+0011c750 l       .rodata	00000000 .LANCHOR0
+0011c834 l       .rodata	00000000 .LANCHOR1
+0011c750 l     O .rodata	000000b0 g_pll_res
+0011c834 l     O .rodata	00000450 pll_configs
+00000000 l    df *ABS*	00000000 pmu_hal.c
+00130184 l       .bss	00000000 .LANCHOR0
+0012c7f4 l       .data	00000000 .LANCHOR2
+00130260 l       .bss	00000000 .LANCHOR3
+0011cc84 l       .rodata	00000000 .LANCHOR1
+0011cc9c l       .rodata	00000000 .LANCHOR4
+0011ccac l       .rodata	00000000 .LANCHOR5
+0011ccbc l       .rodata	00000000 .LANCHOR15
+0011ccdc l       .rodata	00000000 .LANCHOR16
+0011ccfc l       .rodata	00000000 .LANCHOR17
+00130260 l     O .bss	00000004 flag.6116
+0011cc84 l     O .rodata	00000015 __func__.6119
+0011cc9c l     O .rodata	0000000d __func__.6128
+0011ccac l     O .rodata	0000000d __func__.6134
+0011ccbc l     O .rodata	0000001e __func__.6205
+0011ccdc l     O .rodata	0000001f __func__.6213
+0011ccfc l     O .rodata	0000001f __func__.6221
+00000000 l    df *ABS*	00000000 hal_port.c
+00130268 l       .bss	00000000 .LANCHOR1
+00130264 l       .bss	00000000 .LANCHOR0
+0011cd78 l       .rodata	00000000 .LANCHOR2
+00130268 l     O .bss	00000010 s_port_handle
+0011cd78 l     O .rodata	000007a8 Port_kConfiguration
+00000000 l    df *ABS*	00000000 res.c
+0012c80c l       .data	00000000 .LANCHOR0
+0011d5e0 l       .rodata	00000000 .LANCHOR1
+0011ec10 l       .rodata	00000000 .LANCHOR2
+0011e568 l       .rodata	00000000 .LANCHOR3
+0011d650 l       .rodata	00000000 .LANCHOR4
+0011d650 l     O .rodata	00000024 addrmap_tab
+0011e568 l     O .rodata	00000138 g_res_cat
+00000000 l    df *ABS*	00000000 rstgen_hal.c
+001302a4 l       .bss	00000000 .LANCHOR0
+00130278 l       .bss	00000000 .LANCHOR1
+0011ec34 l       .rodata	00000000 .LANCHOR2
+00130278 l     O .bss	0000002c g_RstgenInstance
+0011ec34 l     O .rodata	0000003c s_RstgenDrvInterface
+00000000 l    df *ABS*	00000000 scr_hal.c
+00000000 l    df *ABS*	00000000 timer_hal.c
+0011077c l     F .text	0000000e hal_timer_func_irq_handle
+0011078c l     F .text	0000000e hal_timer_ovf_irq_handle
+00130668 l       .bss	00000000 .LANCHOR0
+001302a8 l       .bss	00000000 .LANCHOR1
+0011ec88 l       .rodata	00000000 .LANCHOR2
+0011ec88 l     O .rodata	00000060 timer_addr2irq_table
+00000000 l    df *ABS*	00000000 uart_hal.c
+00110a28 l     F .text	0000000e hal_uart_irq_handle
+001309ac l       .bss	00000000 .LANCHOR0
+0013066c l       .bss	00000000 .LANCHOR1
+0011ece8 l       .rodata	00000000 .LANCHOR2
+0011ece8 l     O .rodata	00000080 uart_addr2irq_table
+00000000 l    df *ABS*	00000000 cr5_port.c
+001309b8 l       .bss	00000000 .LANCHOR0
+0012c844 l       .data	00000000 .LANCHOR1
+001309b0 l       .bss	00000000 .LANCHOR2
+001309b4 l       .bss	00000000 .LANCHOR3
+00130c84 l     O .bss	00002000 xTimerTaskStack
+00130c20 l       .bss	00000000 .LANCHOR4
+00130a20 l       .bss	00000000 .LANCHOR6
+001309bc l       .bss	00000000 .LANCHOR5
+001309bc l     O .bss	00000064 xIdleTaskMem
+00130a20 l     O .bss	00000200 xIdleTaskStack
+00130c20 l     O .bss	00000064 xTimerTaskMem
+00000000 l    df *ABS*	00000000 heap_4.c
+0011127c l     F .text	00000062 prvInsertBlockIntoFreeList
+00132c94 l       .bss	00000000 .LANCHOR0
+00132c84 l       .bss	00000000 .LANCHOR1
+00132c88 l       .bss	00000000 .LANCHOR2
+00132c8c l       .bss	00000000 .LANCHOR4
+00132c90 l       .bss	00000000 .LANCHOR3
+00132c84 l     O .bss	00000004 pxEnd
+00132c88 l     O .bss	00000004 xBlockAllocatedBit
+00132c8c l     O .bss	00000004 xFreeBytesRemaining
+00132c90 l     O .bss	00000004 xMinimumEverFreeBytesRemaining
+00132c94 l     O .bss	00000008 xStart
+00000000 l    df *ABS*	00000000 croutine.c
+00000000 l    df *ABS*	00000000 event_groups.c
+00000000 l    df *ABS*	00000000 list.c
+00000000 l    df *ABS*	00000000 queue.c
+0011161c l     F .text	00000076 prvCopyDataToQueue
+00111694 l     F .text	00000082 prvNotifyQueueSetContainer
+00111718 l     F .text	00000024 prvCopyDataFromQueue
+0011173c l     F .text	000000a0 prvUnlockQueue
+00132c9c l       .bss	00000000 .LANCHOR0
+00000000 l    df *ABS*	00000000 stream_buffer.c
+00000000 l    df *ABS*	00000000 tasks.c
+00112154 l     F .text	0000012e prvAddNewTaskToReadyList
+00132f6c l       .bss	00000000 .LANCHOR0
+00132cdc l       .bss	00000000 .LANCHOR1
+00132fc8 l       .bss	00000000 .LANCHOR10
+00132ce8 l       .bss	00000000 .LANCHOR2
+00132f7c l       .bss	00000000 .LANCHOR11
+00132f80 l       .bss	00000000 .LANCHOR12
+00132f84 l       .bss	00000000 .LANCHOR3
+00132f98 l       .bss	00000000 .LANCHOR4
+00132fb4 l       .bss	00000000 .LANCHOR5
+00132fe0 l       .bss	00000000 .LANCHOR6
+00132fcc l       .bss	00000000 .LANCHOR7
+00132ce0 l       .bss	00000000 .LANCHOR8
+00132ce4 l       .bss	00000000 .LANCHOR9
+00112284 l     F .text	000000ac prvAddCurrentTaskToDelayedList
+00132ff4 l       .bss	00000000 .LANCHOR13
+00132fac l       .bss	00000000 .LANCHOR14
+00112330 l     F .text	0000001c prvResetNextTaskUnblockTime.part.0
+0011234c l     F .text	00000044 prvTaskIsTaskSuspended
+00112390 l     F .text	000000a8 prvInitialiseNewTask.isra.2
+00112438 l     F .text	00000038 prvDeleteTCB
+00112470 l     F .text	0000005e prvIdleTask
+00132f70 l       .bss	00000000 .LANCHOR15
+001124d0 l     F .text	000000c4 vTaskSwitchContext.part.6
+00132ff8 l       .bss	00000000 .LANCHOR16
+00132f68 l       .bss	00000000 .LANCHOR17
+00132f78 l       .bss	00000000 .LANCHOR18
+00132f74 l       .bss	00000000 .LANCHOR20
+00132fb0 l       .bss	00000000 .LANCHOR19
+00132ce0 l     O .bss	00000004 pxDelayedTaskList
+00132ce4 l     O .bss	00000004 pxOverflowDelayedTaskList
+00132ce8 l     O .bss	00000280 pxReadyTasksLists
+00132f68 l     O .bss	00000004 ulTaskSwitchedInTime
+00132f6c l     O .bss	00000004 uxCurrentNumberOfTasks
+00132f70 l     O .bss	00000004 uxDeletedTasksWaitingCleanUp
+00132f74 l     O .bss	00000004 uxPendedTicks
+00132f78 l     O .bss	00000004 uxSchedulerSuspended
+00132f7c l     O .bss	00000004 uxTaskNumber
+00132f80 l     O .bss	00000004 uxTopReadyPriority
+00132f84 l     O .bss	00000014 xDelayedTaskList1
+00132f98 l     O .bss	00000014 xDelayedTaskList2
+00132fac l     O .bss	00000004 xNextTaskUnblockTime
+00132fb0 l     O .bss	00000004 xNumOfOverflows
+00132fb4 l     O .bss	00000014 xPendingReadyList
+00132fc8 l     O .bss	00000004 xSchedulerRunning
+00132fcc l     O .bss	00000014 xSuspendedTaskList
+00132fe0 l     O .bss	00000014 xTasksWaitingTermination
+00132ff4 l     O .bss	00000004 xTickCount
+00132ff8 l     O .bss	00000004 xYieldPending
+00000000 l    df *ABS*	00000000 timers.c
+00113288 l     F .text	00000086 prvCheckForValidListAndQueue
+00133124 l       .bss	00000000 .LANCHOR0
+001330a4 l       .bss	00000000 .LANCHOR1
+001330b8 l       .bss	00000000 .LANCHOR2
+00132ffc l       .bss	00000000 .LANCHOR3
+00133000 l       .bss	00000000 .LANCHOR4
+001330d0 l       .bss	00000000 .LANCHOR5
+00133004 l       .bss	00000000 .LANCHOR6
+00113310 l     F .text	00000050 prvInsertTimerInActiveList
+001134cc l     F .text	00000200 prvTimerTask
+00133128 l       .bss	00000000 .LANCHOR7
+0011343c l     F .text	00000090 prvSwitchTimerLists
+001330cc l       .bss	00000000 .LANCHOR8
+00132ffc l     O .bss	00000004 pxCurrentTimerList
+00133000 l     O .bss	00000004 pxOverflowTimerList
+00133004 l     O .bss	000000a0 ucStaticTimerQueueStorage.6072
+001330a4 l     O .bss	00000014 xActiveTimerList1
+001330b8 l     O .bss	00000014 xActiveTimerList2
+001330cc l     O .bss	00000004 xLastTime.6025
+001330d0 l     O .bss	00000054 xStaticTimerQueue.6071
+00133124 l     O .bss	00000004 xTimerQueue
+00133128 l     O .bss	00000004 xTimerTaskHandle
+00000000 l    df *ABS*	00000000 build-dil2_d9_ref//home/zhangk/d9/source/sdk/source/lk_safety/../../source/freertos/FreeRTOS/Source/portable/GCC/ARM_CR5/portASM.o
+0000001f l       *ABS*	00000000 SYS_MODE
+00000013 l       *ABS*	00000000 SVC_MODE
+00000012 l       *ABS*	00000000 IRQ_MODE
+00110e4c l       .text	00000000 ulCriticalNestingConst
+00110e50 l       .text	00000000 ulPortTaskHasFPUContextConst
+00110e48 l       .text	00000000 pxCurrentTCBConst
+00110e58 l       .text	00000000 vTaskSwitchContextConst
+00110e44 l       .text	00000000 ulICCPMRConst
+00110e54 l       .text	00000000 ulMaxAPIPriorityMaskConst
+00110e60 l       .text	00000000 ulPortInterruptNestingConst
+00110e3c l       .text	00000000 ulICCIARConst
+00110e5c l       .text	00000000 vApplicationIRQHandlerConst
+00110e40 l       .text	00000000 ulICCEOIRConst
+00110d68 l       .text	00000000 exit_without_switch
+00110d80 l       .text	00000000 switch_before_exit
+00000000 l    df *ABS*	00000000 app.c
+001136cc l     F .text	0000000c app_thread_entry
+00000000 l    df *ABS*	00000000 lib_debug.c
+00000000 l    df *ABS*	00000000 atoi.c
+00000000 l    df *ABS*	00000000 bsearch.c
+00000000 l    df *ABS*	00000000 ctype.c
+00000000 l    df *ABS*	00000000 errno.c
+00000000 l    df *ABS*	00000000 printf.c
+00113a4c l     F .text	000000ba longlong_to_string
+00113b08 l     F .text	00000062 exponent_to_string
+00113b6c l     F .text	000002e0 double_to_hexstring.isra.0
+0011f07c l       .rodata	00000000 .LANCHOR0
+0011f06c l       .rodata	00000000 .LANCHOR1
+00113e4c l     F .text	00000052 longlong_to_hexstring.constprop.1
+00113ea0 l     F .text	000002b8 double_to_string.constprop.2
+0011f06c l     O .rodata	00000010 hextable
+0011f07c l     O .rodata	00000010 hextable_caps
+00000000 l    df *ABS*	00000000 rand.c
+00000000 l    df *ABS*	00000000 strtol.c
+00000000 l    df *ABS*	00000000 strtoll.c
+00000000 l    df *ABS*	00000000 stdio.c
+00114790 l     F .text	0000000c _fprintf_output_func
+00000000 l    df *ABS*	00000000 qsort.c
+00000000 l    df *ABS*	00000000 eabi.c
+00000000 l    df *ABS*	00000000 atexit.c
+00000000 l    df *ABS*	00000000 memchr.c
+00000000 l    df *ABS*	00000000 memcmp.c
+00000000 l    df *ABS*	00000000 strcat.c
+00000000 l    df *ABS*	00000000 strchr.c
+00000000 l    df *ABS*	00000000 strcmp.c
+00000000 l    df *ABS*	00000000 strcoll.c
+00000000 l    df *ABS*	00000000 strcpy.c
+00000000 l    df *ABS*	00000000 strdup.c
+00000000 l    df *ABS*	00000000 strerror.c
+00000000 l    df *ABS*	00000000 strlcat.c
+00000000 l    df *ABS*	00000000 strlcpy.c
+00000000 l    df *ABS*	00000000 strlen.c
+00000000 l    df *ABS*	00000000 strncat.c
+00000000 l    df *ABS*	00000000 strncpy.c
+00000000 l    df *ABS*	00000000 strncmp.c
+00000000 l    df *ABS*	00000000 strnicmp.c
+00000000 l    df *ABS*	00000000 strnlen.c
+00000000 l    df *ABS*	00000000 strpbrk.c
+00000000 l    df *ABS*	00000000 strrchr.c
+00000000 l    df *ABS*	00000000 strspn.c
+00000000 l    df *ABS*	00000000 strstr.c
+00000000 l    df *ABS*	00000000 strtok.c
+00000000 l    df *ABS*	00000000 strxfrm.c
+00000000 l    df *ABS*	00000000 pure_virtual.cpp
+00000000 l    df *ABS*	00000000 build-dil2_d9_ref/lib/libc/string/arch/arm/arm/memcpy.o
+00000000 l    df *ABS*	00000000 build-dil2_d9_ref/lib/libc/string/arch/arm/arm/memset.o
+00000000 l    df *ABS*	00000000 system_configs_parse.c
+001148cc l     F .text	0000003a configs_init.part.0
+00133130 l       .bss	00000000 .LANCHOR0
+0013312c l       .bss	00000000 .LANCHOR1
+00133134 l       .bss	00000000 .LANCHOR2
+0013312c l     O .bss	00000004 addr_module_header
+00133130 l     O .bss	00000004 config_count
+00133134 l     O .bss	00000001 init_done
+00000000 l    df *ABS*	00000000 com_platform.c
+00000000 l    df *ABS*	00000000 disp_panels.c
+00000000 l    df *ABS*	00000000 dsi85.c
+00000000 l    df *ABS*	00000000 ds90ub941as.c
+00000000 l    df *ABS*	00000000 ds90ub947.c
+00000000 l    df *ABS*	00000000 ds90ub927.c
+00000000 l    df *ABS*	00000000 ds90ub9xx_i2c_rw.c
+00000000 l    df *ABS*	00000000 lt9611.c
+00114a24 l     F .text	00000036 LT9611_LowPower_mode.part.0
+00114a5c l     F .text	00000016 LT9611_CSC.part.2
+00114a74 l     F .text	00000036 LT9611_HDMI_CEC_ON.part.4
+0012c8bc l       .data	00000000 .LANCHOR0
+0012ca68 l       .data	00000000 .LANCHOR1
+0012ca88 l       .data	00000000 .LANCHOR4
+0012caa8 l       .data	00000000 .LANCHOR5
+0012c928 l       .data	00000000 .LANCHOR6
+0012c9c8 l       .data	00000000 .LANCHOR9
+0012ca48 l       .data	00000000 .LANCHOR14
+0012c8c8 l       .data	00000000 .LANCHOR17
+0012c9e8 l       .data	00000000 .LANCHOR18
+0013323c l       .bss	00000000 .LANCHOR2
+0013326c l       .bss	00000000 .LANCHOR3
+0012c8e8 l       .data	00000000 .LANCHOR8
+0012c948 l       .data	00000000 .LANCHOR13
+0012ca08 l       .data	00000000 .LANCHOR16
+0012c908 l       .data	00000000 .LANCHOR7
+0012c9a8 l       .data	00000000 .LANCHOR10
+0012ca28 l       .data	00000000 .LANCHOR15
+0012c988 l       .data	00000000 .LANCHOR11
+0012c968 l       .data	00000000 .LANCHOR12
+0013326a l       .bss	00000000 .LANCHOR19
+00133138 l       .bss	00000000 .LANCHOR20
+00115b94 l     F .text	00000108 lt9611_cec_msg_rx_parse.part.5
+00133240 l       .bss	00000000 .LANCHOR21
+00133238 l       .bss	00000000 .LANCHOR23
+00000000 l    df *ABS*	00000000 lt9611_i2c.c
+00133274 l       .bss	00000000 .LANCHOR0
+0011f0cc l       .rodata	00000000 .LANCHOR1
+00133270 l       .bss	00000000 .LANCHOR2
+0011f0dc l       .rodata	00000000 .LANCHOR3
+0011f0ec l       .rodata	00000000 .LANCHOR4
+00133270 l     O .bss	00000004 lt9611_i2c_addr
+00133274 l     O .bss	00000004 lt9611_i2c_handle
+0011f0cc l     O .rodata	00000010 __func__.8317
+0011f0dc l     O .rodata	00000010 __func__.8326
+0011f0ec l     O .rodata	00000011 __func__.8335
+00000000 l    df *ABS*	00000000 lk_event.c
+00000000 l    df *ABS*	00000000 lk_mutex.c
+00000000 l    df *ABS*	00000000 lk_semaphore.c
+00000000 l    df *ABS*	00000000 lk_timers.c
+00000000 l    df *ABS*	00000000 lk_thread.c
+00116640 l     F .text	00000024 task_dispatch
+00000000 l    df *ABS*	00000000 cbuf.c
+00000000 l    df *ABS*	00000000 io_console.c
+001169e0 l     F .text	00000068 __debug_stdio_write
+0012cad0 l       .data	00000000 .LANCHOR0
+00116a48 l     F .text	0000001a __debug_stdio_read
+0011f244 l     O .rodata	00000008 console_io_hooks
+0012cad0 l     O .data	00000008 print_callbacks
+00000000 l    df *ABS*	00000000 io.c
+00000000 l    df *ABS*	00000000 reboot_service.c
+00116a74 l     F .text	00000004 reboot_mp
+00116a78 l     F .text	0000004e kick_module
+00116ac8 l     F .text	0000010a reboot_ap2
+0011f258 l       .rodata	00000000 .LANCHOR0
+00116bd4 l     F .text	000001d6 reboot_ap1
+0011f24c l       .rodata	00000000 .LANCHOR1
+00116dac l     F .text	00000018 reboot_saf
+00116dc4 l     F .text	00000148 reboot_sec
+0011f264 l       .rodata	00000000 .LANCHOR2
+0011f29c l       .rodata	00000000 .LANCHOR4
+0011f270 l       .rodata	00000000 .LANCHOR3
+0011f24c l     O .rodata	0000000b __func__.8391
+0011f258 l     O .rodata	0000000b __func__.8403
+0011f264 l     O .rodata	0000000b __func__.8434
+0011f270 l     O .rodata	0000000e __func__.8441
+0011f29c l     O .rodata	00000014 proc
+00000000 l    df *ABS*	00000000 tca9539.c
+00116f58 l     F .text	0000006c tca9539_input_val
+00116fc4 l     F .text	00000084 tca9539_input_enable
+00117048 l     F .text	0000009c tca9539_output_val
+001170e4 l     F .text	00000098 tca9539_output_enable
+00133278 l       .bss	00000000 .LANCHOR0
+0011f420 l       .rodata	00000000 .LANCHOR1
+00133278 l     O .bss	00000040 pdev
+0011f420 l     O .rodata	00000010 dev_ops
+00000000 l    df *ABS*	00000000 tca6408.c
+001332b8 l       .bss	00000000 .LANCHOR0
+001332b8 l     O .bss	00000040 pdev
+00000000 l    df *ABS*	00000000 mipi_lt9611_to_hdmi_1920x1080_lcd.c
+001173b4 l     F .text	00000026 lt9611_irq_handler
+001332fc l       .bss	00000000 .LANCHOR0
+001173dc l     F .text	0000002e lt9611_work_func
+0011740c l     F .text	00000040 config_lt9611_reset_pin
+0011744c l     F .text	000000ba panel_post_end
+0011f468 l       .rodata	00000000 .LANCHOR1
+00117508 l     F .text	00000030 panel_post_begin
+001332f8 l       .bss	00000000 .LANCHOR2
+001332f8 l     O .bss	00000004 dio_handle.9362
+001332fc l     O .bss	00000008 event_hdmi_hpd
+0012cad8 l     O .data	00000018 mipi_data
+0012cb2c l     O .data	00000003 reset_timing
+0012cb30 l     O .data	00000038 timing
+0011f468 l     O .rodata	0000000f __func__.9388
+00000000 l    df *ABS*	00000000 mem_image.c
+00000000 l    df *ABS*	00000000 boot.c
+001175fc l     F .text	000000a2 update_boot_info.constprop.1
+00133304 l       .bss	00000000 .LANCHOR0
+00133304 l     O .bss	00000008 g_bootinfo
+00000000 l    df *ABS*	00000000 _arm_addsubdf3.o
+00000000 l    df *ABS*	00000000 _aeabi_uldivmod.o
+00000000 l    df *ABS*	00000000 libgcc2.c
+00000000 l    df *ABS*	00000000 _dvmd_tls.o
+00117ba8 l     F .text	00000008 __memcpy_from_thumb
+0010bee4 g     F .text	0000009c hal_display_connect_all
+0010950c g     F .text	0000000a rstgen_module_status
+00108a04 g     F .text	00000058 pmu_set_external_reset_debounce_delay
+00109414 g     F .text	0000000c rstgen_iso_disable
+0011f5b8 g       .lk_init	00000000 __lk_init_end
+0010fba8 g     F .text	00000074 hal_pll_get_config
+0011479c g     F .text	00000020 putchar
+0011628c g     F .text	00000050 lt9611_i2c_init
+0011e48c g     O .rodata	00000008 g_iram_reg_res
+00109730 g     F .text	00000048 rtc_init
+00116948 g     F .text	00000096 cbuf_read_char
+001004bc g     F .text	00000004 platform_init
+00109348 g     F .text	00000008 rstgen_get_default_config
+0010ab38 g     F .text	00000094 hal_clock_ipclk_get
+00109f28 g     F .text	00000016 uart_drv_int_cbk_register
+00117580 g     F .text	0000007c mem_image_seek
+001151f0 g     F .text	000001d6 LT9611_PLL
+001093a0 g     F .text	00000016 rstgen_global_rst_disable
+00103b44 g     F .text	0000007c clkgen_uuu_clock_wrapper
+0010cb04 g     F .text	00000054 hal_i2c_write_reg_data
+001167d8 g     F .text	00000052 thread_detach
+0011623c g     F .text	0000004e LT9611_IRQ_Task
+001182a4 g     O .rodata	000000b8 handover_list
+0011ed6c g     O .rodata	00000004 ulICCIAR
+0010f9bc g     F .text	0000010c register_res_rstgens
+0011ed74 g     O .rodata	00000004 ulMaxAPIPriorityMask
+0011f898 g     O .data	00002970 x9_pins
+00101cac g     F .text	000000b8 set_pmu_ctrl_ap_domain
+0011379c g     F .text	0000002c _panic
+0013326a g     O .bss	00000001 pcr_m
+0010b9c8 g     F .text	0000004a get_ss_cfg
+001110e0 g     F .text	00000040 vPortExitCritical
+00109518 g     F .text	0000000c rstgen_core_status
+0011f624 g     O .data	00000204 dwc_mipi_dsi_host_ops
+001179d0 g     F .text	0000005a .hidden __floatdidf
+0010b194 g     F .text	00000064 hal_clock_uuuslice_debug_disable
+0010081c g     F .text	00000046 arm_gic_init_early
+0010741c g     F .text	0000000e dw_i2c_init_after
+00104a04 g     F .text	000000be mipi_dsih_open
+0011dc8c g     O .rodata	00000008 g_dma_res
+0010a7fc g     F .text	000000a2 hal_disp_clock_set_default
+0010c784 g     F .text	0000028c hal_i2c_creat_handle
+00114804 g     F .text	0000002c printf
+0012f5d8 g     O .bss	00000348 g_instances
+00109350 g     F .text	0000003c rstgen_init
+0012c9c8 g     O .data	00000020 video_1920x1080_60Hz
+00115aec g     F .text	00000044 lt9611_hdmi_cec_read
+00100c44 g     F .text	00000000 arch_idle
+00111160 g     F .text	00000036 ulPortSetInterruptMask
+0011210c g     F .text	00000046 vQueueWaitForMessageRestricted
+001105b0 g     F .text	00000030 hal_rstgen_core_reset
+00100c08 g     F .text	00000000 arch_spin_lock
+0012c7f4 g     O .data	00000018 dev
+0010bb20 g     F .text	00000032 hal_dio_write_channel
+0010c730 g     F .text	0000001c register_gpio_int_handler
+0011f5c4 g       .early_copy	00000000 __earlycopy_end
+00108900 g     F .text	00000052 pmu_set_external_reset_enable
+0010af6c g     F .text	00000064 hal_clock_corectl_set
+0012cc00 g       .nocache	00000000 _nocacheable_end
+00103bc0 g     F .text	00000010 clkgen_uuu_ctl_get
+001098a4 g     F .text	000000d4 scr_set
+001093f8 g     F .text	0000000e rstgen_iso_enable
+0011d69c g     O .rodata	000005ac g_ckgen_res
+001008e0 g     F .text	00000000 arm_chain_load
+0011ebd8 g     O .rodata	0000000c mem_info_dma
+0010369c g     F .text	0000000e clkgen_core_ctl_get
+00122818 g     O .data	00000008 g_clk_root
+00108774 g     F .text	0000007e pmu_get_powerctrl_input_status
+001106ec g     F .text	0000002e hal_scr_delete_handle
+00115e34 g     F .text	00000024 LT9611_Pcr_MK_Print
+001138a0 g     F .text	00000000 memmove
+0012cc40 g     O .bss	00000100 fiq_stack
+001013a4 g     F .text	000001ba arm_data_abort_handler
+00111b58 g     F .text	00000100 xQueueGenericSendFromISR
+00109a74 g     F .text	0000005a timer_drv_ovf_irq_handle
+00122488 g     O .data	00000120 table_dc_res
+0011f568 g     O .lk_init	00000010 _init_struct_soc_init
+00117bb8 g       .ARM.exidx	00000000 __exidx_end
+0010afd0 g     F .text	00000086 hal_clock_uuuclk_set
+001168ac g     F .text	00000024 cbuf_space_avail
+00115770 g     F .text	00000176 LT9611_Read_EDID
+0012c8bc g     O .data	00000009 lt9611
+0011485c g     F .text	00000018 _vprintf
+00109a3c g     F .text	00000016 timer_drv_clk_init
+001112e0 g     F .text	000001da pvPortMallocAligned
+00108ccc g     F .text	00000044 pmu_set_glitch_filter_delay
+00100dc4 g     F .text	00000000 arm_irq
+001105e0 g     F .text	00000034 hal_rstgen_core_ctl
+00116784 g     F .text	00000052 thread_resume
+00132cdc g     O .bss	00000004 pxCurrentTCB
+0011e4b0 g     O .rodata	00000008 g_mipi_dsi_res
+00103d50 g     F .text	0000002c clkgen_uuuslice_debug_disable
+00110654 g     F .text	00000034 hal_rstgen_module_ctl
+0011548c g     F .text	0000003e LT9611_HDCP_Enable
+0011f558 g       .lk_init	00000000 __lk_init
+00116478 g     F .text	00000076 event_signal
+0012f594 g     O .bss	00000004 spin_lock_states
+0011682c g     F .text	00000012 thread_detach_and_resume
+00100630 g     F .text	00000004 uart_get_current_port
+0010b2f0 g     F .text	00000004 hal_cpu_release_handle
+00117bd0 g     O .rodata	00000008 UART_RX_PIN_MODE
+0010cbac g     F .text	00000004 hal_arm_gic_create_handle
+001154cc g     F .text	00000016 LT9611_HDCP_Disable
+001309b8 g     O .bss	00000004 ulPortYieldRequired
+0011e550 g     O .rodata	00000008 g_pwrctrl_res
+001137c8 g     F .text	000000ca hexdump
+0012cb68 g       .data	00000000 __ctor_list
+0012cf40 g     O .bss	00000800 svc_stack
+001057e0 g     F .text	00000190 disp_panel_connect
+0012c9a8 g     O .data	00000020 video_1920x1080_50Hz
+001127ac g     F .text	000000e8 vTaskPrioritySet
+00112f0c g     F .text	0000001a vTaskInternalSetTimeOutState
+001088a0 g     F .text	00000060 pmu_get_internal_powerdown_status
+00109f60 g     F .text	00000028 uart_drv_int_src_disable
+0010ad8c g     F .text	00000068 hal_clock_busctl_set
+0010ca64 g     F .text	000000a0 hal_i2c_set_busconfig
+0012f584 g     O .bss	00000004 clkgen_spin_lock
+0013330c g       .ext.mem	00000000 __ext_mem_start
+0010cbf4 g     F .text	00000010 hal_arm_gic_enable_interrupt
+00133238 g     O .bss	00000001 Tx_HPD
+0011e494 g     O .rodata	0000000c g_iram_res
+00100650 g     F .text	0000001c current_time
+00110f64 g     F .text	00000106 xPortStartScheduler
+0010be08 g     F .text	0000000c hal_display_num
+0010a754 g     F .text	000000a6 hal_sec_clock_set_default
+0011f828 g     O .data	00000024 disp_driver_dsi
+001138a0 g     F .text	00000000 memcpy
+00112df4 g     F .text	00000038 vTaskPlaceOnEventList
+0010ba14 g     F .text	00000004 hal_crypto_init
+001083d8 g     F .text	0000003e pmu_clean_single_event_source
+00117958 g     F .text	00000022 .hidden __floatsidf
+0012e760 g     O .bss	00000200 rev_cpy_buf
+0010ac2c g     F .text	0000005e hal_clock_ipctl_set
+0010a578 g     F .text	00000068 hal_clock_osc_init
+00110508 g     F .text	00000038 hal_rstgen_iso_enable
+00100040 g       .text	00000000 arm_reset
+00108390 g     F .text	00000046 pmu_get_event_source
+00117a2c g     F .text	00000000 .hidden __aeabi_uldivmod
+001147d4 g     F .text	00000030 puts
+0012e1e0 g     O .bss	00000001 g_ce_inited
+0011eb74 g     O .rodata	0000000c g_xtal_res
+001114bc g     F .text	00000094 vPortFree
+0011f5c4 g       .early_copy	00000000 __rodata_end
+00100954 g     F .text	00000000 arch_enable_cache
+0011eb44 g     O .rodata	00000008 g_tm_res
+0012dfe0 g     O .bss	00000200 dbMask
+0010cc7c g     F .text	0000010c module_set_state
+00108848 g     F .text	00000058 pmu_set_internal_powerdown_polarity
+00111dac g     F .text	00000192 xQueueSemaphoreTake
+0011ebf8 g     O .rodata	0000000c mem_info_mb
+001018cc g     F .text	000000d0 lk_init_level
+00111550 g     F .text	00000006 malloc
+00111198 g     F .text	00000060 vPortValidateInterruptPriority
+0010ca10 g     F .text	0000000e hal_i2c_release_handle
+0012cd40 g     O .bss	00000200 irq_stack
+0010bd1c g     F .text	000000da hal_sdm_set_pll_clk
+001108b8 g     F .text	00000046 hal_timer_global_init
+00103e1c g     F .text	0000004e Dio_WriteChannel
+0012cbc0 g     O .bss	00000080 abt_stack
+00115900 g     F .text	0000001e lt9611_cec_logical_reset
+00110140 g     F .text	0000003e hal_port_set_pin_mode
+0010511c g     F .text	0000001c disp_vsync_callback
+004b0000 g       *ABS*	00000000 TCM_BASE
+00100bb4 g     F .text	00000000 _atomic_and
+0011e6a0 g     O .rodata	00000008 g_romc_reg_res
+00109a54 g     F .text	0000000e timer_drv_int_sta_enable
+001094c0 g     F .text	0000004a rstgen_module_ctl
+00115da0 g     F .text	0000006e LT9611_Frequency_Meter_Byte_Clk
+00104ac4 g     F .text	00000456 mipi_dsih_dpi_video
+001115a0 g     F .text	0000001e vListInsertEnd
+001109d8 g     F .text	00000050 hal_timer_glb_cntr_get
+00108598 g     F .text	0000006e pmu_set_powerctrl_powerup_delay
+0012f5d4 g     O .bss	00000004 g_display_num
+00108524 g     F .text	00000074 pmu_set_powerctrl_powerdown_delay
+0013330c g       .ext.mem	00000000 __ext_mem_end
+00107e34 g     F .text	000002fc pll_config
+00117938 g     F .text	0000001e .hidden __aeabi_ui2d
+0010737c g     F .text	000000a0 dw_i2c_set_busconfig
+0011dcdc g     O .rodata	0000000c g_gpv_res
+00117a5c g     F .text	00000142 .hidden __udivmoddi4
+001176b4 g     F .text	00000000 .hidden __aeabi_drsub
+00108d60 g     F .text	00000044 pmu_set_por_powerdown_delay
+0010bc1c g     F .text	00000100 install_resource
+00116840 g     F .text	0000006a cbuf_initialize
+0012d740 g     O .bss	00000800 sys_stack
+00103338 g     F .text	00000240 clkgen_bus_ctl_set
+001022b8 g     F .text	00000088 soc_init
+00109ad0 g     F .text	00000220 timer_drv_func_irq_handle
+00103cd4 g     F .text	00000038 clkgen_coreslice_debug_enable
+00108954 g     F .text	00000058 pmu_set_external_reset_polarity
+00100b98 g     F .text	00000000 _atomic_add
+00111598 g     F .text	00000006 vListInitialiseItem
+0012c948 g     O .data	00000020 video_1920x1080_24Hz
+00180000 g       *ABS*	00000000 _end_of_ram
+0011f558 g       .apps	00000000 __apps_end
+00111c58 g     F .text	00000152 xQueueReceive
+00132c9c g     O .bss	00000040 xQueueRegistry
+00115ccc g     F .text	000000d4 lt9611_cec_msg_tx_handle
+00111134 g     F .text	0000002c vPortClearInterruptMask
+00102eb8 g     F .text	00000044 clkgen_fsrefclk_sel
+0010b0c0 g     F .text	00000068 hal_clock_uuuctl_set
+0012e200 g     O .bss	00000040 hash
+00130264 g     O .bss	00000004 port_spin_lock
+0011037c g     F .text	00000048 p2ap
+00111278 g     F .text	00000004 vPortGetCurrentTimeMs
+00103d10 g     F .text	0000003e clkgen_uuuslice_debug_enable
+0011797c g     F .text	00000042 .hidden __extendsfdf2
+00110334 g     F .text	00000048 res_get_info_by_id
+001111f8 g     F .text	00000020 vApplicationGetTimerTaskMemory
+001082c0 g     F .text	00000046 pmu_exit
+00100ea0 g     F .text	00000000 arch_copy_to_user
+00110be0 g     F .text	00000000 FreeRTOS_SWI_Handler
+001309ac g     O .bss	00000004 uart_spin_lock
+001302a8 g     O .bss	000003c0 g_timer_instance
+001176c0 g     F .text	00000276 .hidden __adddf3
+00102240 g     F .text	00000076 module_config_init
+0012cc00 g       .nocache	00000000 _nocacheable_start
+0012caa8 g     O .data	00000020 video_720x576_50Hz
+00117bb0 g       .text	00000000 __exidx_start
+00117348 g     F .text	00000030 tca9539_enable_i2cpoll
+0010fe6c g     F .text	00000048 hal_pmu_exit
+0010e20c g     F .text	00000040 find_config_in_database
+0011eb38 g     O .rodata	0000000c g_timer_res
+00110ce0 g     F .text	00000000 FreeRTOS_IRQ_Handler
+0011dccc g     O .rodata	00000008 g_gic_res
+001089ac g     F .text	00000058 pmu_set_external_reset_debounce_enable
+0012a914 g     O .data	00000008 g_rstgen_root
+0013330c g       .bss	00000000 __bss_end
+00108c6c g     F .text	00000060 pmu_get_external_wakeup_status
+0011d67c g     O .rodata	0000000c g_bipc_res
+001139a4 g     F .text	00000000 bzero
+00108418 g     F .text	00000036 pmu_clean_all_event_source
+00117bb8 g       .rodata	00000000 __fault_handler_table_start
+0011d68c g     O .rodata	00000008 g_ce_mem_res
+0011f598 g     O .lk_init	00000010 _init_struct_arm_gic_init_percpu
+00103cd0 g     F .text	00000004 clkgen_busslice_debug_disable
+00117bd8 g     O .rodata	00000008 UART_TX_PIN_MODE
+001030cc g     F .text	00000238 clkgen_bus_slice_switch
+00115920 g     F .text	0000010c lt9611_cec_msg_set_logical_address
+00117938 g     F .text	0000001e .hidden __floatunsidf
+0010aad0 g     F .text	00000066 hal_clock_disable
+00101660 g     F .text	0000007e arm_fpu_undefined_instruction
+00111558 g     F .text	00000004 pvPortMalloc
+0010fb08 g     F .text	00000002 hal_pll_delete_handle
+0012c968 g     O .data	00000020 video_1920x1080_25Hz
+0012c858 g     O .data	00000008 display_1_panels
+00109318 g     F .text	0000002e Port_SetHandle
+00100b20 g     F .text	00000000 arch_invalidate_cache_range_asm
+00114908 g     F .text	0000005c get_config_info
+0011f870 g     O .data	00000024 disp_driver_parallel
+00108450 g     F .text	00000050 pmu_powerdown
+0011ed70 g     O .rodata	00000004 ulICCPMR
+00114aac g     F .text	00000036 LT9611_Chip_ID
+00112088 g     F .text	00000058 vQueueDelete
+001004ec g     F .text	0000001e dgetc
+00109a28 g     F .text	00000014 timer_drv_cascade_set
+00111580 g     F .text	00000016 vListInitialise
+0011e858 g     O .rodata	00000008 g_rstgen_rtc_res
+0013323c g     O .bss	00000004 Video_Format
+00100040  w      .text	00000000 platform_reset
+0010ff00 g     F .text	0000004c hal_pmu_set_powerctrl_out_mode
+00133138 g     O .bss	00000100 Sink_EDID
+001037bc g     F .text	0000012a clkgen_mon_ip_slice
+00115fc4 g     F .text	000000e2 LT9611_HDP_Interrupt_Handle
+001188f8 g     O .rodata	00000028 dc_ops
+00101560 g     F .text	000000f0 arm_prefetch_abort_handler
+001223e4 g     O .data	000000a4 g_display_res
+0011f544 g       .apps	00000000 __apps_start
+0010086c g     F .text	00000000 arm_context_switch
+00112ad0 g     F .text	00000018 xTaskGetTickCount
+00111990 g     F .text	0000019e xQueueGenericSend
+001077c0 g     F .text	000000f6 dw_i2c_write_reg_data
+0012c848  w    O .data	0000000c __stdio_FILEs
+00107690 g     F .text	000000c6 dw_i2c_slave_receive
+0012e1e4 g     O .bss	00000008 g_trng_signal
+0012c9e8 g     O .data	00000020 video_1920x720_60Hz
+0011717c g     F .text	000001cc tca9539_init
+0012f578 g     O .bss	00000008 g_disp_list
+0011f578 g     O .lk_init	00000010 _init_struct_arm_gic_resume_cpu
+00110688 g     F .text	0000002e hal_rstgen_module_status
+00108680 g     F .text	0000007a pmu_set_powerctrl_out_mode
+00101844 g     F .text	00000004 arch_invalidate_cache_range
+0011dc5c g     O .rodata	00000028 g_ddr_res
+0012cac8 g     O .data	00000008 console_io
+00110504 g     F .text	00000004 hal_rstgen_init
+0010a430 g     F .text	00000002 dcf_early_init
+00108d10 g     F .text	00000050 pmu_set_glitch_filter_enable
+00107bd8 g     F .text	0000008e arm_gic_init
+00102f48 g     F .text	000000c8 clkgen_ip_slice_set
+00101ff0 g     F .text	0000002c init_display_ss
+0011155c g     F .text	0000001e calloc
+0010cc58 g     F .text	00000022 module_helper_init
+001130c8 g     F .text	000000d2 xTaskPriorityDisinherit
+00108f78 g     F .text	000002c2 Port_Init
+0012e540 g     O .bss	00000220 msg_padding_ext
+001021cc g     F .text	00000020 release_rst_all
+0010adf4 g     F .text	0000007c hal_clock_coreclk_set
+0011eb14 g     O .rodata	0000000c g_sem_res
+0011d674 g     O .rodata	00000008 g_adc_res
+0012ca28 g     O .data	00000020 video_3840x2160_25Hz
+00100588 g     F .text	00000058 uart_init_early
+001007cc g     F .text	0000004e unmask_interrupt
+001096ac g     F .text	00000082 rtc_clr_wakeup_status
+00107cac g     F .text	0000005a arm_gic_set_priority
+0011e868 g     O .rodata	000002a4 g_scr_res
+0011c148 g     O .rodata	000000c0 g_i2c_glb_idx_to_num
+00108de8 g     F .text	00000044 pmu_set_por_force_powerdown
+00111240 g     F .text	00000002 vApplicationMallocFailedHook
+00112e70 g     F .text	0000009a xTaskRemoveFromEventList
+00103c28 g     F .text	0000003c clkgen_ipslice_debug_enable
+001001fc g     F .text	00000000 tcm_init
+00109778 g     F .text	00000098 scr_get
+001160a8 g     F .text	00000066 LT9611_Vid_Chg_Interrupt_Handle
+00116a64 g     F .text	0000000e io_write
+001176c0 g     F .text	00000276 .hidden __aeabi_dadd
+0011123c g     F .text	00000002 vApplicationTickHook
+0010c07c g     F .text	000006b2 disp_link_init
+00100cb0 g     F .text	00000000 arm_syscall
+00100ad8 g     F .text	00000000 arch_clean_cache_range_asm
+00111f40 g     F .text	00000146 xQueuePeek
+0011dcac g     O .rodata	00000008 g_enet_qos_res
+00100884 g     F .text	00000000 arm_save_mode_regs
+0004ccf4 g       *ABS*	00000000 __heap_size
+001179c0 g     F .text	0000006a .hidden __aeabi_ul2d
+0010feb4 g     F .text	0000004c hal_pmu_set_powerctrl_io_mode
+001176a0 g     F .text	00000012 boot_get_pin
+0011f5a8 g     O .lk_init	00000010 _init_struct_cryto_init
+0012c80c g     O .data	00000038 mem_info_init
+00102e30 g     F .text	00000032 ce_key_ctrl
+0011dc9c g     O .rodata	00000010 g_eic_res
+0010a6c0 g     F .text	00000092 hal_saf_clock_set_default
+001021ec g     F .text	00000052 enable_gating_all
+0011eb20 g     O .rodata	00000010 g_spi_res
+001158e8 g     F .text	00000016 LT9611_Get_HPD_Status
+0011671c g     F .text	00000066 thread_sleep
+00110578 g     F .text	00000038 hal_rstgen_iso_status
+001126b0 g     F .text	000000fc vTaskDelete
+00109978 g     F .text	00000050 timer_drv_cntr_set
+0011eb8c g     O .rodata	0000004c mem_info_ddr
+001008f8 g     F .text	00000000 arch_disable_cache
+0010201c g     F .text	00000168 init_vpu_ss
+0011eb30 g     O .rodata	00000008 g_sys_cnt_res
+00103db4 g     F .text	00000014 trng_irq_handle
+0010554c g     F .text	00000294 disp_post_config
+0013016c g     O .bss	00000004 i2c_spin_lock
+0011e530 g     O .rodata	00000008 g_pvt_sens_res
+00113270 g     F .text	00000018 pvTaskIncrementMutexHeldCount
+001004c0 g     F .text	0000002c _dputc
+0012c860 g     O .data	00000004 display_2_panels
+00100554 g     F .text	00000032 uart_init
+0010cbb4 g     F .text	0000003e hal_arm_gic_init
+0011dc48 g     O .rodata	0000000c g_csi_res
+001168d0 g     F .text	00000078 cbuf_write_char
+0010bfec g     F .text	00000004 hal_sdm_init
+00105970 g     F .text	00000024 disp_interface_init
+001156f4 g     F .text	0000007a LT9611_Audio_Init
+00112f28 g     F .text	000000b6 xTaskCheckForTimeOut
+00113014 g     F .text	000000b4 xTaskPriorityInherit
+00115598 g     F .text	0000015a LT9611_HDMI_TX_Digital
+0010ff98 g     F .text	000000d2 hal_port_creat_handle
+00109524 g     F .text	0000007e rtc_enable
+00104728 g     F .text	000002dc mipi_dsih_dphy_configure
+00103d7c g     F .text	00000036 sram_config
+0010a5e0 g     F .text	0000004c hal_clock_ip_init
+0011006c g     F .text	0000006e hal_port_release_handle
+001176bc g     F .text	0000027a .hidden __aeabi_dsub
+0011dc84 g     O .rodata	00000008 g_dma_mux_res
+00111258 g     F .text	00000002 traceTASK_SWITCHED_OUT_HOOK
+001093d4 g     F .text	0000001a rstgen_sw_oth_rst
+001084e4 g     F .text	00000040 pmu_set_powerup_delay
+00100000 g       .text	00000000 _start
+0010039c g     F .text	00000120 platform_early_init
+00112ac0 g     F .text	00000010 vTaskSuspendAll
+00108a5c g     F .text	00000060 pmu_get_external_reset_status
+0010301c g     F .text	000000b0 clkgen_ip_ctl_set
+0010b2f8 g     F .text	000006d0 hal_cpu_boot
+00114ae4 g     F .text	0000003c LT9611_LowPower_mode
+001179c0 g     F .text	0000006a .hidden __floatundidf
+00107de0 g     F .text	0000003a arm_gic_platform_irq_spotless
+00117bb8 g       .rodata	00000000 __rodata_start
+0012c86c g     O .data	0000003c dumb_lcd
+0012ea68 g     O .bss	000001b8 dc_dev
+0010fc1c g     F .text	0000017c hal_pmu_drv_ops_init
+0012e340 g     O .bss	00000200 msg_padding
+00110260 g     F .text	000000d2 res_parse_info
+00109a64 g     F .text	0000000e timer_drv_int_sig_enable
+001162dc g     F .text	00000062 HDMI_ReadI2C_Byte
+0010abcc g     F .text	0000005e hal_clock_ipctl_get
+00101840 g     F .text	00000004 arch_clean_invalidate_cache_range
+001115f4 g     F .text	00000028 uxListRemove
+0010019c g     F .text	00000004 target_init
+00109420 g     F .text	0000004a rstgen_core_reset
+0011f544 g     O .apps	00000014 _app_safety_os
+0010a3cc g     F .text	00000064 sdm_display_init
+0011488c g     F .text	00000040 strncmp
+00103578 g     F .text	00000124 clkgen_core_slice_switch
+0011eb0c g     O .rodata	00000008 g_sec_storage_res
+00108608 g     F .text	00000076 pmu_set_powerctrl_io_mode
+0012cb68 g       .data	00000000 __dtor_end
+0012cb68 g       .data	00000000 __data_end
+0010be14 g     F .text	00000036 hal_get_display_handle
+00103c64 g     F .text	0000002c clkgen_ipslice_debug_disable
+00112594 g     F .text	000000b2 xTaskCreateStatic
+001129b0 g     F .text	00000084 vTaskResume
+0011827c g     O .rodata	00000028 default_rst_ip_module
+00112dd4 g     F .text	0000001e vTaskSwitchContext
+0010fb0c g     F .text	0000009c hal_pll_config
+001164f0 g     F .text	0000003c event_unsignal
+0010cb58 g     F .text	00000054 hal_i2c_read_reg_data
+001059bc g     F .text	0000004e mipi_lcm_init
+0010fd98 g     F .text	00000086 hal_pmu_creat_handle
+0011e860 g     O .rodata	00000008 g_rtc_res
+00114b98 g     F .text	0000006e LT9611_MIPI_Input_Analog
+0011509c g     F .text	00000154 LT9611_MIPI_Pcr
+0011185c g     F .text	000000ca xQueueGenericCreateStatic
+00112e2c g     F .text	00000042 vTaskPlaceOnEventListRestricted
+0010af08 g     F .text	00000064 hal_clock_corectl_get
+00100ee0 g     F .text	00000000 arch_strlcpy_from_user
+0012c854 g     O .data	00000004 display_0_panels
+0012c6cc g     O .data	00000040 per_disp_state_table
+0010bff0 g     F .text	0000003c hal_sdm_post_config
+00117958 g     F .text	00000022 .hidden __aeabi_i2d
+0010066c g     F .text	00000062 timer_init_early
+0010a904 g     F .text	00000060 hal_clock_uuu_init
+00110180 g     F .text	0000005e parse_paddr_ppc
+00113894 g     F .text	00000000 bcopy
+0010bf80 g     F .text	00000068 hal_display_create_handle
+00107758 g     F .text	00000066 dw_i2c_scan
+0011f5c8 g     O .data	00000000 __arm_in_handler
+0011e4a0 g     O .rodata	00000008 g_mb_res
+00111218 g     F .text	0000001e vApplicationGetIdleTaskMemory
+00117538 g     F .text	00000046 mem_image_init
+00103dc8 g     F .text	00000052 ce_globle_init
+0010199c g     F .text	000000e2 lk_main
+00116340 g     F .text	00000066 HDMI_WriteI2C_Byte
+0010742c g     F .text	000000ba dw_i2c_transfer
+00100868 g     F .text	00000004 is_str_resume
+0012ca08 g     O .data	00000020 video_3840x2160_24Hz
+001133d0 g     F .text	0000006a xTimerGenericCommand
+0010ad24 g     F .text	00000068 hal_clock_busctl_get
+0012ec20 g     O .bss	0000008c intf_dev
+001093f0 g     F .text	00000008 rstgen_get_rst_sta
+00100c2c g     F .text	00000000 arch_spin_unlock
+0011e558 g     O .rodata	00000008 g_rc24m_res
+00111244 g     F .text	00000014 vApplicationStackOverflowHook
+00117ba0  w    F .text	00000002 .hidden __aeabi_ldiv0
+0011652c g     F .text	0000000e mutex_init
+00112894 g     F .text	0000011c vTaskSuspend
+0011040c g     F .text	000000e0 hal_rstgen_creat_handle
+0011dd0c g     O .rodata	0000000c g_i2s_sc_res
+0012ca88 g     O .data	00000020 video_720x480_60Hz
+001078b8 g     F .text	000000e6 dw_i2c_read_reg_data
+0010946c g     F .text	00000052 rstgen_core_ctl
+0010f928 g     F .text	00000094 res_rstgen_request
+00102ea8 g     F .text	0000000e clkgen_get_default_config
+00110540 g     F .text	00000038 hal_rstgen_iso_disable
+001038e8 g     F .text	00000130 clkgen_mon_bus_slice
+00108da4 g     F .text	00000044 pmu_set_por_auto_powerdown
+001005f4 g     F .text	0000003c uart_getc
+00130668 g     O .bss	00000004 timer_spin_lock
+0012cb68 g       .data	00000000 __ctor_end
+00100d64 g     F .text	00000000 arm_data_abort
+00102340 g     F .text	00000af0 hpi_qos_init
+0011e560 g     O .rodata	00000008 g_rc_rtc_res
+00103010 g     F .text	0000000c clkgen_ip_ctl_get
+001163a8 g     F .text	0000005c event_init
+001153c8 g     F .text	00000094 LT9611_HDMI_TX_Phy
+001100dc g     F .text	00000062 hal_port_init
+001093b8 g     F .text	0000001a rstgen_sw_self_rst
+001099c8 g     F .text	00000030 timer_drv_cntr_get
+00101d64 g     F .text	00000066 module_iso_disable
+0010bab0 g     F .text	0000006e hal_dio_release_handle
+0010b058 g     F .text	00000068 hal_clock_uuuctl_get
+00111260 g     F .text	00000018 vMainAssertCalled
+00107d08 g     F .text	0000003a arm_gic_mask_interrupt
+00100c4c g     F .text	00000000 arm_invalidate_tlb
+0012cb80 g       .bss	00000000 __bss_start
+00101814 g     F .text	00000026 mpu_enable
+0010a8a0 g     F .text	00000062 hal_clock_core_init
+0010923c g     F .text	000000dc Port_SetPinMode
+001139ac g     F .text	00000000 memset
+0010a1b8 g     F .text	00000180 sdm_display_handle_init
+001149e8 g     F .text	0000003a sdm_panel_probe
+004b0000 g       .tcm	00000000 __tcm_start
+00109408 g     F .text	0000000a rstgen_iso_status
+001095a4 g     F .text	00000106 rtc_wakeup_enable
+0010bb54 g     F .text	000000c6 get_resource_from_table
+0012c8e8 g     O .data	00000020 video_1280x720_30Hz
+0011e538 g     O .rodata	00000018 g_pwm_res
+001079a0 g     F .text	00000162 dw_i2c_common_xfer
+001115c0 g     F .text	00000034 vListInsert
+00105138 g     F .text	00000414 disp_init
+0011125c g     F .text	00000002 traceTASK_SWITCHED_IN_HOOK
+001005e0 g     F .text	00000014 uart_putc
+0012c908 g     O .data	00000020 video_1280x720_50Hz
+001103c4 g     F .text	00000048 ap2p
+00118240 g     O .rodata	0000003c default_clk_gating_enabled_table
+0010cc04 g     F .text	00000010 hal_arm_gic_disable_interrupt
+00108130 g     F .text	000000cc pll_config_get
+0011dc94 g     O .rodata	00000008 g_efuse_res
+001136d8 g     F .text	000000a0 apps_init
+00113360 g     F .text	00000070 xTimerCreateTimerTask
+00110614 g     F .text	00000040 hal_rstgen_module_reset
+00115c9c g     F .text	00000030 lt9611_cec_frame_retransmission
+00110bd8 g     F .text	00000008 hal_uart_int_src_disable
+00116404 g     F .text	00000072 event_wait_timeout
+00105994 g     F .text	00000028 disp_interface_config
+00100710 g     F .text	0000006a register_int_handler
+0012c868 g     O .data	00000004 display_4_panels
+00100b44 g     F .text	00000000 arch_sync_cache_range_asm
+001179d0 g     F .text	0000005a .hidden __aeabi_l2d
+00109f0c g     F .text	0000001c uart_drv_putc
+00100bd0 g     F .text	00000000 _atomic_or
+00108c14 g     F .text	00000058 pmu_set_external_wakeup_debounce_delay
+0011079c g     F .text	0000011c hal_timer_creat_handle
+0012dfc0 g     O .bss	00000010 lk_boot_args
+00113a40 g     F .text	0000000c isprint
+0011e528 g     O .rodata	00000008 g_pmu_res
+00114b20 g     F .text	00000076 LT9611_System_Init
+0012df40 g     O .bss	00000080 und_stack
+00108b64 g     F .text	00000058 pmu_set_external_wakeup_polarity
+00102e64 g     F .text	00000042 scr_init
+00108b0c g     F .text	00000058 pmu_set_external_wakeup_enable
+00111928 g     F .text	00000068 xQueueGenericCreate
+0010077c g     F .text	0000004e mask_interrupt
+00110e68 g     F .text	00000066 FreeRTOS_Tick_Handler
+00113778 g     F .text	00000022 spin
+00107e1c g     F .text	00000018 platform_fiq
+0011dcb4 g     O .rodata	00000010 g_ftbu_res
+0012c8a8 g     O .data	00000014 registered_panels
+00020000 g       *ABS*	00000000 TCM_SIZE
+0010ba18 g     F .text	00000096 hal_dio_creat_handle
+00115eac g     F .text	00000118 LT9611_Enable_Interrupts
+00103e6c g     F .text	00000014 Dio_SetHandle
+0010bdf8 g     F .text	00000010 hal_sdm_panel_connect
+001154e4 g     F .text	0000008e LT9611_HDMI_Out_Enable
+0011f5b8 g       .early_copy	00000000 __earlycopy_start
+0011dce8 g     O .rodata	00000024 g_i2c_res
+00112c7c g     F .text	00000118 xTaskResumeAll
+0010a62c g     F .text	00000094 hal_clock_bus_init
+001012ac  w    F .text	0000000e arm_syscall_handler
+00109cf0 g     F .text	0000021c uart_drv_init
+00112a34 g     F .text	0000008c vTaskStartScheduler
+001087f4 g     F .text	00000052 pmu_set_internal_powerdown_enable
+00100198 g     F .text	00000002 target_early_init
+0012c864 g     O .data	00000004 display_3_panels
+0012f5c8 g     O .bss	00000004 dio_spin_lock
+0013330c g       *ABS*	00000000 __LMA_tcm
+0010b2ec g     F .text	00000004 hal_cpu_create_handle
+00114964 g     F .text	0000004c platform_mpu_r5_common
+00115e84 g     F .text	00000026 LT9611_IRQ_Init
+0012c8c8 g     O .data	00000020 video_1200x1920_60Hz
+0011074c g     F .text	00000030 hal_scr_set
+00114158 g     F .text	00000638 _printf_engine
+0011f558 g     O .lk_init	00000010 _init_struct_safety_init
+0010eea0 g     F .text	00000070 res_clk_request
+00100dc0 g     F .text	00000000 arm_reserved
+00103d0c g     F .text	00000004 clkgen_coreslice_debug_disable
+00103c90 g     F .text	00000040 clkgen_busslice_debug_enable
+0010b1f8 g     F .text	000000f2 hal_clock_uuuclk_get
+0011dc54 g     O .rodata	00000008 g_dc_res
+001084a0 g     F .text	00000042 pmu_set_powerdown_delay
+00107b80 g     F .text	00000056 arm_gic_register_int_handler
+0011f5c8 g       .data	00000000 __data_start_rom
+0010ff4c g     F .text	0000004c hal_pmu_set_powerctrl_out_ctrl
+00117bd0 g       .rodata	00000000 __fault_handler_table_end
+001106b8 g     F .text	0000002e hal_rstgen_core_status
+00101848 g     F .text	00000080 arch_early_init
+00100514 g     F .text	00000004 platform_dgetc
+0011eb68 g     O .rodata	0000000c g_watchdog_res
+0010bfe8 g     F .text	00000002 hal_display_release_handle
+001104ec g     F .text	00000016 hal_rstgen_release_handle
+0011e4dc g     O .rodata	0000004c g_pll_res
+00101dcc g     F .text	00000066 module_rst
+001006d0 g     F .text	0000003e vPortTickTimerEnable
+001309b4 g     O .bss	00000004 ulPortTaskHasFPUContext
+00112fe0 g     F .text	0000000e vTaskMissedYield
+001001a0 g     F .text	0000005c uart_port_init
+00115a2c g     F .text	000000be lt9611_parse_physical_address
+0010be6c g     F .text	00000078 hal_display_handle_install_resource
+00116110 g     F .text	00000060 lt9611_cec_msg_Interrupt_Handle
+0010fe20 g     F .text	00000004 hal_pmu_release_handle
+00103304 g     F .text	00000032 clkgen_bus_ctl_get
+00100864 g     F .text	00000004 vApplicationIRQHandler
+00117378 g     F .text	0000003c tca9539_deinit
+0011dcc4 g     O .rodata	00000008 g_g2d_res
+001120e0 g     F .text	0000002a vQueueAddToRegistry
+00110bd0 g     F .text	00000008 hal_uart_int_src_enable
+0013066c g     O .bss	00000340 g_uart_instance
+00112ae8 g     F .text	00000192 xTaskIncrementTick
+00109f88 g     F .text	00000152 uart_drv_irq_handle
+0012cb68 g       .data	00000000 __dtor_list
+001074e8 g     F .text	000000ca dw_i2c_transmit
+00115574 g     F .text	00000022 LT9611_HDMI_Out_Disable
+004b0000 g       .tcm	00000000 __tcm_end
+001016e0 g     F .text	00000134 mpu_add_region
+001149b0 g     F .text	00000038 sdm_connect_panel
+0011eb4c g     O .rodata	0000001c g_uart_res
+00102184 g     F .text	00000046 rstgen_sec_module_rst
+0010c74c g     F .text	0000001c unmask_gpio_interrupt
+001225a8 g     O .data	0000018c table_if_res
+001117dc g     F .text	0000007e xQueueGenericReset
+0012c844 g     O .data	00000004 ulCriticalNesting
+0010be4c g     F .text	0000001e hal_get_display_handle_by_index
+00115b30 g     F .text	00000062 lt9611_hdmi_cec_write
+00110b90 g     F .text	00000010 hal_uart_putc
+00109810 g     F .text	00000092 scr_is_locked
+0013330c g       .bss	00000000 _end
+001101e0 g     F .text	00000080 parse_paddr_rpc
+0013326c g     O .bss	00000004 video
+0011e4b8 g     O .rodata	00000008 g_mjpeg_res
+00109f40 g     F .text	0000001e uart_drv_int_src_enable
+0010cc14 g     F .text	0000001c hal_arm_gic_register_interrupt
+00114c08 g     F .text	00000084 LT9611_MIPI_Input_Digtal
+00110c80 g     F .text	00000000 vPortRestoreTaskContext
+00100afc g     F .text	00000000 arch_clean_invalidate_cache_range_asm
+00108308 g     F .text	00000088 pmu_get_status
+001018c8 g     F .text	00000004 arch_init
+0012c988 g     O .data	00000020 video_1920x1080_30Hz
+00112648 g     F .text	00000066 xTaskCreate
+00110a38 g     F .text	00000114 hal_uart_creat_handle
+00115e10 g     F .text	00000022 LT9611_Htotal_Sysclk
+0012caf0 g     O .data	0000003c mipi_lt9611_to_hdmi_1920x1080_lcd
+00100e44 g     F .text	00000000 arm_fiq
+0011e484 g     O .rodata	00000008 g_iomuxc_rtc_res
+00108274 g     F .text	0000004a pmu_init
+0010cbb0 g     F .text	00000004 hal_arm_gic_release_handle
+001302a4 g     O .bss	00000004 rstgen_spin_lock
+001086fc g     F .text	00000076 pmu_set_powerctrl_out_ctrl
+0010ac8c g     F .text	00000098 hal_clock_busclk_get
+0013330c g       .bss	00000000 __heap
+0011e4c0 g     O .rodata	00000008 g_ospi_reg_res
+00116f0c g     F .text	0000004a reboot_module
+00100ec0 g     F .text	00000000 arch_copy_from_user
+0011dd18 g     O .rodata	0000076c g_iomuxc_res
+0010b128 g     F .text	0000006a hal_clock_uuuslice_debug_enable
+0010fac8 g     F .text	0000003e hal_pll_create_handle
+001075b4 g     F .text	000000dc dw_i2c_receive
+001012bc g     F .text	000000e8 arm_undefined_handler
+001036ac g     F .text	00000110 clkgen_core_ctl_set
+00101650 g     F .text	00000010 arm_fpu_set_enable
+0011654c g     F .text	00000088 mutex_acquire_timeout
+00112d94 g     F .text	00000040 vTaskDelay
+00110900 g     F .text	00000024 hal_timer_ovf_init
+00111120 g     F .text	00000014 vPortTaskUsesFPU
+0010ae70 g     F .text	00000096 hal_clock_coreclk_get
+00110ba0 g     F .text	0000002e hal_uart_int_cbk_register
+0010a964 g     F .text	00000104 hal_soc_clock_set_default
+00100bec g     F .text	00000000 arch_spin_trylock
+0011d688 g     O .rodata	00000004 g_can_res
+0011e6b0 g     O .rodata	000001a8 g_rstgen_res
+00112ff0 g     F .text	00000024 xTaskGetSchedulerState
+0011e6a8 g     O .rodata	00000008 g_romc_res
+0011319c g     F .text	000000d4 vTaskPriorityDisinheritAfterTimeout
+00117ba0  w    F .text	00000002 .hidden __aeabi_idiv0
+001309b0 g     O .bss	00000004 ulPortInterruptNesting
+001223dc g     O .data	00000005 dc_pll
+0010a568 g     F .text	00000010 hal_clock_release_handle
+001081fc g     F .text	00000064 stuff_valid_value
+00130184 g     O .bss	000000dc drv_ops
+0011f84c g     O .data	00000024 disp_driver_lvds
+0011eb80 g     O .rodata	0000000c mem_info_ce_mem
+00114c8c g     F .text	00000364 LT9611_Video_Check
+00103bd0 g     F .text	00000056 clkgen_uuu_ctl_set
+0010a338 g     F .text	00000092 sdm_screen_clear
+0011071c g     F .text	00000030 hal_scr_get
+0012e968 g     O .bss	00000100 dsi_ctx
+00114874 g     F .text	00000018 strlen
+00110ed0 g     F .text	00000092 pxPortInitialiseStack
+0011545c g     F .text	0000002e LT9611_HDCP_Init
+00101e34 g     F .text	000000e2 init_gpu1_ss
+00101f18 g     F .text	000000d6 init_gpu2_ss
+0011ebe4 g     O .rodata	00000014 mem_info_iram
+0010050c g     F .text	00000004 platform_halt
+0010ef10 g     F .text	000007d4 register_res_clks
+00114830 g     F .text	0000002c _printf
+0010183c g     F .text	00000004 arch_clean_cache_range
+00108abc g     F .text	00000050 pmu_set_internal_wakeup_enable
+0011d694 g     O .rodata	00000008 g_ce_reg_res
+0010c768 g     F .text	0000001c mask_gpio_interrupt
+0011653c g     F .text	00000010 mutex_destroy
+00100510 g     F .text	00000004 platform_dputc
+0012ca48 g     O .data	00000020 video_3840x2160_30Hz
+00103a18 g     F .text	0000012a clkgen_mon_core_slice
+00100d08 g     F .text	00000000 arm_prefetch_abort
+00133240 g     O .bss	0000002a lt9611_cec_msg
+0011797c g     F .text	00000042 .hidden __aeabi_f2d
+00116664 g     F .text	000000b6 thread_create
+00116170 g     F .text	000000ca LT9611_Init
+001147bc g     F .text	00000018 fputs
+0011106c g     F .text	00000072 vPortEnterCritical
+0010fe24 g     F .text	00000048 hal_pmu_init
+0011f5c8 g       .data	00000000 __data_start
+0011ec04 g     O .rodata	0000000c mem_info_ospi
+0010938c g     F .text	00000014 rstgen_global_rst_enable
+0011ec10 g     O .rodata	00000024 mem_info_unprotected
+0010e678 g     F .text	0000030c get_pll_dummy_root_round_rate_clk
+00100c58 g     F .text	00000000 arm_undefined
+0010a0e0 g     F .text	000000d8 sdm_display_change_clk
+00100634 g     F .text	0000001c current_time_hires
+001099f8 g     F .text	0000002e timer_drv_ovf_set
+00107d80 g     F .text	00000060 platform_irq
+0011e4d0 g     O .rodata	0000000c g_platform_res
+001165d4 g     F .text	0000006c mutex_release
+00110924 g     F .text	0000001c hal_timer_int_src_enable
+00115e58 g     F .text	0000002c LT9611_Dphy_debug
+0011e4a8 g     O .rodata	00000008 g_mipi_csi_res
+00108bbc g     F .text	00000058 pmu_set_external_wakeup_debounce_enable
+001176bc g     F .text	0000027a .hidden __subdf3
+0012ca68 g     O .data	00000020 video_640x480_60Hz
+0012c928 g     O .data	00000020 video_1280x720_60Hz
+00102efc g     F .text	0000004a clkgen_gating_enable
+0011f588 g     O .lk_init	00000010 _init_struct_arm_gic_suspend_cpu
+00107d44 g     F .text	0000003a arm_gic_unmask_interrupt
+00111b30 g     F .text	00000026 xQueueCreateMutex
+00110940 g     F .text	00000096 hal_timer_int_cbk_register
+00100b70 g     F .text	00000000 _arch_disable_ints
+0010aa68 g     F .text	00000066 hal_clock_enable
+00114ff0 g     F .text	000000ac LT9611_MIPI_Video_Timing
+001106e8 g     F .text	00000002 hal_scr_create_handle
+00110b4c g     F .text	00000042 hal_uart_init
+0011ed68 g     O .rodata	00000004 ulICCEOIR
+0011e4c8 g     O .rodata	00000008 g_ospi_res
+00100b80 g     F .text	00000000 _atomic_swap
+0011157c g     F .text	00000004 free
+0010a530 g     F .text	00000038 hal_clock_creat_handle
+0012e240 g     O .bss	00000100 hash_padding
+00100b60 g     F .text	00000000 _arch_enable_ints
+0011dcd4 g     O .rodata	00000008 g_gpio_res
+00111238 g     F .text	00000002 vApplicationIdleHook
+0010ca20 g     F .text	00000044 hal_i2c_get_busconfig
+
+

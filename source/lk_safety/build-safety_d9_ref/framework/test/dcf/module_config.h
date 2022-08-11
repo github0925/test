@@ -1,0 +1,13 @@
+#ifndef __build_safety_d9_ref_framework_test_dcf_module_config_h_H
+#define __build_safety_d9_ref_framework_test_dcf_module_config_h_H
+#define MODULE_COMPILEFLAGS "__WNO_FORMAT__FNO_BUILTIN__WNO_UNUSED_VARIABLE__WNO_SIGN_COMPARE__WNO_FORMAT"
+#define MODULE_CFLAGS ""
+#define MODULE_CPPFLAGS ""
+#define MODULE_ASMFLAGS ""
+#define MODULE_LDFLAGS ""
+#define MODULE_OPTFLAGS ""
+#define MODULE_INCLUDES ""
+#define MODULE_SRCDEPS ""
+#define MODULE_DEPS "_FRAMEWORK_COMMUNICATION_FRAMEWORK_SERVICE_PROPERTY_FRAMEWORK_SERVICE_RPMSG"
+#define MODULE_SRCS "_FRAMEWORK_TEST_DCF_DCF_SAMPLE_C_FRAMEWORK_TEST_DCF_TEST_RPMSG_LINUX_C"
+#endif

@@ -1,0 +1,11 @@
+LOCAL_DIR := $(GET_LOCAL_DIR)
+
+GLOBAL_INCLUDES += $(LOCAL_DIR)/include
+
+MODULE_SRCS += \
+	$(LOCAL_DIR)/src/tmp411.c \
+
+MODULE_INCLUDES += $(CURDIR)/include
+
+
+

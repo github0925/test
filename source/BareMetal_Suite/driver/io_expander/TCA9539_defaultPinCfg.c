@@ -1,0 +1,53 @@
+#include "TCA9539.h"
+
+const TCA9539_cfg_t TCA9539_DEFAULT_CFG_TABLE = {
+    //group 0
+    {
+        {TCA9539_CONFIG_INPUT, TCA9539_INPUT_INVERTION_DISABLE, TCA9539_LOGIC_HIGH}, // pin 0
+        {TCA9539_CONFIG_INPUT, TCA9539_INPUT_INVERTION_DISABLE, TCA9539_LOGIC_HIGH}, // pin 1
+        {TCA9539_CONFIG_INPUT, TCA9539_INPUT_INVERTION_DISABLE, TCA9539_LOGIC_HIGH}, // pin 2
+        {TCA9539_CONFIG_INPUT, TCA9539_INPUT_INVERTION_DISABLE, TCA9539_LOGIC_HIGH}, // pin 3
+        {TCA9539_CONFIG_INPUT, TCA9539_INPUT_INVERTION_DISABLE, TCA9539_LOGIC_HIGH}, // pin 4
+        {TCA9539_CONFIG_INPUT, TCA9539_INPUT_INVERTION_DISABLE, TCA9539_LOGIC_HIGH}, // pin 5
+        {TCA9539_CONFIG_INPUT, TCA9539_INPUT_INVERTION_DISABLE, TCA9539_LOGIC_HIGH}, // pin 6
+        {TCA9539_CONFIG_INPUT, TCA9539_INPUT_INVERTION_DISABLE, TCA9539_LOGIC_HIGH}, // pin 7
+    },
+    //group 1
+    {
+        {TCA9539_CONFIG_INPUT, TCA9539_INPUT_INVERTION_DISABLE, TCA9539_LOGIC_HIGH}, // pin 0
+        {TCA9539_CONFIG_INPUT, TCA9539_INPUT_INVERTION_DISABLE, TCA9539_LOGIC_HIGH}, // pin 1
+        {TCA9539_CONFIG_INPUT, TCA9539_INPUT_INVERTION_DISABLE, TCA9539_LOGIC_HIGH}, // pin 2
+        {TCA9539_CONFIG_INPUT, TCA9539_INPUT_INVERTION_DISABLE, TCA9539_LOGIC_HIGH}, // pin 3
+        {TCA9539_CONFIG_INPUT, TCA9539_INPUT_INVERTION_DISABLE, TCA9539_LOGIC_HIGH}, // pin 4
+        {TCA9539_CONFIG_INPUT, TCA9539_INPUT_INVERTION_DISABLE, TCA9539_LOGIC_HIGH}, // pin 5
+        {TCA9539_CONFIG_INPUT, TCA9539_INPUT_INVERTION_DISABLE, TCA9539_LOGIC_HIGH}, // pin 6
+        {TCA9539_CONFIG_INPUT, TCA9539_INPUT_INVERTION_DISABLE, TCA9539_LOGIC_HIGH}, // pin 7
+    },
+};
+
+void TCA9539_parse_cfg(const TCA9539_cfg_t *cfg, TCA9539_reg_val_t *val)
+{
+    TCA9539_group_cfg_t *group = (TCA9539_group_cfg_t *)cfg;
+
+    for (int g = 0; g < 2; g++) {
+        struct TCA9539_pin_cfg_t *pin = (struct TCA9539_pin_cfg_t *)group;
+
+        for (int p = 0; p < 8; p++) {
+            if (pin->dir == TCA9539_CONFIG_INPUT) {
+                val->direction[g] |= TCA9539_PIN(p);
+            }
+
+            if (pin->invert == TCA9539_INPUT_INVERTION_ENABLE) {
+                val->invertion[g] |= TCA9539_PIN(p);
+            }
+
+            if (pin->output_logic == TCA9539_LOGIC_HIGH) {
+                val->output[g] |= TCA9539_PIN(p);
+            }
+
+            pin++;
+        }
+
+        group++;
+    }
+}
